@@ -43,12 +43,22 @@ gem 'jbuilder', '~> 2.5'
 # Use Octokit to consume GitHub API
 gem 'octokit', '~> 4.0'
 
+# Use Devise for authentication
+gem 'devise'
+
+# Omniauth authentication
+gem 'omniauth'
+gem 'omniauth-github'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
   # Use FactoryGirl to use factories
   gem 'factory_girl_rails'
+
+  # Use dotenv to configure environment variables
+  gem 'dotenv-rails', :groups => [:development, :test]
 end
 
 group :development do
