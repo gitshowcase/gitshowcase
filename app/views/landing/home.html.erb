@@ -1,0 +1,92 @@
+<div class="home-view">
+  <section class="presenter">
+    <div class="background"></div>
+
+    <div class="container">
+      <h1>You already have awesome projects</h1>
+      <h2>It's time to have a killer portfolio!</h2>
+
+      <%= render 'components/sign_in' %>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <header>
+        <h3>Get a pretty portfolio based on your GitHub</h3>
+      </header>
+
+      <p>Git Showcase looks at your public profile to build your portfolio.</p>
+      <p>This way you don't have to type it all over again and you can use the time you saved helping to save kittens in trees.</p>
+
+      <div class="steps">
+        <div class="col-md-4">
+          <div class="step">
+            <i class="fa fa-github"></i>
+            <div class="text">Sign in with Github</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="step">
+            <i class="fa fa-thumbs-up"></i>
+            <div class="text">Authorize us to look at your public profile</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="step">
+            <i class="fa fa-rocket"></i>
+            <div class="text">Add extra projects and customize</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <header>
+        <h3>What is Git Showcase?</h3>
+      </header>
+
+      <p>Git Showcase is an Open Source project designed to help developers show of their talents.</p>
+      <p>If you like the project, you can help by sharing it on social media and giving us a Star on Github.</p>
+
+      <div>
+        <a href="https://github.com/pedsmoreira/gitshowcase">Collaborate</a>
+        <a href="">Star</a>
+        <a href="">Twitter</a>
+        <a href="">Facebook</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <header>
+        <h3>Moving Forward</h3>
+      </header>
+
+      <p>Git Showcase is just starting, so while now we only have one template that's not customizable,
+      on the future we want to have a variety of templates and enable customization, so you can have your profile
+      the way you want it.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <header>
+        <h3>Miaaau!</h3>
+      </header>
+
+      <p>If you're still wondering whether you should create your profile, listen what Shia has to tell you.</p>
+
+      <div>
+        <iframe></iframe>
+      </div>
+
+      <%= link_to 'Sign in with GitHub', omniauth_authorize_path(User, :github) %>
+    </div>
+  </section>
+</div>

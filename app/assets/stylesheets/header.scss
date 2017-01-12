@@ -1,0 +1,35 @@
+@import "constants/sizes";
+
+body {
+  padding-top: $header-height;
+}
+
+#header {
+  .navbar {
+    height: $header-height;
+    margin-bottom: 0;
+    background: #222;
+  }
+
+  .navbar-brand {
+    margin-top: -.1rem;
+    height: $header-height * .5;
+
+    img {
+      filter: invert(1);
+      max-height: 100%;
+    }
+  }
+
+  &.transparent {
+    .navbar {
+      background: transparent;
+    }
+  }
+
+  .sign-in {
+    color: white;
+    font-size: 117%;
+    text-decoration: none;
+  }
+}

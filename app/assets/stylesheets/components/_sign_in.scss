@@ -1,0 +1,10 @@
+.sign-in {
+  &.btn-primary {
+    background: #000;
+    border-color: #333;
+
+    &:hover {
+      background: #222;
+    }
+  }
+}

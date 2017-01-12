@@ -2,7 +2,9 @@
 <html>
 
 <head>
-  <%= render 'layouts/partials/head' %>
+  <%= render 'layouts/partials/head',
+             title: current_user.name
+  %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -12,14 +14,7 @@
 
 <%= render 'layouts/partials/header' %>
 
-<!--<aside>-->
-  <!--<p class="notice"><%= notice %></p>-->
-  <!--<p class="alert"><%= alert %></p>-->
-<!--</aside>-->
-
-<section>
-  <%= yield %>
-</section>
+<%= yield %>
 
 <%= render 'layouts/partials/footer' %>
 

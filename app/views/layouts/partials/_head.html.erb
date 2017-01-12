@@ -1,0 +1,19 @@
+<%
+  title ||= 'Git Showcase'
+  description ||= 'Awesome Portfolio from your GitHub'
+  keywords ||= 'portfolio, github'
+  author = 'Pedro Moreira'
+  image ||= image_path('preview.png')
+%>
+
+<title><%= title %></title>
+
+<%= render 'layouts/partials/head/web_app' %>
+<%= render 'layouts/partials/head/icons' %>
+<%= render 'layouts/partials/head/seo',
+           title: title,
+           description: description,
+           keywords: keywords,
+           author: author,
+           image: image
+%>

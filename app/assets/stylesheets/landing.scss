@@ -1,0 +1,90 @@
+// Place all the styles related to the landing controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "constants/sizes";
+
+.home-view {
+  $margin-size: 3rem;
+
+  text-align: center;
+  font-family: arial, helvetica, sans-serif;
+
+  .presenter {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: -$header-height;
+    color: white;
+    position: relative;
+
+    .background {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=");
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: .65;
+      }
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 3rem;
+      color: #f0ad4e;
+    }
+
+    h1, h2 {
+      text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+    }
+
+    .sign-in {
+      font-size: 150%;
+    }
+  }
+
+  section {
+    margin: $margin-size 0;
+
+    h3 {
+      margin-top: 0;
+      font-size: 1.75rem;
+      font-weight: 300;
+    }
+
+    &:nth-child(2n+3) {
+      background: rgba(0, 0, 0, .05);
+      padding: $margin-size 0;
+    }
+  }
+
+  .steps {
+    .step {
+      i {
+        font-size: 300%;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+#footer {
+  text-align: center;
+  margin: 1rem;
+  padding-top: 1rem;
+}

@@ -25,6 +25,18 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# Add Tether because bootstrap needs it
+gem 'rails-assets-tether', source: 'https://rails-assets.org'
+
+# Use Bootstrap to make it pretty
+gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.5', source: 'https://rails-assets.org'
+
+# Use animate.css for cool animations
+gem 'rails-assets-animate.css', source: 'https://rails-assets.org'
+
+# Use font awesome for icons
+gem 'font-awesome-rails'
+
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 
@@ -49,6 +61,9 @@ gem 'devise'
 # Omniauth authentication
 gem 'omniauth'
 gem 'omniauth-github'
+
+# User ServiceWorker for PWA
+gem 'serviceworker-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
