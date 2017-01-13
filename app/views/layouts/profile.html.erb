@@ -3,7 +3,7 @@
 
 <head>
   <%= render 'layouts/partials/head',
-             title: current_user.name
+             title: @user.name
   %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>

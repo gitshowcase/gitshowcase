@@ -4,6 +4,10 @@ class AddInfoToUser < ActiveRecord::Migration[5.0]
     add_column :users, :username, :string
     add_column :users, :image, :string
     add_column :users, :bio, :string
+    add_column :users, :role, :string
+    add_column :users, :location, :string
+    add_column :users, :company, :string
+    add_column :users, :website, :string
     add_column :users, :is_available_for_hire, :bool
 
     add_column :users, :linkedin, :string
