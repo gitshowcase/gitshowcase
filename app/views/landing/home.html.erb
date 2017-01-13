@@ -1,42 +1,52 @@
 <div class="home-view">
-  <section class="presenter">
-    <div class="background"></div>
+  <section class="presenter wow animated fadeIn">
+    <%= render 'components/background',
+               image: image_path('backgrounds/code.jpg') %>
 
     <div class="container">
       <h1>You already have awesome projects</h1>
       <h2>It's time to have a killer portfolio!</h2>
 
-      <%= render 'components/sign_in' %>
+      <%= render 'components/sign-in' %>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <header>
+      <header class="wow animated fadeInDown">
         <h3>Get a pretty portfolio based on your GitHub</h3>
       </header>
 
-      <p>Git Showcase looks at your public profile to build your portfolio.</p>
-      <p>This way you don't have to type it all over again and you can use the time you saved helping to save kittens in trees.</p>
+      <div class="wow animated fadeIn">
+        <p>Git Showcase looks at your public profile to build your portfolio.</p>
+        <p>You don't have to type your info all over again and you can use the time you saved helping to save kittens in
+          trees.</p>
+      </div>
 
-      <div class="steps">
+      <div class="blocks row wow animated fadeInUp">
         <div class="col-md-4">
-          <div class="step">
-            <i class="fa fa-github"></i>
-            <div class="text">Sign in with Github</div>
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-github"></i>
+            </div>
+            <div class="text">Sign in with GitHub</div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="step">
-            <i class="fa fa-thumbs-up"></i>
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-thumbs-up"></i>
+            </div>
             <div class="text">Authorize us to look at your public profile</div>
           </div>
         </div>
 
         <div class="col-md-4">
-          <div class="step">
-            <i class="fa fa-rocket"></i>
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-rocket"></i>
+            </div>
             <div class="text">Add extra projects and customize</div>
           </div>
         </div>
@@ -44,49 +54,78 @@
     </div>
   </section>
 
-  <section>
+  <section id="open-source" class="wow animated fadeIn">
+    <%= render 'components/background',
+               image: image_path('backgrounds/programmer.jpg') %>
+
     <div class="container">
       <header>
-        <h3>What is Git Showcase?</h3>
+        <h3><i class="fa fa-code-fork"></i> Open Sourced</h3>
       </header>
 
-      <p>Git Showcase is an Open Source project designed to help developers show of their talents.</p>
+      <p>Git Showcase is an <strong>Open Source</strong> project designed to help developers show of their talents.</p>
       <p>If you like the project, you can help by sharing it on social media and giving us a Star on Github.</p>
 
-      <div>
-        <a href="https://github.com/pedsmoreira/gitshowcase">Collaborate</a>
-        <a href="">Star</a>
-        <a href="">Twitter</a>
-        <a href="">Facebook</a>
+      <div class="social">
+        <a href="https://github.com/pedsmoreira/gitshowcase" class="btn btn-black" target="_blank">
+          <i class="fa fa-github-alt"></i> GitHub
+        </a>
+
+        <a href="https://twitter.com/home?status=Checkout%20this%20portfolio%20creator%20by%20%40pedsmoreira,%20just%20connect%20your%20GitHub%20and%20you're%20good%20to%20go!%0Awww.gitshowcase.com"
+           class="btn btn-info"
+           target="_blank">
+          <i class="fa fa-twitter"></i> Share
+        </a>
+
+        <a href="https://www.facebook.com/sharer/sharer.php?u=www.gitshowcase.com" target="_blank" class="btn btn-primary">
+          <i class="fa fa-facebook"></i> Share
+        </a>
       </div>
     </div>
   </section>
 
   <section>
     <div class="container">
-      <header>
-        <h3>Moving Forward</h3>
+      <header class="wow animated fadeInDown">
+        <h3>Coming up next</h3>
       </header>
 
-      <p>Git Showcase is just starting, so while now we only have one template that's not customizable,
-      on the future we want to have a variety of templates and enable customization, so you can have your profile
-      the way you want it.</p>
+      <div class="wow animated fadeIn">
+        <p>Git Showcase is just starting and we want to make it even better.</p>
+      </div>
+
+      <div class="blocks row wow animated fadeInUp">
+        <div class="col-md-4">
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-cogs"></i>
+            </div>
+            <div class="text">Multiple Templates</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-code"></i>
+            </div>
+            <div class="text">Template Customization</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="block">
+            <div class="icon">
+              <i class="fa fa-comments-o"></i>
+            </div>
+            <div class="text">Tell us what feature you want :D</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section>
-    <div class="container">
-      <header>
-        <h3>Miaaau!</h3>
-      </header>
-
-      <p>If you're still wondering whether you should create your profile, listen what Shia has to tell you.</p>
-
-      <div>
-        <iframe></iframe>
-      </div>
-
-      <%= link_to 'Sign in with GitHub', omniauth_authorize_path(User, :github) %>
-    </div>
+  <section id="sign-in">
+    <%= render 'components/sign-in' %>
   </section>
 </div>

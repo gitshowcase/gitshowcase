@@ -31,8 +31,9 @@ gem 'rails-assets-tether', source: 'https://rails-assets.org'
 # Use Bootstrap to make it pretty
 gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.5', source: 'https://rails-assets.org'
 
-# Use animate.css for cool animations
+# Use WOW and animate.css for cool animations
 gem 'rails-assets-animate.css', source: 'https://rails-assets.org'
+gem 'rails-assets-wow', source: 'https://rails-assets.org'
 
 # Use font awesome for icons
 gem 'font-awesome-rails'
@@ -58,6 +59,9 @@ gem 'octokit', '~> 4.0'
 # Use Devise for authentication
 gem 'devise'
 
+# Use SimpleForm to facilitate form creation
+gem 'simple_form'
+
 # Omniauth authentication
 gem 'omniauth'
 gem 'omniauth-github'
@@ -76,10 +80,14 @@ group :development, :test do
   gem 'dotenv-rails', :groups => [:development, :test]
 end
 
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
+
+  ## Generate favicons
+  gem 'rails_real_favicon'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

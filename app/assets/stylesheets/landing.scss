@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "constants/sizes";
+@import "constants/colors";
 
 .home-view {
-  $margin-size: 3rem;
+  $margin-size: 4rem;
 
   text-align: center;
   font-family: arial, helvetica, sans-serif;
@@ -17,40 +18,18 @@
     color: white;
     position: relative;
 
-    .background {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-image: url("https://images.unsplash.com/photo-1454165205744-3b78555e5572?dpr=2&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=");
-      background-size: cover;
-      background-position: center;
-      z-index: -1;
-
-      &:after {
-        content: ' ';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: black;
-        opacity: .65;
-      }
-    }
-
     h1 {
       margin-bottom: 2rem;
     }
 
     h2 {
       margin-bottom: 3rem;
-      color: #f0ad4e;
+      color: $color-one;
     }
 
     h1, h2 {
       text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
+      font-variant: small-caps;
     }
 
     .sign-in {
@@ -59,32 +38,77 @@
   }
 
   section {
+    position: relative;
     margin: $margin-size 0;
 
     h3 {
       margin-top: 0;
-      font-size: 1.75rem;
+      margin-bottom: 2rem;
+      font-size: 2rem;
       font-weight: 300;
+      color: $color-title;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, .1);
+      display: inline-block;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-variant: small-caps;
+    }
+
+    p {
+      font-size: 125%;
+      color: $color-text;
     }
 
     &:nth-child(2n+3) {
       background: rgba(0, 0, 0, .05);
       padding: $margin-size 0;
     }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
-  .steps {
-    .step {
-      i {
+  .blocks {
+    margin-top: 2rem;
+
+    .block {
+      .icon {
         font-size: 300%;
-        margin-bottom: 1rem;
+        height: 56px;
+        vertical-align: top;
+        margin-bottom: 1.5rem;
       }
     }
   }
-}
 
-#footer {
-  text-align: center;
-  margin: 1rem;
-  padding-top: 1rem;
+  #open-source {
+    padding: 5rem 0;
+
+    h3 {
+      color: $color-white-highlight;
+    }
+
+    p {
+      color: $color-white;
+    }
+
+    .social {
+      margin-top: 2rem;
+    }
+
+    .btn {
+      margin: .25rem;
+    }
+  }
+
+  #sign-in {
+    background: $color-black;
+
+    .btn {
+      border: 1px solid $color-white;
+      font-size: 150%;
+    }
+  }
 }

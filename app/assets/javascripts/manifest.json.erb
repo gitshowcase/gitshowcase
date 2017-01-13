@@ -1,19 +1,20 @@
-<% icon_sizes = Rails.configuration.serviceworker.icon_sizes %>
 {
-  "name": "My Progressive Rails App",
-  "short_name": "Progressive",
+  "name": "Git Showcase",
+  "short_name": "GitShowcase",
   "start_url": "/",
   "icons": [
-  <% icon_sizes.map { |s| "#{s}x#{s}" }.each.with_index do |dim, i| %>
     {
-      "src": "<%= image_path "serviceworker-rails/heart-#{dim}.png" %>",
-      "sizes": "<%= dim %>",
-      "type": "image/png"
-    }<%= i == (icon_sizes.length - 1) ? '' : ',' %>
-  <% end %>
+      "src": "<%= asset_path 'favicon/android-chrome-192x192.png' %>",
+      "sizes": "192x192",
+      "type": "image\/png"
+    },
+    {
+      "src": "<%= asset_path 'favicon/android-chrome-512x512.png' %>",
+      "sizes": "512x512",
+      "type": "image\/png"
+    }
   ],
-  "theme_color": "#000000",
-  "background_color": "#FFFFFF",
-  "display": "fullscreen",
+  "theme_color": "#c0d3db",
+  "display": "standalone",
   "orientation": "portrait"
 }

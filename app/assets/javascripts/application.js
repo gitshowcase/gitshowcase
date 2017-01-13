@@ -10,6 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require wow
 //= require jquery
 //= require jquery_ujs
 //= require tether
@@ -17,3 +18,5 @@
 //= require turbolinks
 //= require serviceworker-companion
 //= require_tree .
+
+new WOW().init();

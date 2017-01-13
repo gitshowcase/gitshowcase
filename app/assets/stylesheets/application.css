@@ -16,3 +16,17 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-black {
+    background: #222;
+    color: white;
+}
+
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+    background: #000;
+    color: white;
+}
