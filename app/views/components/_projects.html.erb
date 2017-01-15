@@ -1,0 +1,7 @@
+<div class="projects row">
+  <% projects.each do |project| %>
+      <div class="col-md-6 col-lg-4">
+        <%= render 'components/project', project: project %>
+      </div>
+  <% end %>
+</div>

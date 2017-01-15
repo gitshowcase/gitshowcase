@@ -25,15 +25,17 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-# Add Tether because bootstrap needs it
-gem 'rails-assets-tether', source: 'https://rails-assets.org'
+source 'https://rails-assets.org' do
+  # Add Tether because bootstrap needs it
+  gem 'rails-assets-tether'
 
-# Use Bootstrap to make it pretty
-gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.5', source: 'https://rails-assets.org'
+  # Use Bootstrap to make it pretty
+  gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.5'
 
-# Use WOW and animate.css for cool animations
-gem 'rails-assets-animate.css', source: 'https://rails-assets.org'
-gem 'rails-assets-wow', source: 'https://rails-assets.org'
+  # Use WOW and animate.css for cool animations
+  gem 'rails-assets-animate.css'
+  gem 'rails-assets-wow'
+end
 
 # Use font awesome for icons
 gem 'font-awesome-rails'
@@ -73,6 +75,15 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
+  # Add pry-byebug to enable pry features like navigation for byebug
+  gem 'pry-byebug'
+
+  # Call ap for a readable result
+  gem 'awesome_print', require: 'ap'
+
+  # Use meta request for Rails Panel
+  gem 'meta_request'
+
   # Use FactoryGirl to use factories
   gem 'factory_girl_rails'
 
@@ -96,3 +107,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Windows dones't detect file changes by default
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?

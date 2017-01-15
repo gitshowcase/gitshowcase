@@ -1,0 +1,9 @@
+<div class="skill wow animated fadeIn" <%= "data-value-#{ability}" %>>
+  <div class="skill-name">
+    <%= name %>
+  </div>
+
+  <% (1..5).each do |number| %>
+      <i class="fa fa-star<%= ability < number ? '-o' : '' %>"></i>
+  <% end %>
+</div>

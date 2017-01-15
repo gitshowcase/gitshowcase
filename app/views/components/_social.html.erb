@@ -1,0 +1,10 @@
+<%
+  icon = social.gsub('_', '-')
+  icon = 'rss' if social == 'blog'
+  icon = 'github' if social == 'github'
+%>
+
+<a class="social social-<%= social %> wow animated fadeIn"
+   href="<%= url %>" target="_blank" title="<%= social.titleize %>">
+  <i class="fa fa-<%= icon %>"></i>
+</a>

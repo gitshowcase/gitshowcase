@@ -1,59 +1,88 @@
 <div class="profile-show">
-  <section class="header">
+  <section id="header">
     <%= render 'components/background',
-               image: image_path('https://images.unsplash.com/photo-1472457974886-0ebcd59440cc?dpr=2&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop=') %>
+               blur: '5px',
+               # image: 'https://images.unsplash.com/photo-1472457974886-0ebcd59440cc?dpr=2&auto=format&fit=crop&w=767&h=512&q=80&cs=tinysrgb&crop='
+               image: 'https://images.unsplash.com/photo-1416339442236-8ceb164046f8?dpr=2&auto=compress,format&fit=crop&w=767&h=555&q=80&cs=tinysrgb&crop='
+    %>
 
     <div class="container">
-      <h1 class="user-name"><%= @user.name %></h1>
-      <div class="user-role"><i class="fa fa-user-circle"></i> <%= @user.role %></div>
-      <p class="user-bio"><%= @user.bio %></p>
+      <img src="<%= @user.avatar %>"
+           alt="<%= @user.name %> profile photo"
+           class="user-image image-responsive rounded-circle wow animated fadeInDown">
+
+      <h1 class="user-role wow animated fadeIn">
+        <%= @user.role %>
+      </h1>
+
+      <p class="user-bio wow animated fadeIn">
+        <%= @user.bio %>
+      </p>
+
+      <%= render 'components/socials', socials: @user.socials() %>
     </div>
   </section>
 
-  <div class="container">
-    <section class="info clearfix">
-      <header>
-        <img src="<%= @user.image %>" alt="<%= @user.name %> profile photo" class="user-image image-responsive rounded-circle">
-        <div class="user-name"><%= @user.name %></div>
-        <div class="user-company"><i class="fa fa-briefcase"></i> <%= @user.company %></div>
-        <div class="user-location"><i class="fa fa-map-marker"></i> <%= @user.location %></div>
-        <div class="user-website">
-          <i class="fa fa-globe"></i>
-          <a href="<%= @user.website %>"><%= @user.website %></a>
-        </div>
-      </header>
+  <section id="info" class="clearfix">
+    <div class="container">
+      <h2 class="user-name wow animated fadeInDown">
+        <%= @user.name %>
+      </h2>
 
-      <div class="socials">
-        <% @user.socials().each do |social, url| %>
-            <a href="<%= url %>" target="_blank">
-              <i class="fa fa-<%= social.gsub('_', '-') %>"></i>
-            </a>
+      <div class="row">
+        <% if @user.company %>
+            <div class="user-company col-md-4 wow animated fadeIn">
+              <header>
+                <i class="fa fa-briefcase"></i>
+                <h3>Working At</h3>
+              </header>
+
+              <a href="<%= @user.company_website || '#' %>" target="_blank">
+                <%= @user.company %>
+              </a>
+            </div>
+        <% end %>
+
+        <% if @user.location %>
+            <div class="user-location col-md-4 wow animated fadeIn">
+              <header>
+                <i class="fa fa-map-marker"></i>
+                <h3>Location</h3>
+              </header>
+
+              <%= @user.location %>
+            </div>
+        <% end %>
+
+        <% if @user.website %>
+            <div class="user-website col-md-4 wow animated fadeIn">
+              <header>
+                <i class="fa fa-globe"></i>
+                <h3>Website</h3>
+              </header>
+
+              <a href="<%= @user.website %>"><%= @user.website %></a>
+            </div>
         <% end %>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="projects">
-      <header>
-        <h2>
-          <i class="fa fa-rocket"></i>
-          Projects
-        </h2>
-      </header>
+  <section id="skills">
+    <h2 class="wow animated fadeIn">
+      <%= render 'components/icon-header', title: 'Skills', icon: 'flask' %>
+    </h2>
 
-      <% @user.projects.each do |project| %>
-          <div class="project">
-            <%= project.name %>
-          </div>
-      <% end %>
-    </section>
+    <div class="skills-background">
+      <div class="container">
+        <%= render 'components/skills', skills: @user.skills %>
+      </div>
+    </div>
+  </section>
 
-    <section class="skills">
-      <header>
-        <h2>
-          <i class="fa fa-flask"></i>
-          Skills
-        </h2>
-      </header>
-    </section>
-  </div>
+  <section id="projects">
+    <div class="container">
+      <%= render 'components/projects', projects: @user.projects %>
+    </div>
+  </section>
 </div>

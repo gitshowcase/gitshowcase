@@ -1,0 +1,62 @@
+@import "constants/colors";
+
+.social {
+  display: inline-block;
+  color: $color-white;
+  font-size: 2rem;
+  transition: all .1s linear;
+  border-radius: .1rem;
+  padding: 1rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-github {
+    &:hover, &:focus, &:active {
+      color: #aaa;
+    }
+  }
+
+  &-angellist {
+    &:hover, &:focus, &:active {
+      color: #999;
+    }
+  }
+
+  &-twitter {
+    &:hover, &:focus, &:active {
+      color: #1da1f2;
+    }
+  }
+
+  &-linkedin {
+    &:hover, &:focus, &:active {
+      color: #0077b5;
+    }
+  }
+
+  &-facebook {
+    &:hover, &:focus, &:active {
+      color: #3b5998;
+    }
+  }
+
+  &-stack_overflow {
+    &:hover, &:focus, &:active {
+      color: #f48024;
+    }
+  }
+
+  &-medium {
+    &:hover, &:focus, &:active {
+      color: #00ab6c;
+    }
+  }
+
+  &-blog {
+    &:hover, &:focus, &:active {
+      color: #f57d00;
+    }
+  }
+}

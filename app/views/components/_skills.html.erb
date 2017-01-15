@@ -1,0 +1,5 @@
+<div class="skills">
+  <% @user.skills.each do |name, ability| %>
+      <%= render 'components/skill', name: name, ability: ability %>
+  <% end %>
+</div>

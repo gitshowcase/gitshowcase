@@ -10,31 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111215541) do
+ActiveRecord::Schema.define(version: 20170111023844) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
-    t.string   "url"
+    t.string   "homepage"
     t.string   "repository"
-    t.string   "image"
+    t.string   "url"
     t.string   "description"
+    t.string   "cover"
     t.string   "language"
+    t.boolean  "show"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
-  end
-
-  create_table "skills", force: :cascade do |t|
-    t.string   "name"
-    t.string   "proeficiency"
-    t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["user_id"], name: "index_skills_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,19 +43,22 @@ ActiveRecord::Schema.define(version: 20170111215541) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "provider"
-    t.string   "uid"
+    t.string   "github_uid"
+    t.string   "github_token"
     t.string   "name"
     t.string   "username"
-    t.string   "image"
+    t.string   "avatar"
+    t.string   "cover"
     t.string   "bio"
     t.string   "role"
     t.string   "location"
     t.string   "company"
+    t.string   "company_website"
     t.string   "website"
-    t.boolean  "is_available_for_hire"
+    t.boolean  "hireable"
+    t.json     "skills"
     t.string   "linkedin"
-    t.string   "angel_list"
+    t.string   "angellist"
     t.string   "facebook"
     t.string   "twitter"
     t.string   "stack_overflow"
@@ -73,5 +69,4 @@ ActiveRecord::Schema.define(version: 20170111215541) do
   end
 
   add_foreign_key "projects", "users"
-  add_foreign_key "skills", "users"
 end

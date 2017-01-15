@@ -4,57 +4,91 @@
 @import "constants/colors";
 
 .profile-show {
-  .header {
-    padding: 3rem 0;
+  #header {
+    padding: 4rem 0;
     position: relative;
-    margin-bottom: 2rem;
     color: $color-white;
+    text-align: center;
 
-    .user-name {
-      font-size: 2rem;
-      margin-bottom: 0;
+    .user-image {
+      width: 6rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 .1rem .5rem rgba(0, 0, 0, .1);
+    }
+
+    .user-role {
+      font-weight: bold;
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
       color: $color-one;
     }
 
     .user-bio {
-      max-width: 30rem;
+      margin: 0 auto 3rem auto;
+      max-width: 40rem;
       font-size: 117%;
     }
-
-    .user-role {
-      color: $color-two;
-      font-weight: bold;
-      font-size: 1.5rem;
-      margin-bottom: 1rem;
-    }
   }
 
-  .info {
-    .user-image {
-      width: 10rem;
-      float: left;
-      margin-right: 1rem;
-    }
+  #info {
+    text-align: center;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+    font-size: 1.17rem;
 
     .user-name {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      color: $color-text;
+    }
+
+    .user-company, .user-location, .user-website {
+      margin-top: 2rem;
+      color: $color-text;
+
+      i {
+        font-size: 2.5rem;
+        color: $color-text-opaque;
+        display: block;
+        height: 3.5rem;
+        vertical-align: middle;
+      }
+
+      h3 {
+        font-size: 1.17rem;
+        color: $color-text-opaque;
+        margin-bottom: 1rem;
+      }
     }
   }
 
-  .projects {
-    margin-top: 2rem;
+  #skills {
     color: $color-title;
+    position: relative;
+
+    h2 {
+      margin: 0;
+    }
+
+    .icon-header {
+      border-color: transparent;
+      margin-bottom: 0;
+
+      i {
+        border: 4px solid #f6f6f6;
+      }
+    }
+
+    .skills-background {
+      background: #f6f6f6;
+      padding-top: 5rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  #projects {
+    margin-top: 4rem;
 
     .project {
-
-    }
-  }
-
-  .skills {
-    margin-top: 2rem;
-    color: $color-title;
-
-    .skill {
 
     }
   }

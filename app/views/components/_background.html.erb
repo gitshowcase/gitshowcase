@@ -1,7 +1,9 @@
 <%
-  opacity ||= 0.65
+  mask ||= 0.65
+  blur ||= false
 %>
 
-<div class="background" style="background-image: url('<%= image %>');">
-  <div class="mask" style="opacity: <%= opacity %>"></div>
+<div class="background <%= blur ? 'blurred' : '' %>">
+  <div class="image" style="background-image: url('<%= image %>'); <%= blur ? "filter: blur(#{blur});" : '' %>"></div>
+  <div class="mask" style="opacity: <%= mask %>"></div>
 </div>

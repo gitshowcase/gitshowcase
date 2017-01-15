@@ -1,0 +1,23 @@
+<%
+  cover = project.cover || image_path('preview.png')
+%>
+
+<div class="project card">
+  <div class="card-block">
+    <header class="card-title">
+      <%= project.title %>
+    </header>
+
+    <p class="card-text"><%= project.description %></p>
+  </div>
+
+  <a class="card-img-top" href="<%= project.homepage %>" target="_blank">
+    <%= render 'components/background', image: cover, mask: 0.35 %>
+  </a>
+
+  <footer>
+    <a href="<%= project.url %>" class="card-link" target="_blank">
+      <i class="fa fa-github"></i> Repository
+    </a>
+  </footer>
+</div>

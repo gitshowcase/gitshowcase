@@ -4,9 +4,18 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center;
   z-index: -1;
+  overflow: hidden;
+
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
 
   .mask {
     content: ' ';
@@ -16,5 +25,15 @@
     width: 100%;
     height: 100%;
     background: black;
+  }
+
+  &.blurred {
+    .image {
+      $blur-compensation: 1rem;
+      left: -$blur-compensation;
+      top: -$blur-compensation;
+      width: calc(100% + #{$blur-compensation});
+      height: calc(100% + #{$blur-compensation});
+    }
   }
 }

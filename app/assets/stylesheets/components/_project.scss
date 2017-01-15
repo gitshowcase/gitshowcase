@@ -1,0 +1,41 @@
+@import "constants/colors";
+
+.project {
+  border: 1px solid rgba(0, 0, 0, .1);
+  display: block;
+  position: relative;
+  padding-bottom: 3.25rem;
+
+  .card-block {
+    height: 8rem;
+  }
+
+  .card-img-top {
+    height: 13rem;
+    position: relative;
+    display: block;
+
+    .background {
+      position: static;
+    }
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+    color: $color-title;
+  }
+
+  .card-text {
+    color: $color-text;
+  }
+
+  > footer {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+
+    a {
+      color: $color-two;
+    }
+  }
+}
