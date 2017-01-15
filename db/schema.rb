@@ -21,9 +21,10 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "repository"
     t.string   "url"
     t.string   "description"
+    t.string   "icon"
     t.string   "cover"
     t.string   "language"
-    t.boolean  "show"
+    t.boolean  "hide"
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

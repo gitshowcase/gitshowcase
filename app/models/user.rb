@@ -33,11 +33,8 @@ class User < ApplicationRecord
   end
 
   def sync
-    fetch_repositories(true)
-
     sync_profile
-    sync_skills
-    sync_projects
+    sync_skills_projects
 
     self
   end
@@ -46,12 +43,6 @@ class User < ApplicationRecord
 
   def client
     @client ||= Octokit::Client.new(:access_token => self.github_token)
-  end
-
-  def fetch_repositories(force = false)
-    @fetched_repositories = client.repositories if force or @fetched_repositories
-
-    @fetched_repositories
   end
 
   def sync_profile
@@ -72,19 +63,13 @@ class User < ApplicationRecord
     self.save
   end
 
-  def sync_skills
-    self.skills = {} unless self.skills
-
-    fetch_repositories.map do |repository|
-      language = repository.language
-      self.skills[language] = 3 unless self.skills[language]
-    end
-  end
-
-  def sync_projects
-    fetch_repositories.map do |repository|
+  def sync_skills_projects
+    client.repositories.map do |repository|
       project = projects.where(url: repository.html_url).first_or_create
-      project.sync_repository(repository)
+      project.sync(repository)
+
+      self.skills = {} unless self.skills
+      self.skills[project.language] = 3 unless self.skills[project.language]
     end
   end
 end

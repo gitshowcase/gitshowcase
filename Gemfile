@@ -68,8 +68,11 @@ gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-github'
 
-# User ServiceWorker for PWA
+# Use ServiceWorker for PWA
 gem 'serviceworker-rails'
+
+# Use metainspector to fetch project meta information
+gem 'metainspector'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
