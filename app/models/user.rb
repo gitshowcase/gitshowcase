@@ -21,15 +21,20 @@ class User < ApplicationRecord
   end
 
   def self.from_omniauth(auth)
-    user = where(github_uid: auth.uid).first_or_create do |user|
+    user = where(github_uid: auth.uid).first
+
+    unless user
+      user = User.new
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
       user.github_uid = auth.uid
       user.github_token = auth.credentials.token
       user.role = 'Jedi Developer'
+
+      user.sync
     end
 
-    user.sync
+    user
   end
 
   def sync

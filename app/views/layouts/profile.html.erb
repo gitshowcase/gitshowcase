@@ -3,7 +3,10 @@
 
 <head>
   <%= render 'layouts/partials/head',
-             title: @user.name
+             title: @user.name,
+             description: @user.bio,
+             image: @user.cover || @user.avatar,
+             prepend_keywords: "#{@user.username}, #{@user.role}, "
   %>
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>

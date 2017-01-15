@@ -1,9 +1,11 @@
 <%
   title ||= 'Git Showcase'
   description ||= 'Awesome Portfolio from your GitHub'
-  keywords ||= 'portfolio, github'
   author = 'Pedro Moreira'
   image ||= image_path('preview.png')
+
+  prepend_keywords ||= ''
+  keywords ||= prepend_keywords + 'portfolio, github, developer'
 %>
 
 <title><%= title %></title>

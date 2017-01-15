@@ -74,6 +74,9 @@ gem 'serviceworker-rails'
 # Use metainspector to fetch project meta information
 gem 'metainspector'
 
+# Add HAML markup
+gem 'haml'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -93,7 +96,6 @@ group :development, :test do
   # Use dotenv to configure environment variables
   gem 'dotenv-rails', :groups => [:development, :test]
 end
-
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

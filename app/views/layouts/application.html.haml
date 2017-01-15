@@ -1,0 +1,22 @@
+!!! 5
+
+%html
+
+%head
+  = render 'layouts/partials/head'
+
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+  = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+%body
+
+  = render 'layouts/partials/header'
+
+  -#%aside
+  -#  %p.notice = notice
+  -#  %p.alert = alert
+
+  %section
+    = yield
+
+  = render 'layouts/partials/footer'
