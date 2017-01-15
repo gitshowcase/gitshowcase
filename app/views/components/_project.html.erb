@@ -1,22 +1,56 @@
-<%
-  cover = project.cover || image_path('preview.png')
-%>
+<div class="project <%= project.icon ? 'project-with-icon' : '' %> <%= project.cover ? 'project-with-cover' : '' %> wow animated fadeIn">
+  <% if project.cover %>
+      <div class="project-background">
+        <%= render 'components/background',
+                   mask_color: 'white',
+                   mask: 0.2,
+                   image: project.cover,
+                   position: 'center top',
+                   blur: '25px'
+        %>
 
-<div class="project card">
-  <div class="card-block">
-    <header class="card-title">
-      <%= project.title %>
-    </header>
+        <%= render 'components/background',
+                   mask_color: 'white',
+                   mask: 0.2,
+                   image: project.cover,
+                   size: 'contain',
+                   position: 'center top'
+        %>
+      </div>
 
-    <p class="card-text"><%= project.description %></p>
-  </div>
+      <div class="project-blur">
+        <%= render 'components/background',
+                   mask_color: 'white',
+                   mask: 0.75,
+                   image: project.cover,
+                   blur: '15px'
+        %>
+      </div>
+  <% end %>
 
-  <a class="card-img-top" href="<%= project.homepage %>" target="_blank">
-    <%= render 'components/background', image: cover, mask: 0.35 %>
+  <a class="project-link" href="<%= project.homepage || 'javascript:void()' %>">
+    <div class="container-fluid">
+      <% if project.icon %>
+          <img class="project-icon" src="<%= project.icon %>" alt="<%= project.title %> icon">
+      <% end %>
+
+      <h3 class="project-title">
+        <%= project.title %>
+      </h3>
+
+      <p class="project-description">
+        <%= project.description %>
+      </p>
+    </div>
   </a>
 
-  <footer>
-    <a href="<%= project.url %>" class="card-link" target="_blank">
+  <footer class="container-fluid">
+    <div class="project-language">
+      <i class="fa fa-code-fork"></i>
+      <%= project.language %>
+    </div>
+
+    <a href="<%= project.url %>" class="project-repository" target="_blank">
       <i class="fa fa-github"></i> Repository
     </a>
   </footer>

@@ -13,5 +13,5 @@ Rails.application.routes.draw do
   end
 
   root to: 'landing#home'
-  get '/:username', to: 'landing#home'
+  get '/:username', to: 'profile#show'
 end

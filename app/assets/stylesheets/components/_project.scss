@@ -4,38 +4,71 @@
   border: 1px solid rgba(0, 0, 0, .1);
   display: block;
   position: relative;
-  padding-bottom: 3.25rem;
+  padding-bottom: 1rem;
+  border-radius: .2rem;
+  overflow: hidden;
 
-  .card-block {
-    height: 8rem;
+  a {
+    text-decoration: none;
   }
 
-  .card-img-top {
-    height: 13rem;
-    position: relative;
-    display: block;
+  &.project-with-cover {
+    $cover-size: 10rem;
 
-    .background {
-      position: static;
+    .project-link {
+      padding-top: 10rem;
+    }
+
+    .project-blur {
+      .background {
+        clip-path: inset(($cover-size - 1rem) 0 0 0);
+      }
     }
   }
 
-  .card-title {
-    font-size: 1.35rem;
-    color: $color-title;
+  &:not(.project-with-cover) {
+    padding-top: 1rem;
   }
 
-  .card-text {
+  .project-link {
+    display: block;
+  }
+
+  .project-icon {
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+    color: $color-title;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .project-description {
     color: $color-text;
+    height: 3rem;
+    margin-bottom: .5rem;
   }
 
   > footer {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    text-align: right;
 
-    a {
-      color: $color-two;
+    .project-language {
+      float: left;
+      color: $color-four;
+      font-size: .9rem;
+      margin-top: .1rem;
+    }
+
+    .project-repository {
+
     }
   }
 }

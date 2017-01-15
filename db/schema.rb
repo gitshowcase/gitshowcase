@@ -25,9 +25,10 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "cover"
     t.string   "language"
     t.boolean  "hide"
+    t.boolean  "has_manifest"
     t.integer  "user_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
 
@@ -56,7 +57,9 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "company"
     t.string   "company_website"
     t.string   "website"
+    t.string   "resume"
     t.boolean  "hireable"
+    t.boolean  "show_email"
     t.json     "skills"
     t.string   "linkedin"
     t.string   "angellist"

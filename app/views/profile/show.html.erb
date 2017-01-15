@@ -31,7 +31,7 @@
 
       <div class="row">
         <% if @user.company %>
-            <div class="user-company col-md-4 wow animated fadeIn">
+            <section class="col-md-4 col-sm-6 wow animated fadeIn">
               <header>
                 <i class="fa fa-briefcase"></i>
                 <h3>Working At</h3>
@@ -40,37 +40,59 @@
               <a href="<%= @user.company_website || '#' %>" target="_blank">
                 <%= @user.company %>
               </a>
-            </div>
-        <% end %>
-
-        <% if @user.location %>
-            <div class="user-location col-md-4 wow animated fadeIn">
-              <header>
-                <i class="fa fa-map-marker"></i>
-                <h3>Location</h3>
-              </header>
-
-              <%= @user.location %>
-            </div>
+            </section>
         <% end %>
 
         <% if @user.website %>
-            <div class="user-website col-md-4 wow animated fadeIn">
+            <section class="col-md-4 col-sm-6 wow animated fadeIn">
               <header>
                 <i class="fa fa-globe"></i>
                 <h3>Website</h3>
               </header>
 
               <a href="<%= @user.website %>"><%= @user.website %></a>
-            </div>
+            </section>
+        <% end %>
+
+        <% if @user.show_email %>
+            <section class="col-md-4 col-sm-6 wow animated fadeIn">
+              <header>
+                <i class="fa fa-at"></i>
+                <h3>Contact</h3>
+              </header>
+
+              <a href="mailto:<%= @user.email %>"><%= @user.email %></a>
+            </section>
+        <% end %>
+
+        <% if @user.resume %>
+            <section class="col-md-4 col-sm-6 wow animated fadeIn">
+              <header>
+                <i class="fa fa-file-text-o"></i>
+                <h3>Resume</h3>
+              </header>
+
+              <%= @user.resume %>
+            </section>
+        <% end %>
+
+        <% if @user.location %>
+            <section class="col-md-4 col-sm-6 wow animated fadeIn">
+              <header>
+                <i class="fa fa-map-marker"></i>
+                <h3>Location</h3>
+              </header>
+
+              <%= @user.location %>
+            </section>
         <% end %>
       </div>
     </div>
   </section>
 
   <section id="skills">
-    <h2 class="wow animated fadeIn">
-      <%= render 'components/icon-header', title: 'Skills', icon: 'flask' %>
+    <h2 class="wow animated fadeIn" title="Skills">
+      <%= render 'components/icon-header', icon: 'flask' %>
     </h2>
 
     <div class="skills-background">
@@ -81,6 +103,10 @@
   </section>
 
   <section id="projects">
+    <h2 class="wow animated fadeIn" title="Projects">
+      <%= render 'components/icon-header', icon: 'rocket' %>
+    </h2>
+
     <div class="container">
       <%= render 'components/projects', projects: @user.projects %>
     </div>

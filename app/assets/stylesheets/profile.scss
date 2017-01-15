@@ -41,8 +41,8 @@
       color: $color-text;
     }
 
-    .user-company, .user-location, .user-website {
-      margin-top: 2rem;
+    section {
+      margin-top: 3rem;
       color: $color-text;
 
       i {
@@ -88,8 +88,14 @@
   #projects {
     margin-top: 4rem;
 
-    .project {
+    .icon-header {
+      margin-bottom: 5rem;
+    }
 
+    @media screen and (min-width: 1198px) {
+      .projects .row {
+        margin: 0 6rem;
+      }
     }
   }
 }

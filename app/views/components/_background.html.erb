@@ -1,9 +1,23 @@
 <%
   mask ||= 0.65
+  mask_color ||= 'black'
   blur ||= false
+
+  size ||= 'cover'
+  repeat ||= 'no-repeat'
+  position ||= 'center top'
+
+  properties = [
+      "background-image: url('#{image}')",
+      "background-size: #{size}",
+      "background-repeat: #{repeat}",
+      "background-position: #{position}"
+  ]
+
+  properties << "filter: blur(#{blur});" if blur
 %>
 
 <div class="background <%= blur ? 'blurred' : '' %>">
-  <div class="image" style="background-image: url('<%= image %>'); <%= blur ? "filter: blur(#{blur});" : '' %>"></div>
-  <div class="mask" style="opacity: <%= mask %>"></div>
+  <div class="image" style="<%= properties.join(';') %>"></div>
+  <div class="mask" style="background: <%= mask_color %>; opacity: <%= mask %>"></div>
 </div>
