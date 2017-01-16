@@ -74,8 +74,10 @@ class User < ApplicationRecord
 
         result.push project
 
-        self.skills = {} unless self.skills
-        self.skills[project.language] = 3 unless self.skills[project.language]
+        if project.language.present?
+          self.skills = {} unless self.skills
+          self.skills[project.language] = 3 unless self.skills[project.language]
+        end
       end
     end
 
