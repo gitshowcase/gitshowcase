@@ -4,7 +4,7 @@ class ProjectsController < DashboardController
   # GET /projects
   # GET /projects.json
   def index
-    @projects = Project.all
+    @projects = current_user.projects
   end
 
   # GET /projects/new
