@@ -2,7 +2,7 @@ class Project < ApplicationRecord
   belongs_to :user
 
   def sync(data = nil)
-    if self.repository
+    if self.repository.present?
       data ||= client.repository(self.repository)
       sync_repository(data)
     end
@@ -22,7 +22,7 @@ class Project < ApplicationRecord
   end
 
   def sync_homepage()
-    return false unless self.homepage
+    return false unless self.homepage.present?
 
     begin
       page = MetaInspector.new(self.homepage)
