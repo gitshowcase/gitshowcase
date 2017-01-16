@@ -1,5 +1,5 @@
 class UsersController < DashboardController
-  before_action :set_user, only: [:index, :update]
+  before_action :set_user
 
   def index
   end
@@ -11,6 +11,30 @@ class UsersController < DashboardController
       if @user.update(user_params)
         format.html { redirect_to '/', notice: 'Your profile was successfully updated.' }
         format.json { render :index, status: :ok }
+      else
+        format.html { render :index }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def sync
+    respond_to do |format|
+      if @user.sync
+        format.html { redirect_to users_url, notice: 'Your profile was successfully synced.' }
+        format.json { render :index, status: :ok }
+      else
+        format.html { render :index }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def sync_projects
+    respond_to do |format|
+      if @user.sync
+        format.html { redirect_to projects_url, notice: 'Your projects were successfully synced.' }
+        format.json { render projects_url, status: :ok }
       else
         format.html { render :index }
         format.json { render json: @user.errors, status: :unprocessable_entity }

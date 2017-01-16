@@ -1,5 +1,10 @@
 .users-index
 .users-index
+  .pull-right
+    %a.btn.btn-primary{href: sync_users_path}
+      %i.fa.fa-refresh
+      Sync Profile
+
   %h1 Editing profile
 
   = render 'form'

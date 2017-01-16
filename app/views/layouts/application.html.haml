@@ -9,11 +9,6 @@
   %body
     = render 'layouts/partials/header'
 
-    - if notice or alert
-      %aside
-        %p.notice= notice
-        %p.alert= alert
-
     %section
       = yield
 

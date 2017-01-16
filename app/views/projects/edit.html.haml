@@ -1,3 +1,9 @@
-%h1 Editing project
+.edit-view
+  .pull-right
+    %a.btn.btn-primary{href: sync_projects_url(@project.id)}
+      %i.fa.fa-refresh
+      Sync Project
 
-= render 'form'
+  %h1 Editing project
+
+  = render 'form'

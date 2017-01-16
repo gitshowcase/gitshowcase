@@ -4,11 +4,6 @@
       .row
         .col-md-3
           %nav.nav.nav-pills
-            %a.nav-item.nav-link{href: new_project_url}
-              %i.fa.fa-plus
-              New Project
-
-          %nav.nav.nav-pills
             %a.nav-item.nav-link{href: users_url}
               %i.fa.fa-user
               Profile
@@ -20,6 +15,14 @@
             %a.nav-item.nav-link{href: projects_url}
               %i.fa.fa-cubes
               Projects
+
+          %nav.nav.nav-pills
+            %a.nav-item.nav-link{href: new_project_url}
+              %i.fa.fa-plus
+              New Project
+            %a.nav-item.nav-link{href: sync_projects_users_url}
+              %i.fa.fa-refresh
+              Sync Projects
 
         .col-md-9
           = yield

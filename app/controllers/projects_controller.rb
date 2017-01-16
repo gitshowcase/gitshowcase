@@ -1,5 +1,5 @@
 class ProjectsController < DashboardController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :sync, :destroy]
 
   # GET /projects
   # GET /projects.json
@@ -42,6 +42,18 @@ class ProjectsController < DashboardController
         format.json { render :index, status: :ok }
       else
         format.html { render :edit }
+        format.json { render json: @project.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def sync
+    respond_to do |format|
+      if @project.sync
+        format.html { redirect_to edit_project_url(@project), notice: 'Project was was successfully synced.' }
+        format.json { render :index, status: :ok }
+      else
+        format.html { render :index }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end

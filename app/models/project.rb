@@ -1,7 +1,9 @@
 class Project < ApplicationRecord
   belongs_to :user
 
-  def sync(data)
+  def sync(data = nil)
+    data ||= client.repository(self.repository)
+
     sync_repository(data)
     sync_homepage
 
@@ -36,5 +38,11 @@ class Project < ApplicationRecord
     end
 
     false
+  end
+
+  private
+
+  def client
+    @client ||= Octokit::Client.new(:access_token => self.user.github_token)
   end
 end
