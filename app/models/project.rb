@@ -2,9 +2,11 @@ class Project < ApplicationRecord
   belongs_to :user
 
   def sync(data = nil)
-    data ||= client.repository(self.repository)
+    if self.repository
+      data ||= client.repository(self.repository)
+      sync_repository(data)
+    end
 
-    sync_repository(data)
     sync_homepage
 
     self.save
