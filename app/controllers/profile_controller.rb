@@ -10,7 +10,7 @@ class ProfileController < ApplicationController
     if !params[:username] and current_user
       @user = current_user
     else
-      @user = User.find_by_username!(params[:username])
+      @user = User.find_by_username!(params[:username].upcase)
     end
   end
 end

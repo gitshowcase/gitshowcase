@@ -1,5 +1,6 @@
 - edit ||= false
 - href = edit ? edit_project_path(project) : (project.homepage || 'javascript:void()')
+- target = edit ? '_blank' : '_self'
 
 - klass = [project.icon.present? ? 'project-with-icon' : '', project.cover.present? && !edit ? 'project-with-cover' : '']
 - klass << 'wow animated fadeIn' unless edit
@@ -28,7 +29,7 @@
       image: project.cover,
       blur: '15px'
 
-  %a.project-link{href: href}
+  %a.project-link{href: href, target: target}
     .container-fluid
       - if project.icon.present?
         %img.project-icon{src: project.icon, alt: "#{project.title} icon"}

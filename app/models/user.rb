@@ -23,7 +23,10 @@ class User < ApplicationRecord
   def self.from_omniauth(auth)
     user = where(github_uid: auth.uid).first
 
-    unless user
+    if user
+      user.github_token = auth.credentials.token
+      user.save
+    else
       user = User.new
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
@@ -40,15 +43,13 @@ class User < ApplicationRecord
   def sync
     sync_profile
     sync_skills_projects
-
-    self
   end
 
   def sync_profile
     user = client.user
 
     self.avatar = user.avatar_url
-    self.username = user.login
+    self.username = user.login.to_s.downcase
     self.name = user.name
     self.website = user.blog if user.blog.present?
     self.location = user.location if user.location.present?
@@ -59,7 +60,7 @@ class User < ApplicationRecord
     self.company = user.company
     self.company_website = 'https://github.com/' + self.company[1..-1] if self.company.present? and self.company[0] == '@'
 
-    self.save
+    save!
   end
 
   def sync_skills_projects
@@ -80,6 +81,8 @@ class User < ApplicationRecord
         end
       end
     end
+
+    save!
 
     result
   end
