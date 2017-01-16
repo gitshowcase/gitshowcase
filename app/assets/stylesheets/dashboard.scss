@@ -13,15 +13,26 @@
 
   nav {
     margin-top: -.5rem;
-    margin-bottom: 2rem;
 
-    .nav-link {
-      display: block;
-      width: 100%;
+    @media screen and (min-width: 769px) {
+      margin-bottom: 2rem;
+
+      .nav-link, .nav-item {
+        display: block;
+        width: 100%;
+        margin-left: 0 !important;
+      }
     }
 
-    .nav-item {
-      margin-left: 0 !important;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 1.5rem;
+      text-align: center;
+
+      .nav-link, .nav-item {
+        display: inline-block;
+        float: none;
+        background: #eee;
+      }
     }
   }
 }

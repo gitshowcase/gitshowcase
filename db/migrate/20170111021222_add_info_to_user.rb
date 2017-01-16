@@ -22,5 +22,7 @@ class AddInfoToUser < ActiveRecord::Migration[5.0]
     add_column :users, :stack_overflow, :string
     add_column :users, :medium, :string
     add_column :users, :blog, :string
+
+    add_index :users, :username, :unique => true
   end
 end

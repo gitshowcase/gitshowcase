@@ -63,14 +63,23 @@ class User < ApplicationRecord
   end
 
   def sync_skills_projects
+    result = []
+
     client.repositories.each do |repository|
-      project = projects.where(url: repository.html_url).first_or_create
+      project = projects.where(repository: repository.full_name).first
 
-      self.skills = {} unless self.skills
-      self.skills[project.language] = 3 unless self.skills[project.language]
+      unless project
+        project = projects.new(repository: repository.full_name)
+        project.sync(repository)
 
-      project.sync(repository) unless project.id
+        result.push project
+
+        self.skills = {} unless self.skills
+        self.skills[project.language] = 3 unless self.skills[project.language]
+      end
     end
+
+    result
   end
 
   private

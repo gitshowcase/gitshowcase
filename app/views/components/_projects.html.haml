@@ -3,12 +3,12 @@
 .projects
   .row
     - projects.each do |project|
-      - if (edit and !project.hide) or (!edit and !project.hide and project.cover)
+      - if (edit and !project.hide.present?) or (!edit and !project.hide and project.cover.present?)
         .col-lg-6
           = render 'components/project', project: project, edit: edit
 
   .row
     - projects.each do |project|
-      - if (edit and project.hide) or (!edit and !project.hide and !project.cover)
+      - if (edit and project.hide.present?) or (!edit and !project.hide and !project.cover.present?)
         .col-lg-6
           = render 'components/project', project: project, edit: edit

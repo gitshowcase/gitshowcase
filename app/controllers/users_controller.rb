@@ -32,13 +32,9 @@ class UsersController < DashboardController
 
   def sync_projects
     respond_to do |format|
-      if @user.sync
-        format.html { redirect_to projects_url, notice: 'Your projects were successfully synced.' }
-        format.json { render projects_url, status: :ok }
-      else
-        format.html { render :index }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+      results = @user.sync_skills_projects
+      format.html { redirect_to projects_url, notice: "#{results.length} new projects synced." }
+      format.json { render projects_url, status: :ok }
     end
   end
 
