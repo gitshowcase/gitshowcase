@@ -1,6 +1,6 @@
 - edit ||= false
 - href = edit ? edit_project_path(project) : (project.homepage || 'javascript:void()')
-- target = edit ? '_blank' : '_self'
+- target = edit ? '_self' : '_blank'
 
 - klass = [project.icon.present? ? 'project-with-icon' : '', project.cover.present? && !edit ? 'project-with-cover' : '']
 - klass << 'wow animated fadeIn' unless edit
