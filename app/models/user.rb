@@ -53,7 +53,7 @@ class User < ApplicationRecord
     self.name = user.name
     self.website = user.blog if user.blog.present?
     self.location = user.location if user.location.present?
-    self.email = user.email
+    self.email = user.email if user.email.present?
     self.hireable = user.hireable
     self.bio = user.bio if user.bio.present?
 
