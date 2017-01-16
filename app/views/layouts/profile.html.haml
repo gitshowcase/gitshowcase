@@ -1,20 +1,15 @@
 !!! 5
 %html
   %head
-    = render 'layouts/partials/head'
+    = render 'layouts/partials/head',
+    title: @user.name,
+    description: @user.bio,
+    image: @user.cover || @user.avatar,
+    prepend_keywords: "#{@user.username}, #{@user.role}, "
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
   %body
     = render 'layouts/partials/header'
-
-    - if notice or alert
-      %aside
-        %p.notice= notice
-        %p.alert= alert
-
-    %section
-      = yield
-
+    = yield
     = render 'layouts/partials/footer'

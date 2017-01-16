@@ -1,8 +1,6 @@
 # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
 Rails.application.routes.draw do
-  resources :projects, template: 'dashboard'
-
   devise_for :users, :controllers => {
       omniauth_callbacks: 'users/omniauth_callbacks',
       sessions: 'users/sessions'
@@ -10,6 +8,9 @@ Rails.application.routes.draw do
 
   authenticated :user do
     root :to => 'profile#show', as: :authenticated_root
+    resources :projects, only: [:index, :new, :create, :edit, :update, :destroy]
+    resources :languages, only: [:index, :update]
+    resources :users, only: [:index, :update]
   end
 
   root to: 'landing#home'

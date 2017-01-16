@@ -4,7 +4,6 @@
   border: 1px solid rgba(0, 0, 0, .1);
   display: block;
   position: relative;
-  padding-bottom: 1rem;
   border-radius: .2rem;
   overflow: hidden;
 
@@ -59,16 +58,8 @@
 
   > footer {
     text-align: right;
-
-    .project-language {
-      float: left;
-      color: $color-four;
-      font-size: .9rem;
-      margin-top: .1rem;
-    }
-
-    .project-repository {
-
-    }
+    background: rgba(255, 255, 255, .2);
+    border-top: 1px solid rgba(white, .05);
+    padding: .35rem 1rem .65rem;
   }
 }

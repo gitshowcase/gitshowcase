@@ -1,0 +1,81 @@
+%body
+  .home-view
+    %section.presenter.wow.animated.fadeIn
+      = render 'components/background',           |
+        image: image_path('backgrounds/code.jpg') |
+      .container
+        %h1 You already have awesome projects
+        %h2 It's time to have a killer portfolio!
+        = render 'components/sign-in'
+    %section
+      .container
+        %header.wow.animated.fadeInDown
+          %h3 Get a pretty portfolio based on your GitHub
+        .wow.animated.fadeIn
+          %p Git Showcase looks at your public profile to build your portfolio.
+          %p
+            You don't have to type your info all over again and you can use the time you saved helping to save kittens in
+            trees.
+        .blocks.row.wow.animated.fadeInUp
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-github
+              .text Sign in with GitHub
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-thumbs-up
+              .text Authorize us to look at your public profile
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-rocket
+              .text Add extra projects and customize
+    %section#open-source.wow.animated.fadeIn
+      = render 'components/background',                 |
+        image: image_path('backgrounds/programmer.jpg') |
+      .container
+        %header
+          %h3
+            %i.fa.fa-code-fork
+            Open Sourced
+        %p
+          Git Showcase is an
+          %strong Open Source
+          project designed to help developers show of their talents.
+        %p If you like the project, you can help by sharing it on social media and giving us a Star on Github.
+        .social
+          %a.btn.btn-black{:href => "https://github.com/pedsmoreira/gitshowcase", :target => "_blank"}
+            %i.fa.fa-github-alt
+            GitHub
+          %a.btn.btn-info{:href => "https://twitter.com/home?status=Checkout%20this%20portfolio%20creator%20by%20%40pedsmoreira,%20just%20connect%20your%20GitHub%20and%20you're%20good%20to%20go!%0Awww.gitshowcase.com", :target => "_blank"}
+            %i.fa.fa-twitter
+            Share
+          %a.btn.btn-primary{:href => "https://www.facebook.com/sharer/sharer.php?u=www.gitshowcase.com", :target => "_blank"}
+            %i.fa.fa-facebook
+            Share
+    %section
+      .container
+        %header.wow.animated.fadeInDown
+          %h3 Coming up next
+        .wow.animated.fadeIn
+          %p Git Showcase is just starting and we want to make it even better.
+        .blocks.row.wow.animated.fadeInUp
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-cogs
+              .text Multiple Templates
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-code
+              .text Template Customization
+          .col-md-4
+            .block
+              .icon
+                %i.fa.fa-comments-o
+              .text Tell us what feature you want :D
+    %section#sign-in
+      = render 'components/sign-in'

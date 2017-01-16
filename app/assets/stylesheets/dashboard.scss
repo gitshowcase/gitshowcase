@@ -1,0 +1,26 @@
+@import "constants/colors";
+
+.dashboard-layout {
+  margin-top: 2rem;
+
+  h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    color: $color-text-opaque;
+    border-left: .5rem solid rgba(0, 0, 0, .1);
+    padding-left: 1rem;
+  }
+
+  nav {
+    margin-bottom: 1rem;
+
+    .nav-link {
+      display: block;
+      width: 100%;
+    }
+
+    .nav-item {
+      margin-left: 0 !important;
+    }
+  }
+}

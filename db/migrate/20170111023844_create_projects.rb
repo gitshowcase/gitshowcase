@@ -9,8 +9,8 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :icon
       t.string :cover
       t.string :language
+      t.string :manifest
       t.boolean :hide
-      t.boolean :has_manifest
       t.references :user, foreign_key: true
 
       t.timestamps

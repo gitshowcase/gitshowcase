@@ -1,0 +1,14 @@
+- edit ||= false
+
+.projects
+  .row
+    - projects.each do |project|
+      - if (edit and !project.hide) or (!edit and !project.hide and project.cover)
+        .col-lg-6
+          = render 'components/project', project: project, edit: edit
+
+  .row
+    - projects.each do |project|
+      - if (edit and project.hide) or (!edit and !project.hide and !project.cover)
+        .col-lg-6
+          = render 'components/project', project: project, edit: edit

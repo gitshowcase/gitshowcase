@@ -44,12 +44,6 @@ class User < ApplicationRecord
     self
   end
 
-  private
-
-  def client
-    @client ||= Octokit::Client.new(:access_token => self.github_token)
-  end
-
   def sync_profile
     user = client.user
 
@@ -69,12 +63,19 @@ class User < ApplicationRecord
   end
 
   def sync_skills_projects
-    client.repositories.map do |repository|
+    client.repositories.each do |repository|
       project = projects.where(url: repository.html_url).first_or_create
-      project.sync(repository)
 
       self.skills = {} unless self.skills
       self.skills[project.language] = 3 unless self.skills[project.language]
+
+      project.sync(repository) unless project.id
     end
+  end
+
+  private
+
+  def client
+    @client ||= Octokit::Client.new(:access_token => self.github_token)
   end
 end

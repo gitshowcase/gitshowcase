@@ -30,3 +30,7 @@
     background: #000;
     color: white;
 }
+
+.checkbox label input {
+    margin-right: .5rem;
+}

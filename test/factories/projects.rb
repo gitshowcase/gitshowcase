@@ -1,11 +1,15 @@
 FactoryGirl.define do
   factory :project do
     title "MyString"
-    url "MyString"
+    homepage "MyString"
     repository "MyString"
-    image "MyString"
+    url "MyString"
     description "MyString"
+    icon "MyString"
+    cover "MyString"
+    language "MyString"
+    hide false
+    has_manifest false
     user nil
-    language nil
   end
 end

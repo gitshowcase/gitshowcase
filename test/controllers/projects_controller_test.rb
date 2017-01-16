@@ -17,7 +17,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project" do
     assert_difference('Project.count') do
-      post projects_url, params: { project: { description: @project.description, image: @project.image, language: @project.language, repository: @project.repository, title: @project.title, url: @project.url, user_id: @project.user_id } }
+      post projects_url, params: { project: { cover: @project.cover, description: @project.description, has_manifest: @project.has_manifest, hide: @project.hide, homepage: @project.homepage, icon: @project.icon, language: @project.language, repository: @project.repository, title: @project.title, url: @project.url, user_id: @project.user_id } }
     end
 
     assert_redirected_to project_url(Project.last)
@@ -34,7 +34,7 @@ class ProjectsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update project" do
-    patch project_url(@project), params: { project: { description: @project.description, image: @project.image, language: @project.language, repository: @project.repository, title: @project.title, url: @project.url, user_id: @project.user_id } }
+    patch project_url(@project), params: { project: { cover: @project.cover, description: @project.description, has_manifest: @project.has_manifest, hide: @project.hide, homepage: @project.homepage, icon: @project.icon, language: @project.language, repository: @project.repository, title: @project.title, url: @project.url, user_id: @project.user_id } }
     assert_redirected_to project_url(@project)
   end
 

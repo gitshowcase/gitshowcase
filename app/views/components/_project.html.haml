@@ -1,0 +1,62 @@
+- edit ||= false
+- href = edit ? edit_project_path(project) : (project.homepage || 'javascript:void()')
+
+- klass = [project.icon.present? ? 'project-with-icon' : '', project.cover.present? && !edit ? 'project-with-cover' : '']
+- klass << 'wow animated fadeIn' unless edit
+
+.project{class: klass}
+  - if project.cover.present? && !edit
+    .project-background
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.2,
+      image: project.cover,
+      position: 'center top',
+      blur: '25px'
+
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.2,
+      image: project.cover,
+      size: 'contain',
+      position: 'center top'
+
+    .project-blur
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.75,
+      image: project.cover,
+      blur: '15px'
+
+  %a.project-link{href: href}
+    .container-fluid
+      - if project.icon.present?
+        %img.project-icon{src: project.icon, alt: "#{project.title} icon"}
+
+      %h3.project-title= project.title
+      %p.project-description= project.description
+
+  %footer.container-fluid
+    .pull-left
+      - if project.hide.present?
+        %span.project-hide.tag.tag-danger
+          %i.fa.fa-eye-slash
+          Hidden
+
+      - if project.language.present?
+        %span.project-language.tag.tag-default
+          %i.fa.fa-code
+          = project.language
+
+      - if project.manifest.present?
+        %span.project-manifest.tag.tag-success{title: 'Progressive Web App'}
+          %i.fa.fa-check-square-o
+          Progressive
+
+    - if project.url.present?
+      %a.project-repository{href: project.url, target: '_blank'}
+        %i.fa.fa-github
+        Repository
+    - else
+      .project-no-repository.text-muted
+        Closed Source

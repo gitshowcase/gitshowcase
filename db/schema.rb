@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "icon"
     t.string   "cover"
     t.string   "language"
+    t.string  "manifest"
     t.boolean  "hide"
-    t.boolean  "has_manifest"
     t.integer  "user_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false

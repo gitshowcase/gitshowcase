@@ -1,0 +1,19 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title
+    = f.input :homepage
+    = f.input :repository
+    = f.input :url
+    = f.input :description
+    = f.input :icon
+    = f.input :cover
+    = f.input :language
+    = f.input :manifest
+    = f.input :hide
+
+  .form-actions
+    = button_tag type: :submit, class: 'btn btn-success' do
+      %i.fa.fa-check
+      Update project

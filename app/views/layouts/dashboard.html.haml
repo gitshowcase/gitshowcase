@@ -1,0 +1,25 @@
+= inside_layout do
+  .dashboard-layout
+    .container
+      .row
+        .col-md-3
+          %nav.nav.nav-pills
+            %a.nav-item.nav-link{href: new_project_url}
+              %i.fa.fa-plus
+              New Project
+
+          %nav.nav.nav-pills
+            %a.nav-item.nav-link{href: users_url}
+              %i.fa.fa-user
+              Profile
+
+            %a.nav-item.nav-link{href: languages_url}
+              %i.fa.fa-flask
+              Languages
+
+            %a.nav-item.nav-link{href: projects_url}
+              %i.fa.fa-cubes
+              Projects
+
+        .col-md-9
+          = yield

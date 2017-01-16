@@ -1,9 +1,0 @@
-<%
-  type ||= 'black'
-  text ||= 'Sign in with Github'
-%>
-
-<a href="<%= omniauth_authorize_path(User, :github) %>"
-   class="sign-in btn btn-<%= type %>">
-  <i class="fa fa-github"></i> <%= text %>
-</a>
