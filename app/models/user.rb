@@ -57,7 +57,7 @@ class User < ApplicationRecord
     self.bio = user.bio if user.bio.present?
 
     self.company = user.company
-    self.company_website = 'https://github.com/' + self.company[1..-1] if self.company[0] == '@'
+    self.company_website = 'https://github.com/' + self.company[1..-1] if self.company.present? and self.company[0] == '@'
 
     self.save
   end
