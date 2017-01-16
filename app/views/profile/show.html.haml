@@ -2,7 +2,7 @@
   %section#header
     = render 'components/background',
     blur: '5px',
-    image: @user.cover || image_path('backgrounds/workstation.jpg')
+    image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg')
 
     .container
       %img{src: @user.avatar, alt: "#{@user.name} profile photo",
@@ -19,7 +19,7 @@
       %h2.user-name.wow.animated.fadeInDown= @user.name
 
       .row
-        - if @user.company
+        - if @user.company.present?
           %section.col-md-4.col-sm-6.wow.animated.fadeIn
             %header
               %i.fa.fa-briefcase
@@ -27,7 +27,7 @@
 
             %a{href: @user.company_website || '#', target: '_blank'}= @user.company
 
-        - if @user.website
+        - if @user.website.present?
           %section.col-md-4.col-sm-6.wow.animated.fadeIn
             %header
               %i.fa.fa-globe
@@ -35,7 +35,7 @@
 
             %a{href: @user.website, target: '_blank'}= @user.website
 
-        - if @user.show_email
+        - if @user.show_email.present?
           %section.col-md-4.col-sm-6.wow.animated.fadeIn
             %header
               %i.fa.fa-at
@@ -43,7 +43,7 @@
 
             %a{href: "mailto:#{@user.email}", target: '_blank'}= @user.email
 
-        - if @user.resume
+        - if @user.resume.present?
           %section.col-md-4.col-sm-6.wow.animated.fadeIn
             %header
               %i.fa.fa-file-text-o
@@ -51,7 +51,7 @@
 
             %a{href: @user.resume, target: '_blank'} Download
 
-        - if @user.location
+        - if @user.location.present?
           %section.col-md-4.col-sm-6.wow.animated.fadeIn
             %header
               %i.fa.fa-map-marker

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   authenticated :user do
     root :to => 'profile#show', as: :authenticated_root
     resources :projects, only: [:index, :new, :create, :edit, :update, :destroy]
-    resources :languages, only: [:index, :update]
+    resources :skills, only: [:index, :update]
     resources :users, only: [:index, :update]
   end
 

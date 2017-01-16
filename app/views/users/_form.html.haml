@@ -1,0 +1,21 @@
+= simple_form_for(@user) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name, {autofocus: true}
+    = f.input :avatar
+    = f.input :cover
+    = f.input :bio
+    = f.input :role
+    = f.input :location
+    = f.input :company
+    = f.input :company_website
+    = f.input :website
+    = f.input :resume
+    = f.input :hireable
+    = f.input :show_email
+
+  .form-actions
+    = button_tag type: :submit, class: 'btn btn-success' do
+      %i.fa.fa-check
+      Update

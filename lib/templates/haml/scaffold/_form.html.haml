@@ -10,3 +10,8 @@
     = button_tag type: :submit, class: 'btn btn-success' do
       %i.fa.fa-check
       Update <%= singular_table_name %>
+
+    .pull-right
+      - if @<%= singular_table_name %>.persisted?
+        = link_to 'Delete', <%= singular_table_name %>_path(@<%= singular_table_name %>),
+          method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}

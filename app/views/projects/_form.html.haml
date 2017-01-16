@@ -2,7 +2,7 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :title
+    = f.input :title, {autofocus: true}
     = f.input :homepage
     = f.input :repository
     = f.input :url
@@ -17,3 +17,8 @@
     = button_tag type: :submit, class: 'btn btn-success' do
       %i.fa.fa-check
       Update project
+
+    .pull-right
+      - if @project.persisted?
+        = link_to 'Delete', project_path(@project),
+          method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}
