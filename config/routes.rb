@@ -28,5 +28,5 @@ Rails.application.routes.draw do
   end
 
   root to: 'landing#home'
-  get '/:username', to: 'profile#show'
+  get '/:username', to: 'profile#show', :constraints => lambda { |req| req.path !~ /\.(.+)$/ }
 end
