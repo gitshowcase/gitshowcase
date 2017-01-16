@@ -50,11 +50,11 @@ class User < ApplicationRecord
     self.avatar = user.avatar_url
     self.username = user.login
     self.name = user.name
-    self.website = user.blog
-    self.location = user.location
+    self.website = user.blog if user.blog.present?
+    self.location = user.location if user.location.present?
     self.email = user.email
     self.hireable = user.hireable
-    self.bio = user.bio
+    self.bio = user.bio if user.bio.present?
 
     self.company = user.company
     self.company_website = 'https://github.com/' + self.company[1..-1] if self.company[0] == '@'
