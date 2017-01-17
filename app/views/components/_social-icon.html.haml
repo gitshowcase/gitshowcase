@@ -1,5 +1,4 @@
 - icon = social.to_s.gsub('_', '-')
-- icon = 'rss' if social == 'blog'
-- icon = 'github' if social == 'github'
+- icon = 'rss' if social.to_s == 'blog'
 
 %i.fa{class: "fa-#{icon}"}

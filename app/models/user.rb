@@ -41,7 +41,7 @@ class User < ApplicationRecord
 
   def socials
     result = {}
-    result['github'] = self.username
+    result['github'] = "github.com/#{self.username}"
 
     User::SOCIALS.each do |social|
       result[social] = self[social] unless self[social].to_s.empty?
@@ -166,11 +166,14 @@ class User < ApplicationRecord
   end
 
   def social(key)
-    "https://#{HASH_SOCIALS[key]}/#{self[key]}"
+    User.social(key, self[key])
   end
 
   def self.social(key, value)
-    "https://#{HASH_SOCIALS[key]}/#{value}"
+    return value if value.include?('http://') or value.include?('https://')
+
+    pre = HASH_SOCIALS[key] ? "#{HASH_SOCIALS[key]}/" : ''
+    "https://#{pre}#{value}"
   end
 
   private
