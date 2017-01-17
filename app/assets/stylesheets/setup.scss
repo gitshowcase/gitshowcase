@@ -1,0 +1,42 @@
+// Place all the styles related to the setup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "constants/colors";
+
+.sync-view {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: $color-three;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    color: $color-white;
+    text-align: center;
+    font-size: 2rem;
+
+    i {
+      font-size: 3rem;
+      margin: 1rem;
+      display: inline-block;
+    }
+
+    .fa-heart {
+      color: lightpink;
+    }
+
+    .user {
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.75rem;
+    }
+  }
+}

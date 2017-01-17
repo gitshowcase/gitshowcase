@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20170111023844) do
   enable_extension "plpgsql"
 
   create_table "projects", force: :cascade do |t|
-    t.string   "title"
+    t.string   "title",       null: false
     t.string   "homepage"
     t.string   "repository"
     t.string   "url"
@@ -24,11 +24,12 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "icon"
     t.string   "cover"
     t.string   "language"
-    t.string  "manifest"
+    t.string   "manifest"
+    t.boolean  "fork"
     t.boolean  "hide"
-    t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.integer  "user_id",     null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.index ["user_id"], name: "index_projects_on_user_id", using: :btree
   end
 
@@ -63,13 +64,20 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.json     "skills"
     t.string   "linkedin"
     t.string   "angellist"
-    t.string   "facebook"
     t.string   "twitter"
+    t.string   "facebook"
+    t.string   "google_plus"
     t.string   "stack_overflow"
+    t.string   "codepen"
+    t.string   "jsfiddle"
     t.string   "medium"
     t.string   "blog"
+    t.string   "behance"
+    t.string   "dribbble"
+    t.string   "pinterest"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
   add_foreign_key "projects", "users"

@@ -6,32 +6,38 @@
   h1 {
     font-size: 1.75rem;
     margin-bottom: 2rem;
-    color: $color-text-opaque;
-    border-left: .5rem solid rgba(0, 0, 0, .1);
-    padding-left: 1rem;
+    color: $color-three;
   }
 
-  nav {
-    margin-top: -.5rem;
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: $color-text;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid $color-white;
+  }
 
-    @media screen and (min-width: 769px) {
+  .dashboard-menu {
+    nav {
+      margin-top: -.5rem;
       margin-bottom: 2rem;
-
-      .nav-link, .nav-item {
-        display: block;
-        width: 100%;
-        margin-left: 0 !important;
-      }
     }
 
-    @media screen and (max-width: 768px) {
-      margin-bottom: 1.5rem;
-      text-align: center;
+    a {
+      display: block;
+      padding: .15rem 1rem;
+      margin-bottom: .5rem;
+      text-decoration: none;
+      color: $color-text;
+      border-left: 3px solid transparent;
 
-      .nav-link, .nav-item {
-        display: inline-block;
-        float: none;
-        background: #eee;
+      &.active {
+        border-color: $color-three;
+      }
+
+      &:hover {
+        color: $color-three;
       }
     }
   }

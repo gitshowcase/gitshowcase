@@ -1,0 +1,16 @@
+.sync-view
+  .content
+    .user
+      Hi
+      %strong= "#{current_user.name.split(' ').first},"
+
+    %i.fa.fa-heart.animated.pulse.infinite
+    +
+    %i.fa.fa-gear.fa-spin
+    %p
+      hold on a second
+      %br/
+      we're importing your projects
+
+  %script{type: 'text/javascript'}
+    = "location.href = '#{sync_projects_users_url}'"

@@ -18,6 +18,12 @@
     }
   }
 
+  &-linkedin {
+    &:hover, &:focus, &:active {
+      color: #0077b5;
+    }
+  }
+
   &-angellist {
     &:hover, &:focus, &:active {
       color: #999;
@@ -30,21 +36,33 @@
     }
   }
 
-  &-linkedin {
-    &:hover, &:focus, &:active {
-      color: #0077b5;
-    }
-  }
-
   &-facebook {
     &:hover, &:focus, &:active {
       color: #3b5998;
     }
   }
 
+  &-google-plus {
+    &:hover, &:focus, &:active {
+      color: #dd4b39;
+    }
+  }
+
   &-stack_overflow {
     &:hover, &:focus, &:active {
       color: #f48024;
+    }
+  }
+
+  &-codepen {
+    &:hover, &:focus, &:active {
+      color: #000;
+    }
+  }
+
+  &-jsfiddle {
+    &:hover, &:focus, &:active {
+      color: #3099f4;
     }
   }
 
@@ -57,6 +75,24 @@
   &-blog {
     &:hover, &:focus, &:active {
       color: #f57d00;
+    }
+  }
+
+  &-behance {
+    &:hover, &:focus, &:active {
+      color: #1769ff;
+    }
+  }
+
+  &-dribbble {
+    &:hover, &:focus, &:active {
+      color: #ea4c89;
+    }
+  }
+
+  &-pinterest {
+    &:hover, &:focus, &:active {
+      color: #bd081c;
     }
   }
 }

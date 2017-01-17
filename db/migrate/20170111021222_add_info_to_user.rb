@@ -17,11 +17,20 @@ class AddInfoToUser < ActiveRecord::Migration[5.0]
 
     add_column :users, :linkedin, :string
     add_column :users, :angellist, :string
-    add_column :users, :facebook, :string
     add_column :users, :twitter, :string
+    add_column :users, :facebook, :string
+    add_column :users, :google_plus, :string
+
     add_column :users, :stack_overflow, :string
+    add_column :users, :codepen, :string
+    add_column :users, :jsfiddle, :string
+
     add_column :users, :medium, :string
     add_column :users, :blog, :string
+
+    add_column :users, :behance, :string
+    add_column :users, :dribbble, :string
+    add_column :users, :pinterest, :string
 
     add_index :users, :username, :unique => true
   end

@@ -6,19 +6,19 @@
 - klass << 'wow animated fadeIn' unless edit
 
 .project{class: klass}
-  - if project.cover.present? && !edit
+  - if project.cover_url.present? && !edit
     .project-background
       = render 'components/background',
       mask_color: 'white',
       mask: 0.2,
-      image: project.cover,
+      image: project.cover_url,
       position: 'center top',
       blur: '25px'
 
       = render 'components/background',
       mask_color: 'white',
       mask: 0.2,
-      image: project.cover,
+      image: project.cover_url,
       size: 'contain',
       position: 'center top'
 
@@ -26,16 +26,16 @@
       = render 'components/background',
       mask_color: 'white',
       mask: 0.75,
-      image: project.cover,
+      image: project.cover_url,
       blur: '15px'
 
   %a.project-link{href: href, target: target}
     .container-fluid
-      - if project.icon.present?
-        %img.project-icon{src: project.icon, alt: "#{project.title} icon"}
+      - if project.icon_url.present?
+        %img.project-icon{src: project.icon_url, alt: "#{project.title} icon"}
 
       %h3.project-title= project.title
-      %p.project-description= project.description
+      %p.project-description= (project.description || '').truncate(70)
 
   %footer.container-fluid
     .pull-left
@@ -48,6 +48,11 @@
         %span.project-language.tag.tag-default
           %i.fa.fa-code
           = project.language
+
+      - if project.fork
+        %span.project-hide.tag.tag-info
+          %i.fa.fa-code-fork
+          Fork
 
       - if project.manifest.present?
         %span.project-manifest.tag.tag-success{title: 'Progressive Web App'}

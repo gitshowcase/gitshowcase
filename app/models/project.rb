@@ -2,26 +2,27 @@ class Project < ApplicationRecord
   belongs_to :user
 
   def sync(data = nil)
-    if self.repository.present?
-      data ||= client.repository(self.repository)
-      sync_repository(data)
-    end
-
+    sync_repository(data)
     sync_homepage
 
-    self.save
+    save!
   end
 
-  def sync_repository(data)
+  def sync_repository(data = nil)
+    return false unless self.repository.present?
+
+    data ||= client.repository(self.repository)
+
     self.title = data.name.titleize
     self.url = data.html_url
     self.homepage = data.homepage
     self.repository = data.full_name
     self.description = data.description
     self.language = data.language
+    self.fork = data.fork
   end
 
-  def sync_homepage()
+  def sync_homepage
     return false unless self.homepage.present?
 
     begin
@@ -33,7 +34,7 @@ class Project < ApplicationRecord
       self.icon = page.images.favicon if page.images.favicon
       self.cover = page.images.best if page.images.best
 
-      manifest = page.head_links.select {|link| link[:rel] == 'manifest'}.first[:href]
+      manifest = page.head_links.select { |link| link[:rel] == 'manifest' }.first[:href]
       self.manifest = manifest if manifest
     rescue
       return false
@@ -42,9 +43,32 @@ class Project < ApplicationRecord
     false
   end
 
+  def cover_url
+    external_resource self.cover
+  end
+
+  def icon_url
+    external_resource self.icon
+  end
+
+  def repository=(val)
+    self[:repository] = val.sub('https://', '').sub('github.com/', '')
+  end
+
   private
 
   def client
     @client ||= Octokit::Client.new(:access_token => self.user.github_token)
+  end
+
+  def external_resource(href)
+    return nil unless href.present?
+    return href if href.include?('http://') or href.include?('https://')
+
+    pure_homepage = self.homepage.sub(/^https?\:\/\//, '').sub(/^www./,'')
+    href = "#{pure_homepage}/#{href}" if self.homepage.present? and !href.include?(pure_homepage)
+
+    protocol = self.homepage.include?('https://') ? 'https' : 'http'
+    "#{protocol}://#{href}"
   end
 end

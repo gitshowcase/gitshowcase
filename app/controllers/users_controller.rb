@@ -1,7 +1,14 @@
 class UsersController < DashboardController
   before_action :set_user
 
+  # GET /users
+  # GET /users.json
   def index
+  end
+
+  # GET /users/socials
+  # GET /users/socials.json
+  def socials
   end
 
   # PATCH/PUT /users/1
@@ -18,6 +25,8 @@ class UsersController < DashboardController
     end
   end
 
+  # GET /users/sync
+  # GET /users/sync.json
   def sync
     respond_to do |format|
       if @user.sync
@@ -30,6 +39,8 @@ class UsersController < DashboardController
     end
   end
 
+  # GET /users/sync_projects
+  # GET /users/sync_projects.json
   def sync_projects
     respond_to do |format|
       results = @user.sync_skills_projects
@@ -48,6 +59,6 @@ class UsersController < DashboardController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :avatar, :cover, :bio, :role, :location, :company, :company_website, :website,
-                                 :resume, :hireable, :show_email)
+                                 :resume, :hireable, :show_email, User::SOCIALS)
   end
 end

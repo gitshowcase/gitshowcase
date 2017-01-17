@@ -23,10 +23,19 @@ Rails.application.routes.draw do
       collection do
         get 'sync'
         get 'sync_projects'
+        get 'socials'
+        get 'setup'
       end
+    end
+
+    controller 'setup' do
+      get 'sync'
     end
   end
 
   root to: 'landing#home'
-  get '/:username', to: 'profile#show'
+
+  controller 'profile' do
+    get '/:username', action: 'show'
+  end
 end

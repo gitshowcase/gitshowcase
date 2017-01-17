@@ -23,7 +23,7 @@ class ProjectsController < DashboardController
     @project.user_id = current_user.id
 
     respond_to do |format|
-      if @project.save
+      if @project.sync
         format.html { redirect_to edit_project_url(@project), notice: 'Project was successfully created.' }
         format.json { render :edit, status: :created, location: edit_project_url(@project) }
       else

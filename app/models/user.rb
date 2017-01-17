@@ -1,5 +1,39 @@
 class User < ApplicationRecord
-  SOCIALS = %w(angellist twitter linkedin facebook medium stack_overflow blog).freeze
+  SOCIALS_NETWORKING = {
+      linkedin: 'linkedin.com/in',
+      angellist: 'angel.co',
+      twitter: 'twitter.com',
+      facebook: 'facebook.com',
+      google_plus: 'plus.google.com'
+  }
+
+  SOCIALS_DEVELOPMENT = {
+      stack_overflow: 'stackoverflow.com/users',
+      codepen: 'codepen.io',
+      jsfiddle: 'jsfiddle.net'
+  }
+
+  SOCIALS_WRITING = {
+      medium: 'medium.com',
+      blog: ''
+  }
+
+  SOCIALS_DESIGN = {
+      behance: 'behance.net',
+      dribbble: 'dribbble.com',
+      pinterest: 'pinterest.com'
+  }
+
+  GROUPED_SOCIALS = [
+      [:networking, SOCIALS_NETWORKING],
+      [:writing, SOCIALS_WRITING],
+      [:development, SOCIALS_DEVELOPMENT],
+      [:design, SOCIALS_DESIGN]
+  ]
+
+  HASH_SOCIALS = GROUPED_SOCIALS.flat_map { |group| group[1].map { |social| [social[0], social[1]] } }.to_h
+
+  SOCIALS = HASH_SOCIALS.flat_map { |social, _| social }
 
   has_many :projects
 
@@ -34,7 +68,7 @@ class User < ApplicationRecord
       user.github_token = auth.credentials.token
       user.role = 'Jedi Developer'
 
-      user.sync
+      user.sync_profile
     end
 
     user
@@ -87,9 +121,70 @@ class User < ApplicationRecord
     result
   end
 
+  def linkedin=(val)
+    set_social(:linkedin, val)
+  end
+
+  def angellist=(val)
+    set_social(:angellist, val)
+  end
+
+  def facebook=(val)
+    set_social(:facebook, val)
+  end
+
+  def twitter=(val)
+    set_social(:twitter, val)
+  end
+
+  def google_plus=(val)
+    set_social(:google_plus, val)
+  end
+
+  def medium=(val)
+    set_social(:medium, val)
+  end
+
+  def stack_overflow=(val)
+    set_social(:stack_overflow, val)
+  end
+
+  def codepen=(val)
+    set_social(:codepen, val)
+  end
+
+  def jsfiddle=(val)
+    set_social(:jsfiddle, val)
+  end
+
+  def behance=(val)
+    set_social(:behance, val)
+  end
+
+  def dribbble=(val)
+    set_social(:dribbble, val)
+  end
+
+  def pinterest=(val)
+    set_social(:pinterest, val)
+  end
+
+  def social(key)
+    "https://#{HASH_SOCIALS[key]}/#{self[key]}"
+  end
+
+  def self.social(key, value)
+    "https://#{HASH_SOCIALS[key]}/#{value}"
+  end
+
   private
 
   def client
     @client ||= Octokit::Client.new(:access_token => self.github_token)
+  end
+
+  def set_social(key, value)
+    pre = HASH_SOCIALS[key]
+    self[key] = value.sub(/^https?\:\/\//, '').sub(/^www./,'').sub(pre, '')
   end
 end

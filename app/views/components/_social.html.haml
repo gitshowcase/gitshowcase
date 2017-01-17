@@ -1,6 +1,2 @@
-- icon = social.gsub('_', '-')
-- icon = 'rss' if social == 'blog'
-- icon = 'github' if social == 'github'
-
-%a.social.wow.animated.fadeIn{class: "social-#{social}", href: url, target: '_blank', title: social.titleize}
-  %i.fa{class: "fa-#{icon}"}
+%a.social.wow.animated.fadeIn{class: "social-#{social}", href: url, target: '_blank', title: social.to_s.titleize}
+  = render 'components/social-icon', social: social

@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-$(document).on('turbolinks:load', ->
+$(document).on 'turbolinks:load', ->
   homeView = $('.home-view')
   return unless homeView.length
 
@@ -17,4 +17,3 @@ $(document).on('turbolinks:load', ->
 
   $(document).scroll(handleNavbarcolor)
   handleNavbarcolor()
-)
