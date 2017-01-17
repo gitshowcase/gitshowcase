@@ -44,7 +44,7 @@ class UsersController < DashboardController
   def sync_projects
     respond_to do |format|
       results = @user.sync_skills_projects
-      format.html { redirect_to projects_url, notice: "#{results.length} new projects synced." }
+      format.html { redirect_to projects_url, notice: "#{results.length} new projects created." }
       format.json { render projects_url, status: :ok }
     end
   end

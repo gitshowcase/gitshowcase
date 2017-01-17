@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+  has_many :projects
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable,
+         :omniauthable, :omniauth_providers => [:github]
+
   SOCIALS_NETWORKING = {
       linkedin: 'linkedin.com/in',
       angellist: 'angel.co',
@@ -32,20 +37,11 @@ class User < ApplicationRecord
   ]
 
   HASH_SOCIALS = GROUPED_SOCIALS.flat_map { |group| group[1].map { |social| [social[0], social[1]] } }.to_h
-
   SOCIALS = HASH_SOCIALS.flat_map { |social, _| social }
-
-  has_many :projects
-
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable,
-         :omniauthable, :omniauth_providers => [:github]
 
   def socials
     result = {}
-    result['github'] = "https://github.com/#{self.username}"
+    result['github'] = self.username
 
     User::SOCIALS.each do |social|
       result[social] = self[social] unless self[social].to_s.empty?
