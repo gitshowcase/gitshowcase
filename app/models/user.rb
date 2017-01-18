@@ -82,6 +82,7 @@ class User < ApplicationRecord
     self.company_website = 'https://github.com/' + self.company[1..-1] if self.company.present? and self.company[0] == '@'
 
     save!
+    user
   end
 
   def sync_skills_projects
