@@ -14,7 +14,6 @@ class Project < ApplicationRecord
     data ||= client.repository(self.repository)
 
     self.title = data.name.titleize
-    self.url = data.html_url
     self.homepage = data.homepage
     self.repository = data.full_name
     self.description = data.description
@@ -33,9 +32,6 @@ class Project < ApplicationRecord
       self.description = page.best_description if page.best_description
       self.icon = page.images.favicon if page.images.favicon
       self.cover = page.images.best if page.images.best
-
-      manifest = page.head_links.select { |link| link[:rel] == 'manifest' }.first[:href]
-      self.manifest = manifest if manifest
     rescue
       return false
     end
@@ -53,6 +49,10 @@ class Project < ApplicationRecord
 
   def repository=(val)
     self[:repository] = val.sub('https://', '').sub('github.com/', '')
+  end
+
+  def repository_url
+    "https://github.com/#{self.repository}"
   end
 
   private

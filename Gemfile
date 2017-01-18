@@ -30,7 +30,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether'
 
   # Use Bootstrap to make it pretty
-  gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.5'
+  gem 'rails-assets-bootstrap', '~> 4.0.0.alpha.6'
 
   # Use WOW and animate.css for cool animations
   gem 'rails-assets-animate.css'
@@ -68,9 +68,6 @@ gem 'simple_form'
 gem 'omniauth'
 gem 'omniauth-github'
 
-# Use ServiceWorker for PWA
-gem 'serviceworker-rails'
-
 # Use metainspector to fetch project meta information
 gem 'metainspector'
 
@@ -101,9 +98,6 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
   gem 'listen', '~> 3.0.5'
-
-  ## Generate favicons
-  gem 'rails_real_favicon'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

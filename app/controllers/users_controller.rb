@@ -14,39 +14,28 @@ class UsersController < DashboardController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to '/', notice: 'Your profile was successfully updated.' }
-        format.json { render :index, status: :ok }
-      else
-        format.html { render :index }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.update(user_params)
+      redirect_to '/', notice: 'Your profile was successfully updated.'
+    else
+      render :index
     end
   end
 
   # GET /users/sync
   # GET /users/sync.json
   def sync
-    respond_to do |format|
-      if @user.sync
-        format.html { redirect_to users_url, notice: 'Your profile was successfully synced.' }
-        format.json { render :index, status: :ok }
-      else
-        format.html { render :index }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.sync
+      redirect_to users_url, notice: 'Your profile was successfully synced.'
+    else
+      render :index
     end
   end
 
   # GET /users/sync_projects
   # GET /users/sync_projects.json
   def sync_projects
-    respond_to do |format|
-      results = @user.sync_skills_projects
-      format.html { redirect_to projects_url, notice: "#{results.length} new projects created." }
-      format.json { render projects_url, status: :ok }
-    end
+    results = @user.sync_skills_projects
+    redirect_to projects_url, notice: "#{results.length} new projects created."
   end
 
   private

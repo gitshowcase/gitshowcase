@@ -16,7 +16,6 @@
 //= require tether
 //= require bootstrap
 //= require turbolinks
-//= require serviceworker-companion
 //= require_tree .
 
 new WOW().init();

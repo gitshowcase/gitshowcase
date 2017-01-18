@@ -4,17 +4,17 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "<%= asset_path 'favicon/android-chrome-192x192.png' %>",
+      "src": "\/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image\/png"
     },
     {
-      "src": "<%= asset_path 'favicon/android-chrome-512x512.png' %>",
-      "sizes": "512x512",
+      "src": "\/android-chrome-256x256.png",
+      "sizes": "256x256",
       "type": "image\/png"
     }
   ],
-  "theme_color": "#c0d3db",
+  "theme_color": "#ffffff",
   "display": "standalone",
   "orientation": "portrait"
 }

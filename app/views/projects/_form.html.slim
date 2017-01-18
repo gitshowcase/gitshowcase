@@ -5,13 +5,11 @@
     = f.input :title, {autofocus: true}
     = f.input :homepage
     = f.input :repository
-    = f.input :url
     = f.input :description
     = f.input :icon
     = f.input :cover
-    = f.input :language
-    = f.input :manifest
-    = f.input :fork
+    = f.input :language, label: 'Programming Language(s)', placeholder: 'Eg. PHP, Ruby, Rails, Javascript'
+    = f.input :fork, label: 'Is it a forked project?'
     = f.input :hide
 
   .form-actions
@@ -23,4 +21,4 @@
     .pull-right
       - if @project.persisted?
         = link_to 'Delete', project_path(@project),
-          method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}
+                method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}

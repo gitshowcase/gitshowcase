@@ -54,13 +54,8 @@
           i.fa.fa-code-fork
           | Fork
 
-      - if project.manifest.present?
-        span.project-manifest.tag.tag-success title='Progressive Web App'
-          i.fa.fa-check-square-o
-          | Progressive
-
-    - if project.url.present?
-      a.project-repository href=project.url target='_blank' rel='nofollow'
+    - if project.repository.present?
+      a.project-repository href=project.repository_url target='_blank' rel='nofollow'
         i.fa.fa-github
         | Repository
     - else

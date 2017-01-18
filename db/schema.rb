@@ -19,12 +19,10 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "title",       null: false
     t.string   "homepage"
     t.string   "repository"
-    t.string   "url"
     t.string   "description"
     t.string   "icon"
     t.string   "cover"
     t.string   "language"
-    t.string   "manifest"
     t.boolean  "fork"
     t.boolean  "hide"
     t.integer  "user_id",     null: false
