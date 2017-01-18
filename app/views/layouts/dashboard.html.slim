@@ -1,0 +1,38 @@
+= inside_layout do
+  .dashboard-layout
+    .container
+      .row
+        .col-md-3.dashboard-menu
+          nav
+            a href="/#{current_user.username}" target='_blank'
+              i.fa.fa-home
+              | View Portfolio
+
+          nav
+            a href=users_url
+              i.fa.fa-user
+              | Profile
+
+            a href=socials_users_url
+              i.fa.fa-share-alt
+              | Socials
+
+            a href=skills_url
+              i.fa.fa-flask
+              | Skills
+
+          nav
+            a href=projects_url
+              i.fa.fa-cubes
+              | Projects
+
+            a href=new_project_url
+              i.fa.fa-plus
+              | New Project
+
+            a href=sync_projects_users_url
+              i.fa.fa-github
+              | Sync New Projects
+
+        .col-md-9
+          = yield

@@ -1,0 +1,37 @@
+- title ||= 'GitShowcase'
+- site_name ||= 'GitShowcase'
+- description ||= 'Awesome Portfolio from your GitHub'
+- author = 'Pedro Moreira,Victor Santos'
+- image ||= image_path('preview.png')
+- type ||= 'website'
+
+- card_type ||= 'summary_large_image'
+- card_site ||= '@pedsmoreira'
+- card_creator ||= nil
+- card_image ||= image
+
+- prepend_keywords ||= ''
+- keywords ||= prepend_keywords + 'portfolio, github portfolio, developer, developer portfolio, showcase'
+
+title= title
+
+= render 'layouts/partials/head/tag_manager'
+= render 'layouts/partials/head/meta'
+= render 'layouts/partials/head/web_app'
+= render 'layouts/partials/head/favicon'
+
+= render 'layouts/partials/head/seo',
+  title: title,
+  site_name: site_name,
+  description: description,
+  keywords: keywords,
+  author: author,
+  image: image,
+  type: type,
+  card_type: card_type,
+  card_site: card_site,
+  card_creator: card_creator,
+  card_image: card_image
+
+/ Fonts
+link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'

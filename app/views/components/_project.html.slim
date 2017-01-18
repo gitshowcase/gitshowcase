@@ -1,0 +1,68 @@
+- edit ||= false
+- href = edit ? edit_project_path(project) : (project.homepage || 'javascript:void()')
+- target = edit ? '_self' : '_blank'
+
+- klass = [project.icon.present? ? 'project-with-icon' : '', project.cover.present? && !edit ? 'project-with-cover' : '']
+- klass << 'wow animated fadeIn' unless edit
+
+.project class=klass
+  - if project.cover_url.present? && !edit
+    .project-background
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.2,
+      image: project.cover_url,
+      position: 'center top',
+      blur: '25px'
+
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.2,
+      image: project.cover_url,
+      size: 'contain',
+      position: 'center top'
+
+    .project-blur
+      = render 'components/background',
+      mask_color: 'white',
+      mask: 0.75,
+      image: project.cover_url,
+      blur: '15px'
+
+  a.project-link href=href target=target rel='nofollow'
+    .container-fluid
+      - if project.icon_url.present?
+        img.project-icon src=project.icon_url alt="#{project.title} icon"
+
+      h3.project-title= project.title
+      p.project-description= (project.description || '').truncate(70)
+
+  footer.container-fluid
+    .pull-left
+      - if project.hide
+        span.project-hide.tag.tag-danger
+          i.fa.fa-eye-slash
+          | Hidden
+
+      - if project.language.present?
+        span.project-language.tag.tag-default
+          i.fa.fa-code
+          = project.language
+
+      - if project.fork
+        span.project-hide.tag.tag-info
+          i.fa.fa-code-fork
+          | Fork
+
+      - if project.manifest.present?
+        span.project-manifest.tag.tag-success title='Progressive Web App'
+          i.fa.fa-check-square-o
+          | Progressive
+
+    - if project.url.present?
+      a.project-repository href=project.url target='_blank' rel='nofollow'
+        i.fa.fa-github
+        | Repository
+    - else
+      .project-no-repository.text-muted
+        | Closed Source

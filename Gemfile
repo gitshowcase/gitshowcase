@@ -74,9 +74,8 @@ gem 'serviceworker-rails'
 # Use metainspector to fetch project meta information
 gem 'metainspector'
 
-# Add HAML markup
-gem 'haml'
-gem 'haml-rails'
+# Add SLIM markup
+gem 'slim-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

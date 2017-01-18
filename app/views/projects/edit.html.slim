@@ -1,0 +1,10 @@
+.edit-view
+  .pull-right
+    a.btn.btn-primary href=sync_projects_url(@project.id) title='Sync with GitHub and Website'
+      i.fa.fa-github
+      i.fa.fa-globe
+      '  Sync Project
+
+  h1 Editing project
+
+  = render 'form'

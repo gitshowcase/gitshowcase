@@ -1,0 +1,26 @@
+= simple_form_for(@project) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :title, {autofocus: true}
+    = f.input :homepage
+    = f.input :repository
+    = f.input :url
+    = f.input :description
+    = f.input :icon
+    = f.input :cover
+    = f.input :language
+    = f.input :manifest
+    = f.input :fork
+    = f.input :hide
+
+  .form-actions
+    = button_tag type: :submit, class: 'btn btn-success' do
+      i.fa.fa-check
+      '
+      | Save project
+
+    .pull-right
+      - if @project.persisted?
+        = link_to 'Delete', project_path(@project),
+          method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}

@@ -32,6 +32,11 @@
       color: $color-text;
       border-left: 3px solid transparent;
 
+      i {
+        width: 1.5rem;
+        text-align: center;
+      }
+
       &.active {
         border-color: $color-three;
       }

@@ -1,0 +1,17 @@
+<% if ENV['TAG_MANAGER'].present? %>
+    <script>
+        $(document).on('turbolinks:load', function () {
+            dataLayer.push({
+                'event': 'pageView',
+                'virtualUrl': location.href
+            });
+        });
+    </script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=<%= ENV['TAG_MANAGER'] %>"
+              height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+<% end %>

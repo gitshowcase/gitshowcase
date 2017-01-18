@@ -50,24 +50,15 @@ class User < ApplicationRecord
     result
   end
 
-  def self.from_omniauth(auth)
-    user = where(github_uid: auth.uid).first
+  def self.create_from_omniauth(auth)
+    user = User.new
+    user.email = auth.info.email
+    user.password = Devise.friendly_token[0, 20]
+    user.github_uid = auth.uid
+    user.github_token = auth.credentials.token
+    user.role = 'Jedi Developer'
 
-    if user
-      user.github_token = auth.credentials.token
-      user.save
-    else
-      user = User.new
-      user.email = auth.info.email
-      user.password = Devise.friendly_token[0, 20]
-      user.github_uid = auth.uid
-      user.github_token = auth.credentials.token
-      user.role = 'Jedi Developer'
-
-      user.sync_profile
-    end
-
-    user
+    user.sync_profile
   end
 
   def sync
@@ -115,6 +106,14 @@ class User < ApplicationRecord
     save!
 
     result
+  end
+
+  def first_name
+    self.display_name.split(' ')[0]
+  end
+
+  def display_name
+    self.name || self.username
   end
 
   def linkedin=(val)
@@ -184,6 +183,6 @@ class User < ApplicationRecord
 
   def set_social(key, value)
     pre = HASH_SOCIALS[key]
-    self[key] = value.sub(/^https?\:\/\//, '').sub(/^www./,'').sub(pre, '')
+    self[key] = value.sub(/^https?\:\/\//, '').sub(/^www./, '').sub(pre, '')
   end
 end

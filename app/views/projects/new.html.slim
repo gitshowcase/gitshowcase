@@ -1,0 +1,32 @@
+.new-view
+  h1 New project
+
+  section.from-repository
+    h2
+      i.fa.fa-github
+      | From GitHub
+
+    = simple_form_for(@project) do |f|
+      = f.error_notification
+
+      .form-inputs
+        = f.input :repository, autofocus: true, placeholder: 'username/repository'
+
+      = button_tag type: :submit, class: 'btn btn-black' do
+        i.fa.fa-github
+        | Import
+
+  section.from-url
+    h2
+      i.fa.fa-globe
+      | From Website
+
+    = simple_form_for(@project) do |f|
+      = f.error_notification
+
+      .form-inputs
+        = f.input :homepage, placeholder: 'https://my-website.com'
+
+      = button_tag type: :submit, class: 'btn btn-primary' do
+        i.fa.fa-globe
+        | Import

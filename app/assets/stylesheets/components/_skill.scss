@@ -3,6 +3,10 @@
 .skill {
   text-align: center;
 
+  i {
+    margin: 0 .1rem;
+  }
+
   &[data-value-1] {
     .fa-star {
       color: $color-five;
