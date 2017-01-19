@@ -9,7 +9,7 @@
   .form-actions
     = button_tag type: :submit, class: 'btn btn-success' do
       i.fa.fa-check
-      '  Update <%= singular_table_name %>
+      |  Update <%= singular_table_name %>
 
     .pull-right
       - if @<%= singular_table_name %>.persisted?

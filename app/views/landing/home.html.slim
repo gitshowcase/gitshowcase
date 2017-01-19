@@ -1,92 +1,101 @@
 .home-view
-  section.presenter.wow.animated.fadeIn
+  header#presenter.wow.animated.fadeIn
     = render 'components/background',
-            image: image_path('backgrounds/code.jpg')
+            image: image_path('home/header.jpg'),
+            mask: 0
+
+    = image_tag('logo-text.png', {class: 'logo'})
+
     .container
-      h1 You already have awesome projects
-      h2 It's time to have a killer portfolio!
+      h1
+        | Get noticed with a
+        br
+        | rockstar Portfolio
       = render 'components/sign-in'
+      .free It' free and always will be!
 
-  section
-    .container
-      header.wow.animated.fadeInDown
-        h3 Get a pretty portfolio based on your GitHub
 
-      .wow.animated.fadeIn
-        p Git Showcase looks at your public profile to build your portfolio.
-        p You don't have to type your info all over again and you can use the time you saved helping to save kittens in trees.
-
-      .blocks.row.wow.animated.fadeInUp
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-github
-            .text Sign in with GitHub
-
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-thumbs-up
-            .text Authorize us to look at your public profile
-
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-rocket
-            .text Add extra projects and customize
-
-  section#open-source.wow.animated.fadeIn
-    = render 'components/background', image: image_path('backgrounds/programmer.jpg')
-
+  section#plug-and-play.wow.animated.fadeIn
     .container
       header
-        h3
-          i.fa.fa-code-fork
-          ' Open Sourced
+        h2 Plug-and-play GitHub portfolio:
 
-      p Git Showcase is an
-      strong Open Source project designed to help developers show of their talents.
-      p If you like the project, you can help by sharing it on social media and giving us a Star on Github.
+      .row
+        .step.col-md-4
+          = image_tag('home/step-1.png', alt: 'First step')
+          p
+            | Sign-in with your
+            br
+            | GitHub account
+        .step.col-md-4
+          = image_tag('home/step-2.png', alt: 'Second step')
+          p
+            | Authorize GitShowcase
+            br
+            | to look at your profile
+        .step.col-md-4
+          = image_tag('home/step-3.png', alt: 'Third step')
+          p
+            | Get a portfolio
+            br
+            | to call your own
 
-      .social
-        a.btn.btn-black href='https://github.com/pedsmoreira/gitshowcase' target="_blank"
-          i.fa.fa-github-alt
-          '  GitHub
-
-        a.btn.btn-info target='_blank' href="https://twitter.com/home?status=Checkout 20this 20portfolio 20creator 20by 20 40pedsmoreira, 20just 20connect 20your 20GitHub 20and 20you're 20good 20to 20go! 0Awww.gitshowcase.com"
-          i.fa.fa-twitter
-          '  Share
-
-        a.btn.btn-primary href='https://www.facebook.com/sharer/sharer.php?u=www.gitshowcase.com' target='_blank'
-          i.fa.fa-facebook
-          '  Share
-
-  section
+  section#responsive.wow.animated.fadeIn
     .container
-      header.wow.animated.fadeInDown
-        h3 Coming up next
+      header
+        h2 Seamless experience in all devices:
 
-      .wow.animated.fadeIn
-        p Git Showcase is just starting and we want to make it even better.
+      = image_tag('home/responsive.png', alt: 'GitShowcase in different devices', class: 'img-fluid')
 
-      .blocks.row.wow.animated.fadeInUp
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-cogs
-            .text Multiple Templates
+      p
+        | After authorizing Gitshowcase to access your Github, this is what you’ll see. A good to go
+          portfolio. Customizing is as easy as it seems. You can change title, description, background
+          cover, projects etc. Take a sneak peak bellow:
 
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-code
-            .text Template Customization
+      = render 'components/live-preview'
+      = render 'components/sign-in'
 
-        .col-md-4
-          .block
-            .icon
-              i.fa.fa-comments-o
-            .text Tell us what feature you want :D
+  section#open-source
+    .container
+      header
+        h2
+          = image_tag('home/heart.png')
+          | We're open source:
 
-  section#sign-in
-    = render 'components/sign-in'
+        h3 “Learn from the community. Give back to the community.”
+
+      p
+        | Git Showcase is an Open Source project designed to help developers show off their talents.
+        br
+        | If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.
+
+      .social-buttons
+        a.social-button.social-button-github href='https://github.com/pedsmoreira/gitshowcase' target="_blank"
+          i.fa.fa-github
+          |  Star on GitHub
+
+        a.social-button.social-button-facebook href='https://www.facebook.com/sharer/sharer.php?u=www.gitshowcase.com' target='_blank'
+          i.fa.fa-facebook
+          |  Share on Facebook
+
+        a.social-button.social-button-twitter target='_blank' href="https://twitter.com/home?status=Checkout 20this 20portfolio 20creator 20by 20 40pedsmoreira, 20just 20connect 20your 20GitHub 20and 20you're 20good 20to 20go! 0Awww.gitshowcase.com"
+          i.fa.fa-twitter
+          |  Share on Twitter
+
+  footer#footer
+    = render 'components/background',
+            image: image_path('home/footer.jpg'),
+            mask: 0
+
+    = image_tag('logo-text.png', {class: 'logo'})
+
+    .container
+      h2
+        .first-line
+          strong 3793
+          |  developers
+        |  showcased their portfolios
+
+      = render 'components/sign-in'
+
+      = render 'layouts/partials/footer'

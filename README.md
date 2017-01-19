@@ -1,6 +1,6 @@
-# Git Showcase
+# GitShowcase
 
-Awesome Portfolio from your GitHub
+Get noticed with a rockstar Portfolio
 
 ### System Requirements
 

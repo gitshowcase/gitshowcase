@@ -10,19 +10,19 @@ header#header
     .alert.alert-error
       .container= alert
 
-  .navbar.fixed-top.navbar-inverse.bg-light
+  .navbar.fixed-top
     .container
       a.navbar-brand href='/'
         = image_tag 'logo-text.png', alt: 'logo'
 
-      .nav.navbar-nav.pull-right
+      .pull-right
         - unless user_signed_in?
           = render 'components/sign-in', type: 'link', text: 'Sign In'
 
         - if user_signed_in?
-          a.nav-item.nav-link.settings href=users_url
+          a.settings href=users_url
             i.fa.fa-cog
-            '  Settings
-          a.nav-item.nav-link href=destroy_user_session_path
+            |  Settings
+          a.logout href=destroy_user_session_path
             i.fa.fa-sign-out
-            '  Logout
+            |  Logout

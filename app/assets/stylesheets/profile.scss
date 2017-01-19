@@ -2,8 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import "constants/colors";
+@import "constants/sizes";
 
 .profile-show {
+  padding-top: $header-height;
+
   > header {
     padding: 4rem 0;
     position: relative;

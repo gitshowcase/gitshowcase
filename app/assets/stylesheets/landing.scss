@@ -6,109 +6,224 @@
 
 .home-view {
   $margin-size: 4rem;
-
   text-align: center;
-  font-family: arial, helvetica, sans-serif;
 
-  .presenter {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    margin-top: -$header-height;
-    color: white;
+  h2 {
+    color: #484848;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.9;
+    letter-spacing: 1.6px;
+
+    @media screen and (max-width: 997px) {
+      font-size: 32px;
+    }
+  }
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 44px;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(72, 72, 72, 0.8);
+    line-height: 1.17;
+    letter-spacing: 1px;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 1.65;
+    letter-spacing: 0.7px;
+    text-align: center;
+    color: rgba(72, 72, 72, 0.8);
+  }
+
+  #presenter {
     position: relative;
+    color: rgba(white, .8);
+    padding-bottom: 96px;
+
+    @media screen and (max-width: 997px) {
+      padding-bottom: 48px;
+    }
+
+    .logo {
+      margin-top: 68px;
+    }
 
     h1 {
-      margin-bottom: 2rem;
-    }
+      margin-top: 110px;
+      font-weight: 300;
+      font-size: 64px;
+      line-height: 1.19;
+      letter-spacing: 2.6px;
 
-    h2 {
-      margin-bottom: 3rem;
-      color: $color-one;
-    }
-
-    h1, h2 {
-      text-shadow: .2rem .2rem .2rem rgba(0, 0, 0, .5);
-      font-variant: small-caps;
+      @media screen and (max-width: 997px) {
+        font-size: 32px;
+        margin-top: 82px;
+      }
     }
 
     .sign-in {
-      font-size: 150%;
+      margin-top: 74px;
+    }
+
+    .free {
+      font-size: 17px;
+      line-height: 3.82;
+      letter-spacing: 0.7px;
+      margin-top: 45px;
     }
   }
 
-  section {
-    position: relative;
-    margin: $margin-size 0;
+  #plug-and-play {
+    h2 {
+      margin-top: 111px;
+      margin-bottom: 86px;
+    }
 
-    h3 {
-      margin-top: 0;
-      margin-bottom: 2rem;
-      font-size: 2rem;
-      font-weight: 300;
-      color: $color-title;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid rgba(0, 0, 0, .1);
-      display: inline-block;
-      padding-left: 2rem;
-      padding-right: 2rem;
-      font-variant: small-caps;
+    .step {
+      p {
+        margin-top: 42px;
+      }
+    }
+
+    @media screen and (max-width: 997px) {
+      .step p {
+        margin-top: 24px;
+      }
+
+      .step + .step {
+        margin-top: 42px;
+      }
+    }
+  }
+
+  #responsive {
+    h2 {
+      margin-top: 191px;
+      margin-bottom: 86px;
     }
 
     p {
-      font-size: 125%;
-      color: $color-text;
+      margin: 82px auto;
+      width: 741px;
+      max-width: 100%;
     }
 
-    &:nth-child(2n+3) {
-      background: rgba(0, 0, 0, .05);
-      padding: $margin-size 0;
+    @media screen and (max-width: 997px) {
+      a + a {
+        margin-top: 33px;
+      }
     }
 
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  .blocks {
-    margin-top: 2rem;
-
-    .block {
-      .icon {
-        font-size: 300%;
-        height: 56px;
-        vertical-align: top;
-        margin-bottom: 1.5rem;
+    @media screen and (min-width: 998px) {
+      a + a {
+        margin-left: 33px;
       }
     }
   }
 
   #open-source {
-    padding: 5rem 0;
+    padding-bottom: 148px;
 
-    h3 {
-      color: $color-white-highlight;
+    h2 {
+      margin-top: 244px;
+      margin-bottom: 76px;
+
+      img {
+        margin-right: 28px;
+        margin-top: -8px;
+      }
     }
 
     p {
-      color: $color-white;
+      margin-bottom: 82px;
     }
 
-    .social {
-      margin-top: 2rem;
-    }
+    .social-buttons {
+      .social-button {
+        display: inline-block;
+        color: white !important;
+        text-decoration: none !important;
+        height: 90px;
+        width: 311px;
+        max-width: 90%;
+        border-radius: 6px;
+        box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, 0.21);
+        font-family: Montserrat;
+        font-size: 19px;
+        letter-spacing: 0.8px;
+        padding-top: 33px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
 
-    .btn {
-      margin: .25rem;
+        i {
+          font-size: 31px;
+          vertical-align: middle;
+          margin-right: 16px;
+        }
+
+        @media screen and (max-width: 997px) {
+          height: 80px;
+          padding-top: 26px;
+        }
+
+        &-github {
+          background-color: #4e4d4d;
+        }
+
+        &-facebook {
+          background-color: #3b579d;
+        }
+        
+        &-twitter {
+          background-color: #66b5ef;
+        }
+      }
     }
   }
 
-  #sign-in {
-    background: $color-black;
+  #footer {
+    position: relative;
 
-    .btn {
-      border: 1px solid $color-white;
-      font-size: 150%;
+    .logo {
+      margin-top: 69px;
+    }
+
+    h2 {
+      margin-top: 111px;
+      margin-bottom: 52px;
+      line-height: 1.68;
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 300;
+
+      strong {
+        font-weight: 600;
+      }
+
+      .first-line {
+        font-size: 64px;
+        line-height: 1.05;
+        letter-spacing: 2.6px;
+      }
+    }
+
+    .footer {
+      font-size: 17px;
+      margin-top: 110px;
+      padding-bottom: 24px;
+      margin-bottom: 0;
+      color: rgba(255, 255, 255, 0.8);
+      letter-spacing: 0.7px;
+
+      a {
+        color: inherit;
+      }
     }
   }
 }

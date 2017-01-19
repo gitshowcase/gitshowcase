@@ -1,24 +1,20 @@
-@import "constants/colors";
-
-.sign-in {
+.live-preview {
   display: inline-block;
-  color: white !important;
-  text-decoration: none !important;
   width: 356px;
   max-width: 90%;
   height: 86px;
   border-radius: 6px;
-  background-color: #d73264;
-  border: solid 2px #d73264;
+  color: #d73264 !important;
+  text-decoration: none !important;
   box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, 0.21);
+  border: solid 2px #d73264;
   font-family: Montserrat;
   font-size: 19px;
   letter-spacing: 0.8px;
   padding-top: 28px;
   text-align: center;
 
-  i {
-    font-size: 31px;
+  img {
     vertical-align: middle;
     margin-right: 31px;
   }

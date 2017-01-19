@@ -1,0 +1,12 @@
+@import "constants/sizes";
+
+.dashboard-layout {
+  margin-top: $header-height;
+  padding-top: 1rem;
+
+  .dashboard-menu {
+    a {
+      display: block;
+    }
+  }
+}
