@@ -6,11 +6,11 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     created = false
 
     if @user
-      created = true
       @user.github_token = auth.credentials.token
       @user.save
     else
       @user = User.create_from_omniauth(auth)
+      created = true
     end
 
     if @user.persisted?

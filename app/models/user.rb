@@ -67,22 +67,22 @@ class User < ApplicationRecord
   end
 
   def sync_profile
-    user = client.user
+    git_user = git_user.user
 
-    self.avatar = user.avatar_url
-    self.username = user.login.to_s.downcase
-    self.name = user.name
-    self.website = user.blog if user.blog.present?
-    self.location = user.location if user.location.present?
-    self.email = user.email if user.email.present?
-    self.hireable = user.hireable
-    self.bio = user.bio if user.bio.present?
+    self.avatar = git_user.avatar_url
+    self.username = git_user.login.to_s.downcase
+    self.name = git_user.name
+    self.website = git_user.blog if git_user.blog.present?
+    self.location = git_user.location if git_user.location.present?
+    self.email = git_user.email if git_user.email.present?
+    self.hireable = git_user.hireable
+    self.bio = git_user.bio if git_user.bio.present?
 
-    self.company = user.company
+    self.company = git_user.company
     self.company_website = 'https://github.com/' + self.company[1..-1] if self.company.present? and self.company[0] == '@'
 
     save!
-    user
+    self
   end
 
   def sync_skills_projects
