@@ -11,26 +11,43 @@ body {
 
 a {
   color: $color-one;
+
+  &:hover, &:focus, &:active {
+    color: $color-two;
+    text-decoration: none;
+  }
 }
 
-button {
+.btn {
   border: none;
   cursor: pointer;
   outline: none;
   box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, .21);
+  padding: 9px 17px;
 
   &:hover {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, .2);
   }
 }
 
+.form-actions {
+  margin-top: 2rem;
+}
+
 .checkbox label input {
   margin-right: .5rem;
 }
 
-
 .btn, .form-control, .input-group-addon {
   border-radius: 0;
+}
+
+.btn-success {
+  background-color: $color-one;
+
+  &:hover {
+    background-color: $color-two;
+  }
 }
 
 .form-control {

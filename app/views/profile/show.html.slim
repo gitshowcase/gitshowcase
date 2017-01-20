@@ -4,6 +4,8 @@
             blur: '5px',
             image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg')
 
+    img src=image_url('logo-text.png') alt="#{@user.name} profile photo" class='image-responsive rounded-circle wow animated fadeInDown'
+
     .container
       img src=@user.avatar alt="#{@user.name} profile photo" class='user-image image-responsive rounded-circle wow animated fadeInDown'
       h1.user-role.wow.animated.fadeIn= @user.role
@@ -34,7 +36,7 @@
             a href=@user.website target='_blank' rel='nofollow'
               = @user.website
 
-        - if @user.show_email.present?
+        - if @user.hireable
           section.col-md-4.col-sm-6.wow.animated.fadeIn
             header
               i.fa.fa-at

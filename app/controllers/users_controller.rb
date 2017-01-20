@@ -48,6 +48,6 @@ class UsersController < DashboardController
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
     params.require(:user).permit(:name, :avatar, :cover, :bio, :role, :location, :company, :company_website, :website,
-                                 :resume, :hireable, :show_email, User::SOCIALS)
+                                 :resume, :hireable, User::SOCIALS)
   end
 end

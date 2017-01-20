@@ -4,7 +4,7 @@ html
     = render 'layouts/partials/head',
             title: @user.display_name,
             description: @user.bio,
-            image: @user.cover || @user.avatar,
+            image: @user.cover.present? ? @user.cover : @user.avatar,
             card_type: 'summary',
             card_creator: @user.twitter ? "@#{@user.twitter}" : nil,
             prepend_keywords: "#{@user.username}, #{@user.role}, "

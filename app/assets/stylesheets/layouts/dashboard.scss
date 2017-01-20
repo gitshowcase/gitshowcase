@@ -13,14 +13,27 @@
   }
 
   .dashboard-menu {
+    padding: 1rem;
+    background: rgba(0, 0, 0, .025);
+
     a {
       display: block;
       padding: .5rem;
-      text-decoration: none;
+      color: $color-text-black;
+
+      .active, &:hover {
+        color: $color-one;
+      }
+
+      i {
+        transition: none;
+      }
     }
 
-    nav {
-      margin-bottom: 1rem;
+    nav + nav {
+      margin-top: 1rem;
+      border-top: 1px dashed rgba(black, .1);
+      padding-top: 1rem;
     }
   }
 
