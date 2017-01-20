@@ -1,0 +1,19 @@
+@import "constants/colors";
+
+* {
+  transition: all .5s ease;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-text-black;
+}
+
+a {
+  color: $color-one;
+
+  &:hover, &:focus, &:active {
+    color: $color-two;
+    text-decoration: none;
+  }
+}

@@ -3,5 +3,7 @@
     i.fa.fa-cubes
     |  Projects
 
-  = render 'components/projects', projects: @projects, edit: true
+  - @projects.each do |project|
+    a.project href=edit_project_url(project)
+      = project.title
 

@@ -1,12 +1,9 @@
-- edit ||= false
-- href = edit ? edit_project_path(project) : (project.homepage || 'javascript:void()')
-- target = edit ? '_self' : '_blank'
-
-- klass = [project.icon.present? ? 'project-with-icon' : '', project.cover.present? && !edit ? 'project-with-cover' : '']
-- klass << 'wow animated fadeIn' unless edit
+- href = project.homepage || 'javascript:void()'
+- target = '_blank'
+- klass = ['wow animated fadeIn', project.icon.present? ? 'project-with-icon' : '', project.cover.present? ? 'project-with-cover' : '']
 
 .project class=klass
-  - if project.cover_url.present? && !edit
+  - if project.cover_url.present?
     .project-background
       = render 'components/background',
       mask_color: 'white',
