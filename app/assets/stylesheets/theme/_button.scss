@@ -63,7 +63,7 @@
   i {
     font-size: 31px;
     vertical-align: middle;
-    margin-right: 31px;
+    margin-right: 20px;
   }
 
   &:hover {
@@ -98,6 +98,8 @@
   }
 
   &:active {
+    background-color: #e8e8e8;
+    
     &:before {
       border-color: $color-highlight-active;
     }
