@@ -1,7 +1,10 @@
 .socials-view
-  h1
-    i.fa.fa-share-alt
-    |  Editing socials
+  header.wow.animated.fadeIn
+    h1
+      i.fa.fa-share-alt
+      |  Editing socials
+    .header-description
+      '  What are your favorite social networks?
 
   = simple_form_for(@user) do |f|
     = f.error_notification

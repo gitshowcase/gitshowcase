@@ -4,6 +4,21 @@
     |  Projects
 
   - @projects.each do |project|
-    a.project href=edit_project_url(project)
-      = project.title
+    .project-edit
+      .project-actions
+        button.project-show.text-danger type='button' class="#{project.hide ? 'hide' : ''}"
+          i.fa.fa-eye-slash
+          |  Hide
+        button.project-hide.text-success type='button' class="#{!project.hide ? 'hide' : ''}"
+          i.fa.fa-eye
+          |  Show
+        span.project-loading
+          i.fa.fa-spinner.fa-pulse
+          |  Saving
+
+      a.project-link href=edit_project_url(project)
+        - if project.icon
+          img src=project.icon class='project-icon'
+        .project-title= project.title
+        .project-description= project.description
 

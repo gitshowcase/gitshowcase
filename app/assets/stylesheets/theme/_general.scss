@@ -12,8 +12,16 @@ body {
 a {
   color: $color-one;
 
+  i {
+    transition: none;
+  }
+
   &:hover, &:focus, &:active {
     color: $color-two;
     text-decoration: none;
   }
+}
+
+.text-success {
+  color: $color-one !important;
 }

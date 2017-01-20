@@ -14,7 +14,7 @@
 
   .dashboard-menu {
     padding: 1rem;
-    background: rgba(0, 0, 0, .025);
+    background: white;
 
     a {
       display: block;
@@ -23,10 +23,6 @@
 
       .active, &:hover {
         color: $color-one;
-      }
-
-      i {
-        transition: none;
       }
     }
 
@@ -37,18 +33,29 @@
     }
   }
 
+  form {
+    background: white;
+    padding: 1rem;
+  }
+
+  .content-yield {
+    > * {
+      background: white;
+      padding: 1rem 0;
+      margin-bottom: 1.5rem;
+    }
+  }
+
   h1 {
     color: $color-title-black;
     font-weight: 300;
     font-size: 1.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
   }
 
   .header-actions, .header-description {
     text-align: center;
-    margin-top: -1rem;
-    margin-bottom: 1rem;
 
     a {
       text-decoration: none;
@@ -57,8 +64,9 @@
 
   h2 {
     font-size: 1.5rem;
-    margin-top: 3rem;
-    margin-bottom: 1.5rem;
+    margin-top: 0;
+    padding-top: 1rem;
+    margin-bottom: .5rem;
     text-align: center;
   }
 }
