@@ -51,4 +51,14 @@
       }
     }
   }
+
+  &.form-group-addon {
+    .input-group-addon {
+      padding-bottom: .5rem;
+    }
+
+    .form-control {
+      padding-left: .1rem !important;
+    }
+  }
 }
