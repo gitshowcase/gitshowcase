@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
-  Project.init() if $('.dashboard-layout .index-view')
+  Projects.init() if $('.dashboard-layout .index-view')
 
 Projects = {
   init: ->
@@ -17,6 +17,6 @@ Projects = {
   hide: ->
     false
 
-  showAction: name ->
+  showAction: (name) ->
     false
 }
