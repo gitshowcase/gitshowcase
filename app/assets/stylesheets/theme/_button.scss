@@ -24,6 +24,10 @@
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
   }
+
+  &:active {
+    box-shadow: none;
+  }
 }
 
 .btn.btn-social {
@@ -65,6 +69,10 @@
   &:hover {
     background-color: $color-highlight-hover;
   }
+
+  &:active {
+    background-color: $color-highlight-active;
+  }
 }
 
 .btn.btn-action.btn-action-transparent {
@@ -84,10 +92,14 @@
   }
 
   &:hover {
-    background-color: rgba($color-highlight-hover, .05);
-
     &:before {
       border-color: $color-highlight-hover;
+    }
+  }
+
+  &:active {
+    &:before {
+      border-color: $color-highlight-active;
     }
   }
 }
