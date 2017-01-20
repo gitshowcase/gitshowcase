@@ -1,6 +1,5 @@
 - text ||= 'Sign in with Github'
 
-a.sign-in href=omniauth_authorize_path(User, :github)
-  button type='button'
-    i.fa.fa-github
-    = text
+a.btn.btn-action.sign-in href=omniauth_authorize_path(User, :github)
+  i.fa.fa-github
+  = text

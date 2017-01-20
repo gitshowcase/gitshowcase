@@ -1,32 +1,23 @@
 .new-view
-  h1 New project
+  header
+    h1
+      i.fa.fa-plus
+      |  New project
+    .header-description
+      '  Just place your repository name or website and we'll do our magic
 
-  section.from-repository
-    h2
-      i.fa.fa-github
-      |  From GitHub
+  = simple_form_for(@project) do |f|
+    = f.error_notification
 
-    = simple_form_for(@project) do |f|
-      = f.error_notification
+    .form-inputs
+      = f.input :repository, autofocus: true
 
-      .form-inputs
-        = f.input :repository, autofocus: true
+    div or
 
-      = button_tag type: :submit, class: 'btn btn-black' do
-        i.fa.fa-github
-        |  Import
+    .form-inputs
+      = f.input :homepage
 
-  section.from-url
-    h2
-      i.fa.fa-globe
-      |  From Website
-
-    = simple_form_for(@project) do |f|
-      = f.error_notification
-
-      .form-inputs
-        = f.input :homepage
-
-      = button_tag type: :submit, class: 'btn btn-primary' do
-        i.fa.fa-globe
+    .form-actions
+      = button_tag type: :submit, class: 'btn btn-success' do
+        i.fa.fa-cloud-download
         |  Import

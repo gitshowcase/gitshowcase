@@ -42,6 +42,10 @@ $divider-height: 111px;
     color: rgba(72, 72, 72, 0.8);
   }
 
+  .btn {
+    border-radius: 6px;
+  }
+
   #presenter {
     position: relative;
     color: rgba(white, .8);
@@ -146,42 +150,10 @@ $divider-height: 111px;
       margin-bottom: 82px;
     }
 
-    .social-buttons {
-      .social-button {
-        display: inline-block;
-
-        button {
-          color: white !important;
-          text-decoration: none !important;
-          padding: 20px 30px;
-          border-radius: 6px;
-          font-family: Montserrat;
-          font-size: 16px;
-          letter-spacing: 0.8px;
-          text-align: center;
-          margin-left: 10px;
-          margin-right: 10px;
-          margin-bottom: 20px;
-        }
-
-        i {
-          font-size: 31px;
-          vertical-align: middle;
-          margin-right: 16px;
-        }
-
-        &-github button {
-          background-color: #4e4d4d;
-        }
-
-        &-facebook button {
-          background-color: #3b579d;
-        }
-
-        &-twitter button {
-          background-color: #66b5ef;
-        }
-      }
+    .btn-social {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 20px;
     }
   }
 
