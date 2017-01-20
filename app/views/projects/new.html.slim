@@ -10,7 +10,7 @@
       = f.error_notification
 
       .form-inputs
-        = f.input :repository, autofocus: true, placeholder: 'username/repository'
+        = f.input :repository, autofocus: true
 
       = button_tag type: :submit, class: 'btn btn-black' do
         i.fa.fa-github
@@ -25,7 +25,7 @@
       = f.error_notification
 
       .form-inputs
-        = f.input :homepage, placeholder: 'https://my-website.com'
+        = f.input :homepage
 
       = button_tag type: :submit, class: 'btn btn-primary' do
         i.fa.fa-globe

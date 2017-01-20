@@ -25,8 +25,7 @@ $(document).on('turbolinks:load', function () {
         $this = $(this);
         var group = $this.parents('.form-group:first');
 
-        if ($this.val().length) {
-            console.log('remove it');
+        if ($this.is(':focus') || $this.val().length) {
             group.removeClass('form-group-empty');
         } else {
             group.addClass('form-group-empty');
@@ -35,5 +34,5 @@ $(document).on('turbolinks:load', function () {
 
     var inputs = $('input[type="text"].form-control');
     inputs.each(fn);
-    inputs.on('input', fn);
+    inputs.on('input focus blur', fn);
 });

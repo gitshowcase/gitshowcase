@@ -4,6 +4,10 @@
   border-radius: 0;
 }
 
+.form-control {
+  color: $color-text-black;
+}
+
 .input-group-addon {
   border: transparent;
   color: #aaa;
@@ -12,12 +16,15 @@
 }
 
 .form-group {
+  margin-top: -.2rem;
+
   .control-label {
-    transition: all .3s linear;
+    transition: all .2s linear;
     transform: none;
     margin-bottom: 0;
     color: #1b75ad;
-    transform-origin: 10px 0;
+    transform-origin: 0;
+    font-weight: 300;
   }
 
   .form-control {
@@ -25,20 +32,22 @@
     border-left-color: transparent !important;
     border-right-color: transparent !important;
     margin-top: -.75rem;
-    color: #666;
-    padding-bottom: .2rem;
+    background: none;
+    padding-left: 0;
+    padding-bottom: .25rem;
   }
 
   &:not(.form-group-addon) {
     &:not(.form-group-empty) {
       .control-label {
-        transform: scale(.8) translate(-5px);
+        transform: scale(.8);
       }
     }
 
     &.form-group-empty {
       .control-label {
-        transform: translate(15px, 19px);
+        transform: translateY(20px);
+        color: #bbb;
       }
     }
   }
