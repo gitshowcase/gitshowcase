@@ -51,7 +51,7 @@ a {
   }
 
   .control-label {
-    transition: all .2s linear;
+    transition: all .2s ease-out;
     transform: none;
     margin-bottom: 0;
     color: #1b75ad;
