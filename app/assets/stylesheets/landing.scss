@@ -4,6 +4,8 @@
 @import "constants/sizes";
 @import "constants/colors";
 
+$divider-height: 111px;
+
 .home-view {
   $margin-size: 4rem;
   text-align: center;
@@ -80,7 +82,7 @@
 
   #plug-and-play {
     h2 {
-      margin-top: 111px;
+      margin-top: $divider-height;
       margin-bottom: 86px;
     }
 
@@ -103,7 +105,7 @@
 
   #responsive {
     h2 {
-      margin-top: 191px;
+      margin-top: $divider-height;
       margin-bottom: 86px;
     }
 
@@ -127,10 +129,10 @@
   }
 
   #open-source {
-    padding-bottom: 148px;
+    padding-bottom: $divider-height;
 
     h2 {
-      margin-top: 244px;
+      margin-top: $divider-height;
       margin-bottom: 76px;
 
       img {
@@ -146,21 +148,20 @@
     .social-buttons {
       .social-button {
         display: inline-block;
-        color: white !important;
-        text-decoration: none !important;
-        height: 90px;
-        width: 311px;
-        max-width: 90%;
-        border-radius: 6px;
-        box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, 0.21);
-        font-family: Montserrat;
-        font-size: 19px;
-        letter-spacing: 0.8px;
-        padding-top: 33px;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin-bottom: 20px;
+
+        button {
+          color: white !important;
+          text-decoration: none !important;
+          padding: 20px 30px;
+          border-radius: 6px;
+          font-family: Montserrat;
+          font-size: 16px;
+          letter-spacing: 0.8px;
+          text-align: center;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 20px;
+        }
 
         i {
           font-size: 31px;
@@ -168,20 +169,15 @@
           margin-right: 16px;
         }
 
-        @media screen and (max-width: 997px) {
-          height: 80px;
-          padding-top: 26px;
-        }
-
-        &-github {
+        &-github button {
           background-color: #4e4d4d;
         }
 
-        &-facebook {
+        &-facebook button {
           background-color: #3b579d;
         }
-        
-        &-twitter {
+
+        &-twitter button {
           background-color: #66b5ef;
         }
       }
@@ -191,15 +187,13 @@
   #footer {
     position: relative;
 
-    .logo {
-      margin-top: 69px;
-    }
-
     h2 {
-      margin-top: 111px;
+      padding-top: 111px;
+      margin-top: 0;
       margin-bottom: 52px;
       line-height: 1.68;
-      color: rgba(255, 255, 255, 0.8);
+      font-size: 31.65px;
+      color: $color-title-white;
       font-weight: 300;
 
       strong {
@@ -207,7 +201,7 @@
       }
 
       .first-line {
-        font-size: 64px;
+        font-size: 50px;
         line-height: 1.05;
         letter-spacing: 2.6px;
       }
@@ -215,7 +209,7 @@
 
     .footer {
       font-size: 17px;
-      margin-top: 110px;
+      margin-top: 80px;
       padding-bottom: 24px;
       margin-bottom: 0;
       color: rgba(255, 255, 255, 0.8);

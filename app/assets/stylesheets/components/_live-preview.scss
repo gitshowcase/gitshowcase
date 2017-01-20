@@ -9,17 +9,13 @@
     border-radius: 6px;
     border: solid 2px $color-highlight;
     background-color: transparent;
-    box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, .21);
     font-family: Montserrat;
     font-size: 16px;
     letter-spacing: 0.8px;
     padding: 20px 30px;
     text-align: center;
-    outline: none;
-    cursor: pointer;
 
     &:hover {
-      box-shadow: 0px 4px 12px rgba(0,0,0,.2);
       border-color: $color-highlight-hover;
       background-color: rgba($color-highlight-hover, .05);
     }
