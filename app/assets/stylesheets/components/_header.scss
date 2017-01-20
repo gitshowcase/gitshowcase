@@ -1,0 +1,51 @@
+@import "constants/sizes";
+@import "constants/colors";
+
+.header {
+  height: $header-height;
+  margin-bottom: 1rem;
+
+  .alert, .notice {
+    margin-bottom: 0;
+  }
+
+  nav {
+    $padding: .75rem;
+
+    //background-color: #333;
+    background: linear-gradient(to right, $color-one, $color-two);
+
+    .logo {
+      display: inline-block;
+      margin-top: $padding;
+      margin-bottom: $padding;
+    }
+
+    .links {
+      margin-right: -$padding;
+
+      a {
+        display: inline-block;
+        padding: $padding;
+        color: white;
+        text-decoration: none;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &:hover {
+          background: rgba(0, 0, 0, .05);
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    height: 20px;
+    padding: 0;
+
+    img {
+      filter: invert(1);
+      max-height: 100%;
+    }
+  }
+}

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
-    root :to => 'profile#show', as: :authenticated_root
+    root :to => 'dashboard#home', as: :authenticated_root
 
     resources :projects, only: [:index, :new, :create, :edit, :update, :destroy] do
       collection do

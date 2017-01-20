@@ -5,10 +5,9 @@
 @import "constants/sizes";
 
 .profile-show {
-  padding-top: $header-height;
-
   > header {
-    padding: 4rem 0;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
     position: relative;
     color: $color-white;
     text-align: center;
@@ -41,16 +40,13 @@
 
     .user-name {
       font-size: 1.75rem;
-      color: $color-text;
     }
 
     section {
       margin-top: 3rem;
-      color: $color-text;
 
       i {
         font-size: 2.5rem;
-        color: $color-text;
         display: block;
         height: 3.5rem;
         vertical-align: middle;
@@ -58,14 +54,13 @@
 
       h3 {
         font-size: 1.17rem;
-        color: $color-text;
         margin-bottom: 1rem;
       }
     }
   }
 
   #skills {
-    color: $color-title;
+    color: $color-title-black;
     position: relative;
 
     h2 {

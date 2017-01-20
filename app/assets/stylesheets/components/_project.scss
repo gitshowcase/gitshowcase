@@ -44,14 +44,13 @@
 
   .project-title {
     font-size: 1.35rem;
-    color: $color-title;
+    color: $color-title-black;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
   .project-description {
-    color: $color-text;
     height: 3rem;
     margin-bottom: .5rem;
   }

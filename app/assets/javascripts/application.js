@@ -19,3 +19,21 @@
 //= require_tree .
 
 new WOW().init();
+
+$(document).on('turbolinks:load', function () {
+    var fn = function () {
+        $this = $(this);
+        var group = $this.parents('.form-group:first');
+
+        if ($this.val().length) {
+            console.log('remove it');
+            group.removeClass('form-group-empty');
+        } else {
+            group.addClass('form-group-empty');
+        }
+    };
+
+    var inputs = $('input[type="text"].form-control');
+    inputs.each(fn);
+    inputs.on('input', fn);
+});

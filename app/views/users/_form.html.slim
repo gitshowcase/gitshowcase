@@ -2,7 +2,7 @@
   = f.error_notification
 
   .form-inputs
-    = f.input :name, {autofocus: true}
+    = f.input :name, autofocus: true
     = f.input :role
     = f.input :avatar
     = f.input :cover
@@ -18,4 +18,4 @@
   .form-actions
     = button_tag type: :submit, class: 'btn btn-success' do
       i.fa.fa-check
-      |  Update profile
+      |  Save profile

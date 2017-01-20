@@ -40,17 +40,17 @@
   footer.container-fluid
     .pull-left
       - if project.hide
-        span.project-hide.tag.tag-danger
+        span.project-hide.label.label-danger
           i.fa.fa-eye-slash
           | Hidden
 
       - if project.language.present?
-        span.project-language.tag.tag-default
+        span.project-language.label.label-default
           i.fa.fa-code
           = project.language
 
       - if project.fork
-        span.project-hide.tag.tag-info
+        span.project-hide.label.label-info
           i.fa.fa-code-fork
           | Fork
 

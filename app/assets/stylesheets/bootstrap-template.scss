@@ -1,0 +1,45 @@
+@import "constants/colors";
+
+.btn, .form-control, .input-group-addon {
+  border-radius: 0;
+}
+
+.input-group-addon {
+  border: transparent;
+  color: #aaa;
+  padding: 0;
+  background: transparent;
+}
+
+.form-group {
+  .control-label {
+    transition: all .3s linear;
+    transform: none;
+    margin-bottom: 0;
+    color: #1b75ad;
+    transform-origin: 10px 0;
+  }
+
+  .form-control {
+    border-top-color: transparent !important;
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+    margin-top: -.75rem;
+    color: #666;
+    padding-bottom: .2rem;
+  }
+
+  &:not(.form-group-addon) {
+    &:not(.form-group-empty) {
+      .control-label {
+        transform: scale(.8) translate(-5px);
+      }
+    }
+
+    &.form-group-empty {
+      .control-label {
+        transform: translate(15px, 19px);
+      }
+    }
+  }
+}

@@ -8,8 +8,8 @@
       h2= group[0].to_s.titleize
 
       - group[1].each do |social, pre|
-        = f.input social, placeholder: true,
-        label: "#{render 'components/social-icon', social: social} #{social.to_s.titleize}".html_safe do
+        = f.input social, wrapper_html: {class: "form-group #{pre.present? ? 'form-group-addon' : ''}"},
+                label: "#{render 'components/social-icon', social: social} #{social.to_s.titleize}".html_safe do
           - if pre.present?
             .input-group
               span.input-group-addon= "#{pre}/"
@@ -20,4 +20,4 @@
     .form-actions
       = button_tag type: :submit, class: 'btn btn-success' do
         i.fa.fa-check
-        |  Update
+        |  Save Social

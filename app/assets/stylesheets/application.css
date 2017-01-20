@@ -17,18 +17,13 @@
  *= require_self
  */
 
-* {
+body {
     font-family: 'Lato', sans-serif;
+    color: rgba(72,72,72,0.8);
 }
 
-.btn-black {
-    background: #222;
-    color: white;
-}
-
-.btn-black:hover, .btn-black:focus, .btn-black:active {
-    background: #000;
-    color: white;
+a {
+    color: #0088cc;
 }
 
 .checkbox label input {

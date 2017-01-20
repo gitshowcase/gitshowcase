@@ -9,7 +9,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.github_token = auth.credentials.token
       @user.save
     else
-      @user = User.create_from_omniauth(auth)
+      @user = User.create_from_github(auth)
       created = true
     end
 
