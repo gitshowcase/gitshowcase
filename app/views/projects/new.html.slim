@@ -4,7 +4,7 @@
   section.from-repository
     h2
       i.fa.fa-github
-      | From GitHub
+      |  From GitHub
 
     = simple_form_for(@project) do |f|
       = f.error_notification
@@ -14,12 +14,12 @@
 
       = button_tag type: :submit, class: 'btn btn-black' do
         i.fa.fa-github
-        | Import
+        |  Import
 
   section.from-url
     h2
       i.fa.fa-globe
-      | From Website
+      |  From Website
 
     = simple_form_for(@project) do |f|
       = f.error_notification
@@ -29,4 +29,4 @@
 
       = button_tag type: :submit, class: 'btn btn-primary' do
         i.fa.fa-globe
-        | Import
+        |  Import

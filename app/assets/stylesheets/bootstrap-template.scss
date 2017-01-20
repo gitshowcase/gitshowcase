@@ -1,5 +1,19 @@
 @import "constants/colors";
 
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-text-black;
+}
+
+a {
+  color: #0088cc;
+}
+
+.checkbox label input {
+  margin-right: .5rem;
+}
+
+
 .btn, .form-control, .input-group-addon {
   border-radius: 0;
 }
@@ -17,6 +31,24 @@
 
 .form-group {
   margin-top: -.2rem;
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 2px solid #1b75ad;
+    width: 0;
+    transition: width .3s ease;
+  }
+
+  &.form-group-focused {
+    &:before {
+      width: 100%;
+    }
+  }
 
   .control-label {
     transition: all .2s linear;
@@ -24,7 +56,6 @@
     margin-bottom: 0;
     color: #1b75ad;
     transform-origin: 0;
-    font-weight: 300;
   }
 
   .form-control {
@@ -35,6 +66,7 @@
     background: none;
     padding-left: 0;
     padding-bottom: .25rem;
+    font-family: 'Lato', sans-serif;
   }
 
   &:not(.form-group-addon) {

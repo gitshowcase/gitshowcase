@@ -25,11 +25,9 @@ $(document).on('turbolinks:load', function () {
         $this = $(this);
         var group = $this.parents('.form-group:first');
 
-        if ($this.is(':focus') || $this.val().length) {
-            group.removeClass('form-group-empty');
-        } else {
-            group.addClass('form-group-empty');
-        }
+        var focused = $this.is(':focus');
+        group.toggleClass('form-group-focused', focused);
+        group.toggleClass('form-group-empty', !(focused || $this.val().length));
     };
 
     var inputs = $('input[type="text"].form-control');

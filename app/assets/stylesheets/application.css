@@ -16,16 +16,3 @@
  *= require_tree .
  *= require_self
  */
-
-body {
-    font-family: 'Lato', sans-serif;
-    color: rgba(72,72,72,0.8);
-}
-
-a {
-    color: #0088cc;
-}
-
-.checkbox label input {
-    margin-right: .5rem;
-}
