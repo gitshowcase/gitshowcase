@@ -1,12 +1,16 @@
 @import "constants/colors";
 
+* {
+  transition: all .5s ease;
+}
+
 body {
   font-family: 'Lato', sans-serif;
   color: $color-text-black;
 }
 
 a {
-  color: #0088cc;
+  color: $color-one;
 }
 
 .checkbox label input {
@@ -39,7 +43,7 @@ a {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    border-bottom: 2px solid #1b75ad;
+    border-bottom: 2px solid $color-one;
     width: 0;
     transition: width .3s ease;
   }
@@ -54,7 +58,7 @@ a {
     transition: all .2s ease-out;
     transform: none;
     margin-bottom: 0;
-    color: #1b75ad;
+    color: $color-one;
     transform-origin: 0;
   }
 

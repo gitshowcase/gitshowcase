@@ -1,26 +1,33 @@
+@import "constants/colors";
+
 .live-preview {
   display: inline-block;
-  width: 356px;
-  max-width: 90%;
-  height: 86px;
-  border-radius: 6px;
-  color: #d73264 !important;
-  text-decoration: none !important;
-  box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, 0.21);
-  border: solid 2px #d73264;
-  font-family: Montserrat;
-  font-size: 19px;
-  letter-spacing: 0.8px;
-  padding-top: 28px;
-  text-align: center;
 
-  img {
-    vertical-align: middle;
-    margin-right: 31px;
+  button {
+    color: $color-highlight !important;
+    text-decoration: none !important;
+    border-radius: 6px;
+    border: solid 2px $color-highlight;
+    background-color: transparent;
+    box-shadow: 0.5px 1.9px 3px 0 rgba(0, 0, 0, .21);
+    font-family: Montserrat;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    padding: 20px 30px;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0px 4px 12px rgba(0,0,0,.2);
+      border-color: $color-highlight-hover;
+      background-color: rgba($color-highlight-hover, .05);
+    }
   }
 
-  @media screen and (max-width: 997px) {
-    height: 80px;
-    padding-top: 26px;
+  i {
+    font-size: 31px;
+    vertical-align: middle;
+    margin-right: 31px;
   }
 }

@@ -9,7 +9,7 @@
   text-align: center;
 
   h2 {
-    color: #484848;
+    color: $color-title-black;
     font-size: 40px;
     font-weight: 300;
     line-height: 1.9;
@@ -26,7 +26,7 @@
     font-family: Montserrat;
     font-size: 24px;
     font-weight: 600;
-    color: rgba(72, 72, 72, 0.8);
+    color: $color-text-black;
     line-height: 1.17;
     letter-spacing: 1px;
   }
@@ -56,7 +56,7 @@
     h1 {
       margin-top: 110px;
       font-weight: 300;
-      font-size: 64px;
+      font-size: 50px;
       line-height: 1.19;
       letter-spacing: 2.6px;
 
@@ -113,13 +113,13 @@
       max-width: 100%;
     }
 
-    @media screen and (max-width: 997px) {
+    @media screen and (max-width: 767px) {
       a + a {
         margin-top: 33px;
       }
     }
 
-    @media screen and (min-width: 998px) {
+    @media screen and (min-width: 768px) {
       a + a {
         margin-left: 33px;
       }
