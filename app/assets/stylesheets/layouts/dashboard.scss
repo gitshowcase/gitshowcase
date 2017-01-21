@@ -9,40 +9,13 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #f9f9f9;
-  }
-
-  .dashboard-menu {
-    padding: 1rem;
-    background: white;
-
-    a {
-      display: block;
-      padding: .5rem;
-      color: $color-text-black;
-
-      .active, &:hover {
-        color: $color-one;
-      }
-    }
-
-    nav + nav {
-      margin-top: 1rem;
-      border-top: 1px dashed rgba(black, .1);
-      padding-top: 1rem;
-    }
-  }
-
-  form {
-    background: white;
-    padding: 1rem;
+    background: $color-background;
   }
 
   .content-yield {
     > * {
       background: white;
-      padding: 1rem 0;
-      margin-bottom: 1.5rem;
+      padding: 1rem;
     }
   }
 
@@ -54,19 +27,39 @@
     text-align: center;
   }
 
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 0;
+    padding-top: 1rem;
+    margin-bottom: .5rem;
+    text-align: center;
+  }
+
   .header-actions, .header-description {
     text-align: center;
+    margin-top: -.5rem;
+    margin-bottom: 1rem;
 
     a {
       text-decoration: none;
     }
   }
 
-  h2 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    padding-top: 1rem;
-    margin-bottom: .5rem;
-    text-align: center;
+  .side-menu {
+    padding: 1rem;
+    background: white;
+    margin-bottom: 1rem;
+  }
+
+  .footer {
+    background: white;
+    margin-bottom: 1rem;
+  }
+
+  .home-view {
+    > header {
+      margin-bottom: 1rem;
+    }
   }
 }

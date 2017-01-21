@@ -1,0 +1,24 @@
+@import "constants/colors";
+
+.menu-detailed {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: .5rem;
+    margin: 1rem;
+    width: 8rem;
+    vertical-align: top;
+    color: $color-text-black;
+
+    i {
+      display: block;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    &:hover {
+      color: $color-one;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import "constants/colors";
+
+.menu {
+
+  a {
+    display: block;
+    padding: .5rem;
+    color: $color-text-black;
+
+    .active, &:hover {
+      color: $color-one;
+    }
+  }
+
+  nav + nav {
+    margin-top: 1rem;
+    border-top: 1px dashed rgba(black, .1);
+    padding-top: 1rem;
+  }
+}
