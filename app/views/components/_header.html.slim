@@ -20,9 +20,6 @@ header.header
           = render 'components/sign-in', type: 'link', text: 'Sign In'
 
         - if user_signed_in?
-          a.settings href='/'
-            i.fa.fa-cog
-            span  Settings
           a.logout href=destroy_user_session_path
             i.fa.fa-sign-out
-            span  Logout
+            |  Logout
