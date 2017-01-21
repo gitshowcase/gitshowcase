@@ -1,21 +1,37 @@
 @import "constants/colors";
 
 .dashboard-layout {
-  &:before {
-    content: '';
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $color-background;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  > .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 998px) {
+    &:before {
+      content: '';
+      z-index: -1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: $color-background;
+    }
   }
 
   .content-yield {
-    > * {
-      background: white;
-      padding: 1rem;
+    padding-bottom: 1rem;
+
+    @media screen and (min-width: 998px) {
+      > * {
+        background: white;
+        padding: 1rem;
+      }
     }
   }
 
@@ -50,6 +66,12 @@
     padding: 1rem;
     background: white;
     margin-bottom: 1rem;
+  }
+
+  .footer {
+    @media screen and (max-width: 997px) {
+      background: $color-background;
+    }
   }
 
   .home-view {
