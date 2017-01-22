@@ -4,7 +4,7 @@
           image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
           mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
 
-  header
+  header.wow.animated.fadeIn
     h2.user-role= user.role
     .user-bio= user.bio
 
