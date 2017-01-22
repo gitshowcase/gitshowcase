@@ -29,7 +29,6 @@ class Project < ApplicationRecord
 
       self.title = page.title if page.title
       self.description = page.best_description if page.best_description
-      self.icon = page.images.favicon if page.images.favicon
       self.thumbnail = page.images.best if page.images.best
     rescue
       return false

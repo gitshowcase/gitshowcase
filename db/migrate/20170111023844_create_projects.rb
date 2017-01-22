@@ -8,7 +8,6 @@ class CreateProjects < ActiveRecord::Migration[5.0]
       t.string :thumbnail
       t.string :language
       t.integer :position
-      t.boolean :fork
       t.boolean :hide
       t.references :user, foreign_key: true, null: false
 
