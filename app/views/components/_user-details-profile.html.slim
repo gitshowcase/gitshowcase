@@ -1,0 +1,11 @@
+.user-details-profile
+  = render 'components/background',
+          blur: '5px',
+          image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
+          mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4);'
+
+  header
+    h2.user-role= user.role
+    .user-bio= user.bio
+
+  = render 'components/skills-profile', skills: user.skills

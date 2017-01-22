@@ -1,0 +1,5 @@
+.user-header-profile
+  .user-avatar
+    = render 'components/avatar-profile', user: @user
+  h1.user-name= @user.name
+  = render 'components/socials-profile', socials: @user.socials

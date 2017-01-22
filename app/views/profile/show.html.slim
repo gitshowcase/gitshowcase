@@ -1,27 +1,12 @@
 .profile-show
   header
-    = render 'components/summary-profile', user: @user
+    .header-container
+      = render 'components/user-header-profile', user: @user
+      = render 'components/user-details-profile', user: @user
 
-    .profile-skills
-      = render 'components/background',
-              blur: '5px',
-              image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg')
-
-      = render 'components/skills-profile', skills: @user.skills
-
-    .container
-      img src=@user.avatar alt="#{@user.name} profile photo" class='user-image image-responsive rounded-circle wow animated fadeInDown'
-      h1.user-role.wow.animated.fadeIn= @user.role
-      p.user-bio.wow.animated.fadeIn= @user.bio
-
-      = render 'components/socials-profile', socials: @user.socials
-
-  section#info.clearfix
-    .container
+  .container
+    section#info
       = render 'components/infos-profile', user: @user
 
-
-  section#projects
-    h2.wow.animated.fadeIn title='Projects'
-    .container
+    section#projects
       = render 'components/projects-profile', projects: @user.projects

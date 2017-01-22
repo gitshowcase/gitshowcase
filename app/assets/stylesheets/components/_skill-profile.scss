@@ -1,10 +1,22 @@
 @import "constants/colors";
 
 .skill-profile {
-  text-align: center;
+  width: 9rem;
+  margin-right: 2rem;
+  margin-bottom: 32px;
+  color: white;
+
+  .skill-name {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
 
   i {
-    margin: 0 .1rem;
+    margin-right: .25rem;
+    opacity: .75;
   }
 
   &[data-value-1] {

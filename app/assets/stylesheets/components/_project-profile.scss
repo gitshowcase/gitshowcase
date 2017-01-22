@@ -15,6 +15,11 @@
     padding-right: 28px;
   }
 
+  .thumbnail-profile {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+
   .project-link {
     display: block;
     padding-top: $thumbnail-height;
@@ -23,7 +28,6 @@
   .project-title {
     font-family: Montserrat, sans-serif;
     font-size: 16px;
-    font-weight: bold;
     white-space: nowrap;
     color: $color-one;
     overflow: hidden;
@@ -35,7 +39,6 @@
     line-height: 1.4;
     height: 44px;
     font-size: 15px;
-    font-weight: 300;
     color: rgba(52, 52, 52, 0.77);
   }
 
@@ -54,6 +57,10 @@
 
     .project-repository {
       color: rgba(52, 52, 52, 0.8);
+
+      &:hover {
+        color: $color-one;
+      }
 
       i {
         font-size: 16px;

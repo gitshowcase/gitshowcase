@@ -13,6 +13,6 @@
 
 - properties << "filter: blur(#{blur});" if blur
 
-.background class=(blur ? 'blurred' : '')
+.background class=(blur ? 'background-blurred' : '')
   .image style=properties.join(';')
   .mask style="background: #{mask_color}; opacity: #{mask}"

@@ -1,8 +1,10 @@
 .skills-profile {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  height: 164px;
 
   .skill-profile {
-    margin: 2rem 2rem;
     display: inline-block;
   }
 }

@@ -5,23 +5,14 @@
   flex-direction: column;
   min-height: 100vh;
 
+  @media screen and (min-width: 998px) {
+    background: $color-background;
+  }
+
   > .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-  }
-
-  @media screen and (min-width: 998px) {
-    &:before {
-      content: '';
-      z-index: -1;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: $color-background;
-    }
   }
 
   .content-yield {
@@ -69,7 +60,10 @@
   }
 
   .footer {
+    color: #aaa;
+
     @media screen and (max-width: 997px) {
+      border-top: 1px solid rgba(0, 0, 0, .05);
       background: $color-background;
     }
   }

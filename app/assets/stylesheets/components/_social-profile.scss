@@ -1,98 +1,32 @@
-@import "constants/colors";
+@import "constants/brands";
+
+@mixin social-profile-brand($name, $color) {
+  &-#{$name} {
+    &:hover, &:focus, &:active {
+      color: $color;
+    }
+  }
+}
 
 .social-profile {
   display: inline-block;
-  //color: $color-white;
-  font-size: 2rem;
   transition: all .1s linear;
   border-radius: .1rem;
-  padding: 1rem;
+  color: #999;
+  outline: none;
 
-  &:focus {
-    outline: none;
-  }
-
-  &-github {
-    &:hover, &:focus, &:active {
-      color: #aaa;
-    }
-  }
-
-  &-linkedin {
-    &:hover, &:focus, &:active {
-      color: #0077b5;
-    }
-  }
-
-  &-angellist {
-    &:hover, &:focus, &:active {
-      color: #999;
-    }
-  }
-
-  &-twitter {
-    &:hover, &:focus, &:active {
-      color: #1da1f2;
-    }
-  }
-
-  &-facebook {
-    &:hover, &:focus, &:active {
-      color: #3b5998;
-    }
-  }
-
-  &-google-plus {
-    &:hover, &:focus, &:active {
-      color: #dd4b39;
-    }
-  }
-
-  &-stack_overflow {
-    &:hover, &:focus, &:active {
-      color: #f48024;
-    }
-  }
-
-  &-codepen {
-    &:hover, &:focus, &:active {
-      color: #000;
-    }
-  }
-
-  &-jsfiddle {
-    &:hover, &:focus, &:active {
-      color: #3099f4;
-    }
-  }
-
-  &-medium {
-    &:hover, &:focus, &:active {
-      color: #00ab6c;
-    }
-  }
-
-  &-blog {
-    &:hover, &:focus, &:active {
-      color: #f57d00;
-    }
-  }
-
-  &-behance {
-    &:hover, &:focus, &:active {
-      color: #1769ff;
-    }
-  }
-
-  &-dribbble {
-    &:hover, &:focus, &:active {
-      color: #ea4c89;
-    }
-  }
-
-  &-pinterest {
-    &:hover, &:focus, &:active {
-      color: #bd081c;
-    }
-  }
+  @include social-profile-brand('github', $brand-color-github);
+  @include social-profile-brand('linkedin', $brand-color-linkedin);
+  @include social-profile-brand('angellist', $brand-color-angellist);
+  @include social-profile-brand('twitter', $brand-color-twitter);
+  @include social-profile-brand('facebook', $brand-color-facebook);
+  @include social-profile-brand('google-plus', $brand-color-google-plus);
+  @include social-profile-brand('stack_overflow', $brand-color-stack_overflow);
+  @include social-profile-brand('codepen', $brand-color-codepen);
+  @include social-profile-brand('jsfiddle', $brand-color-jsfiddle);
+  @include social-profile-brand('medium', $brand-color-medium);
+  @include social-profile-brand('blog', $brand-color-blog);
+  @include social-profile-brand('behance', $brand-color-behance);
+  @include social-profile-brand('dribbble', $brand-color-dribbble);
+  @include social-profile-brand('pinterest', $brand-color-pinterest);
 }

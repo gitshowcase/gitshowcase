@@ -1,3 +1,24 @@
 .info-profile {
+  text-align: center;
 
+  > header {
+    color: #c8c8c8;
+  }
+
+  i {
+    font-size: 2rem;
+  }
+
+  .info-title {
+    margin-top: .75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  .info-text {
+    margin-top: 8px;
+    letter-spacing: 0.8px;
+    color: #343434;
+  }
 }

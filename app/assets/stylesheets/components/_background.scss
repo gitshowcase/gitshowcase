@@ -24,7 +24,7 @@
     height: 100%;
   }
 
-  &.blurred {
+  &.background-blurred {
     .image {
       $blur-compensation: 1rem;
       left: -$blur-compensation;

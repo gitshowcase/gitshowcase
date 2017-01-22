@@ -4,95 +4,45 @@
 @import "constants/colors";
 @import "constants/sizes";
 
+.profile-layout {
+  &:before {
+    content: '';
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: $color-background;
+  }
+
+  .footer {
+    color: #aaa;
+  }
+}
+
 .profile-show {
   > header {
-    padding-top: 8rem;
-    padding-bottom: 4rem;
-    position: relative;
-    text-align: center;
-
-    .user-image {
-      width: 6rem;
-      margin-bottom: 2rem;
-      box-shadow: 0 0 .1rem .5rem rgba(0, 0, 0, .1);
+    .header-container {
+      width: auto;
+      max-width: 1440px;
+      padding: 0;
     }
 
-    .user-role {
-      font-weight: bold;
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
-      color: $color-one;
+    .user-header-profile {
+      width: $profile-width;
+      height: $profile-height;
+      float: left;
     }
 
-    .user-bio {
-      margin: 0 auto 3rem auto;
-      max-width: 40rem;
-      font-size: 117%;
+    .user-details-profile {
+      height: $profile-height;
     }
   }
 
   #info {
-    text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 3rem;
-    font-size: 1.17rem;
-
-    .user-name {
-      font-size: 1.75rem;
-    }
-
-    section {
-      margin-top: 3rem;
-
-      i {
-        font-size: 2.5rem;
-        display: block;
-        height: 3.5rem;
-        vertical-align: middle;
-      }
-
-      h3 {
-        font-size: 1.17rem;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-
-  #skills {
-    color: $color-title-black;
-    position: relative;
-
-    h2 {
-      margin: 0;
-    }
-
-    .icon-header {
-      border-color: transparent;
-      margin-bottom: 0;
-
-      i {
-        border: 4px solid #f6f6f6;
-      }
-    }
-
-    .skills-background {
-      background: #f6f6f6;
-      padding-top: 5rem;
-      padding-bottom: 4rem;
-    }
-  }
-
-  #projects {
-    margin-top: 4rem;
-
-    .icon-header {
-      margin-bottom: 5rem;
-    }
-
-    @media screen and (min-width: 1198px) {
-      .projects .row {
-        margin: 0 6rem;
-      }
-    }
+    border-bottom: 1px solid #e8e8e8;
+    padding: 60px 0;
+    margin-bottom: 51px;
   }
 }

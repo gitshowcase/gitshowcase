@@ -15,5 +15,6 @@ html
   body
     = render 'layouts/partials/body'
 
-    = yield
-    = render 'components/footer'
+    .profile-layout
+      = yield
+      = render 'components/footer'

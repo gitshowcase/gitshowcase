@@ -1,4 +1,13 @@
-= render 'components/info-profile', icon: 'id-card-o', title: 'Working At', text: user.company
-= render 'components/info-profile', icon: 'map-marker', title: 'Location', text: user.location
-= render 'components/info-profile', icon: 'globe', title: 'Website', text: user.website
-= render 'components/info-profile', icon: 'envelope-o', title: 'Contact', text: user.email
+.infos-profile
+  .row
+    .col-md-3
+      = render 'components/info-profile', icon: 'id-card-o', title: 'Working At', text: user.company
+
+    .col-md-3
+      = render 'components/info-profile', icon: 'map-marker', title: 'Location', text: user.location
+
+    .col-md-3
+      = render 'components/info-profile', icon: 'globe', title: 'Website', text: user.website
+
+    .col-md-3
+      = render 'components/info-profile', icon: 'envelope-o', title: 'Contact', text: user.email
