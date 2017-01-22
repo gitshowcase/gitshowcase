@@ -1,9 +1,9 @@
 - href = project.homepage || 'javascript:void()'
 
 .project-profile.wow.animated.fadeIn
-  = render 'components/thumbnail-profile', project: project
-
   a.project-link href=href target='_blank' rel='nofollow'
+    = render 'components/thumbnail-profile', project: project
+
     .container-fluid
       h3.project-title= project.title
       p.project-description= (project.description || '').truncate(70)
