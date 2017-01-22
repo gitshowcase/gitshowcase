@@ -53,6 +53,14 @@ class Project < ApplicationRecord
     "https://github.com/#{self.repository}"
   end
 
+  def display_title
+    return self.title if self.title.present?
+    return self.homepage if self.homepage.present?
+    return self.repository if self.repository.present?
+
+    'My Project'
+  end
+
   private
 
   def client

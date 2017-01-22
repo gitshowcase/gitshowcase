@@ -5,7 +5,7 @@
     = render 'components/thumbnail-profile', project: project
 
     .container-fluid
-      h3.project-title= project.title
+      h3.project-title= project.display_title
       p.project-description= (project.description || '').truncate(70)
 
   footer.container-fluid
