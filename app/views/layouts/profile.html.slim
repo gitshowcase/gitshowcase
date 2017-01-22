@@ -7,7 +7,7 @@ html
             image: @user.cover.present? ? @user.cover : @user.avatar,
             card_type: 'summary',
             card_creator: @user.twitter ? "@#{@user.twitter}" : nil,
-            prepend_keywords: "#{@user.username}, #{@user.role}, "
+            keywords: "gitshowcase, showcase, github, portfolio, #{@user.username}, #{@user.role}"
 
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'

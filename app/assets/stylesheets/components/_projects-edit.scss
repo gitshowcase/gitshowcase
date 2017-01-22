@@ -1,0 +1,7 @@
+@import "constants/colors";
+
+.projects-edit {
+  .project-edit + .project-edit {
+    border-top: 1px solid $color-background;
+  }
+}

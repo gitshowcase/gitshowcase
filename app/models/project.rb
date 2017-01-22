@@ -18,7 +18,6 @@ class Project < ApplicationRecord
     self.repository = data.full_name
     self.description = data.description
     self.language = data.language
-    self.fork = data.fork
   end
 
   def sync_homepage
@@ -31,7 +30,7 @@ class Project < ApplicationRecord
       self.title = page.title if page.title
       self.description = page.best_description if page.best_description
       self.icon = page.images.favicon if page.images.favicon
-      self.cover = page.images.best if page.images.best
+      self.thumbnail = page.images.best if page.images.best
     rescue
       return false
     end
@@ -39,8 +38,8 @@ class Project < ApplicationRecord
     false
   end
 
-  def cover_url
-    external_resource self.cover
+  def thumbnail_url
+    external_resource self.thumbnail
   end
 
   def icon_url

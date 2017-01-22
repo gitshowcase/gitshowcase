@@ -1,0 +1,3 @@
+.skills-profile
+  - (@user.skills || []).each do |name, mastery|
+    = render 'components/skill-profile', name: name, mastery: mastery

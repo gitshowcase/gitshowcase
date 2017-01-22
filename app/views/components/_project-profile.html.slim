@@ -1,0 +1,25 @@
+- href = project.homepage || 'javascript:void()'
+
+.project-profile.wow.animated.fadeIn
+  = render 'components/thumbnail-profile', project: project
+
+  a.project-link href=href target='_blank' rel='nofollow'
+    .container-fluid
+      h3.project-title= project.title
+      p.project-description= (project.description || '').truncate(70)
+
+  footer.container-fluid
+    .pull-left
+      - if project.language.present?
+        span.project-language.label.label-default
+          i.fa.fa-code
+          '
+          = project.language
+
+    - if project.repository.present?
+      a.project-repository href=project.repository_url target='_blank' rel='nofollow'
+        i.fa.fa-github
+        |  Repository
+    - else
+      .project-repository
+        | Closed Source

@@ -17,7 +17,10 @@
     .logo {
       display: inline-block;
       margin-top: $padding - .1rem;
-      margin-bottom: $padding;
+
+      img {
+        width: 12rem;
+      }
     }
 
     .links {

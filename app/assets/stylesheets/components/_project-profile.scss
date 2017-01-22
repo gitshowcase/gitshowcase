@@ -1,0 +1,65 @@
+@import "constants/colors";
+@import "constants/sizes";
+
+.project-profile {
+  position: relative;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid #d6d6d6;
+  overflow: hidden;
+  margin-bottom: 49px;
+
+  .container-fluid {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  .project-link {
+    display: block;
+    padding-top: $thumbnail-height;
+  }
+
+  .project-title {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    white-space: nowrap;
+    color: $color-one;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 18px 0;
+  }
+
+  .project-description {
+    line-height: 1.4;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 300;
+    color: rgba(52, 52, 52, 0.77);
+  }
+
+  > footer {
+    margin-top: 21px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #d6d6d6;
+    text-align: right;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 12px;
+
+    .project-language {
+      color: rgba(52, 52, 52, 0.5);
+    }
+
+    .project-repository {
+      color: rgba(52, 52, 52, 0.8);
+
+      i {
+        font-size: 16px;
+        margin-right: 5px;
+        transform: translateY(2px);
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+- klass = ['thumbnail-generated', "thumbnail-generated-#{project.id % 3}"] unless project.thumbnail_url.present?
+
+.thumbnail-profile class=klass
+  - if project.thumbnail.present?
+    = render 'components/background',
+            mask_color: 'white',
+            mask: 0.2,
+            image: project.thumbnail_url,
+            position: 'center',
+            blur: '25px'
+
+    = render 'components/background',
+            mask_color: 'white',
+            mask: 0.2,
+            image: project.thumbnail_url,
+            size: 'contain',
+            position: 'center'
+
+  - else
+    = image_tag 'logo.svg', class: 'thumbnail-logo', alt: 'GitShowcase Logo'

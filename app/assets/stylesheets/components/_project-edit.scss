@@ -1,0 +1,34 @@
+@import "constants/colors";
+
+.project-edit {
+  .project-link {
+    display: block;
+  }
+
+  .project-icon {
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+  }
+
+  .project-title {
+    color: $color-title-black;
+    font-size: 1.17rem;
+  }
+
+  .project-description {
+    color: $color-text-black;
+  }
+
+  .project-actions {
+    float: right;
+
+    button {
+      border: None;
+      background: none;
+    }
+  }
+}

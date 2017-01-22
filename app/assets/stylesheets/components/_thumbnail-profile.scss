@@ -1,0 +1,32 @@
+@import "constants/sizes";
+
+.thumbnail-profile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $thumbnail-height;
+
+  &.thumbnail-generated {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-0 {
+      background: #e5fcff;
+    }
+
+    &-1 {
+      background: #fff6e5;
+    }
+
+    &-2 {
+      background: #ffe5f9;
+    }
+  }
+
+  .thumbnail-logo {
+    height: 60%;
+    opacity: .25;
+  }
+}

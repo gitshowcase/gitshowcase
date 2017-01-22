@@ -1,77 +1,27 @@
 .profile-show
   header
-    = render 'components/background',
-            blur: '5px',
-            image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg')
+    = render 'components/summary-profile', user: @user
 
-    img src=image_url('logo-text.png') alt="#{@user.name} profile photo" class='image-responsive rounded-circle wow animated fadeInDown'
+    .profile-skills
+      = render 'components/background',
+              blur: '5px',
+              image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg')
+
+      = render 'components/skills-profile', skills: @user.skills
 
     .container
       img src=@user.avatar alt="#{@user.name} profile photo" class='user-image image-responsive rounded-circle wow animated fadeInDown'
       h1.user-role.wow.animated.fadeIn= @user.role
       p.user-bio.wow.animated.fadeIn= @user.bio
 
-      = render 'components/socials', socials: @user.socials
+      = render 'components/socials-profile', socials: @user.socials
 
   section#info.clearfix
     .container
-      h2.user-name.wow.animated.fadeInDown= @user.name
+      = render 'components/infos-profile', user: @user
 
-      .row
-        - if @user.company.present?
-          section.col-md-4.col-sm-6.wow.animated.fadeIn
-            header
-              i.fa.fa-briefcase
-              h3 Working At
-
-            a href=(@user.company_website || '#') target='_blank' rel='nofollow'
-              = @user.company
-
-        - if @user.website.present?
-          section.col-md-4.col-sm-6.wow.animated.fadeIn
-            header
-              i.fa.fa-globe
-              h3 Website
-
-            a href=@user.website target='_blank' rel='nofollow'
-              = @user.website
-
-        - if @user.hireable
-          section.col-md-4.col-sm-6.wow.animated.fadeIn
-            header
-              i.fa.fa-at
-              h3 Contact
-
-            a href="mailto:#{@user.email}" target='_blank' rel='nofollow'
-              = @user.email
-
-        - if @user.resume.present?
-          section.col-md-4.col-sm-6.wow.animated.fadeIn
-            header
-              i.fa.fa-file-text-o
-              h3 Resumé
-
-            a href=@user.resume target='_blank' rel='nofollow' Download
-
-        - if @user.location.present?
-          section.col-md-4.col-sm-6.wow.animated.fadeIn
-            header
-              i.fa.fa-map-marker
-              h3 Location
-
-            = @user.location
-
-  section#skills
-    h2.wow.animated.fadeIn title='Skills'
-    = render 'components/icon-header', icon: 'flask'
-
-    .skills-background
-      .container
-        = render 'components/skills', skills: @user.skills
 
   section#projects
     h2.wow.animated.fadeIn title='Projects'
-    = render 'components/icon-header', icon: 'rocket'
-
     .container
-      = render 'components/projects', projects: @user.projects
+      = render 'components/projects-profile', projects: @user.projects
