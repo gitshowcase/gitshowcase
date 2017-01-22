@@ -33,6 +33,7 @@
   .project-link {
     display: block;
     padding-top: $thumbnail-height;
+    padding-bottom: 21px;
   }
 
   .project-title {
@@ -54,7 +55,6 @@
   }
 
   > footer {
-    margin-top: 21px;
     background-color: #f4f4f4;
     border-top: 1px solid #d6d6d6;
     text-align: right;
