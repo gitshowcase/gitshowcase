@@ -1,7 +1,4 @@
 .thumbnail-profile
-  .thumbnail-generated class="thumbnail-generated-#{project.id % 3}"
-    = image_tag 'logo.png', class: 'thumbnail-logo', alt: 'GitShowcase Logo'
-
   - if project.thumbnail.present?
     = render 'components/background',
             mask_color: 'white',
@@ -16,4 +13,6 @@
             image: project.thumbnail_url,
             size: 'contain',
             position: 'center'
-
+  - else
+    .thumbnail-generated class="thumbnail-generated-#{project.id % 3}"
+      = image_tag 'logo.png', class: 'thumbnail-logo', alt: 'GitShowcase Logo'

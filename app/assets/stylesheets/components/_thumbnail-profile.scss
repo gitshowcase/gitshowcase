@@ -1,22 +1,12 @@
 @import "constants/sizes";
 
 .thumbnail-profile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
   height: $thumbnail-height;
 
   .thumbnail-generated {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    height: $thumbnail-height;
+    text-align: center;
 
     &-0 {
       background: #e5fcff;
@@ -29,10 +19,11 @@
     &-2 {
       background: #ffe5f9;
     }
-  }
 
-  .thumbnail-logo {
-    height: 60%;
-    opacity: .25;
+    .thumbnail-logo {
+      height: 60%;
+      opacity: .25;
+      margin-top: 36px;
+    }
   }
 }
