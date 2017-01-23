@@ -16,28 +16,33 @@
   }
 
   .logo {
-    margin-top: $header-padding - .1rem;
+    margin-top: $header-padding - .15rem;
     display: inline-block;
+
+    @media screen and (max-width: 767px) {
+      margin-top: $header-padding - .2rem;
+    }
 
     img {
       width: 11rem;
+
+      @media screen and (max-width: 767px) {
+        width: 10rem;
+      }
     }
   }
 
   .links {
     a {
       display: inline-block;
-      padding: $header-padding;
+      margin-top: $header-padding;
       height: $header-height;
       text-decoration: none;
       text-transform: uppercase;
-    }
+      color: $color-highlight;
 
-    .header-sign-in {
       @media screen and (max-width: 767px) {
-        span {
-          display: none;
-        }
+        font-size: .95rem;
       }
     }
   }

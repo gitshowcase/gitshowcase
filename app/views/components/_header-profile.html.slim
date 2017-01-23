@@ -10,8 +10,9 @@
             i.fa.fa-edit
             |  Edit my profile
         - else
-          a.header-sign-in href=omniauth_authorize_path(User, :github)
-            i.fa.fa-github
+          a href=omniauth_authorize_path(User, :github)
+            i.fa.fa-github.hidden-xs-down
             '  Create
-            span your
-            |  portfolio
+            span.hidden-xs-down
+              ' your
+            span portfolio
