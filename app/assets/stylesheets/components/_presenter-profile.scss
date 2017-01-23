@@ -2,6 +2,9 @@
 @import "constants/sizes";
 
 .presenter-profile {
+  max-width: 1440px;
+  margin: 0 auto;
+
   .presenter-basic {
     background: white;
     text-align: center;
