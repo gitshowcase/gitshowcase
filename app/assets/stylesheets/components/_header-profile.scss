@@ -3,16 +3,25 @@
 
 .header-profile {
   height: $header-height;
-  //background: linear-gradient(176deg, $color-one, $color-two);
-  background: $color-background;
+
+  nav {
+    height: $header-height;
+    //background: linear-gradient(176deg, $color-one, $color-two);
+    background: white;
+    box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+  }
 
   .logo {
     margin-top: $header-padding - .1rem;
     display: inline-block;
 
     img {
-      height: 1.25rem;
-      filter: brightness(0);
+      width: 11rem;
     }
   }
 
@@ -23,10 +32,17 @@
       height: $header-height;
       text-decoration: none;
       text-transform: uppercase;
+      //color: $color-text-white;
     }
 
     .header-sign-in {
       color: $color-highlight;
+
+      @media screen and (max-width: $profile-breakpoint) {
+        span {
+          display: none;
+        }
+      }
     }
   }
 }

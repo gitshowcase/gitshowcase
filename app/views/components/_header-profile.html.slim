@@ -1,14 +1,17 @@
 .header-profile
-  .container
-    a.logo href='/'
-      = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
+  nav
+    .container
+      a.logo href='/'
+        = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
 
-    .links.pull-right
-      - if user_signed_in?
-        a.dashboard href='/'
-          i.fa.fa-edit
-          |  Edit my profile
-      - else
-        a.header-sign-in href=omniauth_authorize_path(User, :github)
-          i.fa.fa-github
-          |  Sign in
+      .links.pull-right
+        - if user_signed_in?
+          a.dashboard href='/'
+            i.fa.fa-edit
+            |  Edit my profile
+        - else
+          a.header-sign-in href=omniauth_authorize_path(User, :github)
+            i.fa.fa-github
+            '  Create
+            span your
+            |  portfolio
