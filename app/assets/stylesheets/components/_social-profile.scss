@@ -3,7 +3,7 @@
 @mixin social-profile-brand($name, $color) {
   &-#{$name} {
     &:hover, &:focus, &:active {
-      color: $color;
+      color: $color !important;
     }
   }
 }
