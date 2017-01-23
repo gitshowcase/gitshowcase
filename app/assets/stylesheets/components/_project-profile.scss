@@ -4,11 +4,16 @@
 .project-profile {
   position: relative;
   border-radius: 3px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.12);
   border: 1px solid #d6d6d6;
   overflow: hidden;
   margin-bottom: 49px;
   background: #ffffff;
+
+  &:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
+    border: 1px solid #b9b9b9;
+  }
 
   .container-fluid {
     padding-left: 28px;
