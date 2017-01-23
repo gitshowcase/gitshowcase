@@ -2,7 +2,8 @@
   nav
     .container
       a.logo href='/'
-        = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
+        = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'hidden-sm-up'
+        = image_tag 'logo-text.svg', alt: 'GitShowcase logo', class: 'hidden-xs-down'
 
       .links.pull-right
         - if user_signed_in?
@@ -11,8 +12,5 @@
             |  Edit my profile
         - else
           a href=omniauth_authorize_path(User, :github)
-            i.fa.fa-github.hidden-xs-down
-            '  Create
-            span.hidden-xs-down
-              ' your
-            span portfolio
+            i.fa.fa-github
+            |  Create your portfolio

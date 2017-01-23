@@ -24,11 +24,7 @@
     }
 
     img {
-      width: 11rem;
-
-      @media screen and (max-width: 767px) {
-        width: 10rem;
-      }
+      height: 1.26rem;
     }
   }
 
@@ -39,11 +35,6 @@
       height: $header-height;
       text-decoration: none;
       text-transform: uppercase;
-      color: $color-highlight;
-
-      @media screen and (max-width: 767px) {
-        font-size: .95rem;
-      }
     }
   }
 }
