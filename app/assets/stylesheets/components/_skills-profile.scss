@@ -1,10 +1,29 @@
-.skills-profile {
-  display: flex;
-  flex-direction: column;
-  flex-flow: column wrap;
-  height: 164px;
+@import "constants/sizes";
 
+.skills-profile {
   .skill-profile {
     display: inline-block;
+  }
+
+  @media screen and (min-width: $profile-breakpoint + 1) {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    height: 164px;
+
+    .skill-profile {
+      width: 9rem;
+      margin-right: 2rem;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: $profile-breakpoint) {
+    .skill-profile {
+      font-size: 80%;
+      width: 8rem;
+      margin-right: .5rem;
+      margin-bottom: 24px;
+    }
   }
 }

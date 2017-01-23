@@ -1,0 +1,160 @@
+@import "constants/colors";
+@import "constants/sizes";
+
+.header-profile {
+  .header-basic {
+    background: white;
+    text-align: center;
+    padding-bottom: 49px;
+    padding-top: 43px;
+    position: relative;
+
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      background: white;
+      width: $profile-width;
+      height: $profile-height;
+      float: left;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    .header-background {
+      @media screen and (min-width: $profile-breakpoint + 1) {
+        display: none;
+      }
+    }
+
+    .header-avatar {
+      margin-bottom: 20px;
+
+      .avatar-profile {
+        border-radius: 100%;
+
+        @media screen and (min-width: $profile-breakpoint + 1) {
+          width: 191px;
+          height: 191px;
+        }
+
+        @media screen and (max-width: $profile-breakpoint) {
+          border: 8px solid rgba(0, 0, 0, .1);
+          width: 138px;
+          height: 138px;
+        }
+      }
+    }
+
+    .header-name {
+      font-size: 28px;
+      letter-spacing: 0.8px;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+
+      @media screen and (min-width: $profile-breakpoint + 1) {
+        color: #343434;
+      }
+
+      @media screen and (max-width: $profile-breakpoint) {
+        color: white;
+      }
+    }
+
+    .social-profile {
+      @media screen and (min-width: $profile-breakpoint + 1) {
+        color: #999;
+      }
+
+      @media screen and (max-width: $profile-breakpoint) {
+        color: $color-text-white;
+      }
+    }
+
+    .infos-profile {
+      @media screen and (min-width: $profile-breakpoint + 1) {
+        display: none;
+      }
+    }
+  }
+
+  .header-details {
+    position: relative;
+
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      margin-left: $profile-width;
+      height: $profile-height;
+      padding: 53px 70px;
+      color: white;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      padding: 40px 28px 8px;
+      color: $color-text-black;
+
+      .background {
+        display: none;
+      }
+    }
+
+    > header {
+      position: relative;
+
+      @media screen and (min-width: $profile-breakpoint + 1) {
+        padding-bottom: 25px;
+        margin-bottom: 44px;
+      }
+
+      @media screen and (max-width: $profile-breakpoint) {
+        padding-bottom: 20px;
+        margin-bottom: 32px;
+      }
+
+      &:after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 103px;
+        height: 1px;
+
+        @media screen and (min-width: $profile-breakpoint + 1) {
+          background: rgba(#fafafa, .4);
+        }
+
+        @media screen and (max-width: $profile-breakpoint) {
+          background: rgba($color-text-black, .4);
+        }
+      }
+
+      .header-role {
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        letter-spacing: 1.3px;
+        margin-top: 0;
+
+        @media screen and (min-width: $profile-breakpoint + 1) {
+          font-size: 33px;
+          margin-bottom: 18px;
+        }
+
+        @media screen and (max-width: $profile-breakpoint) {
+          font-size: 24px;
+          margin-bottom: 12px;
+        }
+      }
+
+      .header-bio {
+        letter-spacing: 0.6px;
+
+        @media screen and (min-width: $profile-breakpoint + 1) {
+          font-size: 16px;
+        }
+
+        @media screen and (max-width: $profile-breakpoint) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

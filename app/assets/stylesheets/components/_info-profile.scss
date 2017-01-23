@@ -1,13 +1,35 @@
+@import "constants/sizes";
+@import "constants/colors";
+
 .info-profile {
   text-align: center;
-  margin-top: 40px;
+
+  @media screen and (min-width: $profile-breakpoint + 1) {
+    margin-top: 40px;
+  }
+
+  @media screen and (max-width: $profile-breakpoint) {
+    margin-top: 16px;
+  }
 
   > header {
-    color: #c8c8c8;
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      color: #c8c8c8;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      color: $color-text-white;
+    }
   }
 
   i {
-    font-size: 2rem;
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      font-size: 2rem;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      margin-right: .5rem;
+    }
   }
 
   .info-title {
@@ -15,11 +37,23 @@
     letter-spacing: 5px;
     text-transform: uppercase;
     font-size: 12px;
+
+    @media screen and (max-width: $profile-breakpoint) {
+      display: inline-block;
+    }
   }
 
   .info-text {
     margin-top: 8px;
     letter-spacing: 0.8px;
-    color: #343434;
+
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      color: #343434;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      display: inline-block;
+      color: white;
+    }
   }
 }

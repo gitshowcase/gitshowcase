@@ -12,8 +12,8 @@
   display: inline-block;
   transition: all .1s linear;
   border-radius: .1rem;
-  color: #999;
   outline: none;
+  font-size: 1.25rem;
 
   @include social-profile-brand('github', $brand-color-github);
   @include social-profile-brand('linkedin', $brand-color-linkedin);

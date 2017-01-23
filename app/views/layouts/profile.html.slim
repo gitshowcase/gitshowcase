@@ -9,9 +9,6 @@ html
             card_creator: @user.twitter ? "@#{@user.twitter}" : nil,
             keywords: "gitshowcase, showcase, github, portfolio, #{@user.username}, #{@user.role}"
 
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
   body
     = render 'layouts/partials/body'
 

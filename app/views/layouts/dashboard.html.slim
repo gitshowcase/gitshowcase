@@ -4,14 +4,11 @@ html
     = render 'layouts/partials/head',
             title: 'Dashboard'
 
-    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
-
   body
     = render 'layouts/partials/body'
 
     .dashboard-layout
-      = render 'components/header'
+      = render 'components/header-dashboard'
 
       .container
         .row

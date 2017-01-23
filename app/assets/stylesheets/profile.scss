@@ -22,9 +22,7 @@
     }
 
     .user-header-profile {
-      width: $profile-width;
-      height: $profile-height;
-      float: left;
+
     }
 
     .user-details-profile {
@@ -33,9 +31,25 @@
   }
 
   #info {
-    border-bottom: 1px solid #e8e8e8;
-    padding-top: 20px;
-    padding-bottom: 60px;
-    margin-bottom: 51px;
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      padding-top: 20px;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      display: none;
+    }
+  }
+
+  #projects {
+    border-top: 1px solid #e8e8e8;
+
+    @media screen and (min-width: $profile-breakpoint + 1) {
+      margin-top: 60px;
+      padding-top: 51px;
+    }
+
+    @media screen and (max-width: $profile-breakpoint) {
+      padding-top: 30px;
+    }
   }
 }
