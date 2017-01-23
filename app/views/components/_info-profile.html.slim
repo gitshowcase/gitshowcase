@@ -1,6 +1,21 @@
-.info-profile.wow.animated.fadeIn
-  header
-    i.fa class="fa-#{icon}"
-    .info-title= title
+- edit ||= false
+- placeholder ||= title
+- link ||= ''
 
-  .info-text= text
+- unless link.present?
+  - link = (edit and !text.present?) ? users_url : 'javascript:void'
+
+- if text.present? or edit
+  .col-lg-3.col-md-4.col-sm-6
+    a.info-profile.wow.animated.fadeIn href=link target='_blank'
+      header
+        i.fa class="fa-#{icon}"
+        .info-title= title
+
+      .info-text= text
+
+      - if edit and !text.present?
+        .info-edit
+          i.fa.fa-edit
+          '  Set your
+          = placeholder

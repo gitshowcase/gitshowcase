@@ -6,9 +6,8 @@
 
   nav {
     height: $header-height;
-    //background: linear-gradient(176deg, $color-one, $color-two);
     background: white;
-    box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
     position: fixed;
     top: 0;
     width: 100%;
@@ -32,13 +31,10 @@
       height: $header-height;
       text-decoration: none;
       text-transform: uppercase;
-      //color: $color-text-white;
     }
 
     .header-sign-in {
-      color: $color-highlight;
-
-      @media screen and (max-width: $profile-breakpoint) {
+      @media screen and (max-width: 767px) {
         span {
           display: none;
         }

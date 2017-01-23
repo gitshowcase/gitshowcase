@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "company"
     t.string   "company_website"
     t.string   "website"
-    t.string   "resume"
     t.boolean  "hireable"
     t.json     "skills"
     t.string   "linkedin"

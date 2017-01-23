@@ -2,7 +2,12 @@
 @import "constants/colors";
 
 .info-profile {
+  display: block;
   text-align: center;
+
+  &[href="javascript:void"] {
+    cursor: default;
+  }
 
   @media screen and (min-width: $profile-breakpoint + 1) {
     margin-top: 40px;
@@ -10,6 +15,7 @@
 
   @media screen and (max-width: $profile-breakpoint) {
     margin-top: 16px;
+    text-shadow: 1px 1px rgba(black, .1);
   }
 
   > header {
@@ -22,7 +28,7 @@
     }
   }
 
-  i {
+  > header i {
     @media screen and (min-width: $profile-breakpoint + 1) {
       font-size: 2rem;
     }
@@ -54,6 +60,14 @@
     @media screen and (max-width: $profile-breakpoint) {
       display: inline-block;
       color: white;
+    }
+  }
+
+  .info-edit {
+    display: block;
+
+    @media screen and (max-width: $profile-breakpoint) {
+      color: $color-text-white;
     }
   }
 }

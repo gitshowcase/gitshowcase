@@ -1,13 +1,32 @@
+- is_current_user = user_signed_in? && current_user.id == user.id
+
 .infos-profile
   .row
-    .col-lg-3.col-md-4.col-sm-6
-      = render 'components/info-profile', icon: 'id-card-o', title: 'Working At', text: user.company
+    = render 'components/info-profile',
+            icon: 'id-card-o',
+            title: 'Working At',
+            text: user.company,
+            link: user.company_website,
+            edit: is_current_user,
+            placeholder: 'Company'
 
-    .col-lg-3.col-md-4.col-sm-6
-      = render 'components/info-profile', icon: 'map-marker', title: 'Location', text: user.location
+    = render 'components/info-profile',
+            icon: 'map-marker',
+            title: 'Location',
+            text: user.location,
+            edit: is_current_user
 
-    .col-lg-3.col-md-4.col-sm-6
-      = render 'components/info-profile', icon: 'globe', title: 'Website', text: user.website
+    = render 'components/info-profile',
+            icon: 'globe',
+            title: 'Website',
+            text: user.website,
+            link: user.website,
+            edit: is_current_user
 
-    .col-lg-3.col-md-4.col-sm-6
-      = render 'components/info-profile', icon: 'envelope-o', title: 'Contact', text: user.email
+    = render 'components/info-profile',
+            icon: 'envelope-o',
+            title: 'Contact',
+            text: user.email,
+            link: "mailto:#{user.email}",
+            placeholder: 'Email',
+            edit: is_current_user
