@@ -1,0 +1,27 @@
+.presenter-profile
+  .presenter-basic
+    .presenter-background
+      = render 'components/background',
+              blur: '5px',
+              image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
+              mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
+
+    .presenter-avatar.wow.animated.fadeIn
+      = render 'components/avatar-profile', user: @user
+
+    h1.presenter-name.wow.animated.fadeIn= @user.name
+
+    = render 'components/socials-profile', socials: @user.socials
+    = render 'components/infos-profile', user: @user
+
+  .presenter-details
+    = render 'components/background',
+            blur: '5px',
+            image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
+            mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
+
+    header.wow.animated.fadeIn
+      h2.presenter-role= user.role
+      .presenter-bio= user.bio
+
+    = render 'components/skills-profile', skills: user.skills

@@ -16,10 +16,6 @@ header.header-dashboard
         = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
 
       .links.pull-right
-        - unless user_signed_in?
-          = render 'components/sign-in', type: 'link', text: 'Sign In'
-
-        - if user_signed_in?
-          a.logout href=destroy_user_session_path
-            i.fa.fa-sign-out
-            |  Logout
+        a.logout href=destroy_user_session_path
+          i.fa.fa-sign-out
+          |  Logout

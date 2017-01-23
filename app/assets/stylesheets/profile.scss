@@ -5,7 +5,7 @@
 @import "constants/sizes";
 
 .profile-layout {
-  background: #fafafa;
+  background: $color-background;
 
   .footer {
     color: #aaa;
@@ -30,7 +30,7 @@
     }
   }
 
-  #info {
+  #infos {
     @media screen and (min-width: $profile-breakpoint + 1) {
       padding-top: 20px;
     }

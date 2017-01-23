@@ -22,7 +22,7 @@
 
   .project-link {
     display: block;
-    padding-bottom: 21px;
+    padding-bottom: 3px;
   }
 
   .project-title {
@@ -32,7 +32,7 @@
     color: $color-one;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin: 18px 0;
+    margin: 16px 0 10px 0;
   }
 
   .project-description {

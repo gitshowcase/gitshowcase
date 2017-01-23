@@ -1,27 +1,14 @@
 .header-profile
-  .header-basic
-    .header-background
-      = render 'components/background',
-              blur: '5px',
-              image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
-              mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
+  .container
+    a.logo href='/'
+      = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
 
-    .header-avatar.wow.animated.fadeInDown
-      = render 'components/avatar-profile', user: @user
-
-    h1.header-name.wow.animated.fadeIn= @user.name
-
-    = render 'components/socials-profile', socials: @user.socials
-    = render 'components/infos-profile', user: @user
-
-  .header-details
-    = render 'components/background',
-            blur: '5px',
-            image: @user.cover.present? ? @user.cover : image_path('backgrounds/workstation.jpg'),
-            mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
-
-    header.wow.animated.fadeIn
-      h2.header-role= user.role
-      .header-bio= user.bio
-
-    = render 'components/skills-profile', skills: user.skills
+    .links.pull-right
+      - if user_signed_in?
+        a.dashboard href='/'
+          i.fa.fa-edit
+          |  Edit my profile
+      - else
+        a.header-sign-in href=omniauth_authorize_path(User, :github)
+          i.fa.fa-github
+          |  Sign in

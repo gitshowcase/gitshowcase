@@ -1,10 +1,13 @@
 .profile-show
-  header
+  nav
+    = render 'components/header-profile'
+
+  section#name
     .header-container
-      = render 'components/header-profile', user: @user
+      = render 'components/presenter-profile', user: @user
 
   .container
-    section#info
+    section#infos
       = render 'components/infos-profile', user: @user
 
     section#projects
