@@ -72,6 +72,8 @@
     }
 
     .infos-profile {
+      margin-top: 1rem;
+
       @media screen and (min-width: $profile-breakpoint + 1) {
         display: none;
       }
