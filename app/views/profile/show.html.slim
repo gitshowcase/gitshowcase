@@ -10,4 +10,4 @@
       = render 'components/infos-profile', user: @user
 
     section#projects
-      = render 'components/projects-profile', projects: @user.projects
+      = render 'components/projects-profile', projects: @user.projects.ordered
