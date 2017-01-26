@@ -1,7 +1,7 @@
-- href = project.homepage || 'javascript:void()'
+- href = project.homepage.present? ? project.homepage : 'javascript:void()'
 
 .project-profile.wow.animated.fadeIn
-  a.project-link href=href target='_blank' rel='nofollow'
+  a.project-link href=href target='_blank' rel='nofollow' class=(!project.homepage.present? ? 'project-linkless' : nil)
     = render 'components/thumbnail-profile', project: project
 
     .container-fluid
