@@ -138,6 +138,12 @@ class User < ApplicationRecord
     git_user = client.user
 
     self.avatar = git_user.avatar_url
+
+    # Add suggested size to avoid undesired big preview images
+    if self.avatar.include?('?') and !self.avatar.include?('&s=')
+      self.avatar << '&s=400'
+    end
+
     self.username = git_user.login.to_s.downcase
     self.name = git_user.name
     self.website = git_user.blog if git_user.blog.present?
