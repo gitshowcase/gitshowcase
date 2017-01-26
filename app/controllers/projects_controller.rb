@@ -1,10 +1,10 @@
 class ProjectsController < DashboardController
-  before_action :set_project, only: [:show, :edit, :update, :sync, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :show, :hide, :sync, :destroy]
 
   # GET /projects
   # GET /projects.json
   def index
-    @projects = current_user.projects
+    @projects = current_user.projects.ordered
   end
 
   # GET /projects/new
@@ -39,12 +39,35 @@ class ProjectsController < DashboardController
     end
   end
 
+  # GET /projects/1/show
+  def show
+    @project.update(hide: false)
+  end
+
+  # GET /projects/1/hide
+  def hide
+    @project.update(hide: true)
+  end
+
+  # GET /projects/1/sync
   def sync
     if @project.sync
       redirect_to edit_project_url(@project), notice: 'Project was was successfully synced.'
     else
       render :index
     end
+  end
+
+  # POST /projects/order
+  def order
+    order = params[:order]
+
+    projects = {}
+    order.each_with_index do |project_id, position|
+      projects[project_id] = {position: position}
+    end
+
+    current_user.projects.update(projects.keys, projects.values)
   end
 
   # DELETE /projects/1

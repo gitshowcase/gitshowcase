@@ -14,6 +14,9 @@ Rails.application.routes.draw do
     resources :projects, only: [:index, :new, :create, :edit, :update, :destroy] do
       collection do
         get ':id/sync', as: :sync, action: :sync
+        get ':id/show', as: :show, action: :show
+        get ':id/hide', as: :hide, action: :hide
+        post 'order'
       end
     end
 

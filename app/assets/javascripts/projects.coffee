@@ -2,21 +2,43 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on 'turbolinks:load', ->
-  Projects.init() if $('.dashboard-layout .index-view')
+  Projects.init() if $('.dashboard-layout .index-view').length
 
-Projects = {
+window['Projects'] = {
   init: ->
-    false
+    container = $('.projects-edit:first')[0]
+    sort = Sortable.create container, {
+      animation: 150,
+      handle: ".project-handler",
+      draggable: ".project-edit",
+      onUpdate: (event) ->
+        Projects.order()
+    }
 
-  move: ->
-    false
+  order: ->
+    list = []
+    $('.projects-edit [data-project-id]').each ->
+      list.push $(this).data('project-id')
+    $.post("projects/order", {order: list})
 
-  show: ->
-    false
+  show: (project_id) ->
+    $.get('projects/' + project_id + ' /show')
 
-  hide: ->
-    false
+  hide: (project_id) ->
+    $.get('projects/' + project_id + '/hide')
 
-  showAction: (name) ->
-    false
+  toggle: (element) ->
+    el = $(element)
+    console.log(element);
+
+    parent = el.parents('[data-project-id]')
+    project_id = parent.data('project-id')
+
+    checked = el.is(':checked')
+    if checked
+      this.show(project_id)
+      parent.removeClass('project-hidden')
+    else
+      this.hide(project_id)
+      parent.addClass('project-hidden')
 }

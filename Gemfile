@@ -40,6 +40,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-countup'
 end
 
+# Use sortable to allow sorting projects and skills
+gem 'sortable-rails'
+
 # Use font awesome for icons
 gem 'font-awesome-rails'
 

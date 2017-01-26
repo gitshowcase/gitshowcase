@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require countup
+//= require sortable-rails-jquery
 //= require tether
 //= require bootstrap
 //= require turbolinks

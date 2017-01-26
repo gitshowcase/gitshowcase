@@ -1,6 +1,8 @@
 class Project < ApplicationRecord
   belongs_to :user
 
+  scope :ordered, -> { order(position: :asc) }
+
   def sync(data = nil)
     sync_repository(data)
     sync_homepage

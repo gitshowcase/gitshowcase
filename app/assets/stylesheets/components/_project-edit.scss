@@ -1,17 +1,19 @@
 @import "constants/colors";
 
 .project-edit {
-  .project-link {
-    display: block;
+  &.project-hidden {
+    opacity: .5;
   }
 
-  .project-icon {
+  .project-handler {
     float: left;
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-    margin-top: .2rem;
-    margin-bottom: .5rem;
+    padding: 1.4rem;
+    cursor: move;
+  }
+
+  .project-link {
+    display: block;
+    padding: .5rem 0;
   }
 
   .project-title {
@@ -25,6 +27,8 @@
 
   .project-actions {
     float: right;
+    margin-top: 1.17rem;
+    margin-right: .5rem;
 
     button {
       border: None;
