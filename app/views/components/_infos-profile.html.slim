@@ -6,7 +6,7 @@
             icon: 'id-card-o',
             title: 'Working At',
             text: user.company,
-            link: user.company_website,
+            link: user.company_website_url,
             edit: is_current_user,
             placeholder: 'Company'
 
@@ -20,7 +20,7 @@
             icon: 'globe',
             title: 'Website',
             text: user.website,
-            link: user.website,
+            link: user.website_url,
             edit: is_current_user
 
     = render 'components/info-profile',

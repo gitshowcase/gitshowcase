@@ -35,6 +35,9 @@ source 'https://rails-assets.org' do
   # Use WOW and animate.css for cool animations
   gem 'rails-assets-animate.css'
   gem 'rails-assets-wow'
+
+  # Use countUp to animate number of projects created
+  gem 'rails-assets-countup'
 end
 
 # Use font awesome for icons

@@ -45,7 +45,7 @@
       header
         h2 Seamless experience in all devices:
 
-      = image_tag('home/responsive.png', alt: 'GitShowcase in different devices', class: 'img-fluid')
+      = image_tag('home/responsive.jpg', alt: 'GitShowcase in different devices', class: 'img-fluid')
 
       p
         | After authorizing Gitshowcase to access your Github, this is what you’ll see. A good to go
@@ -90,9 +90,9 @@
     .container.clearfix
       h2
         .first-line
-          strong 3793
-          |  developers
-        |  showcased their portfolios
+          strong#homeProjectCountUp= @project_count
+          |  projects
+        |  showcased their awesomeness!
 
       = render 'components/sign-in'
       = render 'components/footer'

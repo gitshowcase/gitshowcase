@@ -174,11 +174,24 @@ class User < ApplicationRecord
     if self.website and not projects.where(homepage: self.website).first
       website_project = projects.new(homepage: self.website)
       website_project.sync_homepage
+      website_project.position = 0
       result.push website_project
     end
 
     save!
     result
+  end
+
+  def website_url
+    return nil unless self.website.present?
+    (self.website.include?('http://') or self.website.include?('https://')) ? self.website : "http://#{self.website}"
+  end
+
+  def company_website_url
+    return nil unless self.company_website.present?
+    (self.company_website.include?('http://') or self.company_website.include?('https://')) ?
+        self.company_website :
+        "http://#{self.company_website}"
   end
 
   private

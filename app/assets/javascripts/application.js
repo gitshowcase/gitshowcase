@@ -13,6 +13,7 @@
 //= require wow
 //= require jquery
 //= require jquery_ujs
+//= require countup
 //= require tether
 //= require bootstrap
 //= require turbolinks

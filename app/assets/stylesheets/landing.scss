@@ -90,8 +90,8 @@ $divider-height: 111px;
 
   #plug-and-play {
     h2 {
-      margin-top: $divider-height;
-      margin-bottom: 86px;
+      margin: $divider-height auto 86px;
+      width: 40%;
     }
 
     .step {

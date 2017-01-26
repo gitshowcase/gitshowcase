@@ -71,7 +71,7 @@ class Project < ApplicationRecord
     return nil unless href.present?
     return href if href.include?('http://') or href.include?('https://')
 
-    pure_homepage = self.homepage.sub(/^https?\:\/\//, '').sub(/^www./,'')
+    pure_homepage = self.homepage.sub(/^https?\:\/\//, '').sub(/^www./, '')
     href = "#{pure_homepage}/#{href}" if self.homepage.present? and !href.include?(pure_homepage)
 
     protocol = self.homepage.include?('https://') ? 'https' : 'http'
