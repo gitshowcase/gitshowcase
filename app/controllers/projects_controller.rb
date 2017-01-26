@@ -19,6 +19,7 @@ class ProjectsController < DashboardController
   def create
     @project = Project.new(project_params)
     @project.user_id = current_user.id
+    @project.position = 0
 
     if @project.sync
       redirect_to edit_project_url(@project), notice: 'Project was successfully created.'

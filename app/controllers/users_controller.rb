@@ -16,7 +16,7 @@ class UsersController < DashboardController
   # PATCH/PUT /users/1
   def update
     skills = params[:user][:skills]
-    if (!skills and @user.update(user_params)) or skills and @user.update_skills(skills)
+    if (!skills and @user.update(user_params)) or (skills and @user.update_skills(skills))
       redirect_to '/', notice: 'Your profile was successfully updated.'
     else
       render :index
