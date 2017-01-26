@@ -2,19 +2,21 @@ class UsersController < DashboardController
   before_action :set_user
 
   # GET /users
-  # GET /users.json
   def index
   end
 
   # GET /users/socials
-  # GET /users/socials.json
   def socials
   end
 
+  # GET /users/skills
+  def skills
+  end
+
   # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
   def update
-    if @user.update(user_params)
+    skills = params[:user][:skills]
+    if (!skills and @user.update(user_params)) or skills and @user.update_skills(skills)
       redirect_to '/', notice: 'Your profile was successfully updated.'
     else
       render :index
@@ -22,7 +24,6 @@ class UsersController < DashboardController
   end
 
   # GET /users/sync
-  # GET /users/sync.json
   def sync
     if @user.sync
       redirect_to users_url, notice: 'Your profile was successfully synced.'
@@ -32,10 +33,9 @@ class UsersController < DashboardController
   end
 
   # GET /users/sync_projects
-  # GET /users/sync_projects.json
   def sync_projects
     results = @user.sync_skills_projects
-    redirect_to projects_url, notice: "#{results.length} new projects created."
+    redirect_to "/#{current_user.username}", notice: "#{results.length} new projects created."
   end
 
   private

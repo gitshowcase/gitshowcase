@@ -20,13 +20,12 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :skills, only: [:index, :update]
-
     resources :users, only: [:index, :update] do
       collection do
         get 'sync'
         get 'sync_projects'
         get 'socials'
+        get 'skills'
         get 'setup'
       end
     end

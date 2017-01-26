@@ -159,14 +159,14 @@ class User < ApplicationRecord
       project = projects.where(repository: repository.full_name).first
 
       unless project
-        project = projects.new(repository: repository.full_name)
+        project = projects.new(repository: repository.full_name, position: 1)
         project.sync(repository)
 
         result.push project
 
         if project.language.present?
           self.skills = {} unless self.skills
-          self.skills[project.language] = 3 unless self.skills[project.language]
+          self.skills[project.language] = {mastery: 3} unless self.skills[project.language]
         end
       end
     end
@@ -192,6 +192,19 @@ class User < ApplicationRecord
     (self.company_website.include?('http://') or self.company_website.include?('https://')) ?
         self.company_website :
         "http://#{self.company_website}"
+  end
+
+  def update_skills(skills)
+    parsed = {}
+
+    skills.each_with_index do |values, index|
+      parsed[values[1]['name']] = {
+          mastery: values[1]['mastery'].to_i,
+          position: index
+      }
+    end
+
+    self.update({skills: parsed})
   end
 
   private

@@ -1,3 +1,9 @@
 .skills-edit {
+  .skill-edit-template {
+    display: none;
+  }
 
+  .skill-edit + .skill-edit {
+    margin-top: 1rem;
+  }
 }

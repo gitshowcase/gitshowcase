@@ -2,7 +2,6 @@ class ProjectsController < DashboardController
   before_action :set_project, only: [:show, :edit, :update, :show, :hide, :sync, :destroy]
 
   # GET /projects
-  # GET /projects.json
   def index
     @projects = current_user.projects.ordered
   end
@@ -17,7 +16,6 @@ class ProjectsController < DashboardController
   end
 
   # POST /projects
-  # POST /projects.json
   def create
     @project = Project.new(project_params)
     @project.user_id = current_user.id
@@ -30,7 +28,6 @@ class ProjectsController < DashboardController
   end
 
   # PATCH/PUT /projects/1
-  # PATCH/PUT /projects/1.json
   def update
     if @project.update(project_params)
       redirect_to projects_url, notice: 'Project was successfully updated.'
@@ -71,7 +68,6 @@ class ProjectsController < DashboardController
   end
 
   # DELETE /projects/1
-  # DELETE /projects/1.json
   def destroy
     @project.destroy
     redirect_to projects_url, notice: 'Project was successfully destroyed.'

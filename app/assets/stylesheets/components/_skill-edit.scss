@@ -1,3 +1,41 @@
-.skill-edit {
+@import "constants/colors";
 
+.skill-edit {
+  position: relative;
+
+  .skill-handler {
+    float: left;
+    padding: .5rem 1.4rem;
+    cursor: move;
+  }
+
+  .skill-actions {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .skill-remove {
+    border: 1px solid $color-two;
+    color: $color-two;
+    border-radius: 100%;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-size: .9rem;
+    padding: .2rem .3rem;
+  }
+
+  input {
+    margin-right: 1rem;
+  }
+
+  i {
+    margin: .1rem;
+    font-size: 1.17rem;
+    cursor: pointer;
+  }
+
+  i.skill-star-hover {
+    color: $color-highlight;
+  }
 }

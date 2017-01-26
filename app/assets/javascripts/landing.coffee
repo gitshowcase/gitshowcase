@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'turbolinks:load', ->
-  return unless $('.home-view').length
+  return unless $('.landing-home-view').length
 
   countUp = $('#homeProjectCountUp')
   countUpAnimation = new CountUp(countUp.attr('id'), 0, countUp.text(), 0, 2.5)
