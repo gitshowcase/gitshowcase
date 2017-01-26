@@ -166,7 +166,7 @@ class User < ApplicationRecord
 
         if project.language.present?
           self.skills = {} unless self.skills
-          self.skills[project.language] = {mastery: 3} unless self.skills[project.language]
+          self.skills[project.language] = 3 unless self.skills[project.language]
         end
       end
     end
@@ -197,11 +197,8 @@ class User < ApplicationRecord
   def update_skills(skills)
     parsed = {}
 
-    skills.each_with_index do |values, index|
-      parsed[values[1]['name']] = {
-          mastery: values[1]['mastery'].to_i,
-          position: index
-      }
+    skills.each do |name, mastery|
+      parsed[name] = mastery.to_i
     end
 
     self.update({skills: parsed})

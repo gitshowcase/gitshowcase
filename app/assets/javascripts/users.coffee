@@ -47,7 +47,7 @@ window['Skills'] = {
         $this.parent().find('.skill-star').removeClass(hoverClass)
 
       $this.click ->
-        mastery.val index
+        mastery.val(index + 1)
         $this.parent().find('.skill-star').filter(':gt(' + index + ')').removeClass(activeClass).addClass(normalClass)
         $this.parent().find('.skill-star').filter(':lt(' + (index + 1) + ')').removeClass(normalClass).addClass(activeClass)
 
@@ -66,14 +66,14 @@ window['Skills'] = {
       Skills.createNew()
 
   save: (url) ->
-    skills = []
+    skills = {}
     $('.skill-edit').each ->
       $this = $(this)
       name = $this.find('[name="name"]').val()
       return unless name.length
 
-      mastery = parseInt($this.find('[name="mastery"]').val()) + 1
-      skills.push {name: name, mastery: mastery}
+      mastery = parseInt($this.find('[name="mastery"]').val())
+      skills[name] = mastery
 
     $.ajax({
       url,
