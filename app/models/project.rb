@@ -47,6 +47,12 @@ class Project < ApplicationRecord
     external_resource self.icon
   end
 
+  def homepage_url
+    nil unless self.homepage.present?
+    self.homepage if self.homepage.include?('http://') or self.homepage.include?('https://')
+    "http://#{self.homepage}"
+  end
+
   def repository=(val)
     self[:repository] = val.sub('https://', '').sub('github.com/', '')
   end

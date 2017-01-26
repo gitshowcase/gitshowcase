@@ -40,4 +40,7 @@ Rails.application.routes.draw do
   controller 'profile' do
     get '/:username', action: 'show'
   end
+
+  # SSL Route
+  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
 end
