@@ -16,11 +16,6 @@
     = render 'components/socials-profile', socials: @user.socials
     = render 'components/infos-profile', user: @user
 
-    - if edit
-      a href=users_path
-        i.fa.fa-edit
-        |  Edit my personal info
-
   .presenter-details
     = render 'components/background',
             blur: '5px',
