@@ -103,8 +103,6 @@
     }
 
     > header {
-      position: relative;
-
       @media screen and (min-width: $profile-breakpoint + 1) {
         padding-bottom: 25px;
         margin-bottom: 36px;

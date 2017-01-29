@@ -1,8 +1,31 @@
+- type ||= 'full'
+
 .footer.wow.animated.fadeIn
   .container
-    .footer-content
-      .links
-        a href=asset_url('privacy_policy.txt') target='_blank'
-          | Privacy Policy
-        |  - jedi@gitshowcase.com
-      div © 2017 GitShowcase - Pedro Moreira & Victor Santos
+    - if type == 'full'
+      .footer-header
+        = image_tag 'logo.png', class: 'footer-logo'
+
+        .links
+          a href=privacy_policy_url target='_blank' Privacy Policy
+          a href='mailto:jedi@gitshowcase.com' target='_blank' Get in touch
+
+        .socials
+          header Follow the updates:
+
+          a href='https://fb.com/gitshowcase' target='_blank'
+            i.fa.fa-facebook
+
+          a href='https://twitter.com/gitshowcase' target='_blank'
+            i.fa.fa-twitter
+
+          a href='https://linkedin.com/company/gitshowcase' target='_blank'
+            i.fa.fa-linkedin
+
+    .copyright
+      ' Copyright 2017 - GitShowcase - This is an open source project by:
+      a target='_blank' href='/pedsmoreira' Pedro Moreira
+      '  &
+      a target='_blank' href='/victorgaard' Victor Santos
+      '  under the
+      a target='_blank' href=license_url MIT License

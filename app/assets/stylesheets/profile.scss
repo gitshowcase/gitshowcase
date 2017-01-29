@@ -7,29 +7,14 @@
 .profile-layout {
   background: $color-background;
 
-  .footer {
-    color: #aaa;
+  .header-profile .dashboard span {
+    @media screen and (max-width: $profile-breakpoint) {
+      display: none !important;
+    }
   }
 }
 
 .profile-show-view {
-  > header {
-    .header-container {
-      width: auto;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    .user-header-profile {
-
-    }
-
-    .user-details-profile {
-      height: $profile-height;
-    }
-  }
-
   #infos {
     @media screen and (min-width: $profile-breakpoint + 1) {
       padding-top: 20px;

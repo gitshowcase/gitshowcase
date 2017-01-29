@@ -1,0 +1,41 @@
+- type ||= 'dashboard'
+
+- if type == 'profile'
+  - url = request.original_url
+  - twitter_text = "Checkout my portfolio #{url}"
+  - button_text = 'Share my awesomeness!'
+  - icon = 'share'
+- else
+  - url = 'www.gitshowcase.com'
+  - twitter_text = "If you're developer looking to have a rockstar portoflio, checkout @gitshowcase #{url}"
+  - button_text = 'Invite my friends'
+  - icon = 'thumbs-up'
+
+- twitter_url = "https://twitter.com/home?status=#{twitter_text}"
+- facebook_url = "https://www.facebook.com/sharer/sharer.php?u=#{url}"
+
+.share-box
+  button.share-button.btn.btn-success type='buttton'
+    i.fa class="fa-#{icon}"
+    = ' ' + button_text.split(' ')[0]
+    span= ' ' + button_text.split(' ')[1..-1].join(' ')
+
+  .share-container.animated.fadeIn
+    .share-mask
+    .share-content
+      header
+        i.fa.fa-heart.animated.pulse.infinite
+        h3 Share my portfolio
+
+      .share-url
+        i.fa.fa-link
+        span= url
+
+      .share-socials
+        a.share-social.share-social-twitter href=twitter_url target='_blank'
+          i.fa.fa-twitter
+          |  Share on Twitter
+
+        a.share-social.share-social-facebook href=facebook_url target='_blank'
+          i.fa.fa-facebook
+          |  Share on Facebook

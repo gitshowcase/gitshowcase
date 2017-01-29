@@ -1,8 +1,83 @@
 @import "constants/colors";
 
 .footer {
-  .footer-content {
-    text-align: center;
-    padding: .75rem;
+  $breakpoint: 767px;
+
+  padding-bottom: 36px;
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint + 1) {
+    padding-top: 55px;
+  }
+
+  @media screen and (max-width: $breakpoint) {
+    padding-top: 36px;
+  }
+
+  .footer-header {
+    padding-bottom: 33px;
+    margin-bottom: 33px;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .links {
+    @media screen and (min-width: $breakpoint + 1) {
+      float: left;
+    }
+
+    @media screen and (max-width: $breakpoint) {
+    }
+
+    a {
+      font-size: 15px;
+      letter-spacing: 0.6px;
+    }
+
+    a + a {
+      margin-left: 47px;
+    }
+  }
+
+  .socials {
+    @media screen and (min-width: $breakpoint + 1) {
+      float: right;
+    }
+
+    @media screen and (max-width: $breakpoint) {
+      margin-top: 1rem;
+    }
+
+    > header {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    a {
+      margin: .5rem;
+      font-size: 117%;
+    }
+  }
+
+  .footer-logo {
+    width: 42px;
+
+    @media screen and (min-width: $breakpoint + 1) {
+      margin-top: -.7rem;
+    }
+
+    @media screen and (max-width: $breakpoint) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .copyright {
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    color: #545454;
+
+    a {
+      font-weight: bold;
+    }
   }
 }

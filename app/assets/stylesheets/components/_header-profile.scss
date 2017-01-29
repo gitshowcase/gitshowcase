@@ -1,8 +1,10 @@
 @import "constants/sizes";
 @import "constants/colors";
+@import "constants/brands";
 
 .header-profile {
   height: $header-height;
+  position: relative;
 
   nav {
     height: $header-height;

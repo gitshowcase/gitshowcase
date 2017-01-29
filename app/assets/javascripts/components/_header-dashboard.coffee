@@ -4,5 +4,5 @@ $(document).on 'turbolinks:load', ->
 
   # Hide after 2s
   setTimeout ->
-    alerts.alert('close')
+    true
   , 3000

@@ -1,0 +1,21 @@
+doctype 5
+html
+  head
+    = render 'layouts/partials/head',
+            title: "GitShowcase - #{@title}"
+
+  body
+    .pages-layout
+      = render 'components/header-profile'
+
+      - if @background.present?
+        = render 'components/background',
+                image: image_path(@background),
+                mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
+
+      div class=(@background ? 'page-centralized' : 'page-normal')
+        .container
+          = yield
+
+      = render 'components/footer'
+

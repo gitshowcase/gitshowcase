@@ -1,4 +1,16 @@
 header.header-dashboard
+  nav.fixed-top
+    .container
+      a.logo href='/'
+        = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
+
+      = render 'components/share-box'
+
+      .links.pull-right
+        a.logout href=destroy_user_session_path
+          i.fa.fa-sign-out
+          span.hidden-xs-down  Logout
+
   - if notice
     .alert.alert-success.alert-dismissible
       .container
@@ -6,16 +18,6 @@ header.header-dashboard
           span &times;
         = notice
 
-  - if alert
-    .alert.alert-error
-      .container= alert
-
-  nav.fixed-top
-    .container
-      a.logo href='/'
-        = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
-
-      .links.pull-right
-        a.logout href=destroy_user_session_path
-          i.fa.fa-sign-out
-          |  Logout
+    - if alert
+      .alert.alert-error
+        .container= alert

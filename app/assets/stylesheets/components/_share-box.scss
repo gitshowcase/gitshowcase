@@ -1,0 +1,113 @@
+@import "constants/brands";
+@import "constants/colors";
+@import "constants/sizes";
+
+.share-box {
+  position: absolute;
+  left: 50%;
+  top: 6px;
+
+  .share-button {
+    transform: translateX(-50%);
+
+    span {
+      @media screen and (max-width: $profile-breakpoint) {
+        display: none;
+      }
+    }
+  }
+
+  .share-button {
+    border-radius: 6px;
+  }
+
+  .share-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+
+    .share-mask {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba(white, .5), rgba(white, 1));
+    }
+
+    .share-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      max-width: 90%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      background: rgba(white, .95);
+      border-radius: .25rem;
+      box-shadow: 0 0 1rem rgba(black, .1);
+      white-space: nowrap;
+
+      @media screen and (min-width: 998px) {
+        padding: 3rem 5rem;
+      }
+
+      @media screen and (max-width: 997px) {
+        padding: 2rem 3rem;
+      }
+
+      > header {
+        color: $color-highlight;
+
+        i {
+          font-size: 2rem;
+        }
+
+        h3 {
+          margin-top: .5rem;
+          font-size: 1.5rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .share-url {
+    color: $color-text-black;
+
+    span {
+      margin-left: .2rem;
+      font-size: 1.17rem;
+    }
+  }
+
+  .share-socials {
+    margin-top: 2rem;
+  }
+
+  .share-social {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 300;
+
+    i {
+      transition: none;
+      width: 18px;
+      text-align: center;
+    }
+
+    &-twitter {
+      color: $brand-color-twitter;
+    }
+
+    &-facebook {
+      color: $brand-color-facebook;
+    }
+  }
+
+  .share-social + .share-social {
+    margin-top: 1rem;
+  }
+}

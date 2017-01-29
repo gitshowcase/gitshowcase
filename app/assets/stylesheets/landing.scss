@@ -42,10 +42,6 @@ $divider-height: 111px;
     color: rgba(72, 72, 72, 0.8);
   }
 
-  .btn {
-    border-radius: 6px;
-  }
-
   #presenter {
     position: relative;
     color: rgba(white, .8);
@@ -56,7 +52,6 @@ $divider-height: 111px;
     }
 
     .logo {
-      position: relative;
       margin-top: 68px;
       width: 191px;
       filter: brightness(0) invert(1);
@@ -157,14 +152,16 @@ $divider-height: 111px;
       margin-left: 10px;
       margin-right: 10px;
       margin-bottom: 20px;
+      border-radius: 6px;
     }
   }
 
   #footer {
     position: relative;
+    padding-bottom: 111px;
+    padding-top: 111px;
 
     h2 {
-      padding-top: 111px;
       margin-top: 0;
       margin-bottom: 52px;
       line-height: 1.68;
@@ -180,18 +177,6 @@ $divider-height: 111px;
         font-size: 50px;
         line-height: 1.05;
         letter-spacing: 2.6px;
-      }
-    }
-
-    .footer {
-      font-size: 17px;
-      margin-top: 80px;
-      padding-bottom: 12px;
-      color: rgba(255, 255, 255, 0.8);
-      letter-spacing: 0.7px;
-
-      a {
-        color: inherit;
       }
     }
   }

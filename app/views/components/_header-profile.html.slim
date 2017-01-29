@@ -1,3 +1,6 @@
+- edit ||= false
+- type ||= 'dashboard'
+
 .header-profile
   nav
     .container
@@ -5,11 +8,14 @@
         = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'hidden-sm-up'
         = image_tag 'logo-text.svg', alt: 'GitShowcase logo', class: 'hidden-xs-down'
 
+      = render 'components/share-box', type: type
+
       .links.pull-right
         - if user_signed_in?
           a.dashboard href='/'
             i.fa.fa-edit
-            |  Edit my profile
+            '  Edit
+            span my profile
         - else
           a href=omniauth_authorize_path(User, :github)
             i.fa.fa-github

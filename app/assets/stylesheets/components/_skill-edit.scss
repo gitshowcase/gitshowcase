@@ -1,8 +1,6 @@
 @import "constants/colors";
 
 .skill-edit {
-  position: relative;
-
   .skill-handler {
     float: left;
     padding: .5rem 1.4rem;
@@ -22,7 +20,7 @@
     background: none;
     box-shadow: none;
     font-size: .9rem;
-    padding: .2rem .3rem;
+    padding: .2rem .25rem;
   }
 
   input {

@@ -1,4 +1,4 @@
-- is_current_user = user_signed_in? && current_user.id == user.id
+- edit ||= false
 
 .infos-profile
   .row
@@ -7,21 +7,21 @@
             title: 'Working At',
             text: user.company,
             link: user.company_website_url,
-            edit: is_current_user,
+            edit: edit,
             placeholder: 'Company'
 
     = render 'components/info-profile',
             icon: 'map-marker',
             title: 'Location',
             text: user.location,
-            edit: is_current_user
+            edit: edit
 
     = render 'components/info-profile',
             icon: 'globe',
             title: 'Website',
             text: user.website,
             link: user.website_url,
-            edit: is_current_user
+            edit: edit
 
     = render 'components/info-profile',
             icon: 'envelope-o',
@@ -29,4 +29,4 @@
             text: user.email,
             link: "mailto:#{user.email}",
             placeholder: 'Email',
-            edit: is_current_user
+            edit: edit

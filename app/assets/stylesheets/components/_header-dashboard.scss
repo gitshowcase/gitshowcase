@@ -2,11 +2,12 @@
 @import "constants/colors";
 
 .header-dashboard {
-  height: $header-height;
+  padding-top: $header-height;
   margin-bottom: 2rem;
 
   .alert, .notice {
     margin-bottom: 0;
+    display: none;
   }
 
   nav {
@@ -20,8 +21,24 @@
       margin-top: $header-padding - .15rem;
 
       img {
-        width: 11rem;
+        height: 1.26rem;
         filter: brightness(0) invert(1);
+      }
+    }
+
+    .share-box {
+      @media screen and (max-width: 575px) {
+        right: 45px;
+        left: auto;
+      }
+
+      .share-button {
+        color: $color-one;
+        background: $color-background;
+
+        @media screen and (max-width: 575px) {
+          transform: none;
+        }
       }
     }
 

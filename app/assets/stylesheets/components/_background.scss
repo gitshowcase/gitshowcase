@@ -33,3 +33,7 @@
     }
   }
 }
+
+.background ~ * {
+  position: relative;
+}
