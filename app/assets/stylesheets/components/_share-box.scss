@@ -49,7 +49,6 @@
       background: rgba(white, .95);
       border-radius: .25rem;
       box-shadow: 0 0 1rem rgba(black, .1);
-      white-space: nowrap;
 
       @media screen and (min-width: 998px) {
         padding: 3rem 5rem;
@@ -70,6 +69,7 @@
           margin-top: .5rem;
           font-size: 1.5rem;
           font-weight: 300;
+          white-space: nowrap;
         }
       }
     }
@@ -77,10 +77,16 @@
 
   .share-url {
     color: $color-text-black;
+    word-wrap: break-word;
+    font-size: 1.17rem;
+
+    i {
+      margin-right: .2rem;
+      font-size: 1rem;
+    }
 
     span {
-      margin-left: .2rem;
-      font-size: 1.17rem;
+      display: inline-block;
     }
   }
 

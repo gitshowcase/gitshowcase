@@ -2,12 +2,14 @@
 
 - if type == 'profile'
   - url = request.original_url
+  - url_text = "<span>gitshowcase.com</span><span>/#{@user.username}</span>".html_safe
   - twitter_text = "Checkout my portfolio #{url}"
   - button_text = 'Share my awesomeness!'
   - icon = 'share'
   - content_text = 'Share my portfolio'
 - else
   - url = 'www.gitshowcase.com'
+  - url_text = url
   - twitter_text = "If you're developer looking to have a rockstar portoflio, checkout @gitshowcase #{url}"
   - button_text = 'Invite my friends'
   - icon = 'thumbs-up'
@@ -31,7 +33,7 @@
 
       .share-url
         i.fa.fa-link
-        span= url.sub('https://www.', '')
+        = url_text
 
       .share-socials
         a.share-social.share-social-twitter href=twitter_url target='_blank'
