@@ -16,7 +16,7 @@
           a.dashboard href='/'
             i.fa.fa-edit
             '  Edit
-            span my profile
+            span class="#{hide_share ? '' : 'hidden-xs-down'}" my profile
         - else
           a href=omniauth_authorize_path(User, :github)
             i.fa.fa-github

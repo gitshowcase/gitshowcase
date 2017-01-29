@@ -6,12 +6,6 @@
 
 .profile-layout {
   background: $color-background;
-
-  .header-profile .dashboard span {
-    @media screen and (max-width: $profile-breakpoint) {
-      display: none !important;
-    }
-  }
 }
 
 .profile-show-view {
