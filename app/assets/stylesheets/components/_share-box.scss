@@ -5,7 +5,7 @@
 .share-box {
   position: absolute;
   left: 50%;
-  top: 6px;
+  top: 8px;
 
   .share-button {
     transform: translateX(-50%);
@@ -19,6 +19,7 @@
 
   .share-button {
     border-radius: 6px;
+    font-size: .9rem;
   }
 
   .share-container {
