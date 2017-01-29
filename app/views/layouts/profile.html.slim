@@ -13,6 +13,6 @@ html
     = render 'layouts/partials/body'
 
     .profile-layout
-      = render 'components/header-profile', type: 'profile'
+      = render 'components/header-profile', type: 'profile', edit: (user_signed_in? and current_user.id == @user.id)
       = yield
       = render 'components/footer'

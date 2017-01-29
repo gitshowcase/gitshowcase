@@ -6,7 +6,7 @@ html
 
   body
     .pages-layout
-      = render 'components/header-profile'
+      = render 'components/header-profile', hide_share: true
 
       - if @background.present?
         = render 'components/background',

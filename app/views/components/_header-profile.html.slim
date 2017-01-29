@@ -1,4 +1,5 @@
 - edit ||= false
+- hide_share ||= false
 - type ||= 'dashboard'
 
 .header-profile
@@ -8,7 +9,8 @@
         = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'hidden-sm-up'
         = image_tag 'logo-text.svg', alt: 'GitShowcase logo', class: 'hidden-xs-down'
 
-      = render 'components/share-box', type: type
+      - unless hide_share
+        = render 'components/share-box', type: type
 
       .links.pull-right
         - if user_signed_in?
