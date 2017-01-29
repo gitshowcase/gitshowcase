@@ -1,4 +1,4 @@
-- hide_share ||= false
+- show_share ||= false
 - type ||= 'dashboard'
 
 .header-profile
@@ -8,7 +8,7 @@
         = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'hidden-sm-up'
         = image_tag 'logo-text.svg', alt: 'GitShowcase logo', class: 'hidden-xs-down'
 
-      - unless hide_share
+      - if show_share
         = render 'components/share-box', type: type
 
       .links.pull-right
@@ -16,7 +16,7 @@
           a.dashboard href='/'
             i.fa.fa-edit
             '  Edit
-            span class="#{hide_share ? '' : 'hidden-xs-down'}" my profile
+            span class="#{show_share ? 'hidden-xs-down' : ''}" my profile
         - else
           a href=omniauth_authorize_path(User, :github)
             i.fa.fa-github

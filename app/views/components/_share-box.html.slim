@@ -5,11 +5,13 @@
   - twitter_text = "Checkout my portfolio #{url}"
   - button_text = 'Share my awesomeness!'
   - icon = 'share'
+  - content_text = 'Share my portfolio'
 - else
   - url = 'www.gitshowcase.com'
   - twitter_text = "If you're developer looking to have a rockstar portoflio, checkout @gitshowcase #{url}"
   - button_text = 'Invite my friends'
   - icon = 'thumbs-up'
+  - content_text = 'Let\'s rock!'
 
 - twitter_url = "https://twitter.com/home?status=#{twitter_text}"
 - facebook_url = "https://www.facebook.com/sharer/sharer.php?u=#{url}"
@@ -25,7 +27,7 @@
     .share-content
       header
         i.fa.fa-heart.animated.pulse.infinite
-        h3 Share my portfolio
+        h3= content_text
 
       .share-url
         i.fa.fa-link
