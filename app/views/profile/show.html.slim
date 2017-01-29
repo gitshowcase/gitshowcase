@@ -1,13 +1,13 @@
-- edit = user_signed_in? and current_user.id == @user.id
+- edit = (user_signed_in? and current_user.id == @user.id)
 
 .profile-show-view
   section#name
     .header-container
-      = render 'components/presenter-profile', user: @user, edit: edit
+      = render 'components/presenter-profile', user: @user
 
   .container
     section#infos
       = render 'components/infos-profile', user: @user, edit: edit
 
     section#projects
-      = render 'components/projects-profile', projects: @user.projects.ordered, edit: edit
+      = render 'components/projects-profile', projects: @user.projects.ordered
