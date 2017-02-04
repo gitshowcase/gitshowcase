@@ -1,7 +1,7 @@
 # GitShowcase
 
 [![Code Climate](https://codeclimate.com/github/pedsmoreira/gitshowcase/badges/gpa.svg)](https://codeclimate.com/github/pedsmoreira/gitshowcase)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 ![Get noticed with a rockstar Portfolio](./public/preview.png)
 
@@ -41,12 +41,6 @@ rails db:migrate
 rails db:seed
 ```
 
-## Maintainers
-
-Pedro Moreira _(Developer)_ - [https://www.gitshowcase.com/pedsmoreira](https://www.gitshowcase.com/pedsmoreira)
-
-Victor Hunter _(UI/UX)_ - [https://www.gitshowcase.com/victorgaard](https://www.gitshowcase.com/victorgaard)
-
 ### Running Tests
 
 To run the tests, use:
@@ -60,6 +54,12 @@ rails test
 ```bash
 rails s
 ```
+
+## Maintainers
+
+Pedro Moreira _(Developer)_ - [https://www.gitshowcase.com/pedsmoreira](https://www.gitshowcase.com/pedsmoreira)
+
+Victor Hunter _(UI/UX)_ - [https://www.gitshowcase.com/victorgaard](https://www.gitshowcase.com/victorgaard)
 
 ## Contribute
 
