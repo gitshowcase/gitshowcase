@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 20170111023844) do
     t.string   "thumbnail"
     t.string   "language"
     t.integer  "position"
-    t.boolean  "fork"
     t.boolean  "hide"
     t.integer  "user_id",     null: false
     t.datetime "created_at",  null: false
