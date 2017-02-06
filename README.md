@@ -22,9 +22,29 @@ Contact us @ [jedi@gitshowcase.com](mailto:jedi@gitshowcase.com)
 - Ruby `2.2.2+`
 - [NodeJS](https://nodejs.org/) _(for compiling javascript resources)_
 
+#### GitHub credentials
+
+Unless you only want to edit the homepage, you'll need your own GitHub credentials for development.
+ 
+Go to your settings, than [OAuth applications](https://github.com/settings/developers) and register a new application.
+
+### Configure your environment
+
+Copy the file `.env.example` to `.env` and fill the fields
+
+```bash
+DB_USERNAME=
+DB_PASSWORD=
+
+GITHUB_KEY=
+GITHUB_SECRET=
+```
+
+If you're using Linux or OSX, you probably don't need to fill the `DB_` fields
+
 ### Database setup
 
-We highly recommend the usage of Postgres. Some features like JSON fields may not work as well on other databases.
+[Download and Install Postgres](https://www.postgresql.org/download/)
 
 - Create the databases:
 ```bash
@@ -63,7 +83,10 @@ Victor Hunter _(UI/UX)_ - [https://www.gitshowcase.com/victorgaard](https://www.
 
 ## Contribute
 
-Feel free to [Open an issue](https://github.com/pedsmoreira/gitshowcase/issues/new) or submit PRs. PRs must be opened on the `development` branch.
+All contributions must be written in *English*, so everyone can communicate :)
+
+Feel free to [Open an issue](https://github.com/pedsmoreira/gitshowcase/issues/new) or submit PRs. If you choose
+to open a PR, please do so on the `development` branch.
 
 GitShowcase follows the [Contributor Covenant](http://contributor-covenant.org/version/1/4) Code of Conduct.
 
