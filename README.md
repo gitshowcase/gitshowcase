@@ -66,7 +66,7 @@ rails db:seed
 To run the tests, use:
 
 ```bash
-rails test
+bundle exec rspec
 ```
 
 ### Running Server
