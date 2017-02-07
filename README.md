@@ -1,6 +1,7 @@
 # GitShowcase
 
 [![Code Climate](https://codeclimate.com/github/pedsmoreira/gitshowcase/badges/gpa.svg)](https://codeclimate.com/github/pedsmoreira/gitshowcase)
+[![Build Status](https://travis-ci.org/pedsmoreira/gitshowcase.svg?branch=master)](https://travis-ci.org/pedsmoreira/gitshowcase)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 ![Get noticed with a rockstar Portfolio](./public/preview.png)
@@ -92,7 +93,7 @@ GitShowcase follows the [Contributor Covenant](http://contributor-covenant.org/v
 
 ### Code Style
 
-TODO - Set code style and integrate CI
+TODO - Add code styling (Rubocop) to Travis CI
 
 ### Code Quality
 
@@ -111,7 +112,7 @@ Commit messages should be verb based, such as:
 
 Please update the tests to reflect your changes.
 
-TODO - Integrate CI
+Travis CI will run on your PR and it has to pass for the PR to be accepted :)
 
 ## Road map
 
