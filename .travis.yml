@@ -1,3 +1,7 @@
 language: ruby
+
 rvm:
   - 2.2.2
+
+before_script:
+  - psql -c 'create database gitshowcase_test;' -U postgres
