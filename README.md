@@ -13,6 +13,7 @@ Contact us @ [jedi@gitshowcase.com](mailto:jedi@gitshowcase.com)
 
 # Table of Contents
 - [Install](#install)
+- [Road map](#road-map)
 - [Maintainers](#maintainers)
 - [Contribute](#contribute)
 - [License](#license)
@@ -21,9 +22,17 @@ Contact us @ [jedi@gitshowcase.com](mailto:jedi@gitshowcase.com)
 
 ### System Requirements
 - Ruby `2.2.2+`
+- Postgres 9.2+
 - [NodeJS](https://nodejs.org/) _(for compiling javascript resources)_
 
-#### GitHub credentials
+### Fork and bundle
+- Fork the project
+- Run bundle to install gems
+```bash
+bundle install
+```
+
+### Create your GitHub application
 
 Unless you only want to edit the homepage, you'll need your own GitHub credentials for development.
  
@@ -76,6 +85,12 @@ bundle exec rspec
 rails s
 ```
 
+## Road map
+
+The road map is available at our projects page
+
+[https://github.com/pedsmoreira/gitshowcase/projects](https://github.com/pedsmoreira/gitshowcase/projects)
+
 ## Maintainers
 
 Pedro Moreira _(Developer)_ - [https://www.gitshowcase.com/pedsmoreira](https://www.gitshowcase.com/pedsmoreira)
@@ -113,12 +128,6 @@ Commit messages should be verb based, such as:
 Please update the tests to reflect your changes.
 
 Travis CI will run on your PR and it has to pass for the PR to be accepted :)
-
-## Road map
-
-The road map is available at our projects page
-
-[https://github.com/pedsmoreira/gitshowcase/projects](https://github.com/pedsmoreira/gitshowcase/projects)
 
 ## License
 
