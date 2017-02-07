@@ -113,6 +113,12 @@ Please update the tests to reflect your changes.
 
 TODO - Integrate CI
 
+## Road map
+
+The road map is available at our projects page
+
+[https://github.com/pedsmoreira/gitshowcase/projects](https://github.com/pedsmoreira/gitshowcase/projects)
+
 ## License
 
 [gitshowcase.com/license](http://gitshowcase.com/license)
