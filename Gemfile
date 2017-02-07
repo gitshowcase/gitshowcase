@@ -97,7 +97,13 @@ group :development, :test do
   gem 'factory_girl_rails'
 
   # Use dotenv to configure environment variables
-  gem 'dotenv-rails', :groups => [:development, :test]
+  gem 'dotenv-rails'
+
+  gem 'rspec-rails', '~> 3.5'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.1', require: false
 end
 
 group :development do
