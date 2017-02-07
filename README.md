@@ -87,9 +87,15 @@ rails s
 
 ## Road map
 
-The road map is available at our projects page
+We have a road map of what we are going to implement next. It is available at our projects page
 
 [https://github.com/pedsmoreira/gitshowcase/projects](https://github.com/pedsmoreira/gitshowcase/projects)
+
+If you wish to add features that are not on the road map, you're very welcome to do so. We encourage you to
+[create an Issue](https://github.com/pedsmoreira/gitshowcase/issues/new)
+before coding, so we can all discuss the relevance to the community.
+
+Please keep in mind that the focus is to create a great product, so we might not implement/accept all the suggested features.
 
 ## Maintainers
 
