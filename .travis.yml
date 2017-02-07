@@ -5,3 +5,6 @@ rvm:
 
 before_script:
   - psql -c 'create database gitshowcase_test;' -U postgres
+
+addons:
+  postgresql: "9.4"
