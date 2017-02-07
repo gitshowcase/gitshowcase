@@ -1,7 +1,7 @@
 # GitShowcase
 
-[![Code Climate](https://codeclimate.com/github/pedsmoreira/gitshowcase/badges/gpa.svg)](https://codeclimate.com/github/pedsmoreira/gitshowcase)
-[![Build Status](https://travis-ci.org/pedsmoreira/gitshowcase.svg?branch=master)](https://travis-ci.org/pedsmoreira/gitshowcase)
+[![Code Climate](https://codeclimate.com/github/gitshowcase/gitshowcase/badges/gpa.svg)](https://codeclimate.com/github/gitshowcase/gitshowcase)
+[![Build Status](https://travis-ci.org/gitshowcase/gitshowcase.svg?branch=master)](https://travis-ci.org/gitshowcase/gitshowcase)
 [![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg)](https://github.com/RichardLitt/standard-readme)
 
 ![Get noticed with a rockstar Portfolio](./public/preview.png)
@@ -89,10 +89,10 @@ rails s
 
 We have a road map of what we are going to implement next. It is available at our projects page
 
-[https://github.com/pedsmoreira/gitshowcase/projects](https://github.com/pedsmoreira/gitshowcase/projects)
+[https://github.com/gitshowcase/gitshowcase/projects](https://github.com/gitshowcase/gitshowcase/projects)
 
 If you wish to add features that are not on the road map, you're very welcome to do so. We encourage you to
-[create an Issue](https://github.com/pedsmoreira/gitshowcase/issues/new)
+[create an Issue](https://github.com/gitshowcase/gitshowcase/issues/new)
 before coding, so we can all discuss the relevance to the community.
 
 Please keep in mind that the focus is to create a great product, so we might not implement/accept all the suggested features.
@@ -107,7 +107,7 @@ Victor Hunter _(UI/UX)_ - [https://www.gitshowcase.com/victorgaard](https://www.
 
 All contributions must be written in *English*, so everyone can communicate :)
 
-Feel free to [Open an issue](https://github.com/pedsmoreira/gitshowcase/issues/new) or submit PRs. If you choose
+Feel free to [Open an issue](https://github.com/gitshowcase/gitshowcase/issues/new) or submit PRs. If you choose
 to open a PR, please do so on the `development` branch.
 
 GitShowcase follows the [Contributor Covenant](http://contributor-covenant.org/version/1/4) Code of Conduct.
