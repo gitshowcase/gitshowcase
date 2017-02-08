@@ -38,6 +38,8 @@ Unless you only want to edit the homepage, you'll need your own GitHub credentia
  
 Go to your settings, than [OAuth applications](https://github.com/settings/developers) and register a new application.
 
+For `Authorization callback URL` field, use: http://localhost:3000/users/auth/github/callback. The other fields (name, description) may be filled at your will.
+
 ### Configure your environment
 
 Copy the file `.env.example` to `.env` and fill the fields
