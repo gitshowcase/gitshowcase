@@ -2,21 +2,3 @@
 meta name='description' content=description 
 meta name='keywords' content=keywords 
 meta name='author' content=author 
-
-/ OpenGraph
-meta property='og:type' content=type 
-meta property='og:site_name' content=site_name 
-meta property='og:url' content=request.original_url 
-meta property='og:title' content=title 
-meta property='og:description' content=description 
-meta property='og:image' content=image 
-
-/ Twitter
-meta name='twitter:card' content=card_type 
-meta name='twitter:site' content=card_site 
-meta name='twitter:title' content=title 
-meta name='twitter:description' content=description 
-meta name='twitter:image' content=card_image 
-
-- if card_creator.present?
-  meta name='twitter:creator' content=card_creator 

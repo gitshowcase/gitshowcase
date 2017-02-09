@@ -7,7 +7,7 @@ html
             image: @user.avatar,
             card_type: 'summary',
             card_creator: @user.twitter ? "@#{@user.twitter}" : nil,
-            keywords: "gitshowcase, showcase, github, portfolio, #{@user.username}, #{@user.role}"
+            keywords: "github #{@user.username}, gitshowcase #{@user.username}, #{@user.username}, #{@user.role}, gitshowcase, github portfolio, showcase"
 
   body
     = render 'layouts/partials/body'

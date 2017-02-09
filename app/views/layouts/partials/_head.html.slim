@@ -10,8 +10,7 @@
 - card_creator ||= nil
 - card_image ||= image
 
-- prepend_keywords ||= ''
-- keywords ||= prepend_keywords + 'portfolio, github portfolio, developer, developer portfolio, showcase, personal website, personal branding'
+- keywords ||= 'gitshowcase, git showcase, developer portfolio, github portfolio, online portfolio, portfolio template, free portfolio, open source, developer, showcase, personal website, personal branding, rockstar portfolio, tech portfolio, free template, developer platform'
 
 title= title
 
@@ -21,11 +20,14 @@ title= title
 = render 'layouts/partials/head/favicon'
 
 = render 'layouts/partials/head/seo',
+        description: description,
+        keywords: keywords,
+        author: author
+
+= render 'layouts/partials/head/social',
         title: title,
         site_name: site_name,
         description: description,
-        keywords: keywords,
-        author: author,
         image: image,
         type: type,
         card_type: card_type,
