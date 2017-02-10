@@ -52,63 +52,54 @@ RSpec.describe User do
 
     it 'updates the username' do
       user.sync_profile
-      user.reload
 
       expect(user.username).to eq(github_user.login)
     end
 
     it 'updates the avatar' do
       user.sync_profile
-      user.reload
 
       expect(user.avatar).to eq(avatar_url)
     end
 
     it 'updates the name' do
       user.sync_profile
-      user.reload
 
       expect(user.name).to eq(github_user.name)
     end
 
     it 'updates the website' do
       user.sync_profile
-      user.reload
 
       expect(user.website).to eq(github_user.blog)
     end
 
     it 'updates the location' do
       user.sync_profile
-      user.reload
 
       expect(user.location).to eq(github_user.location)
     end
 
     it 'updates the email' do
       user.sync_profile
-      user.reload
 
       expect(user.email).to eq(github_user.email)
     end
 
     it 'updates the hireable info' do
       user.sync_profile
-      user.reload
 
       expect(user.hireable).to be_truthy
     end
 
     it 'updates the bio' do
       user.sync_profile
-      user.reload
 
       expect(user.bio).to eq(github_user.bio)
     end
 
     it 'updates the company' do
       user.sync_profile
-      user.reload
 
       expect(user.company).to eq(github_user.company)
     end
@@ -117,7 +108,6 @@ RSpec.describe User do
       context 'when company name starts with a @ sign' do
         it 'sets the company website' do
           user.sync_profile
-          user.reload
 
           expected = "https://github.com/example"
 
@@ -130,7 +120,6 @@ RSpec.describe User do
 
         it 'does not set the company website' do
           user.sync_profile
-          user.reload
 
           expect(user.company_website).to be_nil
         end
@@ -142,7 +131,6 @@ RSpec.describe User do
 
       it 'adds an optimized size to avatar url' do
         user.sync_profile
-        user.reload
 
         expected = avatar_url + '&s=400'
 
