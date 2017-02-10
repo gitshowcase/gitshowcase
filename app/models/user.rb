@@ -4,6 +4,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, :omniauth_providers => [:github]
 
+  DEFAULT_SKILL_VALUE = 3
+
   SOCIALS_NETWORKING = {
       linkedin: 'linkedin.com/in',
       angellist: 'angel.co',
@@ -172,7 +174,7 @@ class User < ApplicationRecord
 
         if project.language.present?
           self.skills = {} unless self.skills
-          self.skills[project.language] = 3 unless self.skills[project.language]
+          self.skills[project.language] = DEFAULT_SKILL_VALUE unless self.skills[project.language]
         end
       end
     end
