@@ -137,7 +137,6 @@ RSpec.describe User do
       end
     end
 
-
     context 'when no size is set on avatar' do
       let(:avatar_url) { 'https://avatars.githubusercontent.com/u/2944985?v=3' }
 
@@ -149,6 +148,34 @@ RSpec.describe User do
 
         expect(user.avatar).to eq(expected)
       end
+    end
+  end
+
+  describe '#sync_skills_projects' do
+    let(:user) { FactoryGirl.build(:user) }
+
+    let(:github_client) do
+      instance_double(Octokit::Client, repositories: repositories)
+    end
+
+    let(:repositories) do
+      [
+        double(name: 'foo', homepage: nil, language: 'ruby',
+               full_name: 'johndoe/foo', description: 'lorem'),
+        double(name: 'bar', homepage: nil, language: 'javascript',
+               full_name: 'johndoe/bar', description: 'lorem')
+      ]
+    end
+
+    before do
+      allow(user).to receive(:client).and_return(github_client)
+    end
+
+    it 'sets the skills with default values' do
+      user.sync_skills_projects
+
+      expect(user.skills['ruby']).to eq(User::DEFAULT_SKILL_VALUE)
+      expect(user.skills['javascript']).to eq(User::DEFAULT_SKILL_VALUE)
     end
   end
 end
