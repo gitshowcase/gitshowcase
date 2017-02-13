@@ -1,0 +1,22 @@
+.users-settings-view
+  header
+    h1
+      i.fa.fa-cog
+      |  Settings
+
+  section.danger-zone
+    section
+      header.bg-danger
+        h3.text-white
+          .container-fluid Delete account
+
+      .section-content.container-fluid
+        p
+          b We do not keep any information about deleted accounts,
+          |  so we will not be able to restore your account.
+        p If you wish, you can sign in again with your GitHub and we will refetch your projects :)
+
+      footer
+        .container-fluid
+          = link_to 'Delete my Account', user_path(current_user),
+                  method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete your account?'}

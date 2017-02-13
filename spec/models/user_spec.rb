@@ -1,169 +1,79 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.describe User do
+  # Concerns
+  it_behaves_like 'social_networks'
+  it_behaves_like 'github_user', User
+
+  # Foreign Keys
   it { should have_many(:projects) }
 
-  describe '#sync' do
-    let(:user) { User.new }
-
-    it 'syncs the profile' do
-      allow(user).to receive(:sync_skills_projects)
-      expect(user).to receive(:sync_profile)
-
-      user.sync
+  # Methods
+  describe '#display_name' do
+    it 'when name' do
+      expect(User.new(name: 'John Doe').display_name).to eq('John Doe')
     end
 
-    it 'syncs the skills' do
-      allow(user).to receive(:sync_profile)
-      expect(user).to receive(:sync_skills_projects)
-
-      user.sync
+    it 'when username' do
+      expect(User.new(username: 'johndoe').display_name).to eq('johndoe')
     end
   end
 
-  describe '#sync_profile' do
-    let(:user) { FactoryGirl.build(:user) }
-
-    let(:github_client) do
-      instance_double(Octokit::Client, user: github_user)
+  describe '#first_name' do
+    it 'when display name has spaces' do
+      expect(User.new(name: 'John Doe').first_name).to eq('John')
     end
 
-    let(:github_user) do
-      double(
-        avatar_url: avatar_url,
-        login: 'johndoe',
-        name: 'John Doe',
-        blog: 'https://medium.com/@johndoe',
-        location: 'Brazil',
-        email: 'johndoe@example.com',
-        hireable: 'true',
-        bio: 'Lorem ipsum dolor sit amet consectetur.',
-        company: company
-      )
-    end
-
-    let(:company) { '@example' }
-
-    let(:avatar_url) { 'https://avatars.githubusercontent.com/u/2944985?v=3&s=200' }
-
-    before do
-      allow(user).to receive(:client).and_return(github_client)
-    end
-
-    it 'updates the username' do
-      user.sync_profile
-
-      expect(user.username).to eq(github_user.login)
-    end
-
-    it 'updates the avatar' do
-      user.sync_profile
-
-      expect(user.avatar).to eq(avatar_url)
-    end
-
-    it 'updates the name' do
-      user.sync_profile
-
-      expect(user.name).to eq(github_user.name)
-    end
-
-    it 'updates the website' do
-      user.sync_profile
-
-      expect(user.website).to eq(github_user.blog)
-    end
-
-    it 'updates the location' do
-      user.sync_profile
-
-      expect(user.location).to eq(github_user.location)
-    end
-
-    it 'updates the email' do
-      user.sync_profile
-
-      expect(user.email).to eq(github_user.email)
-    end
-
-    it 'updates the hireable info' do
-      user.sync_profile
-
-      expect(user.hireable).to be_truthy
-    end
-
-    it 'updates the bio' do
-      user.sync_profile
-
-      expect(user.bio).to eq(github_user.bio)
-    end
-
-    it 'updates the company' do
-      user.sync_profile
-
-      expect(user.company).to eq(github_user.company)
-    end
-
-    describe 'company website' do
-      context 'when company name starts with a @ sign' do
-        it 'sets the company website' do
-          user.sync_profile
-
-          expected = "https://github.com/example"
-
-          expect(user.company_website).to eq(expected)
-        end
-      end
-
-      context 'when company name does not start with a @ sign' do
-        let(:company) { 'Foo Bar' }
-
-        it 'does not set the company website' do
-          user.sync_profile
-
-          expect(user.company_website).to be_nil
-        end
-      end
-    end
-
-    context 'when no size is set on avatar' do
-      let(:avatar_url) { 'https://avatars.githubusercontent.com/u/2944985?v=3' }
-
-      it 'adds an optimized size to avatar url' do
-        user.sync_profile
-
-        expected = avatar_url + '&s=400'
-
-        expect(user.avatar).to eq(expected)
-      end
+    it 'when display_name is a word' do
+      expect(User.new(username: 'johndoe').first_name).to eq('johndoe')
     end
   end
 
-  describe '#sync_skills_projects' do
-    let(:user) { FactoryGirl.build(:user) }
+  describe '#sync_projects_skills' do
+    let(:user) { described_class.new }
 
-    let(:github_client) do
-      instance_double(Octokit::Client, repositories: repositories)
+    it 'calls methods' do
+      expect(user).to receive(:sync_projects).and_return('projects')
+      expect(user).to receive(:add_skills_by_projects).with('projects')
+      user.sync_projects_skills
     end
+  end
 
-    let(:repositories) do
+  describe '#add_skills_by_projects' do
+    let(:user) { FactoryGirl.create(described_class.to_s.downcase, skills: {'ruby': 5}) }
+    let :projects do
       [
-        double(name: 'foo', homepage: nil, language: 'ruby',
-               full_name: 'johndoe/foo', description: 'lorem'),
-        double(name: 'bar', homepage: nil, language: 'javascript',
-               full_name: 'johndoe/bar', description: 'lorem')
+          double(language: 'ruby'),
+          double(language: 'php'),
+          double(language: 'javascript')
       ]
     end
 
-    before do
-      allow(user).to receive(:client).and_return(github_client)
+    it 'adds skills by project languages' do
+      user.add_skills_by_projects(projects)
+      expect(user.skills).to eq({'ruby' => 5, 'php' => 3, 'javascript' => 3})
+    end
+  end
+
+  describe '#update_skills' do
+    let(:user) {
+      user = FactoryGirl.create(:user)
+      user.update_skills({'javascript': 3, 'ruby': 6, 'backpacking': -1})
+
+      user
+    }
+
+    it 'has the exact amount of skills' do
+      expect(user.skills.length).to eq(3)
     end
 
-    it 'sets the skills with default values' do
-      user.sync_skills_projects
+    it 'updates mastery' do
+      expect(user.skills['javascript']).to eq(3)
+    end
 
-      expect(user.skills['ruby']).to eq(User::DEFAULT_SKILL_VALUE)
-      expect(user.skills['javascript']).to eq(User::DEFAULT_SKILL_VALUE)
+    it 'fixes masteries out of range' do
+      expect(user.skills['ruby']).to eq(5)
+      expect(user.skills['backpacking']).to eq(0)
     end
   end
 end

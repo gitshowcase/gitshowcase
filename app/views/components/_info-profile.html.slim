@@ -3,7 +3,7 @@
 - link ||= ''
 
 - unless link.present?
-  - link = (edit and !text.present?) ? users_url : 'javascript:void'
+  - link = (edit and !text.present?) ? users_path : 'javascript:void'
 
 - if text.present? or edit
   .col-lg-3.col-md-4.col-sm-6

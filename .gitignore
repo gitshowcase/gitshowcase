@@ -24,3 +24,6 @@
 
 # Ignore Mac files
 *.DS_Store
+
+# Ignore RSpec tmp files
+spec/examples.txt

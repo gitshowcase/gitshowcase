@@ -9,13 +9,12 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.github_token = auth.credentials.token
       @user.save
     else
-      @user = User.create_from_github(auth)
+      @user = User.github_auth(auth)
       created = true
     end
 
     if @user.persisted?
-      sign_in @user, :event => :authentication #this will throw if @user is not activated
-      # set_flash_message(:notice, :success, :kind => "Github") if is_navigational_format?
+      sign_in @user, event: :authentication #this will throw if @user is not activated
       redirect_to created ? sync_url : users_url
     else
       session['devise.github_data'] = request.env['omniauth.auth']

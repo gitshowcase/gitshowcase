@@ -9,6 +9,6 @@
   = render 'components/skills-edit', skills: @user.skills
 
   .form-actions
-    button.btn.btn-success type='button' onclick="Skills.save('#{user_url(@user)}')"
+    button.btn.btn-success type='button' onclick="Skills.save('#{user_path(@user)}')"
       i.fa.fa-check
       |  Save skills
