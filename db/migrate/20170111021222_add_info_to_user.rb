@@ -30,6 +30,6 @@ class AddInfoToUser < ActiveRecord::Migration[5.0]
     add_column :users, :dribbble, :string
     add_column :users, :pinterest, :string
 
-    add_index :users, :username, :unique => true
+    add_index :users, :username, unique: true
   end
 end

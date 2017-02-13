@@ -13,34 +13,4 @@
     margin-right: .25rem;
     opacity: .75;
   }
-
-  &[data-value-1] {
-    .fa-star {
-      color: $color-three;
-    }
-  }
-
-  &[data-value-2] {
-    .fa-star {
-      color: $color-three;
-    }
-  }
-
-  &[data-value-3] {
-    .fa-star {
-      color: $color-two;
-    }
-  }
-
-  &[data-value-4] {
-    .fa-star {
-      color: $color-two;
-    }
-  }
-
-  &[data-value-5] {
-    .fa-star {
-      color: $color-one;
-    }
-  }
 }

@@ -2,26 +2,26 @@
 
 Rails.application.routes.draw do
   # Error pages
-  match '/404', :to => 'pages#not_found', :via => :all
-  match '/500', :to => 'pages#internal_server_error', :via => :all
+  get '/404', to: 'pages#not_found'
+  get '/500', to: 'pages#internal_server_error'
 
   # Pages
-  match '/license', :to => 'pages#license', :via => :all
-  match '/privacy_policy', :to => 'pages#privacy_policy', :via => :all
+  get '/license', to: 'pages#license'
+  get '/privacy_policy', to: 'pages#privacy_policy'
 
   # SSL Route
-  get '/.well-known/acme-challenge/:id' => 'pages#letsencrypt'
+  get '/.well-known/acme-challenge/:id', to: 'pages#letsencrypt'
 
   # Authentication
-  devise_for :users, :controllers => {
+  devise_for :users, controllers: {
       omniauth_callbacks: 'users/omniauth_callbacks',
       sessions: 'users/sessions'
   } do
-    get 'users/sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+    get 'users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
   end
 
   authenticated :user do
-    root :to => 'dashboard#home', as: :authenticated_root
+    root to: 'dashboard#home', as: :authenticated_root
 
     resources :projects, only: [:index, :new, :create, :edit, :update, :destroy] do
       collection do
@@ -32,13 +32,13 @@ Rails.application.routes.draw do
       end
     end
 
-    resources :users, only: [:index, :update] do
+    resources :users, only: [:index, :update, :destroy] do
       collection do
-        get 'sync'
-        get 'sync_projects'
         get 'socials'
         get 'skills'
-        get 'setup'
+        get 'settings'
+        get 'sync'
+        get 'sync_projects'
       end
     end
 

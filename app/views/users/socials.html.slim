@@ -18,9 +18,9 @@
           - if pre.present?
             .input-group
               span.input-group-addon= "#{pre}/"
-              = f.input_field social, class: 'form-control'
+              = f.input_field social, class: 'form-control', value: @user[social]
           - else
-            = f.input_field social, class: 'form-control'
+            = f.input_field social, class: 'form-control', value: @user[social]
 
     .form-actions
       = button_tag type: :submit, class: 'btn btn-success' do
