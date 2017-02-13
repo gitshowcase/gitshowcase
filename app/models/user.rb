@@ -35,7 +35,8 @@ class User < ApplicationRecord
   end
 
   def add_skills_by_projects(projects)
-    projects.each { |project| skills[project.language] = DEFAULT_SKILL_MASTERY if project.language.present? and !skills[project .language] }
+    self.skills ||= {}
+    projects.each { |project| self.skills[project.language] = DEFAULT_SKILL_MASTERY if project.language.present? and !skills[project.language] }
     save!
   end
 
