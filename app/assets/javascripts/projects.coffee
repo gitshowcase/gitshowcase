@@ -29,7 +29,7 @@ window['Projects'] = {
 
   toggle: (element) ->
     el = $(element)
-    console.log(element);
+    console.log(element)
 
     parent = el.parents('[data-project-id]')
     project_id = parent.data('project-id')

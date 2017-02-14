@@ -9,7 +9,8 @@ $(document).on 'turbolinks:load', ->
   countUpAnimation = new CountUp(countUp.attr('id'), 0, countUp.text(), 0, 2.5)
 
   applyCountUp = ->
-    return unless countUp.offset().top < ($(window).scrollTop() + $(window).height())
+    topLimit = $(window).scrollTop() + $(window).height()
+    return unless countUp.offset().top < topLimit
     countUpAnimation.start()
 
   $(window).on 'scroll', applyCountUp

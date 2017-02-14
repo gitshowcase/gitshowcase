@@ -4,10 +4,10 @@ $(document).on 'turbolinks:load', ->
 
     button = $box.find('.share-button:first')
     container = $box.find('.share-container:first')
-    mask = container.find('.share-mask:first');
+    mask = container.find('.share-mask:first')
 
     button.click ->
       container.show()
 
     mask.click ->
-      container.hide();
+      container.hide()

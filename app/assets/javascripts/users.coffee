@@ -42,14 +42,24 @@ window['Skills'] = {
       activeClass = 'fa-star'
 
       $this.hover ->
-        $this.parent().find('.skill-star').removeClass(hoverClass).filter(':lt(' + (index + 1) + ')').addClass(hoverClass)
+        $this.parent().find('.skill-star')
+          .removeClass(hoverClass)
+          .filter(':lt(' + (index + 1) + ')')
+          .addClass(hoverClass)
       , ->
         $this.parent().find('.skill-star').removeClass(hoverClass)
 
       $this.click ->
         mastery.val(index + 1)
-        $this.parent().find('.skill-star').filter(':gt(' + index + ')').removeClass(activeClass).addClass(normalClass)
-        $this.parent().find('.skill-star').filter(':lt(' + (index + 1) + ')').removeClass(normalClass).addClass(activeClass)
+        $this.parent().find('.skill-star')
+          .filter(':gt(' + index + ')')
+          .removeClass(activeClass)
+          .addClass(normalClass)
+
+        $this.parent().find('.skill-star')
+          .filter(':lt(' + (index + 1) + ')')
+          .removeClass(normalClass)
+          .addClass(activeClass)
 
   createNew: ->
     created = $(this.template)
