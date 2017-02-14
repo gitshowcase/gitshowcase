@@ -18,7 +18,14 @@ module GithubUser
 
     # This method is used for batch updates after adding a new field or updating the logic
     def sync_profiles(fields = nil, users = User.all)
-        users.each { |user| user.sync_profile fields }
+      users.each do |user|
+        begin
+          user.sync_profile fields
+          logger.info "Synced ##{user.id} (#{user.name}) profile - #{fields}"
+        rescue
+          logger.info "Unable to sync ##{user.id} (#{user.name}) profile - #{fields}"
+        end
+      end
     end
   end
 
