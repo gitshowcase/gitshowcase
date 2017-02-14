@@ -2,8 +2,8 @@
 - placeholder ||= title
 - link ||= ''
 
-- unless link.present?
-  - link = (edit and !text.present?) ? users_path : 'javascript:void'
+- link = users_path if edit and !text.present?
+- link = 'javascript:void' unless link.present?
 
 - if text.present? or edit
   .col-lg-3.col-md-4.col-sm-6
