@@ -40,7 +40,7 @@ RSpec.describe User do
   end
 
   describe '#add_skills_by_projects' do
-    let(:user) { FactoryGirl.create(described_class.to_s.downcase, skills: {'ruby': 5}) }
+    let(:user) { FactoryGirl.create(described_class.to_s.downcase) }
     let :projects do
       [
           double(language: 'ruby'),
@@ -49,9 +49,27 @@ RSpec.describe User do
       ]
     end
 
-    it 'adds skills by project languages' do
+    it 'adds skills from scratch' do
+      user.skills = {'ruby': 5}
       user.add_skills_by_projects(projects)
-      expect(user.skills).to eq({'ruby' => 5, 'php' => 3, 'javascript' => 3})
+
+      skills = {
+          'ruby' => 5,
+          'php' => User::DEFAULT_SKILL_MASTERY,
+          'javascript' => User::DEFAULT_SKILL_MASTERY
+      }
+      expect(user.skills).to eq(skills)
+    end
+
+    it 'adds to existing skills' do
+      user.add_skills_by_projects(projects)
+
+      skills = {
+          'ruby' => User::DEFAULT_SKILL_MASTERY,
+          'php' => User::DEFAULT_SKILL_MASTERY,
+          'javascript' => User::DEFAULT_SKILL_MASTERY
+      }
+      expect(user.skills).to eq(skills)
     end
   end
 

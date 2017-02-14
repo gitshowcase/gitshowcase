@@ -30,6 +30,16 @@ RSpec.shared_examples 'github_user' do
     end
   end
 
+  describe '.sync_profiles' do
+    let(:users) { [double.as_null_object, double.as_null_object] }
+
+    it 'calls #sync_profile for each user' do
+      expect(users[0]).to receive(:sync_profile).once.with('fields')
+      expect(users[1]).to receive(:sync_profile).once.with('fields')
+      described_class.sync_profiles('fields', users)
+    end
+  end
+
   describe '#company_website=' do
     let(:user) { described_class.new }
 
@@ -71,7 +81,7 @@ RSpec.shared_examples 'github_user' do
       )
     end
 
-    it 'updates data' do
+    it 'updates all fields' do
       expect(user).to receive(:client).and_return(github_client)
       user.sync_profile
 
@@ -80,16 +90,39 @@ RSpec.shared_examples 'github_user' do
       expect(user.avatar).to eq('https://avatars.githubusercontent.com/u/0?s=400')
       expect(user.website).to eq('johndoe.com')
       expect(user.location).to eq('Brazil')
-      expect(user.email).to eq('contact@johndoe.com')
+      expect(user.email).not_to eq('contact@johndoe.com')
+      expect(user.display_email).to eq('contact@johndoe.com')
       expect(user.bio).to eq('Lorem ipsum')
       expect(user.company).to eq('@company')
       expect(user.company_website).to eq('https://github.com/company')
       expect(user.hireable).to eq(true)
     end
 
-    it 'does not update company_website' do
-      expect(github_client_user).to receive(:company).and_return('company')
+    it 'updates one field' do
       expect(user).to receive(:client).and_return(github_client)
+      user.sync_profile 'display_email'
+
+      expect(user.name).to be_nil
+      expect(user.display_email).to eq('contact@johndoe.com')
+    end
+
+    it 'updates selected fields' do
+      expect(user).to receive(:client).and_return(github_client)
+      user.sync_profile ['display_email', :bio]
+
+      expect(user.name).to be_nil
+      expect(user.display_email).to eq('contact@johndoe.com')
+      expect(user.bio).to eq('Lorem ipsum')
+    end
+
+    it 'does not sync invalid fields' do
+      expect(user).not_to receive(:client)
+      user.sync_profile 'id'
+    end
+
+    it 'does not update company_website without @company' do
+      expect(github_client_user).to receive(:company).and_return('company')
+      expect(user).to receive(:client).once.and_return(github_client)
       user.sync_profile
 
       expect(user.company_website).to be_nil

@@ -17,6 +17,8 @@ class User < ApplicationRecord
 
   # Constraints
   DEFAULT_SKILL_MASTERY = 3
+  MIN_SKILL_MASTERY = 0
+  MAX_SKILL_MASTERY = 5
 
   # Methods
   def display_name
@@ -45,8 +47,8 @@ class User < ApplicationRecord
 
     skills.each do |name, mastery|
       mastery = mastery.to_i
-      mastery = 0 if mastery < 0
-      mastery = 5 if mastery > 5
+      mastery = MIN_SKILL_MASTERY if mastery < MIN_SKILL_MASTERY
+      mastery = MAX_SKILL_MASTERY if mastery > MAX_SKILL_MASTERY
 
       parsed[name] = mastery
     end

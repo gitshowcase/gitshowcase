@@ -1,6 +1,8 @@
 module GithubUser
   extend ActiveSupport::Concern
 
+  SYNC_FIELDS = %w(name username avatar website location display_email bio company company_website hireable)
+
   class_methods do
     def github_auth(auth)
       instance = self.new
@@ -12,6 +14,11 @@ module GithubUser
 
       instance.sync_profile
       instance
+    end
+
+    # This method is used for batch updates after adding a new field or updating the logic
+    def sync_profiles(fields = nil, users = User.all)
+        users.each { |user| user.sync_profile fields }
     end
   end
 
@@ -35,26 +42,24 @@ module GithubUser
     self[:username] = val.to_s.downcase
   end
 
-  def sync_profile
-    github_user = client.user
-
-    self.name = github_user.name
-    self.username = github_user.login
-    self.avatar = github_user.avatar_url
-    self.hireable = github_user.hireable
-    self.company = github_user.company
-    self.company_website = company if company.start_with? '@'
-
-    self.website = github_user.blog if github_user.blog.present?
-    self.location = github_user.location if github_user.location.present?
-    self.email = github_user.email if github_user.email.present?
-    self.bio = github_user.bio if github_user.bio.present?
-
-    save!
-  end
-
   def client
     @client ||= Octokit::Client.new(access_token: github_token)
+  end
+
+  def client_user
+    @client_user ||= client.user
+  end
+
+  def sync_profile(fields = nil)
+    fields ||= SYNC_FIELDS
+    fields = [fields] if fields.is_a? String
+
+    fields.each do |field|
+      field = field.to_s
+      send("sync_#{field}") if SYNC_FIELDS.include? field
+    end
+
+    save!
   end
 
   def sync_projects
@@ -72,5 +77,47 @@ module GithubUser
     project = projects.new(homepage: website, position: 0)
     project.sync_homepage
     project
+  end
+
+  protected
+
+  def sync_name
+    self.name = client_user.name
+  end
+
+  def sync_username
+    self.username = client_user.login
+  end
+
+  def sync_avatar
+    self.avatar = client_user.avatar_url
+  end
+
+  def sync_hireable
+    self.hireable = client_user.hireable
+  end
+
+  def sync_company
+    self.company = client_user.company
+  end
+
+  def sync_company_website
+    self.company_website = company if company.start_with? '@'
+  end
+
+  def sync_website
+    self.website = client_user.blog if client_user.blog.present?
+  end
+
+  def sync_location
+    self.location = client_user.location if client_user.location.present?
+  end
+
+  def sync_display_email
+    self.display_email = client_user.email if client_user.email.present?
+  end
+
+  def sync_bio
+    self.bio = client_user.bio if client_user.bio.present?
   end
 end

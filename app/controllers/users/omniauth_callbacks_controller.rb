@@ -7,6 +7,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user
       @user.github_token = auth.credentials.token
+      @user.email = auth.info.email
       @user.save
     else
       @user = User.github_auth(auth)

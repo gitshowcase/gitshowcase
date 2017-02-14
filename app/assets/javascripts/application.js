@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function () {
         group.toggleClass('form-group-empty', !(focused || $this.val().length));
     };
 
-    var inputs = $('input[type="text"].form-control');
+    var inputs = $('input[type="text"].form-control, input[type="email"].form-control');
     inputs.each(fn);
     inputs.on('input focus blur', fn);
 });
