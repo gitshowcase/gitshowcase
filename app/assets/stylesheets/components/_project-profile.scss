@@ -9,6 +9,7 @@
   margin-bottom: 49px;
   background: #ffffff;
   position: relative;
+  transition: all .5s ease;
 
   &:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
@@ -29,18 +30,25 @@
     position: absolute;
     z-index: 1;
     font-size: 1.17rem;
-    background: rgba(black, .5);
     width: 100%;
     height: $thumbnail-height;
     color: $color-title-white;
     text-align: center;
     padding-top: 4.5rem;
+    transition: all .5s ease;
 
     span {
       display: inline-block;
       padding: .35rem .7rem;
-      background: rgba(black, .5);
       border-radius: 3px;
+    }
+
+    &, span {
+      background: rgba(black, .5);
+
+      &:hover {
+        background: rgba(black, .65);
+      }
     }
   }
 
