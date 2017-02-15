@@ -28,4 +28,8 @@ class Project < ApplicationRecord
     return repository if repository.present?
     'My Project'
   end
+
+  def link
+    homepage.present? ? homepage : repository
+  end
 end

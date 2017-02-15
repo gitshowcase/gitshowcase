@@ -1,5 +1,5 @@
 - edit ||= false
-- href = project.homepage.present? ? project.homepage : 'javascript:void()'
+- href = project.link.present? ? project.link : 'javascript:void()'
 
 .project-profile.wow.animated.fadeIn
   - if edit
@@ -8,7 +8,7 @@
         i.fa.fa-edit
         |  Edit Thumbnail
 
-  a.project-link href=href target='_blank' rel='nofollow' class=(!project.homepage.present? ? 'project-linkless' : nil)
+  a.project-link href=href target='_blank' rel='nofollow' class=(project.link.present? ? nil : 'project-linkless')
     = render 'components/thumbnail-profile', project: project, edit: edit
 
     .container-fluid

@@ -42,4 +42,18 @@ RSpec.describe Project do
       expect(project.display_title).to eq('My Project')
     end
   end
+
+  describe '#link' do
+    let(:project) { Project.new }
+
+    it 'returns homepage' do
+      project.homepage = 'home'
+      expect(project.link).to eq('home')
+    end
+
+    it 'returns repository' do
+      project.repository = 'repo'
+      expect(project.link).to eq('repo')
+    end
+  end
 end
