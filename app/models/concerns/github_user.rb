@@ -42,7 +42,7 @@ module GithubUser
 
   # @param val [String]
   def company_website=(val)
-    self[:company_website] = (val and val.start_with?('@')) ? ('https://github.com/' + val[1..-1]) : val
+    self[:company_website] = val.start_with?('@') ? ('https://github.com/' + val[1..-1]) : val
   end
 
   # @param val [String]

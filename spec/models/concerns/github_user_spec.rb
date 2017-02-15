@@ -66,6 +66,21 @@ RSpec.shared_examples 'github_user' do
   describe '#sync_profile' do
     let(:user) { FactoryGirl.build(:user) }
 
+    let(:github_client_empty) { instance_double(Octokit::Client, user: github_client_user_empty) }
+    let :github_client_user_empty do
+      double(
+          login: 'johndoe',
+          avatar_url: nil,
+          name: nil,
+          blog: nil,
+          location: nil,
+          email: nil,
+          bio: nil,
+          company: nil,
+          hireable: nil
+      )
+    end
+
     let(:github_client) { instance_double(Octokit::Client, user: github_client_user) }
     let :github_client_user do
       double(
@@ -126,6 +141,11 @@ RSpec.shared_examples 'github_user' do
       user.sync_profile
 
       expect(user.company_website).to be_nil
+    end
+
+    it 'syncs with nil fields' do
+      expect(user).to receive(:github_client).once.and_return(github_client_empty)
+      user.sync_profile
     end
   end
 
