@@ -29,11 +29,12 @@ module MailchimpUser
         status: 'subscribed',
         merge_fields: {
             FNAME: first_name,
-            NAME: name,
-            USERNAME: username,
-            LOCATION: location
+            NAME: display_name,
+            USERNAME: username
         }
     }
+
+    body[:merge_fields][:location] = location if location.present?
 
     mailchimp_member.upsert(body: body)
   end

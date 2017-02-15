@@ -11,6 +11,7 @@ module GithubUser
       instance.github_uid = auth.uid
       instance.github_token = auth.credentials.token
       instance.role = 'Jedi Developer'
+      instance.save
 
       instance.sync_profile
       instance
