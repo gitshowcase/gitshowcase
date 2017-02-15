@@ -14,6 +14,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require countup
+//= require geopattern.min
 //= require sortable-rails-jquery
 //= require tether
 //= require bootstrap
@@ -22,17 +23,4 @@
 
 new WOW().init();
 
-$(document).on('turbolinks:load', function () {
-    var fn = function () {
-        $this = $(this);
-        var group = $this.parents('.form-group:first');
 
-        var focused = $this.is(':focus');
-        group.toggleClass('form-group-focused', focused);
-        group.toggleClass('form-group-empty', !(focused || $this.val().length));
-    };
-
-    var inputs = $('input[type="text"].form-control, input[type="email"].form-control');
-    inputs.each(fn);
-    inputs.on('input focus blur', fn);
-});

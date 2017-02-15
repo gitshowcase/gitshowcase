@@ -28,16 +28,19 @@
   .project-edit-thumbnail {
     position: absolute;
     z-index: 1;
-    font-size: 1.5rem;
-    background: rgba(black, .3);
+    font-size: 1.17rem;
+    background: rgba(black, .5);
     width: 100%;
     height: $thumbnail-height;
     color: $color-title-white;
     text-align: center;
     padding-top: 4.5rem;
 
-    &:hover {
+    span {
+      display: inline-block;
+      padding: .35rem .7rem;
       background: rgba(black, .5);
+      border-radius: 3px;
     }
   }
 

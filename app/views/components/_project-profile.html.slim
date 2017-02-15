@@ -4,8 +4,9 @@
 .project-profile.wow.animated.fadeIn
   - if edit
     a.project-edit-thumbnail href=edit_project_path(project) target='_blank' rel='nofollow'
-      i.fa.fa-edit
-      |  Edit Thumbnail
+      span
+        i.fa.fa-edit
+        |  Edit Thumbnail
 
   a.project-link href=href target='_blank' rel='nofollow' class=(!project.homepage.present? ? 'project-linkless' : nil)
     = render 'components/thumbnail-profile', project: project, edit: edit

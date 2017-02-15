@@ -23,7 +23,9 @@ class Project < ApplicationRecord
   end
 
   def display_title
-    [title, homepage, repository].each { |val| return val if val.present? }
+    return title if title.present?
+    return UrlHelper.extract homepage if homepage.present?
+    return repository if repository.present?
     'My Project'
   end
 end

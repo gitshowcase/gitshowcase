@@ -1,4 +1,5 @@
 @import "constants/sizes";
+@import "constants/colors";
 
 .thumbnail-profile {
   position: relative;
@@ -7,23 +8,16 @@
   .thumbnail-generated {
     height: $thumbnail-height;
     text-align: center;
+  }
 
-    &-0 {
-      background: #e5fcff;
-    }
-
-    &-1 {
-      background: #fff6e5;
-    }
-
-    &-2 {
-      background: #ffe5f9;
-    }
-
-    .thumbnail-logo {
-      height: 60%;
-      opacity: .25;
-      margin-top: 36px;
-    }
+  .thumbnail-title {
+    color: $color-text-white;
+    text-align: center;
+    padding-top: 5rem;
+    white-space: nowrap;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.3px;
   }
 }

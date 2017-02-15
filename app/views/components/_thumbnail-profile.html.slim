@@ -14,5 +14,6 @@
             size: 'contain',
             position: 'center'
   - else
-    .thumbnail-generated class="thumbnail-generated-#{project.id % 3}"
-      = image_tag 'logo.png', class: 'thumbnail-logo', alt: 'GitShowcase Logo'
+    .thumbnail-generated class="thumbnail-generated" data-geopattern=project.id
+      .thumbnail-title
+        = project.display_title
