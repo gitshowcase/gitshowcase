@@ -11,6 +11,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       @user.save
     else
       @user = User.github_auth(auth)
+      @user.mailchimp_subscribe
       created = true
     end
 

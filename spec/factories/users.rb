@@ -11,9 +11,6 @@ FactoryGirl.define do
     after(:build) do |user, evaluated|
       unless evaluated.with_mailchimp_callbacks
         class << user
-          def mailchimp_subscribe;
-          end
-
           def mailchimp_subscribe_change;
           end
 

@@ -23,7 +23,7 @@ class User < ApplicationRecord
 
   # Methods
   def display_name
-    name || username
+    name.present? ? name : username
   end
 
   def first_name

@@ -9,14 +9,15 @@ module MailchimpUser
     def mailchimp_client_list
       @mailchimp_client_list = mailchimp_client.lists(ENV['MAILCHIMP_LIST_ID'])
     end
+
+    def has_keys
+      return (ENV['MAILCHIMP_KEY'].present? and ENV['MAILCHIMP_LIST_ID'].present?) ? true : false
+    end
   end
 
   included do
-    if ENV['MAILCHIMP_KEY'].present? and ENV['MAILCHIMP_LIST_ID'].present?
-      after_create :mailchimp_subscribe
-      after_update :mailchimp_subscribe_changed
-      after_destroy :mailchimp_unsubscribe
-    end
+    after_update :mailchimp_subscribe_changed
+    after_destroy :mailchimp_unsubscribe
   end
 
   def mailchimp_member
@@ -24,6 +25,8 @@ module MailchimpUser
   end
 
   def mailchimp_subscribe
+    return unless self.class.has_keys
+
     body = {
         email_address: email,
         status: 'subscribed',
@@ -44,6 +47,8 @@ module MailchimpUser
   end
 
   def mailchimp_unsubscribe
+    return unless self.class.has_keys
+
     mailchimp_member.delete
   end
 
