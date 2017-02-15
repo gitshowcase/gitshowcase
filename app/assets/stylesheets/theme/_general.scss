@@ -7,6 +7,7 @@ body {
 
 a {
   color: $color-one;
+  transition: color .5s ease;
 
   &:hover, &:focus, &:active {
     color: $color-two;

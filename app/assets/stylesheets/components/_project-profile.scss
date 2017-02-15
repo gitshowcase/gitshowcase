@@ -11,6 +11,10 @@
   position: relative;
   transition: all .5s ease;
 
+  > a {
+    transition: none;
+  }
+
   &:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
     border: 1px solid #b9b9b9;
