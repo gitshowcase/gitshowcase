@@ -32,7 +32,7 @@ module GithubUser
   # @param val [String]
   def avatar=(val)
     # Add suggested size to avoid oversized preview images from GitHub
-    if val.start_with?('https://avatars.githubusercontent.com') and !val.include?('s=')
+    if val and val.start_with?('https://avatars.githubusercontent.com') and !val.include?('s=')
       val << (val.include?('?') ? '&' : '?') + 's=400'
     end
 
@@ -41,12 +41,12 @@ module GithubUser
 
   # @param val [String]
   def company_website=(val)
-    self[:company_website] = val.start_with?('@') ? ('https://github.com/' + val[1..-1]) : val
+    self[:company_website] = (val and val.start_with?('@')) ? ('https://github.com/' + val[1..-1]) : val
   end
 
   # @param val [String]
   def username=(val)
-    self[:username] = val.to_s.downcase
+    self[:username] = val.downcase
   end
 
   def github_client
@@ -109,7 +109,7 @@ module GithubUser
   end
 
   def sync_company_website
-    self.company_website = company if company.start_with? '@'
+    self.company_website = company if company and company.start_with? '@'
   end
 
   def sync_website
