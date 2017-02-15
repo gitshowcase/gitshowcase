@@ -2,6 +2,7 @@ class User < ApplicationRecord
   # Concerns
   include GithubUser
   include SocialNetworks
+  include MailchimpUser
 
   # Relationships
   has_many :projects

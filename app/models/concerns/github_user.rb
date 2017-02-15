@@ -49,12 +49,12 @@ module GithubUser
     self[:username] = val.to_s.downcase
   end
 
-  def client
+  def github_client
     @client ||= Octokit::Client.new(access_token: github_token)
   end
 
-  def client_user
-    @client_user ||= client.user
+  def github_client_user
+    @client_user ||= github_client.user
   end
 
   def sync_profile(fields = nil)
@@ -89,23 +89,23 @@ module GithubUser
   protected
 
   def sync_name
-    self.name = client_user.name
+    self.name = github_client_user.name
   end
 
   def sync_username
-    self.username = client_user.login
+    self.username = github_client_user.login
   end
 
   def sync_avatar
-    self.avatar = client_user.avatar_url
+    self.avatar = github_client_user.avatar_url
   end
 
   def sync_hireable
-    self.hireable = client_user.hireable
+    self.hireable = github_client_user.hireable
   end
 
   def sync_company
-    self.company = client_user.company
+    self.company = github_client_user.company
   end
 
   def sync_company_website
@@ -113,18 +113,18 @@ module GithubUser
   end
 
   def sync_website
-    self.website = client_user.blog if client_user.blog.present?
+    self.website = github_client_user.blog if github_client_user.blog.present?
   end
 
   def sync_location
-    self.location = client_user.location if client_user.location.present?
+    self.location = github_client_user.location if github_client_user.location.present?
   end
 
   def sync_display_email
-    self.display_email = client_user.email if client_user.email.present?
+    self.display_email = github_client_user.email if github_client_user.email.present?
   end
 
   def sync_bio
-    self.bio = client_user.bio if client_user.bio.present?
+    self.bio = github_client_user.bio if github_client_user.bio.present?
   end
 end

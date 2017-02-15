@@ -5,7 +5,7 @@ module GithubProject
     def sync_by_user(user)
       result = []
 
-      repos = user.client.repositories
+      repos = user.github_client.repositories
       repos.each do |repository_data|
         params = {user_id: user.id}
 
@@ -33,7 +33,7 @@ module GithubProject
   def sync_repository(data = nil)
     return false unless repository.present?
 
-    data ||= user.client.repository(self.repository)
+    data ||= user.github_client.repository(self.repository)
 
     self.title = data.name.titleize
     self.homepage = data.homepage

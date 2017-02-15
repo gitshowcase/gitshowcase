@@ -82,7 +82,7 @@ RSpec.shared_examples 'github_user' do
     end
 
     it 'updates all fields' do
-      expect(user).to receive(:client).and_return(github_client)
+      expect(user).to receive(:github_client).and_return(github_client)
       user.sync_profile
 
       expect(user.name).to eq('John Doe')
@@ -99,7 +99,7 @@ RSpec.shared_examples 'github_user' do
     end
 
     it 'updates one field' do
-      expect(user).to receive(:client).and_return(github_client)
+      expect(user).to receive(:github_client).and_return(github_client)
       user.sync_profile 'display_email'
 
       expect(user.name).to be_nil
@@ -107,7 +107,7 @@ RSpec.shared_examples 'github_user' do
     end
 
     it 'updates selected fields' do
-      expect(user).to receive(:client).and_return(github_client)
+      expect(user).to receive(:github_client).and_return(github_client)
       user.sync_profile ['display_email', :bio]
 
       expect(user.name).to be_nil
@@ -116,13 +116,13 @@ RSpec.shared_examples 'github_user' do
     end
 
     it 'does not sync invalid fields' do
-      expect(user).not_to receive(:client)
+      expect(user).not_to receive(:github_client)
       user.sync_profile 'id'
     end
 
     it 'does not update company_website without @company' do
       expect(github_client_user).to receive(:company).and_return('company')
-      expect(user).to receive(:client).once.and_return(github_client)
+      expect(user).to receive(:github_client).once.and_return(github_client)
       user.sync_profile
 
       expect(user.company_website).to be_nil

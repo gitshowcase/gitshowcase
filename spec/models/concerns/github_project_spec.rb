@@ -13,7 +13,7 @@ RSpec.shared_examples 'github_project' do
     }
 
     it 'syncs projects' do
-      expect(user).to receive(:client).and_return(github_client)
+      expect(user).to receive(:github_client).and_return(github_client)
       synced_projects = Project.sync_by_user(user)
 
       expect(synced_projects.count).to eq(2)
@@ -49,7 +49,7 @@ RSpec.shared_examples 'github_project' do
     end
 
     it 'sets data' do
-      expect(project.user).to receive(:client).and_return(client_data)
+      expect(project.user).to receive(:github_client).and_return(client_data)
 
       project.sync_repository
 
