@@ -3,6 +3,7 @@
     i.fa.fa-ellipsis-v
 
   .project-actions
+    = link_to 'Edit', edit_project_path(project), class: 'btn btn-primary'
     = render 'components/switch', checked: !project.hide, onchange: 'Projects.toggle(this)'
 
   a.project-link href=edit_project_path(project)

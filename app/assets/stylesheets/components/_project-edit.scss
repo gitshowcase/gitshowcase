@@ -31,9 +31,12 @@
     margin-top: 1.17rem;
     margin-right: .5rem;
 
-    button {
-      border: None;
-      background: none;
+    .btn {
+      float: left;
+      margin-right: .75rem;
+      padding: .4rem 1rem;
+      text-decoration: none;
+      background: $color-one;
     }
   }
 }
