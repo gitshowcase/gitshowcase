@@ -3,5 +3,6 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).on 'turbolinks:load', ->
-  $('.dashboard-layout .menu a[href="' + location.href + '"]').addClass('active')
+  $('.dashboard-layout .menu a[href="' + location.href + '"]')
+    .addClass('active')
 

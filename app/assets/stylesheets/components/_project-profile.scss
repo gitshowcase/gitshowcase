@@ -8,6 +8,7 @@
   overflow: hidden;
   margin-bottom: 49px;
   background: #ffffff;
+  position: relative;
 
   &:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.22);
@@ -22,6 +23,22 @@
   .thumbnail-profile {
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+  }
+
+  .project-edit-thumbnail {
+    position: absolute;
+    z-index: 1;
+    font-size: 1.5rem;
+    background: rgba(black, .3);
+    width: 100%;
+    height: $thumbnail-height;
+    color: $color-title-white;
+    text-align: center;
+    padding-top: 4.5rem;
+
+    &:hover {
+      background: rgba(black, .5);
+    }
   }
 
   .project-link {
