@@ -53,7 +53,7 @@ RSpec.describe Project do
 
     it 'returns repository' do
       project.repository = 'repo'
-      expect(project.link).to eq('repo')
+      expect(project.link).to eq('https://github.com/repo')
     end
   end
 end

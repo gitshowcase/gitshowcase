@@ -30,6 +30,6 @@ class Project < ApplicationRecord
   end
 
   def link
-    homepage.present? ? homepage : repository
+    homepage.present? ? homepage : repository_url
   end
 end
