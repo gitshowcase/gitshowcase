@@ -1,8 +1,13 @@
 .menu
-  nav
+  = render 'components/avatar-profile', user: current_user
+
+  header.clearfix
+    .menu-name
+      = current_user.first_name
+
     a href="/#{current_user.username}" target='_blank'
       i.fa.fa-home
-      |  View Portfolio
+      |  My Portfolio
 
   nav
     a href=users_path
