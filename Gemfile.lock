@@ -71,6 +71,7 @@ GEM
       dotenv (= 2.2.0)
       railties (>= 3.2, < 5.1)
     erubis (2.7.0)
+    excon (0.55.0)
     execjs (2.7.0)
     factory_girl (4.8.0)
       activesupport (>= 3.0.0)
@@ -99,6 +100,10 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.5.1)
+    heroics (0.0.19)
+      erubis (~> 2.0)
+      excon
+      multi_json (>= 1.9.2)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
     i18n (0.8.0)
@@ -163,6 +168,8 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.19.0)
+    platform-api (0.8.0)
+      heroics (~> 0.0.17)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -313,6 +320,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg (~> 0.18)
+  platform-api
   pry-byebug
   puma (~> 3.0)
   rails (~> 5.0.0, >= 5.0.0.1)

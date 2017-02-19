@@ -1,5 +1,6 @@
 - title ||= 'GitShowcase'
 - site_name ||= 'GitShowcase'
+- canonical ||= nil
 - description ||= 'Developer, feature your best projects in a plug and play portfolio. The best part, for free.'
 - author = 'Pedro Moreira,Victor Santos'
 - image ||= asset_url('/preview.png')
@@ -15,7 +16,7 @@
 title= title
 
 = render 'layouts/partials/head/tag_manager'
-= render 'layouts/partials/head/meta'
+= render 'layouts/partials/head/meta', canonical: canonical
 = render 'layouts/partials/head/web_app'
 = render 'layouts/partials/head/favicon'
 

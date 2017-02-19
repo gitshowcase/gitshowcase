@@ -48,6 +48,8 @@ Copy the file `.env.example` to `.env` and fill the fields
 DB_USERNAME=
 DB_PASSWORD=
 
+APP_DOMAIN=localhost
+
 GITHUB_KEY=
 GITHUB_SECRET=
 ```

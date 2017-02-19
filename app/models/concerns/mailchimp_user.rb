@@ -2,16 +2,24 @@ module MailchimpUser
   extend ActiveSupport::Concern
 
   class_methods do
+    def mailchimp_key
+      ENV['MAILCHIMP_KEY']
+    end
+
+    def mailchimp_list
+      ENV['MAILCHIMP_LIST_ID']
+    end
+
     def mailchimp_client
-      @mailchimp_client = Gibbon::Request.new(api_key: ENV['MAILCHIMP_KEY'])
+      @mailchimp_client = Gibbon::Request.new(api_key: mailchimp_key)
     end
 
     def mailchimp_client_list
-      @mailchimp_client_list = mailchimp_client.lists(ENV['MAILCHIMP_LIST_ID'])
+      @mailchimp_client_list = mailchimp_client.lists mailchimp_list
     end
 
-    def has_keys
-      return (ENV['MAILCHIMP_KEY'].present? and ENV['MAILCHIMP_LIST_ID'].present?) ? true : false
+    def mailchimp_enabled?
+      return mailchimp_key.present? && mailchimp_list.present?
     end
   end
 
@@ -25,7 +33,7 @@ module MailchimpUser
   end
 
   def mailchimp_subscribe
-    return unless self.class.has_keys
+    return unless self.class.mailchimp_enabled?
 
     body = {
         email_address: email,
@@ -47,7 +55,7 @@ module MailchimpUser
   end
 
   def mailchimp_unsubscribe
-    return unless self.class.has_keys
+    return unless self.class.mailchimp_enabled?
 
     mailchimp_member.delete
   end

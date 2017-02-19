@@ -3,6 +3,7 @@ class User < ApplicationRecord
   include GithubUser
   include SocialNetworks
   include MailchimpUser
+  include HerokuUser
 
   # Relationships
   has_many :projects

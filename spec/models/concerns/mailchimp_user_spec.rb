@@ -1,4 +1,12 @@
 RSpec.shared_examples 'mailchimp_user' do
+  describe '.mailchimp_key' do
+    # TODO
+  end
+
+  describe '.mailchimp_list' do
+    # TODO
+  end
+
   describe '.mailchimp_client' do
     # TODO
   end
@@ -7,11 +15,7 @@ RSpec.shared_examples 'mailchimp_user' do
     # TODO
   end
 
-  describe '.mailchimp_client' do
-    # TODO
-  end
-
-  describe 'after_create' do
+  describe '.mailchimp_enabled?' do
     # TODO
   end
 

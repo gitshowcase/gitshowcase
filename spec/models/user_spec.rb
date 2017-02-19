@@ -4,6 +4,7 @@ RSpec.describe User do
   # Concerns
   it_behaves_like 'social_networks'
   it_behaves_like 'github_user', User
+  it_behaves_like 'heroku_user'
 
   # Foreign Keys
   it { should have_many(:projects) }

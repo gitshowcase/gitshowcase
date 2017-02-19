@@ -3,6 +3,7 @@ html
   head
     = render 'layouts/partials/head',
             title: @user.display_name,
+            canonical: @user.username,
             description: @user.bio,
             image: @user.avatar,
             card_type: 'summary',

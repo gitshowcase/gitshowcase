@@ -47,9 +47,15 @@ Rails.application.routes.draw do
     end
   end
 
-  root to: 'landing#home'
+  # Home
+  constraints domain: ENV['APP_DOMAIN'] || 'localhost' do
+    root to: 'landing#home'
+  end
 
+  # Profile
   controller 'profile' do
     get '/:username', action: 'show'
   end
+
+  root 'profile#show'
 end

@@ -7,6 +7,12 @@ class ProfileController < ApplicationController
   private
 
   def set_user
-    @user = User.find_by_username!(params[:username].downcase)
+    if params[:username]
+      @user = User.find_by_username params[:username].downcase
+    else
+      @user = User.find_by_domain request.domain
+    end
+
+    redirect_to '/404' unless @user.present?
   end
 end

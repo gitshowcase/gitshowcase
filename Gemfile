@@ -83,6 +83,9 @@ gem 'slim-rails'
 # Use Gibbon as MailChimp API wrapper
 gem 'gibbon'
 
+# Use Heroku Platform API to register domains
+gem 'platform-api'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri

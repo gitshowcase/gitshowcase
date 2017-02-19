@@ -60,7 +60,7 @@ class UsersController < DashboardController
   end
 
   def user_params
-    params.require(:user).permit(:name, :avatar, :cover, :bio, :role, :location, :display_email,
+    params.require(:user).permit(:name, :avatar, :cover, :bio, :role, :location, :display_email, :domain,
                                  :company, :company_website, :website, :hireable, User::SOCIALS)
   end
 end
