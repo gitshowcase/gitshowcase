@@ -11,5 +11,4 @@ meta name='viewport' content='width=device-width, initial-scale=1'
 meta name='turbolinks-cache-control' content='no-preview'
 
 / Canonical
-- if canonical.present?
-  link rel='canonical' href="https://www.gitshowcase.com/#{canonical}"
+link rel='canonical' href="https://www.gitshowcase.com#{canonical.start_with?('/') ? '' : '/'}#{canonical}"
