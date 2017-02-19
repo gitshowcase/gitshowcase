@@ -24,6 +24,7 @@ module HerokuUser
     after_destroy :heroku_delete_domain
   end
 
+  # @param val [String]
   def domain_valid?(val)
     !(val.include?(ENV['APP_DOMAIN']))
   end
@@ -35,7 +36,7 @@ module HerokuUser
 
   # @param val [String]
   def domain=(val)
-    if val
+    if val.present?
       raise "*.#{ENV['APP_DOMAIN']} domains forbidden" unless domain_valid?(val)
       raise "#{ENV['APP_DOMAIN']} already in use" unless domain_available?(val)
     end
