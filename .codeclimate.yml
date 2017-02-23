@@ -1,0 +1,21 @@
+engines:
+ duplication:
+  enabled: true
+  config:
+    languages:
+      ruby:
+        mass_threshold: 25
+ rubocop:
+  enabled: true
+ csslint:
+  enabled: true
+ coffeelint:
+  enabled: true
+
+ratings:
+ paths:
+ - "**.rb"
+ - "**.css"
+ - "**.coffee"
+
+exclude_paths:
