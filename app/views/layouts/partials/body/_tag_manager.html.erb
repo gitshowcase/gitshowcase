@@ -1,9 +1,12 @@
 <% if ENV['TAG_MANAGER'].present? %>
     <script>
+        var canonical = $('link[rel="canonical"]').first();
+        var virtualUrl = canonical ? canonical.attr('href') : location.href;
+
         $(document).on('turbolinks:load', function () {
             dataLayer.push({
                 'event': 'pageView',
-                'virtualUrl': location.href
+                'virtualUrl': virtualUrl
             });
         });
     </script>
