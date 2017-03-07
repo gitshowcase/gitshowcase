@@ -88,8 +88,9 @@ gem 'gibbon'
 # Use Heroku Platform API to register domains
 gem 'platform-api'
 
-# Use NewRelic for monitoring
-gem 'newrelic_rpm'
+# Choose monitoring app
+# gem 'newrelic_rpm'
+gem 'scout_apm'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

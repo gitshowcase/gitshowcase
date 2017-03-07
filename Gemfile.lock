@@ -146,7 +146,6 @@ GEM
     multi_xml (0.6.0)
     multipart-post (2.0.0)
     nesty (1.0.2)
-    newrelic_rpm (3.18.1.330)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -249,6 +248,7 @@ GEM
     sawyer (0.8.1)
       addressable (>= 2.3.5, < 2.6)
       faraday (~> 0.8, < 1.0)
+    scout_apm (2.1.22)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
     simple_form (3.4.0)
@@ -317,7 +317,6 @@ DEPENDENCIES
   listen (~> 3.0.5)
   meta_request
   metainspector
-  newrelic_rpm
   octokit (~> 4.0)
   omniauth
   omniauth-github
@@ -333,6 +332,7 @@ DEPENDENCIES
   rails-assets-wow!
   rspec-rails (~> 3.5)
   sass-rails (~> 5.0)
+  scout_apm
   shoulda-matchers (~> 3.1)
   simple_form
   slim-rails
