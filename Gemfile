@@ -92,6 +92,9 @@ gem 'platform-api'
 # gem 'newrelic_rpm'
 gem 'scout_apm'
 
+# Use TunyeMyGC for GC insights
+gem 'tunemygc'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
