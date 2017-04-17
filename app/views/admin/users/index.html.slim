@@ -15,5 +15,5 @@
         = " #{user.email}"
 
   - if @users.total_pages > 1
-    footer
+    footer.panel-transparent
       = bs_will_paginate @users
