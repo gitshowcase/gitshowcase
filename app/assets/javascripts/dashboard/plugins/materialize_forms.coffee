@@ -7,6 +7,11 @@ $(document).on 'turbolinks:load', ->
     group.toggleClass('form-group-focused', focused)
     group.toggleClass('form-group-empty', !(focused || $this.val().length))
 
-  inputs = $('input[type="text"].form-control, input[type="email"].form-control')
+  inputFields = [
+    'input[type="text"].form-control',
+    'input[type="email"].form-control'
+  ]
+
+  inputs = $(inputFields.join(','))
   inputs.each fn
   inputs.on 'input focus blur', fn

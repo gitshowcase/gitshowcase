@@ -1,6 +1,6 @@
 RSpec.shared_examples 'social_networks' do
   describe 'included' do
-    subject (:user) { described_class.new(linkedin: 'http://linkedin.com/in/john_in') }
+    subject(:user) { described_class.new(linkedin: 'http://linkedin.com/in/john_in') }
 
     it 'creates getter' do
       expect(user.linkedin).to eq('https://linkedin.com/in/john_in')
@@ -22,7 +22,7 @@ RSpec.shared_examples 'social_networks' do
   end
 
   describe '#github' do
-    subject (:user) { described_class.new(username: 'johndoe') }
+    subject(:user) { described_class.new(username: 'johndoe') }
 
     it 'returns github profile' do
       expect(user.github).to eq('https://github.com/johndoe')
@@ -30,7 +30,7 @@ RSpec.shared_examples 'social_networks' do
   end
 
   describe 'socials' do
-    subject (:user) { described_class.new(username: 'johndoe', linkedin: 'john_in', blog: 'my_blog') }
+    subject(:user) { described_class.new(username: 'johndoe', linkedin: 'john_in', blog: 'my_blog') }
 
     it 'gets existing socials' do
       socials = {

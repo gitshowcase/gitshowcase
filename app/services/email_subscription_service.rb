@@ -27,8 +27,6 @@ class EmailSubscriptionService < ApplicationService
     mailchimp_key.present? && mailchimp_list.present?
   end
 
-  private
-
   def self.mailchimp_key
     ENV['MAILCHIMP_KEY']
   end

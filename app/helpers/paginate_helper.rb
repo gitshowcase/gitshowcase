@@ -6,7 +6,7 @@ module PaginateHelper
       tag(:nav, tag(:ul, html, class: 'pagination'))
     end
 
-    def previous_or_next_page(page, text, classname)
+    def previous_or_next_page(page, text, _classname)
       if page
         tag(:li, link(text, page, class: 'page-link'), class: 'page-item')
       else

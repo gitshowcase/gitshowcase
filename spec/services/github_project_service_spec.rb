@@ -27,7 +27,7 @@ RSpec.describe GithubProjectService, type: :service do
 
       it 'fetches repository data' do
         client = double
-        allow(service).to receive(:client).and_return (client)
+        allow(service).to receive(:client).and_return(client)
         expect(client).to receive(:repository).with('gitshowcase/gitshowcase').and_return(spy)
         expect_any_instance_of(Project).to receive(:save)
 
@@ -36,7 +36,7 @@ RSpec.describe GithubProjectService, type: :service do
 
       it 'uses given data' do
         client = double
-        allow(service).to receive(:client).and_return (client)
+        allow(service).to receive(:client).and_return(client)
         expect(client).to_not receive(:repository)
         expect_any_instance_of(Project).to receive(:save)
 
