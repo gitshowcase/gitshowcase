@@ -5,7 +5,9 @@ class GithubProjectService < ApplicationService
 
   def sync(data = nil)
     raise "Project ##{@project.id} - #{@project.title} does not have a repository to sync" unless @project.repository.present?
-    data = client.repository(@project.repository) if data.nil?
+
+    repository = UrlHelper.extract(@project.repository, 'github.com/')
+    data = client.repository(repository) if data.nil?
 
     @project.title = data.name.titleize
     @project.homepage = data.homepage

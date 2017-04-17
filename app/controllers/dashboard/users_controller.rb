@@ -29,7 +29,7 @@ class Dashboard::UsersController < DashboardController
       @user.update(domain: new_domain)
     end
 
-    redirect_to dashboard_home_url, notice: 'Domain updated :D'
+    redirect_to dashboard_home_url, notice: 'Domain updated :)'
   end
 
   # GET /dashboard/profile
@@ -39,7 +39,7 @@ class Dashboard::UsersController < DashboardController
   # PUT /dashboard/profile
   def update_profile
     @user.update(user_params(:name, :avatar, :cover, :bio, :role, :location, :display_email, :company, :company_website, :website, :hireable))
-    redirect_to dashboard_home_url, notice: 'Profile updated :3'
+    redirect_to dashboard_home_url, notice: 'Profile updated :)'
   end
 
   # GET /dashboard/socials
@@ -67,7 +67,7 @@ class Dashboard::UsersController < DashboardController
     end
 
     UserSkillService.new(@user).update(skills)
-    redirect_to dashboard_home_url, notice: 'Skills updated :-)'
+    redirect_to dashboard_home_url, notice: 'Skills updated :)'
   end
 
   # GET /dashboard/billing
@@ -81,7 +81,7 @@ class Dashboard::UsersController < DashboardController
   # GET /dashboard/sync_profile
   def sync_profile
     GithubProjectService.sync_by_user(@user)
-    redirect_to dashboard_profile_url, notice: 'Profile synced =)'
+    redirect_to dashboard_profile_url, notice: 'Profile synced :)'
   end
 
   # DELETE /users/1

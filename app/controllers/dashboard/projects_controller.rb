@@ -21,10 +21,17 @@ class Dashboard::ProjectsController < DashboardController
     @project.user_id = current_user.id
     @project.position = 0
 
-    GithubProjectService.new(@project).sync if @project.repository.present?
-    ProjectInspectorService.new(@project).sync if @project.homepage.present?
+    begin
+      if @project.repository.present?
+        GithubProjectService.new(@project).sync
+      else
+        ProjectInspectorService.new(@project).sync if @project.homepage.present?
+      end
 
-    redirect_to edit_dashboard_project_url(@project), notice: 'Project created'
+      redirect_to edit_dashboard_project_url(@project), notice: 'Project created :)'
+    rescue
+      redirect_back fallback_location: new_dashboard_project_path, alert: 'Failed to created project :('
+    end
   end
 
   # PATCH/PUT /projects/1
@@ -49,7 +56,7 @@ class Dashboard::ProjectsController < DashboardController
   # GET /projects/1/sync
   def sync
     GithubProjectService.new(@project).sync
-    redirect_to edit_dashboard_project_url(@project), notice: 'Project synced'
+    redirect_to edit_dashboard_project_url(@project), notice: 'Project synced :)'
   end
 
   # POST /projects/order

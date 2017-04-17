@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe GithubProjectService, type: :service do
   describe '#sync' do
+    subject(:service) { GithubProjectService.new(project) }
+
     context 'without repository' do
-      subject(:service) { GithubProjectService.new(project) }
       let(:project) { FactoryGirl.build(:project, repository: '', title: 'title', id: 0) }
 
       it 'raises message' do
@@ -11,8 +12,17 @@ RSpec.describe GithubProjectService, type: :service do
       end
     end
 
+    context 'with repository url' do
+      let(:project) { FactoryGirl.build(:project, repository: 'https://github.com/gitshowcase/gitshowcase') }
+
+      it 'does not raise exception' do
+        VCR.use_cassette 'projects/gitshowcase' do
+          expect { service.sync }.not_to raise_exception
+        end
+      end
+    end
+
     context 'with repository' do
-      subject(:service) { GithubProjectService.new(project) }
       let(:project) { FactoryGirl.build(:project, repository: 'gitshowcase/gitshowcase') }
 
       it 'fetches repository data' do
