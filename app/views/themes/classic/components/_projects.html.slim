@@ -1,0 +1,8 @@
+- edit ||= false
+
+.projects
+  .row
+    - projects.each do |project|
+      - if !project.hide.present?
+        .col-lg-4.col-md-6
+          = render 'themes/classic/components/project', project: project, edit: edit

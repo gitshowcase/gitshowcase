@@ -16,6 +16,15 @@
 # users commonly want.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+
+# Code coverage
+require 'simplecov'
+SimpleCov.start
+
+# Include VCR
+require 'webmock/rspec'
+require 'support/vcr_setup'
+
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest

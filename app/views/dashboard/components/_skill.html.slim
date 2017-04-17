@@ -1,0 +1,14 @@
+.skill.form-inline
+  .skill-handler
+    i.fa.fa-ellipsis-v
+
+  input.form-control type='text' name='name[]' value=name
+
+  input type='hidden' name='mastery[]' value=mastery
+  div.skill-stars
+    - (1..5).each do |number|
+      i.skill-star.fa class="fa-star#{mastery < number ? '-o' : ''}"
+
+  .skill-actions
+    button.btn.skill-remove.color-primary type='button'
+      i.fa.fa-remove

@@ -1,0 +1,7 @@
+#analytics-home-view.transparent
+  .row
+    .col-md-4
+      = render 'admin/components/analytics-card', title: 'Users', value: @users_count
+
+    .col-md-4
+      = render 'admin/components/analytics-card', title: 'Projects', value: @projects_count

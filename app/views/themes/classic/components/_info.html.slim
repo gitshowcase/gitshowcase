@@ -1,0 +1,21 @@
+- edit ||= false
+- placeholder ||= title
+- link ||= ''
+
+- link = users_path if edit and !text.present?
+- link = 'javascript:void' unless link.present?
+
+- if text.present? or edit
+  .col-lg-3.col-md-4.col-sm-6
+    a.info.wow.animated.fadeIn href=link target='_blank'
+      header
+        i.fa class="fa-#{icon}"
+        .info-title= title
+
+      .info-text= text
+
+      - if edit and !text.present?
+        .info
+          i.fa.fa-edit
+          '  Set my
+          = placeholder

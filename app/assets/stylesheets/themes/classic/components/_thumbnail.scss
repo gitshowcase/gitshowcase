@@ -1,0 +1,23 @@
+@import "globals/colors";
+@import "../constants/sizes";
+
+.thumbnail {
+  position: relative;
+  height: $thumbnail-height;
+
+  .thumbnail-generated {
+    height: $thumbnail-height;
+    text-align: center;
+  }
+
+  .thumbnail-title {
+    color: $color-text-white;
+    text-align: center;
+    padding-top: 5rem;
+    white-space: nowrap;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+  }
+}

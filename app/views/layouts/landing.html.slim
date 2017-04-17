@@ -1,0 +1,14 @@
+doctype 5
+html
+  head
+    = render 'layouts/partials/head'
+
+    = stylesheet_link_tag 'landing', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'landing', 'data-turbolinks-track': 'reload'
+
+  body
+    = render 'layouts/partials/body'
+
+    section
+      = yield
+

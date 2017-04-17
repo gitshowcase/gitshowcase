@@ -19,6 +19,13 @@ class PagesController < ApplicationController
     @title = 'Privacy Policy'
   end
 
+  def sitemap_users
+    service = SitemapService.new('sitemap-users.cache.xml')
+    service.create unless service.valid?
+
+    render file: service.path
+  end
+
   def letsencrypt
     render text: ENV['SSL_ACME_TEXT']
   end

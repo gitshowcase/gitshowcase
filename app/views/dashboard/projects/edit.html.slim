@@ -1,0 +1,33 @@
+#projects-edit-view
+  header
+    a.header-action href=sync_dashboard_projects_path(@project.id)
+      i.fa.fa-refresh
+      |  Click to resync project with GitHub and homepage
+
+    h1
+      i.fa.fa-cube
+      |  Project
+
+  .panel-transparent
+    = simple_form_for([:dashboard, @project]) do |f|
+      = f.error_notification
+
+      .form-inputs.panel-block
+        = f.input :title, {autofocus: true}
+        = f.input :homepage
+        = f.input :repository
+        = f.input :description
+        = f.input :thumbnail
+        = f.input :language, label: 'Programming Language(s)'
+        /= f.input :fork, label: 'It\'s a fork'
+
+      .form-actions
+        = button_tag type: :submit, class: 'btn btn-primary' do
+          i.fa.fa-check
+          '
+          | Save project
+
+        .pull-right
+          - if @project.persisted?
+            = link_to 'Delete', dashboard_project_path(@project),
+                    method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure ?'}

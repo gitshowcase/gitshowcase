@@ -1,0 +1,11 @@
+.projects
+  header
+    .handler Move
+    .name
+      ' Name
+      i
+        | (click to edit)
+    .visibility Show/Hide
+
+  - projects.each do |project|
+    = render 'dashboard/components/project', project: project

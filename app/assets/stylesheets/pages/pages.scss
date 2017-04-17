@@ -1,0 +1,78 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "globals/colors";
+
+#pages-layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $color-background;
+
+  .page-centralized {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 6rem 0;
+
+    > .container {
+      text-align: center;
+      color: white;
+
+      h1 {
+        font-family: Montserrat, sans-serif;
+        font-size: 52px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: 2.1px;
+        margin-bottom: 22px;
+
+        @media screen and (max-width: 997px) {
+          font-size: 1.85rem;
+        }
+      }
+
+      p {
+        font-size: 22px;
+        font-weight: 300;
+        letter-spacing: 0.9px;
+        color: #fafafa;
+        margin-bottom: 42px;
+
+        @media screen and (max-width: 997px) {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .page-normal {
+    flex: 1;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: $color-text-black;
+
+    h1 {
+      font-size: 1.5rem;
+      color: $color-one;
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      color: $color-title-black;
+      font-size: 1.2rem;
+      margin-bottom: .75rem;
+    }
+
+    section {
+      margin-top: 1.5rem;
+    }
+  }
+
+  .footer {
+    background: white;
+  }
+}

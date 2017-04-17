@@ -1,0 +1,7 @@
+#cover-view
+  input type='hidden' name='cover'
+
+  .row
+    - @covers.each do |cover|
+      .col-md-6.col-lg-4.my-auto
+        = render 'setup/components/cover', cover: cover

@@ -1,0 +1,9 @@
+.skills {
+  .skill-template {
+    display: none;
+  }
+
+  .skill + .skill {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,22 @@
+@import "panel";
+
+$color-one: #018fcd;
+$color-two: #01c3bb;
+
+@include panel($color-one, $color-two);
+
+.share-box {
+  @media screen and (max-width: 575px) {
+    right: 45px;
+    left: auto;
+  }
+
+  .share-button {
+    color: $color-one;
+    background: $color-background;
+
+    @media screen and (max-width: 575px) {
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.panel
+  header.header
+    nav.fixed-top
+      .container
+        a.logo href=path
+          = image_tag 'logo-text.svg', alt: 'GitShowcase logo'
+
+        = yield :header
+
+        .links.pull-right
+          button.hidden-lg-up type='button'
+            i.fa.fa-bars
+            |  Menu
+
+          a.logout.hidden-md-down href=destroy_user_session_path
+            i.fa.fa-sign-out
+            span.hidden-xs-down  Logout
+
+  .container
+    = render 'layouts/partials/alert'
+
+    .row
+      .col-md-3.hidden-md-down
+        .menu
+          header.clearfix
+            = render 'components/avatar', user: current_user
+
+            .menu-name
+              = current_user.first_name
+
+            a href=profile_path(username: current_user.username) target='_blank'
+              i.fa.fa-home
+              |  My Portfolio
+
+          = yield :menu
+
+      .col-lg-9
+        .content-yield.animated.fadeIn
+          = content_for?(:body) ? yield(:body) : yield
+
+  = render 'components/footer', type: 'simple'

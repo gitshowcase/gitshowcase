@@ -1,0 +1,16 @@
+#projects-index-view {
+  > footer {
+    .btn + .btn {
+      margin-left: .5rem;
+    }
+  }
+}
+
+#projects-edit-view {
+  .fork-input {
+    .switch {
+      margin-right: 1rem;
+      vertical-align: middle;
+    }
+  }
+}

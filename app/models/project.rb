@@ -1,8 +1,4 @@
 class Project < ApplicationRecord
-  # Concerns
-  include GithubProject
-  include WebsiteProject
-
   # Relationships
   belongs_to :user
 
@@ -14,13 +10,6 @@ class Project < ApplicationRecord
   website_url :homepage, :thumbnail
   website_url :homepage, :icon
   website_url 'https://github.com', :repository
-
-  # Other Methods
-  def sync(data = nil)
-    sync_repository(data)
-    sync_homepage
-    save!
-  end
 
   def display_title
     return title if title.present?

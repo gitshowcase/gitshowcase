@@ -1,0 +1,22 @@
+#projects-index-view
+  header
+    a.header-action href=new_dashboard_project_path
+      i.fa.fa-plus
+      |  New Project
+
+    h1
+      i.fa.fa-cubes
+      |  Projects
+
+  section.panel-transparent
+    .panel-block
+      = render 'dashboard/components/projects', projects: @projects
+
+    footer.form-actions
+      a.btn.btn-primary href=new_dashboard_project_path
+        i.fa.fa-plus
+        |  New Project
+
+      a.btn.btn-primary.pull-right href=dashboard_sync_projects_path
+        i.fa.fa-github
+        |  Sync New Projects

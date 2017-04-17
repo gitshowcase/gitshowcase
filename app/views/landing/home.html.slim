@@ -1,4 +1,4 @@
-.landing-home-view
+#home-view
   header#presenter.wow.animated.fadeIn
     = render 'components/background',
             image: image_path('home/header.jpg'),
@@ -13,7 +13,6 @@
         | rockstar Portfolio
       = render 'components/sign-in'
       .free It's free and always will be!
-
 
   section#plug-and-play.wow.animated.fadeIn
     .container
@@ -52,7 +51,10 @@
           personal website. Customizing is as easy as it seems. You can change title, description, background
           cover, projects etc. Take a sneak peak bellow:
 
-      = render 'components/live-preview'
+      a.btn.btn-action.btn-action-transparent.live-preview href='/showcasecat' target='_blank'
+        i.fa.fa-user-o
+        | Live demo preview
+
       = render 'components/sign-in'
 
   section#open-source

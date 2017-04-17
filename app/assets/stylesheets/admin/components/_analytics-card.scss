@@ -1,0 +1,17 @@
+@import "globals/colors";
+
+.analytics-card {
+  padding: 1rem;
+  border-radius: .1rem;
+  background: white;
+  border: 1px solid $color-border;
+  margin-bottom: 1rem;
+
+  .title {
+    margin-bottom: .5rem;
+  }
+
+  .value {
+    font-size: 2rem;
+  }
+}

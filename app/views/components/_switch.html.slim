@@ -1,7 +1,8 @@
 - checked ||= false
+- name ||= nil
 - onchange ||= nil
 - id ||= Time.now.strftime('%Y%m%d%k%M%S%L').to_i.to_s(36)
 
 label.switch
-  input[checked=('checked' if checked) type='checkbox' onchange=(onchange if onchange.present?)]
+  input[name=(name if name.present?) checked=('checked' if checked) type='checkbox' onchange=(onchange if onchange.present?)]
   .switch-slider

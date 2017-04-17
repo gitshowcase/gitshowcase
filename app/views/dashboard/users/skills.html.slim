@@ -1,0 +1,15 @@
+#users-skills-view
+  header
+    h1
+      i.fa.fa-flask
+      |  My Skills
+
+  .panel-transparent
+    = form_for @user, url: dashboard_update_skills_path
+      .panel-block
+        = render 'dashboard/components/skills', skills: @user.skills
+
+      .form-actions
+        button.btn.btn-primary
+          i.fa.fa-check
+          |  Save skills

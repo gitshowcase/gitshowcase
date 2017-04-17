@@ -1,0 +1,38 @@
+#users-profile-view
+  header
+    a.header-action href=dashboard_sync_profile_path
+      i.fa.fa-refresh
+      |  Resync profile with GitHub
+
+    h1
+      i.fa.fa-user-o
+      |  My Profile
+
+  .panel-transparent
+    = simple_form_for @user, url: dashboard_update_profile_url do |f|
+      = f.error_notification
+
+      .form-inputs
+        .panel-block
+          = f.input :name, autofocus: true
+          = f.input :role
+          = f.input :bio, as: :text
+          = f.input :display_email, label: 'Email (leave it blank if you don\'t want it to be public)'
+          = f.input :location
+          = f.input :website
+
+        .panel-block
+          h2 Images
+          = f.input :avatar
+          = f.input :cover, label: 'Background cover image', placeholder: image_url('themes/classic/cover.jpg')
+
+        .panel-block
+          h2 Company Information
+
+          = f.input :company
+          = f.input :company_website
+
+      .form-actions
+        = button_tag type: :submit, class: 'btn btn-primary' do
+          i.fa.fa-check
+          |  Save profile

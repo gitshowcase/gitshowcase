@@ -13,6 +13,8 @@
  *= require bootstrap
  *= require animate.css
  *= require font-awesome
- *= require_tree .
+ *= require ./scaffolds
+ *= require_tree ./globals
+ *= require_tree ./components
  *= require_self
  */

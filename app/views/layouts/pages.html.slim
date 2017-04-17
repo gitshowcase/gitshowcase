@@ -4,9 +4,12 @@ html
     = render 'layouts/partials/head',
             title: "GitShowcase - #{@title}"
 
+    = stylesheet_link_tag 'pages', media: 'all', 'data-turbolinks-track' => 'reload'
+    /= javascript_include_tag 'pages', 'data-turbolinks-track': 'reload'
+
   body
-    .pages-layout
-      = render 'components/header-profile'
+    #pages-layout
+      = render 'pages/components/header'
 
       - if @background.present?
         = render 'components/background',

@@ -1,8 +1,0 @@
-- edit ||= false
-
-.projects-profile
-  .row
-    - projects.each do |project|
-      - if !project.hide.present?
-        .col-lg-4.col-md-6
-          = render 'components/project-profile', project: project, edit: edit

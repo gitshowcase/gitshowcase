@@ -1,0 +1,16 @@
+#users-settings-view
+  header
+    h1
+      i.fa.fa-cog
+      |  Settings
+
+  = render 'dashboard/components/summary', icon: 'warning', title: "Delete account @#{current_user.username}" do
+    p
+      b We do not keep any information about deleted accounts,
+      |  so we will not be able to restore your account.
+
+    p If you wish, you can sign in again with your GitHub and we will refetch your projects :)
+
+    .form-actions
+      = link_to 'Delete my Account', dashboard_users_path(current_user),
+              method: :delete, class: 'text-danger', data: {confirm: 'Are you sure you want to delete your account?'}

@@ -1,0 +1,69 @@
+#users-home-view
+  - if @user.domain_allowed?
+    = render 'dashboard/components/summary', icon: 'globe', title: 'Domain', path: @user.domain_allowed? ? dashboard_domain_path : nil do
+      = render 'dashboard/components/summary-value', value: @user.domain do
+        a href="http://#{@user.domain}" target='_blank'
+          = @user.domain
+
+        '  or
+
+        a href="http://www.#{@user.domain}" target='_blank'
+          = "www.#{@user.domain}"
+
+  .home-profile
+    = render 'dashboard/components/summary', icon: 'user-o', title: 'Profile', path: dashboard_profile_path do
+      .row
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.name do
+            i.fa.fa-font
+            = " #{@user.name}"
+
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.role do
+            i.fa.fa-user-circle-o
+            = " #{@user.role}"
+
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.display_email do
+            i.fa.fa-at
+            = " #{@user.display_email}"
+
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.location do
+            i.fa.fa-map-marker
+            = " #{@user.location}"
+
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.company do
+            i.fa.fa-briefcase
+            = " #{@user.company}"
+
+        .col-sm-6.col-md-4
+          = render 'dashboard/components/summary-value', value: @user.website do
+            i.fa.fa-link
+            = " #{@user.website}"
+
+  = render 'dashboard/components/summary', icon: 'share-alt', title: 'Socials', path: dashboard_socials_path do
+    = render 'dashboard/components/summary-value', value: @socials do
+      .row
+        - @socials.each do |social, url|
+          a.home-social.col-md-6 href=url target='_blank'
+            = render 'components/social-icon', social: social
+            = " #{url}"
+
+  = render 'dashboard/components/summary', icon: 'flask', title: 'Skills', path: dashboard_skills_path do
+    = render 'dashboard/components/summary-value', value: @user.skills do
+      .home-skills
+        - @user.skills.each do |name, mastery|
+          .home-skill
+            - (1..5).each do |number|
+              i.fa class="fa-star#{mastery < number ? '-o' : ''}"
+            .home-skill-name= name
+
+  = render 'dashboard/components/summary', icon: 'cubes', title: 'Projects', path: dashboard_projects_path do
+    = render 'dashboard/components/summary-value', value: @projects do
+      .row
+        - @projects.each do |project|
+          .col-md-6
+            a.home-project href=edit_dashboard_project_path(project) target='_blank'
+              = project.display_title.truncate(30)

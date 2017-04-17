@@ -1,0 +1,5 @@
+/*
+ *= require_tree ./dashboard
+ *= require ./panel
+ *= require_self
+ */

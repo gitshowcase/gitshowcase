@@ -1,0 +1,14 @@
+#users-index-view {
+  .created_at {
+    color: #aaa;
+    float: right;
+  }
+
+  .profile-block {
+    display: block;
+  }
+
+  .profile-block + .profile-block {
+    margin-top: .5rem !important;
+  }
+}

@@ -1,0 +1,19 @@
+- show_share ||= false
+
+header.header
+  nav
+    .container
+      a.logo href='/'
+        = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'hidden-sm-up'
+        = image_tag 'logo-text.svg', alt: 'GitShowcase logo', class: 'hidden-xs-down'
+
+      .links.pull-right
+        - if user_signed_in?
+          a.dashboard href='/'
+            i.fa.fa-edit
+            '  Edit
+            span class="#{show_share ? 'hidden-xs-down' : ''}" my profile
+        - else
+          a href=omniauth_authorize_path(User, :github)
+            i.fa.fa-github
+            |  Create your portfolio

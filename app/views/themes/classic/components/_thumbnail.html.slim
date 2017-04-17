@@ -1,0 +1,19 @@
+.thumbnail
+  - if project.thumbnail.present?
+    = render 'components/background',
+            mask_color: 'white',
+            mask: 0.2,
+            image: project.thumbnail_url,
+            position: 'center',
+            blur: '25px'
+
+    = render 'components/background',
+            mask_color: 'white',
+            mask: 0.2,
+            image: project.thumbnail_url,
+            size: 'contain',
+            position: 'center'
+  - else
+    .thumbnail-generated class="thumbnail-generated" data-geopattern=project.id
+      .thumbnail-title
+        = project.display_title

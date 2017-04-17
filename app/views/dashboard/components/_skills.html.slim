@@ -1,0 +1,6 @@
+.skills
+  .skill-template
+    = render 'dashboard/components/skill', name: '', mastery: 0
+
+  - (skills || {}).each do |name, mastery|
+    = render 'dashboard/components/skill', name: name, mastery: mastery

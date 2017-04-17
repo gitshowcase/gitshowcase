@@ -1,0 +1,6 @@
+@import "panel";
+
+$color-one: #24292e;
+$color-two: #0366d6;
+
+@include panel($color-one, $color-two);

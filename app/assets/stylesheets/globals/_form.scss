@@ -1,0 +1,84 @@
+@import "globals/colors";
+
+@mixin form-theme($color-one, $color-two) {
+  .form-group {
+    &:before {
+      border-color: $color-one;
+    }
+  }
+
+  .control-label {
+    color: $color-one;
+  }
+}
+
+@include form-theme($color-one, $color-two);
+
+.checkbox label input {
+  margin-right: .5rem;
+}
+
+.form-control {
+  color: $color-text-black;
+}
+
+.input-group-addon {
+  border: transparent;
+  color: #aaa;
+  padding: 0;
+  background: transparent;
+}
+
+.form-group {
+  position: relative;
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 2px solid;
+    width: 0;
+    transition: width .3s ease;
+  }
+
+  &.form-group-focused {
+    &:before {
+      width: 100%;
+    }
+  }
+
+  .control-label {
+    transition: all .2s ease-out;
+    margin-bottom: 0;
+    transform-origin: 0;
+    font-size: .8rem;
+  }
+
+  &.form-group-addon {
+    .input-group-addon {
+      padding-bottom: .5rem;
+    }
+
+    .form-control {
+      padding-left: .1rem !important;
+    }
+  }
+}
+
+.form-control {
+  border-top-color: transparent !important;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  margin-top: -.75rem;
+  background: none;
+  padding-left: 0;
+  padding-bottom: .25rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+}

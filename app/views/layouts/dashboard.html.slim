@@ -1,24 +1,51 @@
 doctype 5
 html
   head
-    = render 'layouts/partials/head',
-            title: 'Dashboard'
+    = render 'layouts/partials/head', title: 'Dashboard'
+
+    = stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload'
 
   body
-    = render 'layouts/partials/body'
-    = render 'layouts/partials/userreport'
+    = render 'layouts/partials/body', userreport: true
 
-    .dashboard-layout
-      = render 'components/header-dashboard', show_share: true
+    - content_for :header do
+      = render 'components/share-box'
 
-      .container
-        .row
-          .col-md-3.hidden-md-down
-            .side-menu
-              = render 'components/menu'
+    - content_for :menu do
+      - if current_user.admin
+        nav
+          a href=admin_home_path
+            i.fa.fa-diamond
+            |  Admin
 
-          .col-lg-9
-            .content-yield.animated.fadeIn
-              = yield
+      - if current_user.domain_allowed?
+        nav
+          a href=dashboard_domain_path
+            i.fa.fa-globe
+            |  Custom Domain
+            span class='badge badge-success' New
 
-      = render 'components/footer', type: 'simple'
+      nav
+        a href=dashboard_profile_path
+          i.fa.fa-user-o
+          |  Profile
+
+        a href=dashboard_socials_path
+          i.fa.fa-share-alt
+          |  Socials
+
+        a href=dashboard_skills_path
+          i.fa.fa-flask
+          |  Skills
+
+        a href=dashboard_projects_path
+          i.fa.fa-cubes
+          |  Projects
+
+      nav
+        a href=dashboard_settings_path
+          i.fa.fa-cog
+          |  Settings
+
+    = render 'layouts/partials/panel', path: dashboard_home_path

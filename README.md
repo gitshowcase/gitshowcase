@@ -21,7 +21,7 @@ Contact us @ [jedi@gitshowcase.com](mailto:jedi@gitshowcase.com)
 ## Install
 
 ### System Requirements
-- Ruby `2.2.2+`
+- Ruby `2.4.0` recommended
 - Postgres 9.2+
 - [NodeJS](https://nodejs.org/) _(for compiling javascript resources)_
 
@@ -75,6 +75,12 @@ rails db:migrate
 rails db:seed
 ```
 
+### Redis setup
+
+Redis is used for managing queues inside the application.
+
+For more information about how to install Redis, please refer to [https://redis.io/topics/quickstart](https://redis.io/topics/quickstart)
+
 ### Running Tests
 
 To run the tests, use:
@@ -85,8 +91,12 @@ bundle exec rspec
 
 ### Running Server
 
+Start Rails, Redis and Sidekiq.
+
 ```bash
 rails s
+redis-server
+bundle exec sidekiq
 ```
 
 ## Road map

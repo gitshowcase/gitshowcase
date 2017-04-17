@@ -1,46 +1,79 @@
 module SocialNetworks
   extend ActiveSupport::Concern
 
-  SOCIALS_NETWORKING = {
-      linkedin: 'linkedin.com/in',
-      angellist: 'angel.co',
-      twitter: 'twitter.com',
-      facebook: 'facebook.com',
-      google_plus: 'plus.google.com'
+  SOCIALS = {
+      # Networking
+      linkedin: {
+          prefix: 'linkedin.com/in',
+          type: :networking
+      },
+      angellist: {
+          prefix: 'angel.co',
+          type: :networking
+      },
+      twitter: {
+          prefix: 'twitter.com',
+          type: :networking
+      },
+      facebook: {
+          prefix: 'facebook.com',
+          type: :networking
+      },
+      google_plus: {
+          prefix: 'plus.google.com',
+          type: :networking
+      },
+
+      # Development
+      stack_overflow: {
+          prefix: 'stackoverflow.com/users',
+          type: :development
+      },
+      codepen: {
+          prefix: 'codepen.io',
+          type: :development
+      },
+      jsfiddle: {
+          prefix: 'jsfiddle.net',
+          type: :development
+      },
+
+      # Writing
+      medium: {
+          prefix: 'medium.com',
+          type: :writing
+      },
+      blog: {
+          type: :writing,
+          protocol: 'http'
+      },
+
+      # Design
+      behance: {
+          prefix: 'behance.net',
+          type: :design
+      },
+      dribbble: {
+          prefix: 'dribbble.com',
+          type: :design
+      },
+      pinterest: {
+          prefix: 'pinterest.com',
+          type: :design
+      }
   }
-
-  SOCIALS_DEVELOPMENT = {
-      stack_overflow: 'stackoverflow.com/users',
-      codepen: 'codepen.io',
-      jsfiddle: 'jsfiddle.net'
-  }
-
-  SOCIALS_WRITING = {
-      medium: 'medium.com',
-      blog: ''
-  }
-
-  SOCIALS_DESIGN = {
-      behance: 'behance.net',
-      dribbble: 'dribbble.com',
-      pinterest: 'pinterest.com'
-  }
-
-  GROUPED_SOCIALS = [
-      [:networking, SOCIALS_NETWORKING],
-      [:writing, SOCIALS_WRITING],
-      [:development, SOCIALS_DEVELOPMENT],
-      [:design, SOCIALS_DESIGN]
-  ]
-
-  HASH_SOCIALS = GROUPED_SOCIALS.flat_map { |group| group[1].map { |social| [social[0], social[1]] } }.to_h
-  SOCIALS = HASH_SOCIALS.flat_map { |social, _| social }
 
   included do
     # Create getters and setters
-    SOCIALS.each do |social|
-      define_method("#{social}") { UrlHelper.website_url(HASH_SOCIALS[social], self[social], social == :blog ? 'http' : 'https') }
-      define_method("#{social}=") { |val| self[social] = HASH_SOCIALS[social].present? ? UrlHelper.extract(val, "#{HASH_SOCIALS[social]}/") : val }
+    SOCIALS.each do |social, properties|
+      define_method "#{social}" do
+        UrlHelper.website_url(properties[:prefix], self[social], properties[:protocol] || 'https')
+      end
+
+      define_method "#{social}=" do |val|
+        val = UrlHelper.extract(val, "#{properties[:prefix]}/") if properties.key?(:prefix)
+        self[social] = val
+      end
     end
   end
 
@@ -51,7 +84,7 @@ module SocialNetworks
   def socials
     socials = {github: github}
 
-    SOCIALS.each do |social|
+    SOCIALS.each do |social, _|
       value = send(social)
       socials[social] = value if value
     end

@@ -1,6 +1,5 @@
-@import "constants/brands";
-@import "constants/colors";
-@import "constants/sizes";
+@import "globals/brands";
+@import "globals/colors";
 
 .share-box {
   position: absolute;
@@ -11,7 +10,7 @@
     transform: translateX(-50%);
 
     span {
-      @media screen and (max-width: $profile-breakpoint) {
+      @media screen and (max-width: 997px) {
         display: none;
       }
     }

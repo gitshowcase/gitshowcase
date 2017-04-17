@@ -1,0 +1,49 @@
+@import "globals/colors";
+
+.setup-cover {
+  position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s all ease;
+    opacity: 0;
+    background: white;
+  }
+
+  img {
+    max-width: 100%;
+    padding: 1rem;
+    background: white;
+    border: 1px solid $color-border;
+  }
+
+  a {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: .5rem .8rem;
+    background: rgba(white, .25);
+    border-radius: 100%;
+    transition: .3s all ease;
+    opacity: .5;
+  }
+
+  &:hover {
+    &:before {
+      opacity: .35;
+    }
+
+    a {
+      background: rgba(white, .75);
+      opacity: 1;
+    }
+  }
+}

@@ -13,14 +13,9 @@
 //= require wow
 //= require jquery
 //= require jquery_ujs
-//= require countup
-//= require geopattern.min
-//= require sortable-rails-jquery
 //= require tether
 //= require bootstrap
 //= require turbolinks
-//= require_tree .
+//= require ./cable
 
 new WOW().init();
-
-

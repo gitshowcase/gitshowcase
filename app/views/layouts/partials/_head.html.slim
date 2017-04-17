@@ -13,9 +13,13 @@
 
 - keywords ||= 'gitshowcase, git showcase, developer portfolio, github portfolio, online portfolio, portfolio template, free portfolio, open source, developer, showcase, personal website, personal branding, rockstar portfolio, tech portfolio, free template, developer platform'
 
+- tag_manager ||= true
+
 title= title
 
-= render 'layouts/partials/head/tag_manager'
+- if tag_manager
+  = render 'layouts/partials/head/tag_manager'
+
 = render 'layouts/partials/head/meta', canonical: canonical
 = render 'layouts/partials/head/web_app'
 = render 'layouts/partials/head/favicon'
@@ -36,7 +40,9 @@ title= title
         card_creator: card_creator,
         card_image: card_image
 
-/ Fonts
+/ Main assets
 = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
 = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+/ Fonts
 link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat" rel="stylesheet"

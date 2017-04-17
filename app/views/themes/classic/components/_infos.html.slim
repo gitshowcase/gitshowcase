@@ -1,0 +1,32 @@
+- edit ||= false
+
+.infos
+  .row.justify-content-center
+    = render 'themes/classic/components/info',
+            icon: 'id-card-o',
+            title: 'Working At',
+            text: user.company,
+            link: user.company_website_url,
+            edit: edit,
+            placeholder: 'Company'
+
+    = render 'themes/classic/components/info',
+            icon: 'map-marker',
+            title: 'Location',
+            text: user.location,
+            edit: edit
+
+    = render 'themes/classic/components/info',
+            icon: 'globe',
+            title: 'Website',
+            text: user.website,
+            link: user.website_url,
+            edit: edit
+
+    = render 'themes/classic/components/info',
+            icon: 'envelope-o',
+            title: 'Contact',
+            text: user.display_email,
+            link: "mailto:#{user.display_email}",
+            placeholder: 'Email',
+            edit: edit

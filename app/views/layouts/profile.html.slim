@@ -10,10 +10,13 @@ html
             card_creator: @user.twitter ? "@#{@user.twitter}" : nil,
             keywords: "github #{@user.username}, gitshowcase #{@user.username}, #{@user.username}, #{@user.role}, gitshowcase, github portfolio, showcase"
 
+    = stylesheet_link_tag "themes/#{@theme}", media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag "themes/#{@theme}", 'data-turbolinks-track': 'reload'
+
   body
     = render 'layouts/partials/body'
 
-    .profile-layout
-      = render 'components/header-profile', type: 'profile', show_share: (user_signed_in? and current_user.id == @user.id)
+    #profile-layout
+      = render 'themes/classic/components/header', show_share: (user_signed_in? and current_user.id == @user.id)
       = yield
       = render 'components/footer'

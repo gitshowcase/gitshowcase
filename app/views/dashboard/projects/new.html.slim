@@ -1,0 +1,26 @@
+#projects-new-view
+  header
+    h1
+      i.fa.fa-plus
+      |  New project
+
+  .panel-transparent
+    = simple_form_for [:dashboard, @project] do |f|
+      = f.error_notification
+
+      .panel-block
+        h2 From Repo
+
+        .form-inputs
+          = f.input :repository, autofocus: true
+
+      .panel-block
+        h2 From Website
+
+        .form-inputs
+           = f.input :homepage
+
+      .form-actions
+        = button_tag type: :submit, class: 'btn btn-primary' do
+          i.fa.fa-cloud-download
+          |  Import

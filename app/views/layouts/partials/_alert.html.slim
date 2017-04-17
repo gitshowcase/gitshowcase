@@ -1,0 +1,9 @@
+- if notice
+  .alert.alert-success.alert-dismissible.fade.show
+    button.close type='button' data-dismiss='alert' &times;
+    = notice
+
+- if alert
+  .alert.alert-dismissible.alert-danger.fade.show
+    button.close type='button' data-dismiss='alert' &times;
+    = alert

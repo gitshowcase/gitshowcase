@@ -1,0 +1,16 @@
+@import "globals/colors";
+
+.skill {
+  .skill-name {
+    font-size: 75%;
+    margin-top: 0;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  i {
+    margin-right: .25rem;
+    opacity: .75;
+  }
+}

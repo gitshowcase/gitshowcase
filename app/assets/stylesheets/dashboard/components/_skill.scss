@@ -1,0 +1,42 @@
+@import "globals/colors";
+
+.skill {
+  .skill-handler {
+    float: left;
+    padding: .5rem 1.2rem .5rem 0;
+    cursor: move;
+  }
+
+  .skill-actions {
+    display: inline-block;
+    margin-left: 1rem;
+  }
+
+  .skill-remove {
+    border: 1px solid $color-border;
+    border-radius: 100%;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    font-size: .9rem;
+    padding: .2rem .25rem;
+
+    &:hover {
+      color: $color-two;
+    }
+  }
+
+  input {
+    margin-right: 1rem;
+  }
+
+  i {
+    padding: .1rem;
+    font-size: 1.17rem;
+    cursor: pointer;
+  }
+
+  i.skill-star-hover {
+    color: $color-highlight;
+  }
+}

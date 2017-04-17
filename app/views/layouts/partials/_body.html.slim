@@ -1,1 +1,8 @@
-= render 'layouts/partials/body/tag_manager'
+- tag_manager ||= true
+- userreport ||= false
+
+- if tag_manager
+  = render 'layouts/partials/body/tag_manager'
+
+- if userreport
+  = render 'layouts/partials/userreport'

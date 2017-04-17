@@ -1,0 +1,48 @@
+@import "globals/colors";
+
+@mixin general-theme($color-one, $color-two) {
+  a:not(.btn) {
+    color: $color-one;
+
+    &:hover, &:focus, &:active {
+      color: $color-two;
+    }
+  }
+
+  .color-primary {
+    color: $color-one;
+  }
+
+  .bg-primary {
+    background-color: $color-one;
+  }
+
+  .color-two {
+    color: $color-two;
+  }
+
+  .bg-two {
+    background-color: $color-two;
+  }
+}
+
+@include general-theme($color-one, $color-two);
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-text-black;
+}
+
+a {
+  transition: color .5s ease;
+
+  &:hover, &:focus, &:active {
+    text-decoration: none;
+  }
+}
+
+button.close {
+  top: 0 !important;
+  right: 0 !important;
+  padding: 0 !important;
+}

@@ -1,0 +1,25 @@
+doctype 5
+html
+  head
+    = render 'layouts/partials/head',
+            title: @title
+
+    = stylesheet_link_tag 'setup', media: 'all', 'data-turbolinks-track' => 'reload'
+  = javascript_include_tag 'setup', 'data-turbolinks-track': 'reload'
+
+  body
+    #setup-layout
+      .container
+        header.setup-header.wow.animated.fadeIn
+          = image_tag 'logo.png', alt: 'GitShowcase logo', class: 'logo'
+
+          h1.title.animated.fadeIn= @title
+          h2.subtitle.animated.fadeIn= @description
+
+        = yield
+
+      footer.setup-footer
+        .container
+          a.skip.animated.wow.fadeIn href=@next
+            ' Skip
+            i.fa.fa-angle-right

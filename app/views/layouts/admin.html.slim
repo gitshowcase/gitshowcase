@@ -1,0 +1,33 @@
+doctype 5
+html
+  head
+    = render 'layouts/partials/head', title: 'Admin', tag_manager: false
+
+    = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => 'reload'
+    = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
+
+  body
+    = render 'layouts/partials/body', tag_manager: false
+
+    - content_for :menu do
+      nav
+        a href=dashboard_home_path
+          i.fa.fa-dashboard
+          |  Dashboard
+
+      nav
+        a href=admin_users_path
+          i.fa.fa-users
+          |  Users
+
+      nav
+        a href=admin_setup_covers_path
+          i.fa.fa-image
+          |  Covers
+
+      nav
+        a href=admin_monitor_queue_path target='_blank'
+          i.fa.fa-cogs
+          |  Queue Monitor
+
+    = render 'layouts/partials/panel', path: admin_home_path

@@ -1,0 +1,49 @@
+// Place all the styles related to the setup controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "globals/colors";
+
+#setup-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $color-background;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+
+  .setup-header {
+    margin-bottom: 3rem;
+    text-align: center;
+
+    .logo {
+      width: 4rem;
+      margin-bottom: 1rem;
+      opacity: .5;
+    }
+
+    .title {
+      font-weight: 300;
+    }
+
+    .subtitle {
+      margin-top: 1rem;
+      font-size: 1.25rem;
+      color: $color-one;
+    }
+  }
+
+  .setup-footer {
+    margin-top: 2rem;
+    text-align: right;
+
+    .skip {
+      font-size: 1.4rem;
+      font-weight: 300;
+      letter-spacing: 4px;
+
+      &:not(:hover) {
+        color: $color-one;
+      }
+    }
+  }
+}

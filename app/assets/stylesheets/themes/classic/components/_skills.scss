@@ -1,0 +1,29 @@
+@import "../constants/sizes";
+
+.skills {
+  .skill {
+    display: inline-block;
+  }
+
+  @media screen and (min-width: $profile-breakpoint + 1) {
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    height: 164px;
+
+    .skill {
+      width: 9rem;
+      margin-right: 2rem;
+      margin-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: $profile-breakpoint) {
+    .skill {
+      font-size: 80%;
+      width: 8rem;
+      margin-right: .5rem;
+      margin-bottom: 24px;
+    }
+  }
+}

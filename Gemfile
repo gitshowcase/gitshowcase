@@ -79,6 +79,9 @@ gem 'omniauth-github'
 # Use metainspector to fetch project meta information
 gem 'metainspector'
 
+# Use xml-sitemap to create sitemap strings
+gem 'xml-sitemap'
+
 # Add SLIM markup
 gem 'slim-rails'
 
@@ -88,12 +91,18 @@ gem 'gibbon'
 # Use Heroku Platform API to register domains
 gem 'platform-api'
 
-# Choose monitoring app
-# gem 'newrelic_rpm'
-gem 'scout_apm'
+# Use Sidekiq for background jobs
+gem 'sidekiq'
 
-# Use TunyeMyGC for GC insights
-gem 'tunemygc'
+# Use GoogleAPI for analytics
+gem 'google-api-client', '~> 0.10'
+
+# Use WillPaginate for pagination
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
+
+# Use HTTP to handle pontual requests
+gem 'http'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -118,7 +127,17 @@ group :development, :test do
 end
 
 group :test do
+  # Use simplecov for code coverage
+  gem 'simplecov', require: false
+
+  # Use shoulda to facilitate testing
   gem 'shoulda-matchers', '~> 3.1', require: false
+
+  # Use VCR for recording HTTP requests
+  gem 'vcr'
+
+  # Use WebMock as HTTP interceptor
+  gem 'webmock'
 end
 
 group :development do
@@ -129,6 +148,14 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  # Use TunyeMyGC for GC insights
+  gem 'tunemygc'
+
+  # Choose monitoring app
+  gem 'scout_apm'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

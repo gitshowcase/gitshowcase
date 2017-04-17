@@ -18,8 +18,8 @@
 - twitter_url = "https://twitter.com/home?status=#{twitter_text}"
 - facebook_url = "https://www.facebook.com/sharer/sharer.php?u=#{url}"
 
-.share-box
-  button.share-button.btn.btn-success type='buttton'
+.share-box.hidden-md-down
+  button.share-button.btn.btn-primary type='buttton'
     i.fa class="fa-#{icon}"
     = ' ' + button_text.split(' ')[0]
     span= ' ' + button_text.split(' ')[1..-1].join(' ')

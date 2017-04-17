@@ -1,0 +1,28 @@
+#socials-view
+  header
+    h1
+      i.fa.fa-share-alt
+      |  My Social Networks
+
+  .panel-transparent
+    = simple_form_for @user, url: dashboard_update_socials_url do |f|
+      = f.error_notification
+
+      - SocialsHelper.grouped.each do |group, socials|
+        .panel-block
+          h2= group.to_s.titleize
+
+          - socials.each do |social, properties|
+            = f.input social, wrapper_html: {class: "form-group #{properties[:prefix].present? ? 'form-group-addon' : ''}"},
+                    label: "#{render 'components/social-icon', social: social} #{social.to_s.titleize}".html_safe do
+              - if properties[:prefix].present?
+                .input-group
+                  span.input-group-addon= "#{properties[:prefix]}/"
+                  = f.input_field social, class: 'form-control', value: @user[social]
+              - else
+                = f.input_field social, class: 'form-control', value: @user[social]
+
+      .form-actions
+        = button_tag type: :submit, class: 'btn btn-primary' do
+          i.fa.fa-check
+          |  Save Social

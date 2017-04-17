@@ -1,6 +1,0 @@
-.skills-edit
-  .skill-edit-template
-    = render 'components/skill-edit', name: '', mastery: 0
-
-  - (skills || {}).each do |name, mastery|
-    = render 'components/skill-edit', name: name, mastery: mastery

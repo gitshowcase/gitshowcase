@@ -1,7 +1,8 @@
 class ProfileController < ApplicationController
-  before_action :set_user, only: [:show]
+  before_action :set_user, only: [:home]
 
-  def show
+  def home
+    @theme = 'classic'
   end
 
   private
@@ -10,16 +11,12 @@ class ProfileController < ApplicationController
     if params[:username]
       @user = User.find_by_username params[:username].downcase
     else
-      @user = User.find_by_domain request.host
+      user = User.find_by_domain UrlHelper.extract(request.host)
+      @user = user if user&.domain_allowed?
     end
 
     unless @user.present?
-      if Rails.env.production?
-        app_domain = ENV['APP_DOMAIN'] || 'localhost'
-        redirect_to "https://www.#{app_domain}/404"
-      else
-        redirect_to '/404'
-      end
+      redirect_to not_found_path
     end
   end
 end

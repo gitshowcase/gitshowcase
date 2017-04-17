@@ -1,0 +1,18 @@
+#users-domain-view
+  header
+    h1
+      i.fa.fa-globe
+      |  My Domain
+
+
+  .panel-transparent
+    = simple_form_for @user, url: dashboard_update_domain_url do |f|
+      = f.error_notification
+
+      .form-inputs.panel-block
+        = f.input :domain, autofocus: true, placeholder: 'example.com'
+
+      .form-actions
+        = button_tag type: :submit, class: 'btn btn-primary' do
+          i.fa.fa-check
+          |  Save domain

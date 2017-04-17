@@ -1,0 +1,19 @@
+#users-index-view
+  header
+    h1
+      i.fa.fa-users
+      |  Users
+
+  - @users.each do |user|
+    a.profile-block href=profile_path(username: user.username) target='_blank'
+      .created_at= "#{time_ago_in_words user.created_at} ago"
+      div
+        i.fa.fa-user
+        = " #{user.username}"
+      div
+        i.fa.fa-at
+        = " #{user.email}"
+
+  - if @users.total_pages > 1
+    footer
+      = bs_will_paginate @users

@@ -27,3 +27,9 @@
 
 # Ignore RSpec tmp files
 spec/examples.txt
+
+# Ignore coverage files
+coverage
+
+# Ignore cached sitemap
+public/sitemap-users.cache.xml

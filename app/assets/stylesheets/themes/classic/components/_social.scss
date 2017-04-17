@@ -1,0 +1,32 @@
+@import "globals/brands";
+
+@mixin social-brand($name, $color) {
+  &-#{$name} {
+    &:hover, &:focus, &:active {
+      color: $color !important;
+    }
+  }
+}
+
+.social {
+  display: inline-block;
+  transition: all .1s linear;
+  border-radius: .1rem;
+  outline: none;
+  font-size: 1.25rem;
+
+  @include social-brand('github', $brand-color-github);
+  @include social-brand('linkedin', $brand-color-linkedin);
+  @include social-brand('angellist', $brand-color-angellist);
+  @include social-brand('twitter', $brand-color-twitter);
+  @include social-brand('facebook', $brand-color-facebook);
+  @include social-brand('google-plus', $brand-color-google-plus);
+  @include social-brand('stack_overflow', $brand-color-stack_overflow);
+  @include social-brand('codepen', $brand-color-codepen);
+  @include social-brand('jsfiddle', $brand-color-jsfiddle);
+  @include social-brand('medium', $brand-color-medium);
+  @include social-brand('blog', $brand-color-blog);
+  @include social-brand('behance', $brand-color-behance);
+  @include social-brand('dribbble', $brand-color-dribbble);
+  @include social-brand('pinterest', $brand-color-pinterest);
+}

@@ -1,0 +1,14 @@
+- path ||= nil
+
+.summary
+  header
+    i.fa class="fa-#{icon}"
+    = " #{title}"
+
+  = yield
+
+  - if path
+    footer
+      a href=path
+        i.fa.fa-edit
+        = " Edit #{title}"

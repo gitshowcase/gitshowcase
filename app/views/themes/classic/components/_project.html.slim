@@ -1,0 +1,32 @@
+- edit ||= false
+- href = project.link.present? ? project.link : 'javascript:void()'
+
+.project.wow.animated.fadeIn
+  - if edit
+    a.project-thumbnail href=edit_dashboard_project_path(project) target='_blank' rel='nofollow'
+      span
+        i.fa.fa-edit
+        |  Edit Thumbnail
+
+  a.project-link href=href target='_blank' rel='nofollow' class=(project.link.present? ? nil : 'project-linkless')
+    = render 'themes/classic/components/thumbnail', project: project, edit: edit
+
+    .container-fluid
+      h3.project-title= project.display_title
+      p.project-description= (project.description || '').truncate(70)
+
+  footer.container-fluid
+    .pull-left
+      - if project.language.present?
+        span.project-language.label.label-default
+          i.fa.fa-code
+          '
+          = project.language
+
+    - if project.repository.present?
+      a.project-repository href=project.repository_url target='_blank' rel='nofollow'
+        i.fa.fa-github
+        |  Repository
+    - else
+      .project-repository
+        | Closed Source

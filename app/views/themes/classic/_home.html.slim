@@ -1,0 +1,13 @@
+- edit = (user_signed_in? and current_user.id == @user.id)
+
+#profile-home-view
+  section#name
+    .header-container
+      = render 'themes/classic/components/presenter', user: @user
+
+  .container
+    section#infos
+      = render 'themes/classic/components/infos', user: @user, edit: edit
+
+    section#projects
+      = render 'themes/classic/components/projects', projects: @user.projects.ordered, edit: edit

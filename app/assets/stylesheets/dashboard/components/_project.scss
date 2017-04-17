@@ -1,0 +1,30 @@
+.project {
+  $padding: .5rem;
+
+  position: relative;
+
+  &.project-hidden {
+    .project-link {
+      color: #999;
+    }
+  }
+
+  .project-handler {
+    float: left;
+    padding: $padding ($padding * 2);
+    cursor: move;
+  }
+
+  .project-link {
+    display: block;
+    padding: ($padding - .05rem) 0;
+    margin-left: 2.5rem;
+  }
+
+  .switch {
+    position: absolute;
+    right: $padding;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
