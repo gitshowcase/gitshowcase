@@ -18,7 +18,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       UserSkillService.new(@user).import
       @user.projects.create(homepage: @user.website) if @user.website.present?
 
-      SyncProjectWebsitesJob.perform_later(@user.projects)
+      SyncUserProjectWebsitesJob.perform_later(@user)
       CreateEmailSubscriptionJob.perform_later(@user)
     end
 
