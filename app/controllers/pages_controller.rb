@@ -23,7 +23,7 @@ class PagesController < ApplicationController
     service = SitemapService.new('sitemap-users.cache.xml')
     service.create unless service.valid?
 
-    render file: service.path
+    render layout: nil, file: service.path, content_type: 'application/xml'
   end
 
   def letsencrypt
