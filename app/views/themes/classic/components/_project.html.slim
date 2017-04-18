@@ -22,6 +22,19 @@
           i.fa.fa-code
           '
           = project.language
+        |  &nbsp;    
+
+      span.project-language.label.label-default
+        i.fa.fa-star
+        '
+        = project.stars
+      |  &nbsp;    
+
+      span.project-language.label.label-default
+        i.fa.fa-code-fork
+        '
+        = project.forks
+      |  &nbsp;    
 
     - if project.repository.present?
       a.project-repository href=project.repository_url target='_blank' rel='nofollow'
