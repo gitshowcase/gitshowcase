@@ -1,2 +1,2 @@
 //= require countup
-//= require_tree ./dashboard
+//= require_tree ./landing
