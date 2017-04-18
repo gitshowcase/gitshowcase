@@ -33,3 +33,4 @@ coverage
 
 # Ignore cached sitemap
 public/sitemap-users.cache.xml
+.vscode
