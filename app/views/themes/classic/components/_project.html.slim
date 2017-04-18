@@ -18,21 +18,21 @@
   footer.container-fluid
     .pull-left
       - if project.language.present?
-        span.project-language.label.label-default
+        span.project-label.label.label-default
           i.fa.fa-code
           '
           = project.language
         |  &nbsp;    
         
       - if project.stars.present?
-        span.project-language.label.label-default
+        span.project-label.label.label-default
           i.fa.fa-star
           '
           = project.stars
         |  &nbsp;    
       
       - if project.forks.present?
-        span.project-language.label.label-default
+        span.project-label.label.label-default
           i.fa.fa-code-fork
           '
           = project.forks
