@@ -1,14 +1,15 @@
 #users-home-view
   - if @user.domain_allowed?
-    = render 'dashboard/components/summary', icon: 'globe', title: 'Domain', path: @user.domain_allowed? ? dashboard_domain_path : nil do
-      = render 'dashboard/components/summary-value', value: @user.domain do
-        a href="http://#{@user.domain}" target='_blank'
-          = @user.domain
+    .home-domain
+      = render 'dashboard/components/summary', icon: 'globe', title: 'Domain', path: @user.domain_allowed? ? dashboard_domain_path : nil do
+        = render 'dashboard/components/summary-value', value: @user.domain do
+          a href="http://#{@user.domain}" target='_blank'
+            = @user.domain
 
-        '  or
+          '  or
 
-        a href="http://www.#{@user.domain}" target='_blank'
-          = "www.#{@user.domain}"
+          a href="http://www.#{@user.domain}" target='_blank'
+            = "www.#{@user.domain}"
 
   .home-profile
     = render 'dashboard/components/summary', icon: 'user-o', title: 'Profile', path: dashboard_profile_path do

@@ -3,7 +3,7 @@
     display: inline-block;
   }
 
-  .summary > *:not(header):not(footer) {
+  .home-domain .summary-value, .home-profile .row, .home-socials .row, .home-projects .row {
     i {
       width: 1rem;
       margin-right: .5rem;
