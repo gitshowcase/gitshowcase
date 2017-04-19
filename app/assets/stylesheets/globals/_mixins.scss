@@ -1,0 +1,6 @@
+@import "colors";
+
+@mixin cardify {
+  background: white;
+  border: 1px solid $color-border;
+}

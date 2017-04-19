@@ -1,4 +1,5 @@
 @import "globals/colors";
+@import "globals/mixins";
 
 .setup-cover {
   position: relative;
@@ -20,8 +21,7 @@
   img {
     max-width: 100%;
     padding: 1rem;
-    background: white;
-    border: 1px solid $color-border;
+    @include cardify();
   }
 
   a {

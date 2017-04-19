@@ -1,5 +1,9 @@
+- name ||= ''
+
 .summary-value
   - if value.present?
     = yield
   - else
-    .empty Empty
+    .empty
+      ' Empty
+      = name

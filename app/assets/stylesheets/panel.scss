@@ -2,6 +2,7 @@
 @import "globals/button";
 @import "globals/form";
 @import "globals/general";
+@import "globals/mixins";
 @import "components/switch";
 
 .panel {
@@ -69,8 +70,7 @@
 
   .menu {
     padding: 1rem;
-    background: white;
-    border: 1px solid $color-border;
+    @include cardify();
 
     > header {
       margin-bottom: .5rem;
@@ -127,12 +127,8 @@
       }
 
       > *:not(.panel-transparent), .panel-block {
-        background: white;
         padding: 1rem 1.5rem;
-
-        &:not(header) {
-          border: 1px solid $color-border;
-        }
+        @include cardify();
       }
 
       > * + *, .panel-block + .panel-block {
@@ -177,11 +173,6 @@
     @include button-theme($color-one, $color-two);
     @include form-theme($color-one, $color-two);
     @include switch-theme($color-one, $color-two);
-
-    .btn {
-      box-shadow: none !important;
-      border: 1px solid $color-border;
-    }
 
     .header {
       nav {

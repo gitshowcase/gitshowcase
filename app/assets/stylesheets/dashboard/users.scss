@@ -7,6 +7,15 @@
     color: inherit;
   }
 
+  .home-profile, .home-socials {
+    .row i {
+      width: 1rem;
+      margin-right: .5rem;
+      display: inline-block;
+      opacity: .2;
+    }
+  }
+
   .home-skills {
     $margin-bottom: .5rem;
     margin-bottom: -$margin-bottom;
@@ -24,6 +33,12 @@
       .home-skill-name {
         font-size: .95rem;
       }
+    }
+  }
+
+  .home-project {
+    &.project-hidden {
+      opacity: .5;
     }
   }
 

@@ -1,7 +1,5 @@
+@import "globals/colors";
 @import "panel";
-
-$color-one: #018fcd;
-$color-two: #01c3bb;
 
 @include panel($color-one, $color-two);
 
@@ -12,11 +10,19 @@ $color-two: #01c3bb;
   }
 
   .share-button {
-    color: $color-one;
-    background: $color-background;
+    color: $color-one !important;
+    background: $color-background !important;
 
     @media screen and (max-width: 575px) {
       transform: none;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, .2) !important;
+    }
+
+    &:active {
+      box-shadow: none !important;
     }
   }
 }

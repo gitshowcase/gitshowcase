@@ -14,37 +14,37 @@
     = render 'dashboard/components/summary', icon: 'user-o', title: 'Profile', path: dashboard_profile_path do
       .row
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.name do
-            i.fa.fa-font
+          i.fa.fa-font
+          = render 'dashboard/components/summary-value', value: @user.name, name: 'name' do
             = " #{@user.name}"
 
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.role do
-            i.fa.fa-user-circle-o
+          i.fa.fa-user-circle-o
+          = render 'dashboard/components/summary-value', value: @user.role, name: 'role' do
             = " #{@user.role}"
 
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.display_email do
-            i.fa.fa-at
+          i.fa.fa-at
+          = render 'dashboard/components/summary-value', value: @user.display_email, name: 'email' do
             = " #{@user.display_email}"
 
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.location do
-            i.fa.fa-map-marker
+          i.fa.fa-map-marker
+          = render 'dashboard/components/summary-value', value: @user.location, name: 'location' do
             = " #{@user.location}"
 
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.company do
-            i.fa.fa-briefcase
+          i.fa.fa-briefcase
+          = render 'dashboard/components/summary-value', value: @user.company, name: 'company' do
             = " #{@user.company}"
 
         .col-sm-6.col-md-4
-          = render 'dashboard/components/summary-value', value: @user.website do
-            i.fa.fa-link
+          i.fa.fa-link
+          = render 'dashboard/components/summary-value', value: @user.website, name: 'website' do
             = " #{@user.website}"
 
-  = render 'dashboard/components/summary', icon: 'share-alt', title: 'Socials', path: dashboard_socials_path do
-    = render 'dashboard/components/summary-value', value: @socials do
+  .home-socials
+    = render 'dashboard/components/summary', icon: 'share-alt', title: 'Socials', path: dashboard_socials_path do
       .row
         - @socials.each do |social, url|
           a.home-social.col-md-6 href=url target='_blank'
@@ -52,7 +52,7 @@
             = " #{url}"
 
   = render 'dashboard/components/summary', icon: 'flask', title: 'Skills', path: dashboard_skills_path do
-    = render 'dashboard/components/summary-value', value: @user.skills do
+    = render 'dashboard/components/summary-value', value: @user.skills, name: 'skills' do
       .home-skills
         - @user.skills.each do |name, mastery|
           .home-skill
@@ -60,10 +60,11 @@
               i.fa class="fa-star#{mastery < number ? '-o' : ''}"
             .home-skill-name= name
 
-  = render 'dashboard/components/summary', icon: 'cubes', title: 'Projects', path: dashboard_projects_path do
-    = render 'dashboard/components/summary-value', value: @projects do
-      .row
-        - @projects.each do |project|
-          .col-md-6
-            a.home-project href=edit_dashboard_project_path(project) target='_blank'
-              = project.display_title.truncate(30)
+  .home-projects
+    = render 'dashboard/components/summary', icon: 'cubes', title: 'Projects', path: dashboard_projects_path do
+      = render 'dashboard/components/summary-value', value: @projects, name: 'projects' do
+        .row
+          - @projects.each do |project|
+            .col-md-6
+              a.home-project href=edit_dashboard_project_path(project) target='_blank' class=(project.hide ? 'project-hidden' : '')
+                = project.display_title.truncate(30)

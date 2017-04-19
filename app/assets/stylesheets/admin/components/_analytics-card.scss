@@ -1,11 +1,11 @@
 @import "globals/colors";
+@import "globals/mixins";
 
 .analytics-card {
   padding: 1rem;
   border-radius: .1rem;
-  background: white;
-  border: 1px solid $color-border;
   margin-bottom: 1rem;
+  @include cardify();
 
   .title {
     margin-bottom: .5rem;
