@@ -80,7 +80,7 @@ class Dashboard::ProjectsController < DashboardController
   # GET /sync_projects
   def sync_projects
     projects = GithubProjectService.sync_by_user(current_user)
-    projects.each { |project| SyncProjectWebsiteJob.perform_later(project) }
+    projects.each { |project| SyncProjectWebsiteJob.perform_later(project) if project.homepage.present? }
     redirect_to dashboard_home_url, notice: "#{projects.size} new project(s) created."
   end
 
