@@ -41,7 +41,8 @@
         .col-sm-6.col-md-4
           i.fa.fa-link
           = render 'dashboard/components/summary-value', value: @user.website, name: 'website' do
-            = " #{@user.website}"
+            a href=@user.website target='_blank'
+              = UrlHelper.extract(@user.website).truncate(25)
 
   .home-socials
     = render 'dashboard/components/summary', icon: 'share-alt', title: 'Socials', path: dashboard_socials_path do

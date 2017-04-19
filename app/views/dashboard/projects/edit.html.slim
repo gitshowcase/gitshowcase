@@ -13,12 +13,12 @@
       = f.error_notification
 
       .form-inputs.panel-block
-        = f.input :title, {autofocus: true}
-        = f.input :homepage
-        = f.input :repository
-        = f.input :description
-        = f.input :thumbnail
-        = f.input :language, label: 'Programming Language(s)'
+        = f.input :title, autofocus: true, placeholder: 'e.g. GitShowcase'
+        = f.input :homepage, placeholder: 'e.g. https://www.gitshowcase.com'
+        = f.input :repository, placeholder: 'e.g. gitshowcase/gitshowcase'
+        = f.input :description, placeholder: 'e.g. My project does things'
+        = f.input :thumbnail, placeholder: 'A pretty image related to your project'
+        = f.input :language, label: 'Programming Language(s)', placeholder: 'e.g. Rails, Javascript'
         /= f.input :fork, label: 'It\'s a fork'
 
       .form-actions

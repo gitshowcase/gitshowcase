@@ -14,23 +14,23 @@
 
       .form-inputs
         .panel-block
-          = f.input :name, autofocus: true
-          = f.input :role
-          = f.input :bio, as: :text
-          = f.input :display_email, label: 'Email (leave it blank if you don\'t want it to be public)'
-          = f.input :location
-          = f.input :website
+          = f.input :name, autofocus: true, placeholder: 'e.g. John Doe'
+          = f.input :role, placeholder: 'e.g. Jedi Developer'
+          = f.input :bio, as: :text, placeholder: 'e.g. I like to code and ride bikes'
+          = f.input :display_email, label: 'Email (leave it blank if you don\'t want it to be public)', placeholder: 'Type your email or leave blank'
+          = f.input :location, placeholder: 'e.g. North Pole'
+          = f.input :website, placeholder: 'e.g. my-website.com'
 
         .panel-block
           h2 Images
-          = f.input :avatar
-          = f.input :cover, label: 'Background cover image', placeholder: image_url('themes/classic/cover.jpg')
+          = f.input :avatar, placeholder: 'A link to an image that represents you'
+          = f.input :cover, label: 'Background cover image', placeholder: 'A link to your favorite image'
 
         .panel-block
           h2 Company Information
 
-          = f.input :company
-          = f.input :company_website
+          = f.input :company, placeholder: 'e.g. GitShowcase'
+          = f.input :company_website, placeholder: 'e.g. https://www.gitshowcase.com'
 
       .form-actions
         = button_tag type: :submit, class: 'btn btn-primary' do
