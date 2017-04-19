@@ -23,6 +23,26 @@ Rails.application.routes.draw do
       get 'users/sign_out', to: 'devise/sessions#destroy', as: :destroy_user_session
     end
 
+    # Admin
+    authenticated :user, lambda { |u| u.admin } do
+      namespace :admin do
+        controller :analytics do
+          get '/', action: :home, as: :home
+        end
+
+        resources :users, only: [:index]
+        resources :setup_covers, only: [:index, :create, :destroy]
+
+        namespace :monitor do
+          # Sidekiq
+          require 'sidekiq/web'
+          mount Sidekiq::Web => 'queue', as: :queue
+        end
+      end
+
+      root to: redirect('/admin')
+    end
+
     # Dashboard
     authenticated :user do
       namespace :dashboard do
@@ -81,22 +101,6 @@ Rails.application.routes.draw do
     end
 
     root to: 'landing#home'
-  end
-
-  # Admin
-  namespace :admin do
-    controller :analytics do
-      get '/', action: :home, as: :home
-    end
-
-    resources :users, only: [:index]
-    resources :setup_covers, only: [:index, :create, :destroy]
-
-    namespace :monitor do
-      # Sidekiq
-      require 'sidekiq/web'
-      mount Sidekiq::Web => 'queue', as: :queue
-    end
   end
 
   # Profile
