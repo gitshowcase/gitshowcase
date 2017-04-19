@@ -3,16 +3,16 @@
     display: inline-block;
   }
 
-  .home-social:not(:hover), .home-project:not(:hover) {
-    color: inherit;
-  }
-
-  .home-profile, .home-socials {
-    .row i {
+  .summary > *:not(header):not(footer) {
+    i {
       width: 1rem;
       margin-right: .5rem;
       display: inline-block;
       opacity: .2;
+    }
+
+    a:not(:hover) {
+      color: inherit;
     }
   }
 

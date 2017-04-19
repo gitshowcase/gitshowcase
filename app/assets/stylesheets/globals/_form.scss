@@ -20,6 +20,10 @@
 
 .form-control {
   color: $color-text-black;
+
+  &::placeholder {
+    color: rgba(black, .35);
+  }
 }
 
 .input-group-addon {
