@@ -24,7 +24,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
     if @user.persisted?
       sign_in @user, event: :authentication #this will throw if @user is not activated
-      redirect_to first_sign_in ? profile_path(username: @user.username) : dashboard_home_path
+      path = first_sign_in ? profile_path(username: @user.username) : dashboard_home_path
+      redirect_to "#{path}?utm_source=github&utm_medium=authentication"
     else
       session['devise.github_data'] = request.env['omniauth.auth']
       redirect_to '/404'
