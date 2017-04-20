@@ -4,7 +4,7 @@
 $(document).on 'turbolinks:load', ->
   Projects.init() if $('#projects-index-view').length
 
-window['Projects'] = {
+Projects = {
   init: ->
     container = $('.projects:first')[0]
     sort = Sortable.create container, {
