@@ -100,6 +100,10 @@ Rails.application.routes.draw do
       root to: redirect('/dashboard')
     end
 
+    controller :landing do
+      get 'invitation/:username', as: :invitation, action: :invitation
+    end
+
     root to: 'landing#home'
   end
 

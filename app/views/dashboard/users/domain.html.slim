@@ -2,17 +2,91 @@
   header
     h1
       i.fa.fa-globe
-      |  My Domain
+      |  Custom Domain
 
+  nav.steps
+    a.step href='#choose'
+      - if @user.domain.present?
+        i.fa.fa-check-circle
+      - else
+        i.fa.fa-globe
+      |  Choose domain
+    a.step href='#invite'
+      - if @user.domain_allowed?
+        i.fa.fa-check-circle
+        |  Account Unlocked
+      - else
+        i.fa.fa-unlock-alt
+        |  Unlock Account
+    a.step href='#configure'
+      i.fa.fa-cog
+      |  Configure DNS
 
   .panel-transparent
-    = simple_form_for @user, url: dashboard_update_domain_url do |f|
-      = f.error_notification
+    #choose.step-content.wow.animated.fadeIn
+      = simple_form_for @user, url: dashboard_update_domain_url do |f|
+        .panel-block
+          header
+            h2 Insert your domain
+            .step-description Please note it has to be a registered domain. We don't register the domain for you
 
-      .form-inputs.panel-block
-        = f.input :domain, autofocus: true, placeholder: 'example.com'
+          = f.error_notification
 
-      .form-actions
-        = button_tag type: :submit, class: 'btn btn-primary' do
-          i.fa.fa-check
-          |  Save domain
+          .form-inputs
+            = f.input :domain, placeholder: 'e.g. example.com'
+
+        .form-actions
+          = button_tag type: :submit, class: 'btn btn-primary' do
+            i.fa.fa-check
+            |  Save domain
+
+  #invite.step-content.wow.animated.fadeIn
+    header
+      h2 Unlock your account
+      .step-description
+        ' We won't charge you anything. In exchange, to unlock your account, you must invite
+        = PlanService::INVITATIONS_REQUIREMENT
+        |  friends to join GitShowcase
+
+    - if @user.domain_allowed?
+      .unlocked-content
+        i.fa.fa-check-circle
+        |  Account Unlocked
+    - else
+      .progress-content
+        .invitees
+          = "#{@user.invitations.count} / #{PlanService::INVITATIONS_REQUIREMENT} friends joined GitShowcase"
+
+        #invitation-link.button.btn.btn-primary data-clipboard-text=invitation_url(username: @user.username) title='Copied!'
+          i.fa.fa-clipboard
+          |  COPY YOUR UNIQUE LINK
+
+        footer
+          a href=invitation_url(username: @user.username) target='_blank'
+            i.fa.fa-link
+            '
+            = invitation_url(username: @user.username)
+
+  #configure.step-content.wow.animated.fadeIn
+    header
+      h2 Configure your DNS
+      .step-description
+        ' Add our DNS as a
+        i CNAME record
+        |  in your domian provider
+
+    .configure-dns dns.gitshowcase.com
+
+    footer
+      .configure-help
+        i.fa.fa-question-circle
+        '  Need help?
+        a href='https://support.google.com/a/topic/1615038' target='_blank'
+          | Checkout this support article
+        '  or send us an email to
+        a href='mailto:jedi@gitshowcase.com' jedi@gitshowcase.com
+
+      - unless @user.domain_allowed?
+        .text-danger
+          i.fa.fa-exclamation-triangle
+          |  Your domain will only work after you unlock your account inviting friends

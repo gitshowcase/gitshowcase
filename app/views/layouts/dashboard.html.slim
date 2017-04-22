@@ -19,12 +19,11 @@ html
             i.fa.fa-diamond
             |  Admin
 
-      - if current_user.domain_allowed?
-        nav
-          a href=dashboard_domain_path
-            i.fa.fa-globe
-            |  Custom Domain
-            span class='badge badge-success' New
+      nav
+        a href=dashboard_domain_path
+          i.fa.fa-globe
+          |  Custom Domain
+          span class='badge badge-success' New
 
       nav
         a href=dashboard_profile_path

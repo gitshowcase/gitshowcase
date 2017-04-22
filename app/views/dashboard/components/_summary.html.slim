@@ -1,4 +1,6 @@
 - path ||= nil
+- edit ||= "Edit #{title}"
+- icon_edit ||= 'edit'
 
 .summary
   header
@@ -10,5 +12,5 @@
   - if path
     footer
       a href=path
-        i.fa.fa-edit
-        = " Edit #{title}"
+        i.fa class="fa-#{icon_edit}"
+        = " #{edit}"

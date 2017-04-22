@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   # Relationships
   has_many :projects
+  has_many :invitations, foreign_key: 'inviter_id'
+  belongs_to :plan, optional: true
 
   # Authentication
   devise :database_authenticatable, :registerable,
@@ -24,6 +26,11 @@ class User < ApplicationRecord
   end
 
   def domain_allowed?
-    admin.present?
+    admin.present? || plan&.domain
+  end
+
+  def url
+    domain if domain && domain_allowed?
+    Rails.application.routes.url_helpers.profile_path(username: username)
   end
 end

@@ -1,2 +1,2 @@
-//= require ./panel
+//= require_tree ./panel
 //= require_tree ./admin

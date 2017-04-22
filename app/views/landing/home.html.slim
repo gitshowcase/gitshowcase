@@ -1,5 +1,18 @@
 #home-view
-  header#presenter.wow.animated.fadeIn
+  - if @inviter
+    header#invitation
+      nav
+        .container
+          = render 'components/avatar', user: @inviter
+          a.invitation-user href=@inviter.url target='_blank'
+            = "@#{@inviter.username}"
+          |  invited you
+          span.hidden-xs-down
+            |  to GitShowcase.
+          span.hidden-sm-down
+            |  Create your profile today
+
+  #presenter.wow.animated.fadeIn
     = render 'components/background',
             image: image_path('home/header.jpg'),
             mask: 0
@@ -67,7 +80,7 @@
         h3 “Learn from the community. Give back to the community.”
 
       p
-        | Git Showcase is an Open Source project designed to help developers show off their talents.
+        | GitShowcase is an Open Source project designed to help developers show off their talents.
         br
         | If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.
 

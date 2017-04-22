@@ -40,6 +40,9 @@ source 'https://rails-assets.org' do
 
   # Use countUp to animate number of projects created
   gem 'rails-assets-countup'
+
+  # Use Clipboard for copying text to clipboard
+  gem 'rails-assets-clipboard'
 end
 
 # Use sortable to allow sorting projects and skills

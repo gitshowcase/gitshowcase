@@ -1,0 +1,44 @@
+.panel .header {
+  $header-height: 52px;
+  $header-padding: .95rem;
+
+  padding-top: $header-height;
+  margin-bottom: 1.5rem;
+
+  nav {
+    height: $header-height;
+    z-index: 1;
+
+    .logo {
+      display: inline-block;
+      margin-top: $header-padding - .15rem;
+
+      img {
+        height: 1.26rem;
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    .links {
+      margin-right: -$header-padding;
+
+      > * {
+        display: inline-block;
+        padding: $header-padding;
+        height: $header-height;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        box-shadow: none;
+        outline: none;
+        border: 0;
+        background: transparent;
+        transition: .3s background ease;
+
+        &:hover {
+          background: rgba(0, 0, 0, .05);
+        }
+      }
+    }
+  }
+}

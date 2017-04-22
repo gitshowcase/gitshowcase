@@ -1,0 +1,128 @@
+@import "globals/mixins";
+@import "globals/colors";
+
+#users-domain-view {
+  .steps {
+    padding: 0;
+    background-color: #f0f0f0;
+
+    .step {
+      $inactive: #f6f6f6;
+      $hover: #f9f9f9;
+      $arrow-border-color: #e6e6e6;
+      $arrow-size: 26px;
+
+      padding: 1rem 2rem;
+      position: relative;
+      counter-increment: step;
+
+      @media screen and (max-width: 997px) {
+        display: block;
+
+        &:after, &:before {
+          display: none;
+        }
+      }
+
+      @media screen and (min-width: 998px) {
+        display: inline-block;
+      }
+
+      &, &:after, &:before {
+        transition: all .5s ease;
+      }
+
+      &.active {
+        background: white;
+        cursor: default;
+        color: $color-one;
+        @include arrow-right($arrow-size, white, $arrow-border-color);
+      }
+
+      &:not(.active) {
+        background: $inactive;
+
+        &:hover {
+          background: $hover;
+          @include arrow-right($arrow-size, $hover, $arrow-border-color);
+        }
+
+        &:not(:hover) {
+          color: rgba(black, .35);
+          @include arrow-right($arrow-size, $inactive, $arrow-border-color);
+        }
+      }
+    }
+
+    @media screen and (min-width: 998px) {
+      .step + .step {
+        padding-left: 3rem;
+      }
+    }
+  }
+
+  .step-content {
+    &:not(:target) {
+      display: none;
+    }
+
+    h2 {
+      font-weight: normal;
+    }
+
+    .step-description {
+      font-size: .9rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  #invite {
+    .progress-content {
+      text-align: center;
+      margin-top: 2rem;
+
+      .invitees {
+        font-size: 1.35rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+      }
+
+      > footer {
+        font-size: .9rem;
+        margin-top: .65rem;
+        margin-bottom: .65rem;
+      }
+    }
+
+    .unlocked-content {
+      font-size: 1.75rem;
+      letter-spacing: 1.5px;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 1.5rem;
+      color: $color-two;
+    }
+  }
+
+  #configure {
+    .configure-dns {
+      font-size: 1.25rem;
+      color: $color-one;
+    }
+
+    > footer {
+      border-top: 1px solid rgba(black, .05);
+      padding-top: 1rem;
+      margin-top: 1rem;
+
+      .configure-help {
+        margin-bottom: .5rem;
+
+        a {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

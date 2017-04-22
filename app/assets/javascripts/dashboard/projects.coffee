@@ -4,7 +4,7 @@
 $(document).on 'turbolinks:load', ->
   Projects.init() if $('#projects-index-view').length
 
-Projects = {
+window['Projects'] = {
   init: ->
     container = $('.projects:first')[0]
     sort = Sortable.create container, {
@@ -29,7 +29,6 @@ Projects = {
 
   toggle: (element) ->
     el = $(element)
-    console.log(element)
 
     parent = el.parents('[data-project-id]')
     project_id = parent.data('project-id')

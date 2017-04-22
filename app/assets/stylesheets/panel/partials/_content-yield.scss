@@ -1,0 +1,29 @@
+@import "globals/colors";
+@import "panel/mixins";
+
+.panel .content-yield {
+  > *:not(.transparent) {
+    > header {
+      border: 1px solid $color-border;
+    }
+
+    > *:not(.panel-transparent), .panel-block {
+      padding: 1rem 1.5rem;
+      @include cardify();
+    }
+
+    > * + *, .panel-block + .panel-block {
+      margin-top: 1rem;
+    }
+  }
+
+  .header-action {
+    float: right;
+    color: $color-highlight;
+    line-height: 1.5rem;
+
+    &:hover {
+      color: $color-highlight-hover;
+    }
+  }
+}

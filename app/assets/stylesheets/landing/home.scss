@@ -38,6 +38,38 @@ $divider-height: 111px;
     color: rgba(72, 72, 72, 0.8);
   }
 
+  #invitation {
+    $invitation-height: 4rem;
+    padding-top: $invitation-height;
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $invitation-height;
+      z-index: 1;
+      padding: .5rem 0;
+      text-align: left;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+      color: $color-one;
+      letter-spacing: 1px;
+    }
+
+    .avatar {
+      border-radius: 100%;
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+    }
+
+    .invitation-user {
+      color: inherit;
+      text-decoration: underline;
+    }
+  }
+
   .live-preview {
     border-radius: 6px !important;
   }

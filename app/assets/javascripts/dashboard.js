@@ -1,3 +1,4 @@
 //= require sortable-rails-jquery
-//= require ./panel
+//= require clipboard
+//= require_tree ./panel
 //= require_tree ./dashboard

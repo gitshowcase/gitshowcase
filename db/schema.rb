@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322214622) do
+ActiveRecord::Schema.define(version: 20170422023444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "invitations", force: :cascade do |t|
+    t.integer  "inviter_id"
+    t.string   "invitee"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["inviter_id"], name: "index_invitations_on_inviter_id", using: :btree
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string   "name"
+    t.string   "slug"
+    t.boolean  "domain"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"
@@ -35,7 +51,6 @@ ActiveRecord::Schema.define(version: 20170322214622) do
   end
 
   create_table "setup_covers", force: :cascade do |t|
-    t.string   "name"
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -84,11 +99,15 @@ ActiveRecord::Schema.define(version: 20170322214622) do
     t.string   "display_email"
     t.string   "domain"
     t.boolean  "admin"
+    t.integer  "plans_id"
     t.index ["domain"], name: "index_users_on_domain", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["plans_id"], name: "index_users_on_plans_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
+  add_foreign_key "invitations", "users", column: "inviter_id", on_delete: :cascade
   add_foreign_key "projects", "users", on_delete: :cascade
+  add_foreign_key "users", "plans", column: "plans_id"
 end

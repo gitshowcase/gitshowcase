@@ -243,6 +243,7 @@ GEM
     rails-assets-bootstrap (4.0.0.alpha.6)
       rails-assets-jquery (>= 1.9.1)
       rails-assets-tether (>= 1.4.0, < 2)
+    rails-assets-clipboard (1.6.1)
     rails-assets-countup (1.8.2)
     rails-assets-jquery (3.1.1)
     rails-assets-tether (1.4.0)
@@ -406,6 +407,7 @@ DEPENDENCIES
   rails (~> 5.0.0, >= 5.0.0.1)
   rails-assets-animate.css!
   rails-assets-bootstrap (~> 4.0.0.alpha.6)!
+  rails-assets-clipboard!
   rails-assets-countup!
   rails-assets-tether!
   rails-assets-wow!

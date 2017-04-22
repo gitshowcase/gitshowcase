@@ -1,6 +1,37 @@
-@import "colors";
+@import "globals/button";
+@import "globals/form";
+@import "globals/general";
+@import "globals/colors";
 
 @mixin cardify {
   background: white;
   border: 1px solid $color-border;
+}
+
+@mixin arrow-right($size, $color, $border-color) {
+  &:after, &:before {
+    left: 100%;
+    top: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  &:after {
+    border-color: transparent;
+    border-left-color: $color;
+    border-width: $size;
+    margin-top: -$size;
+  }
+
+  &:before {
+    border-color: transparent;
+    border-left-color: $border-color;
+    border-width: $size + 1;
+    margin-top: -($size + 1);
+  }
 }

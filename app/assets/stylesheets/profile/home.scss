@@ -1,0 +1,12 @@
+#home-view {
+  .alert {
+    position: fixed;
+    top: 4rem;
+    right: 1rem;
+    z-index: 2;
+
+    .close {
+      margin-left: .5rem;
+    }
+  }
+}

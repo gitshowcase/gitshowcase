@@ -13,11 +13,10 @@ class Dashboard::UsersController < DashboardController
 
   # PUT /dashboard/domain
   def update_domain
-    return redirect_to root_path unless @user.domain_allowed?
-
     old_domain = @user.domain
     new_domain = user_params(:domain)[:domain]
 
+    @user.update(domain: new_domain)
     if old_domain != new_domain
       begin
         DomainService.new(new_domain).add if new_domain.present?
@@ -29,7 +28,7 @@ class Dashboard::UsersController < DashboardController
       @user.update(domain: new_domain)
     end
 
-    redirect_to dashboard_home_url, notice: 'Domain updated :)'
+    redirect_to dashboard_domain_path, notice: 'Domain saved :)'
   end
 
   # GET /dashboard/profile
@@ -39,7 +38,7 @@ class Dashboard::UsersController < DashboardController
   # PUT /dashboard/profile
   def update_profile
     @user.update(user_params(:name, :avatar, :cover, :bio, :role, :location, :display_email, :company, :company_website, :website, :hireable))
-    redirect_to dashboard_home_url, notice: 'Profile updated :)'
+    redirect_to dashboard_home_url, notice: 'Profile saved :)'
   end
 
   # GET /dashboard/socials
@@ -49,7 +48,7 @@ class Dashboard::UsersController < DashboardController
   # PUT /dashboard/socials
   def update_socials
     @user.update(user_params(User::SOCIALS.keys))
-    redirect_to dashboard_home_url, notice: 'Socials updated :)'
+    redirect_to dashboard_home_url, notice: 'Socials saved :)'
   end
 
   # GET /dashboard/skills
@@ -67,7 +66,7 @@ class Dashboard::UsersController < DashboardController
     end
 
     UserSkillService.new(@user).update(skills)
-    redirect_to dashboard_home_url, notice: 'Skills updated :)'
+    redirect_to dashboard_home_url, notice: 'Skills saved :)'
   end
 
   # GET /dashboard/billing
@@ -86,8 +85,10 @@ class Dashboard::UsersController < DashboardController
 
   # DELETE /users/1
   def destroy
-    # Remove domain and delete email subscription
+    # Remove domain
     RemoveDomainJob.perform_later(@user.domain) if @user.domain.present?
+
+    # Delete email subscription
     DeleteEmailSubscriptionJob.perform_later(@user.email)
 
     # Destroy user. This will trigger delete projects on cascade
