@@ -32,6 +32,7 @@ Rails.application.routes.draw do
 
         resources :users, only: [:index]
         resources :invitations, only: [:index]
+        resources :plans, only: [:index, :show]
         resources :setup_covers, only: [:index, :create, :destroy]
 
         namespace :monitor do

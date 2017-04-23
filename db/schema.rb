@@ -99,15 +99,15 @@ ActiveRecord::Schema.define(version: 20170422023444) do
     t.string   "display_email"
     t.string   "domain"
     t.boolean  "admin"
-    t.integer  "plans_id"
+    t.integer  "plan_id"
     t.index ["domain"], name: "index_users_on_domain", unique: true, using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
-    t.index ["plans_id"], name: "index_users_on_plans_id", using: :btree
+    t.index ["plan_id"], name: "index_users_on_plan_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["username"], name: "index_users_on_username", unique: true, using: :btree
   end
 
   add_foreign_key "invitations", "users", column: "inviter_id", on_delete: :cascade
   add_foreign_key "projects", "users", on_delete: :cascade
-  add_foreign_key "users", "plans", column: "plans_id"
+  add_foreign_key "users", "plans", column: "plan_id"
 end

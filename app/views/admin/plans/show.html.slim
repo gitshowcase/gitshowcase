@@ -1,0 +1,21 @@
+#plans-show-view
+  header
+    h1
+      i.fa.fa-leaf
+      = " #{@plan.name}"
+
+  - if @users.total_entries > 0
+    .panel-transparent.list-group
+      - @users.each do |user|
+        a.list-group-item href=profile_path(username: user.username) target='_blank' style='display: block'
+          i.fa.fa-user
+          = " #{user.username}"
+
+          .pull-right
+            = "#{time_ago_in_words user.created_at} ago"
+  - else
+    div There are no users in this plan
+
+  - if @users.total_pages > 1
+    footer.panel-transparent
+      = bs_will_paginate @users
