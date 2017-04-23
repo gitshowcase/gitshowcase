@@ -4,6 +4,14 @@
       i.fa.fa-leaf
       = " #{@plan.name}"
 
+  .properties
+    header
+      h2 Features
+
+    div
+      i.fa class="fa-#{@plan.domain ? 'check' : 'remove'}"
+      |  Domain
+
   - if @users.total_entries > 0
     .panel-transparent.list-group
       - @users.each do |user|
