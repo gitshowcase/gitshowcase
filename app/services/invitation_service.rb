@@ -6,12 +6,11 @@ class InvitationService < ApplicationService
   def accept(inviter_id)
     return false if Invitation.find_by_invitee(@user.username)
 
-    host = User.find inviter_id rescue nil
-    if host
-      Invitation.create(inviter_id: host.id, invitee: @user.username)
-      return true
-    end
+    inviter = User.find inviter_id rescue nil
 
-    false
+    if inviter
+      Invitation.create(inviter_id: inviter.id, invitee: @user.username)
+      inviter
+    end
   end
 end

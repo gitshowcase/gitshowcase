@@ -8,7 +8,7 @@ class PlanService < ApplicationService
   end
 
   def reward_domain
-    return false unless @user.invitations.count > INVITATIONS_REQUIREMENT
+    return false unless @user.invitations.count >= INVITATIONS_REQUIREMENT
 
     plan = Plan.find_by_slug(INVITATION_PLAN)
     plan = Plan.create(name: 'Invitation Reward', slug: INVITATION_PLAN, domain: true) unless plan

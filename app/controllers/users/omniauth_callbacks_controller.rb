@@ -14,9 +14,9 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
       first_sign_in = true
 
-      if session.key?(:inviter)
-        InvitationService.new(@user).accept(session[:inviter])
-        PlanService.new(@user).reward_domain
+      if session.key?(:inviter_id)
+        inviter = InvitationService.new(@user).accept(session[:inviter_id])
+        PlanService.new(inviter).reward_domain if inviter
       end
 
       GithubProjectService.sync_by_user(@user)
