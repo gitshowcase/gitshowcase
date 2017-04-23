@@ -12,9 +12,6 @@ Rails.application.routes.draw do
     get '/privacy_policy', to: 'pages#privacy_policy'
     get '/sitemap-users.xml', to: 'pages#sitemap_users'
 
-    # SSL Route
-    get '/.well-known/acme-challenge/:id', to: 'pages#letsencrypt'
-
     # Authentication
     devise_for :users, controllers: {
         omniauth_callbacks: 'users/omniauth_callbacks',

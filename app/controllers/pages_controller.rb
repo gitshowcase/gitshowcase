@@ -25,8 +25,4 @@ class PagesController < ApplicationController
 
     render layout: nil, file: service.path, content_type: 'application/xml'
   end
-
-  def letsencrypt
-    render text: ENV['SSL_ACME_TEXT']
-  end
 end
