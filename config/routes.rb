@@ -31,6 +31,7 @@ Rails.application.routes.draw do
         end
 
         resources :users, only: [:index]
+        resources :invitations, only: [:index]
         resources :setup_covers, only: [:index, :create, :destroy]
 
         namespace :monitor do

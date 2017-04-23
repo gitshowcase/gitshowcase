@@ -1,0 +1,22 @@
+#invitations-index-view
+  header
+    h1
+      i.fa.fa-envelope
+      |  Invitations
+
+  .panel-transparent.list-group
+    - @invitations.each do |invitation|
+      .list-group-item style='display: block'
+        a href=profile_path(username: invitation.inviter.username) target='_blank'
+          = "@#{invitation.inviter.username}"
+        '  invited
+        a href=profile_path(username: invitation.invitee) target='_blank'
+          = "@#{invitation.invitee}"
+
+        .pull-right
+          = "#{time_ago_in_words invitation.created_at} ago"
+
+  - if @invitations.total_pages > 1
+    footer.panel-transparent
+      = bs_will_paginate @invitations
+
