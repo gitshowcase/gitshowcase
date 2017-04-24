@@ -89,6 +89,9 @@ Rails.application.routes.draw do
 
       scope path: '/setup', as: :setup do
         controller :setup do
+          get '/', action: :profile, as: :profile
+          match '/', action: :update_profile, via: [:put, :patch]
+
           get 'cover', action: :cover
           match 'cover', action: :update_cover, via: [:put, :patch]
 

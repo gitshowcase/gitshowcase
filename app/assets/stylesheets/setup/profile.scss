@@ -1,0 +1,20 @@
+@import "globals/mixins";
+
+#profile-view {
+  h3 {
+    font-weight: 300;
+  }
+
+  section + section {
+    margin-top: 1rem;
+  }
+
+  .form-group {
+    @include cardify();
+    padding: .5rem .75rem;
+  }
+
+  .setup-footer {
+    padding-top: 1rem;
+  }
+}

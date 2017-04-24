@@ -1,6 +1,17 @@
 class SetupController < ApplicationController
   before_action :set_user
 
+  # GET /setup/profile
+  def profile
+    @title = 'Tell me more about you'
+    @description = 'We got some info from your GitHub. How do you like it?'
+  end
+
+  def update_profile
+    @user.update(user_params(:name, :bio, :role, :location, :company))
+    redirect_to setup_cover_path
+  end
+
   # GET /setup/cover
   def cover
     @title = 'Choose your cover image'

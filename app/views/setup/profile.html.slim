@@ -1,0 +1,27 @@
+#profile-view
+  = simple_form_for @user, url: setup_profile_url do |f|
+    .form-inputs
+      section
+        header
+          h3 Basic Information
+
+        .row
+          .col-md-6
+            = f.input :name, autofocus: true, placeholder: 'e.g. John Doe'
+          .col-md-6
+            = f.input :role, placeholder: 'e.g. Jedi Developer'
+          .col-md-6
+            = f.input :location, placeholder: 'e.g. North Pole'
+          .col-md-6
+            = f.input :company, placeholder: 'Where you work at. @GitShowcase, Freelancer, Google ...'
+
+      section
+        header
+          h3 I describe myself as...
+
+        = f.input :bio, as: :text, placeholder: 'e.g. I like to code and play guitar. In the spare time, I collaborate to awesome projects like GitShowcase'
+
+    footer.setup-footer
+      button.setup-button.animated.wow.fadeIn
+        ' Continue
+        i.fa.fa-angle-right
