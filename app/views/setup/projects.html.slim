@@ -13,7 +13,4 @@
 
       = render 'setup/components/projects', projects: @forked_projects
 
-  footer.setup-footer
-    a.setup-button.animated.wow.fadeIn href=profile_path(username: @user.username)
-      ' Finish
-      i.fa.fa-angle-right
+  = render 'setup/components/step-footer', text: 'Finish', icon: 'check', href: profile_path(username: @user.username)

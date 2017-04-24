@@ -7,7 +7,4 @@
         = link_to "#{setup_cover_path}?cover=#{cover.profile}", method: :put, class: 'cover wow animated fadeIn' do
           img src=cover.small
 
-  footer.setup-footer
-    a.setup-button.animated.wow.fadeIn href=setup_socials_path
-      ' Continue
-      i.fa.fa-angle-right
+  = render 'setup/components/step-footer', href:  setup_socials_path

@@ -21,7 +21,4 @@
 
         = f.input :bio, as: :text, placeholder: 'e.g. I like to code and play guitar. In the spare time, I collaborate to awesome projects like GitShowcase'
 
-    footer.setup-footer
-      button.setup-button.animated.wow.fadeIn
-        ' Continue
-        i.fa.fa-angle-right
+    = render 'setup/components/step-footer'

@@ -33,25 +33,4 @@
       font-weight:300;
     }
   }
-
-  .setup-footer {
-    margin-top: 1em;
-    text-align: right;
-
-    .setup-button {
-      font-size: 1.4rem;
-      letter-spacing: 4px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: $color-one;
-      transition: color .5s ease;
-      font-family: 'Lato', sans-serif;
-      outline: none;
-
-      &:hover {
-        color: $color-two;
-      }
-    }
-  }
 }

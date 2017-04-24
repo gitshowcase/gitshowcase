@@ -1,0 +1,15 @@
+.step-footer {
+  margin-top: 1em;
+  text-align: right;
+
+  button.continue, a.continue {
+    padding: .75rem 1rem;
+
+    i {
+      margin-right: 0;
+      font-size: 1.5rem;
+      margin-top: -4px;
+      margin-left: .75rem;
+    }
+  }
+}

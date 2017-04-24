@@ -1,0 +1,14 @@
+- klass = 'continue btn btn-action animated wow fadeIn'
+- href ||= nil
+- text ||= 'Continue'
+- icon ||= 'angle-right'
+
+footer.step-footer
+  - if href
+    a class=klass href=href
+      = text
+      i.fa class="fa-#{icon}"
+  - else
+    button class=klass
+      = text
+      i.fa class="fa-#{icon}"

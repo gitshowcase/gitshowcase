@@ -20,7 +20,4 @@
                       - else
                         = f.input_field social, class: 'form-control', value: @user[social]
 
-    footer.setup-footer
-      button.setup-button.animated.wow.fadeIn
-        ' Continue
-        i.fa.fa-angle-right
+    = render 'setup/components/step-footer'
