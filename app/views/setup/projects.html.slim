@@ -1,12 +1,12 @@
 #projects-view
-  - if @personal_projects.length
+  - if @personal_projects.length > 0
     section
       header
         h3 Personal Projects
 
       = render 'setup/components/projects', projects: @personal_projects
 
-  - if @forked_projects.length
+  - if @forked_projects.length > 0
     section
       header
         h3 Forked Projects
