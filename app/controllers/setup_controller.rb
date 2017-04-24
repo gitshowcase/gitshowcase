@@ -1,12 +1,13 @@
 class SetupController < ApplicationController
   before_action :set_user
 
-  # GET /setup/profile
+  # GET /setup
   def profile
-    @title = 'Tell me more about you'
+    @title = "Hey @#{@user.username}"
     @description = 'We got some info from your GitHub. How do you like it?'
   end
 
+  # PUT/PATCH /setup
   def update_profile
     @user.update(user_params(:name, :bio, :role, :location, :company))
     redirect_to setup_cover_path
