@@ -1,0 +1,21 @@
+@import "globals/colors";
+@import "globals/mixins";
+
+.skill {
+  @include cardify();
+  padding: .65rem;
+
+  input {
+    margin-right: 1rem;
+  }
+
+  i {
+    padding: .1rem;
+    font-size: 1.17rem;
+    cursor: pointer;
+  }
+
+  i.skill-star-hover {
+    color: $color-highlight;
+  }
+}

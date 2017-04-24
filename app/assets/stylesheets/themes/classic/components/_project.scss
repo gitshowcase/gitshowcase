@@ -62,10 +62,10 @@
   }
 
   .project-title {
+    color: $color-one;
     font-family: Montserrat, sans-serif;
     font-size: 16px;
     white-space: nowrap;
-    color: $color-one;
     overflow: hidden;
     text-overflow: ellipsis;
     margin: 16px 0 10px 0;

@@ -3,5 +3,11 @@
 
   .row
     - @covers.each do |cover|
-      .col-md-6.col-lg-4.my-auto
-        = render 'setup/components/cover', cover: cover
+      .col-sm-6.col-md-4.col-lg-3.my-auto
+        = link_to "#{setup_cover_path}?cover=#{cover.profile}", method: :put, class: 'cover wow animated fadeIn' do
+          img src=cover.small
+
+  footer.setup-footer
+    a.setup-button.animated.wow.fadeIn href=setup_socials_path
+      ' Skip
+      i.fa.fa-angle-right

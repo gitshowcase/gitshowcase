@@ -1,0 +1,8 @@
+.row.skills
+  .skill-template
+    .col-md-4.col-sm-6
+      = render 'setup/components/skill', name: '', mastery: 0
+
+  - (skills || {}).each do |name, mastery|
+    .col-md-4.col-sm-6
+      = render 'setup/components/skill', name: name, mastery: mastery

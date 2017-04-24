@@ -7,21 +7,23 @@ module SocialNetworks
           prefix: 'linkedin.com/in',
           type: :networking
       },
-      angellist: {
-          prefix: 'angel.co',
-          type: :networking
-      },
       twitter: {
           prefix: 'twitter.com',
           type: :networking
       },
+      angellist: {
+          prefix: 'angel.co',
+          type: :networking
+      },
       facebook: {
           prefix: 'facebook.com',
-          type: :networking
+          type: :networking,
+          secondary: true
       },
       google_plus: {
           prefix: 'plus.google.com',
-          type: :networking
+          type: :networking,
+          secondary: true
       },
 
       # Development

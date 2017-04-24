@@ -1,0 +1,33 @@
+@import "globals/mixins";
+
+#socials-view {
+  .group {
+    h2 {
+      font-weight: 300;
+      font-size: 1.35rem;
+    }
+  }
+
+  .group {
+    margin-bottom: 1.5rem;
+  }
+
+  .socials {
+    $social-margin: .5rem;
+
+    margin: 0 -$social-margin;
+
+    .social {
+      display: inline-block;
+      padding: .5rem .75rem;
+      margin: $social-margin;
+      width: 20rem;
+      max-width: 100%;
+      @include cardify();
+
+      .form-group {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

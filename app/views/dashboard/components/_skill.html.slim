@@ -4,7 +4,7 @@
 
   input.form-control type='text' name='name[]' value=name
 
-  input type='hidden' name='mastery[]' value=mastery
+  input type='hidden' name='mastery[]' value=mastery placeholder='Skill name'
   div.skill-stars
     - (1..5).each do |number|
       i.skill-star.fa class="fa-star#{mastery < number ? '-o' : ''}"

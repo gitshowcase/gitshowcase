@@ -8,16 +8,16 @@
   flex-direction: column;
   min-height: 100vh;
   background: $color-background;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 
   .setup-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2.5rem;
     text-align: center;
 
     .logo {
       width: 4rem;
-      margin-bottom: 1rem;
+      margin-bottom: .5rem;
       opacity: .5;
     }
 
@@ -28,21 +28,28 @@
     .subtitle {
       margin-top: 1rem;
       font-size: 1.25rem;
+      font-weight:300;
       color: $color-one;
     }
   }
 
   .setup-footer {
-    margin-top: 2rem;
+    margin-top: 1em;
     text-align: right;
 
-    .skip {
+    .setup-button {
       font-size: 1.4rem;
-      font-weight: 300;
       letter-spacing: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: $color-one;
+      transition: color .5s ease;
+      font-family: 'Lato', sans-serif;
+      outline: none;
 
-      &:not(:hover) {
-        color: $color-one;
+      &:hover {
+        color: $color-two;
       }
     }
   }

@@ -9,8 +9,9 @@
           |  invited you
           span.hidden-xs-down
             |  to GitShowcase.
-          span.hidden-sm-down
-            |  Create your profile today
+
+          .pull-right.hidden-sm-down
+            = render 'components/sign-in', text: 'Create your portfolio today'
 
   #presenter.wow.animated.fadeIn
     = render 'components/background',

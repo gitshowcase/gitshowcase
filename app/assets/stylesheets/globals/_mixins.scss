@@ -8,6 +8,18 @@
   border: 1px solid $color-border;
 }
 
+@mixin switch-theme($color-one, $color-two) {
+  .switch {
+    input:checked + .switch-slider {
+      background-color: $color-one;
+    }
+
+    input:focus + .switch-slider {
+      box-shadow: 0 0 1px $color-one;
+    }
+  }
+}
+
 @mixin arrow-right($size, $color, $border-color) {
   &:after, &:before {
     left: 100%;

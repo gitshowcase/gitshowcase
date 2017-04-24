@@ -68,6 +68,17 @@ $divider-height: 111px;
       color: inherit;
       text-decoration: underline;
     }
+
+    .sign-in {
+      letter-spacing: 0;
+      padding: .8rem 1.25rem;
+      font-size: 1rem;
+
+      i {
+        font-size: 1.25rem;
+        margin-right: .5rem;
+      }
+    }
   }
 
   .live-preview {

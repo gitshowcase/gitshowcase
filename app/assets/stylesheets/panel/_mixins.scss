@@ -4,18 +4,6 @@
 @import "globals/general";
 @import "globals/mixins";
 
-@mixin switch-theme($color-one, $color-two) {
-  .switch {
-    input:checked + .switch-slider {
-      background-color: $color-one;
-    }
-
-    input:focus + .switch-slider {
-      box-shadow: 0 0 1px $color-one;
-    }
-  }
-}
-
 @mixin panel($color-one, $color-two) {
   @include switch-theme($color-one, $color-two);
 

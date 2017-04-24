@@ -5,7 +5,7 @@
       |  My Skills
 
   .panel-transparent
-    = form_for @user, url: dashboard_update_skills_path
+    = form_for @user, url: dashboard_skills_path
       .panel-block
         = render 'dashboard/components/skills', skills: @user.skills
 

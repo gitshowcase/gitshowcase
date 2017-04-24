@@ -1,0 +1,35 @@
+@import "globals/mixins";
+
+.projects {
+  .project {
+    @include cardify();
+    padding: .5rem .75rem;
+
+    .title {
+      font-size: 1.17rem;
+    }
+
+    .description {
+      font-size: .8rem;
+      color: #999;
+    }
+
+    .title, .description {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.project-hidden {
+      opacity: .5;
+    }
+  }
+
+  .project {
+    margin-top: .5rem;
+  }
+
+  .switch {
+    margin-left: 1rem;
+  }
+}

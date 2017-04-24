@@ -1,4 +1,5 @@
 @import "globals/colors";
+@import "globals/mixins";
 
 .switch {
   position: relative;
@@ -39,3 +40,5 @@
     transform: translateX(26px);
   }
 }
+
+@include switch-theme($color-one, $color-two);

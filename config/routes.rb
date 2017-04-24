@@ -49,22 +49,22 @@ Rails.application.routes.draw do
           get '/', action: :home, as: :home
 
           get 'domain'
-          match 'domain', action: :update_domain, as: :update_domain, via: [:put, :patch]
+          match 'domain', action: :update_domain, via: [:put, :patch]
 
           get 'profile'
-          match 'profile', action: :update_profile, as: :update_profile, via: [:put, :patch]
+          match 'profile', action: :update_profile, via: [:put, :patch]
 
           get 'socials'
-          match 'socials', action: :update_socials, as: :update_socials, via: [:put, :patch]
+          match 'socials', action: :update_socials, via: [:put, :patch]
 
           get 'skills'
-          match 'skills', action: :update_skills, as: :update_skills, via: [:put, :patch]
+          match 'skills', action: :update_skills, via: [:put, :patch]
 
           get 'experience'
-          match 'experience', action: :update_experience, as: :update_experience, via: [:put, :patch]
+          match 'experience', action: :update_experience, via: [:put, :patch]
 
           get 'education'
-          match 'education', action: :update_education, as: :update_education, via: [:put, :patch]
+          match 'education', action: :update_education, via: [:put, :patch]
 
           get 'settings'
 
@@ -87,12 +87,21 @@ Rails.application.routes.draw do
         end
       end
 
-      scope path: '/setup' do
+      scope path: '/setup', as: :setup do
         controller :setup do
-          get '/', action: :cover, as: :setup
-          get 'socials', as: :setup_socials
-          get 'skills', as: :setup_skills
-          get 'theme', as: :setup_theme
+          get 'cover', action: :cover
+          match 'cover', action: :update_cover, via: [:put, :patch]
+
+          get 'socials'
+          match 'socials', action: :update_socials, via: [:put, :patch]
+
+          get 'skills'
+          match 'skills', action: :update_skills, via: [:put, :patch]
+
+          get 'projects'
+
+          get 'theme'
+          match 'theme', action: :update_theme, as: :update_theme, via: [:put, :patch]
         end
       end
 

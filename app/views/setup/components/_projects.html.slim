@@ -1,0 +1,9 @@
+.projects.row
+  - projects.each do |project|
+    .col-lg-4.col-md-6
+      .project data-project-id=project.id class="#{project.hide ? 'project-hidden' : ''}"
+        .pull-right
+          = render 'components/switch', checked: !project.hide, onchange: 'Projects.toggle(this)'
+
+        .title= project.display_title
+        .description= project.description || 'No description'

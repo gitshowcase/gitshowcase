@@ -1,2 +1,11 @@
 #skills-view
-  | Hello
+  header
+    h3 We got a few from your GitHub. Edit as you please
+
+  = form_for @user, url: setup_skills_path do
+    = render 'setup/components/skills', skills: @user.skills
+
+    footer.setup-footer
+      button.setup-button.animated.wow.fadeIn
+        ' Continue
+        i.fa.fa-angle-right

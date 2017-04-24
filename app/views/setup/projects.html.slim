@@ -1,2 +1,19 @@
 #projects-view
-  | Helo
+  - if @personal_projects.length
+    section
+      header
+        h3 Personal Projects
+
+      = render 'setup/components/projects', projects: @personal_projects
+
+  - if @forked_projects.length
+    section
+      header
+        h3 Forked Projects
+
+      = render 'setup/components/projects', projects: @forked_projects
+
+  footer.setup-footer
+    a.setup-button.animated.wow.fadeIn href=profile_path(username: @user.username)
+      ' Finish
+      i.fa.fa-angle-right

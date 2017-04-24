@@ -1,2 +1,26 @@
 #socials-view
-  | Socials
+  = simple_form_for @user, url: setup_socials_path do |f|
+    .groups
+      - SocialsHelper.grouped.each do |type, socials|
+        - if type != :development
+          .group
+            header
+              h2= type.to_s.titleize
+
+            .socials
+              - socials.each do |social, properties|
+                - if !properties[:secondary]
+                  .social.wow.animated.fadeIn
+                    = f.input social, wrapper_html: {class: "form-group #{properties[:prefix].present? ? 'form-group-addon' : ''}"},
+                            label: "#{render 'components/social-icon', social: social} #{social.to_s.titleize}".html_safe do
+                      - if properties[:prefix].present?
+                        .input-group
+                          span.input-group-addon= "#{properties[:prefix]}/"
+                          = f.input_field social, class: 'form-control', value: @user[social]
+                      - else
+                        = f.input_field social, class: 'form-control', value: @user[social]
+
+    footer.setup-footer
+      button.setup-button.animated.wow.fadeIn
+        ' Continue
+        i.fa.fa-angle-right

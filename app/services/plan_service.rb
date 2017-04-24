@@ -1,6 +1,6 @@
 class PlanService < ApplicationService
   # Constraints
-  INVITATIONS_REQUIREMENT = 15
+  INVITATIONS_REQUIREMENT = 5
   INVITATION_PLAN = 'invitation'
 
   def initialize(user)
