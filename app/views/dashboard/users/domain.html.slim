@@ -35,6 +35,13 @@
           .form-inputs
             = f.input :domain, placeholder: 'e.g. example.com'
 
+          footer
+            small
+              i.fa.fa-question-circle
+              '  Do you need to register a domain?
+              a href='https://affiliate.namecheap.com/?affId=115131' target='_blank'
+                | Here's a shortcut.
+
         .form-actions
           = button_tag type: :submit, class: 'btn btn-primary' do
             i.fa.fa-check
@@ -61,7 +68,7 @@
           i.fa.fa-clipboard
           |  COPY YOUR UNIQUE LINK
 
-        footer
+        .copy
           a href=invitation_url(username: @user.username) target='_blank'
             i.fa.fa-link
             '

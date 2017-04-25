@@ -74,6 +74,18 @@
       font-size: .9rem;
       margin-bottom: 1rem;
     }
+
+    footer {
+      border-top: 1px solid rgba(black, .05);
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  #choose {
+    footer {
+      border: none;
+    }
   }
 
   #invite {
@@ -87,7 +99,7 @@
         margin-bottom: 1rem;
       }
 
-      > footer {
+      .copy {
         font-size: .9rem;
         margin-top: .65rem;
         margin-bottom: .65rem;
@@ -110,18 +122,12 @@
       color: $color-one;
     }
 
-    > footer {
-      border-top: 1px solid rgba(black, .05);
-      padding-top: 1rem;
-      margin-top: 1rem;
+    .configure-help {
+      margin-bottom: .5rem;
 
-      .configure-help {
-        margin-bottom: .5rem;
-
-        a {
-          color: inherit;
-          text-decoration: underline;
-        }
+      a {
+        color: inherit;
+        text-decoration: underline;
       }
     }
   }
