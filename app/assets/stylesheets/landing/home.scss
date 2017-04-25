@@ -157,14 +157,27 @@ $divider-height-small: 4rem;
     }
 
     .step {
-      p {
-        margin-top: 42px;
+      @media screen and (min-width: 768px) {
+        p {
+          margin-top: 42px;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 85%;
+
+        p {
+          text-align: left;
+          margin-top: -.2rem;
+        }
       }
     }
 
     @media screen and (max-width: 767px) {
-      .step p {
-        margin-top: 24px;
+      img {
+        width: 3rem;
+        float: left;
+        margin-right: 1rem;
       }
 
       .step + .step {
