@@ -13,8 +13,14 @@ $divider-height: 111px;
     line-height: 1.9;
     letter-spacing: 1.6px;
 
-    @media screen and (max-width: 997px) {
+    @media screen and (max-width: 767px) {
       font-size: 32px;
+    }
+  }
+
+  br {
+    @media (max-width: 575px) {
+      display: none;
     }
   }
 
@@ -90,7 +96,7 @@ $divider-height: 111px;
     color: rgba(white, .8);
     padding-bottom: 96px;
 
-    @media screen and (max-width: 997px) {
+    @media screen and (max-width: 767px) {
       padding-bottom: 48px;
     }
 
@@ -108,7 +114,7 @@ $divider-height: 111px;
       letter-spacing: 2.6px;
       color: $color-title-white;
 
-      @media screen and (max-width: 997px) {
+      @media screen and (max-width: 767px) {
         font-size: 32px;
         margin-top: 82px;
       }
@@ -129,7 +135,17 @@ $divider-height: 111px;
   #plug-and-play {
     h2 {
       margin: $divider-height auto 86px;
-      width: 40%;
+
+      @media screen and (min-width: 768px) {
+        width: 40%;
+      }
+
+      @media (max-width: 768px) {
+        #home-view #plug-and-play h2 {
+          margin: 61px auto 86px;
+          font-size: 28px;
+        }
+      }
     }
 
     .step {
@@ -138,7 +154,7 @@ $divider-height: 111px;
       }
     }
 
-    @media screen and (max-width: 997px) {
+    @media screen and (max-width: 767px) {
       .step p {
         margin-top: 24px;
       }
@@ -162,6 +178,10 @@ $divider-height: 111px;
     }
 
     @media screen and (max-width: 767px) {
+      a {
+        display: block;
+      }
+
       a + a {
         margin-top: 33px;
       }
@@ -213,10 +233,15 @@ $divider-height: 111px;
 
       .url {
         position: relative;
+        overflow: hidden;
         padding: 2rem;
         color: white;
         font-size: 2.5rem;
         letter-spacing: 2.6px;
+
+        @media screen and (max-width: 767px) {
+          font-size: 1.5rem;
+        }
       }
 
       .bio {
@@ -224,6 +249,10 @@ $divider-height: 111px;
         font-weight: 300;
         color: #999;
         letter-spacing: 1px;
+
+        @media screen and (max-width: 767px) {
+          padding: 1.5rem 1.5rem;
+        }
       }
     }
 
@@ -250,10 +279,17 @@ $divider-height: 111px;
     }
 
     .btn-social {
-      margin-left: 10px;
-      margin-right: 10px;
       margin-bottom: 20px;
       border-radius: 6px;
+
+      @media screen and (max-width: 767px) {
+        display: block;
+      }
+
+      @media screen and (min-width: 768px) {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     }
   }
 
