@@ -28,58 +28,59 @@
       = render 'components/sign-in'
       .free It's free and always will be!
 
-  section#plug-and-play.wow.animated.fadeIn
+  section#plug-and-play
     .container
-      header
+      header.wow.animated.fadeIn
         h2 Plug-and-play GitHub portfolio:
 
       .row
-        .step.col-md-4
+        .step.col-md-4.wow.animated.fadeIn
           = image_tag('home/step-1.png', alt: 'First step')
           p
             | Sign-in with your
             br
             | GitHub account
-        .step.col-md-4
+        .step.col-md-4.wow.animated.fadeIn
           = image_tag('home/step-2.png', alt: 'Second step')
           p
             | Authorize GitShowcase
             br
             | to look at your profile
-        .step.col-md-4
+        .step.col-md-4.wow.animated.fadeIn
           = image_tag('home/step-3.png', alt: 'Third step')
           p
             | Get a portfolio
             br
             | to call your own
 
-  section#responsive.wow.animated.fadeIn
+  section#responsive
     .container
-      header
+      header.wow.animated.fadeIn
         h2 Seamless experience in all devices:
 
       = image_tag('home/responsive.jpg', alt: 'GitShowcase in different devices', class: 'img-fluid')
 
-      p
+      p.wow.animated.fadeIn
         | After authorizing Gitshowcase to access your Github, this is what you’ll see. A good to go
           personal website. Customizing is as easy as it seems. You can change title, description, background
           cover, projects etc. Take a sneak peak bellow:
 
-      a.btn.btn-action.btn-action-transparent.live-preview href='/showcasecat' target='_blank'
-        i.fa.fa-user-o
-        | Live demo preview
+      .wow.animated.fadeIn
+        a.btn.btn-action.btn-action-transparent.live-preview href='/showcasecat' target='_blank'
+          i.fa.fa-user-o
+          | Live demo preview
 
-      = render 'components/sign-in'
+        = render 'components/sign-in'
 
   section#domain
     .container
-      header
+      header.wow.animated.fadeIn
         h2
           | Make it your own website. We provide
           br
           | Custom domain host for free:
 
-      a.domain-card href=@domain_user.url
+      a.wow.animated.fadeIn.domain-card href=@domain_user.url target='_blank'
         = render 'components/avatar', user: @domain_user
 
         .url
@@ -94,25 +95,25 @@
         .bio
           = @domain_user.bio
 
-      p
+      p.wow.animated.fadeIn
         b This could be you.
         |  Get started today and stand out.
 
   section#open-source
     .container
-      header
+      header.wow.animated.fadeIn
         h2
           = image_tag('home/heart.png')
           | We're open source:
 
         h3 “Learn from the community. Give back to the community.”
 
-      p
+      p.wow.animated.fadeIn
         | GitShowcase is an Open Source project designed to help developers show off their talents.
         br
         | If you like the project, you can help by sharing it on social media and giving us a Star on GitHub.
 
-      div
+      div.wow.animated.fadeIn
         a.btn.btn-social.btn-social-github href='https://github.com/gitshowcase/gitshowcase' target="_blank"
           i.fa.fa-github
           |  Star on GitHub
@@ -131,12 +132,13 @@
             mask: 0
 
     .container.clearfix
-      h2
+      h2.wow.animated.fadeIn
         .first-line
           strong#homeProjectCountUp= @project_count
           |  projects
         |  showcased their awesomeness!
 
-      = render 'components/sign-in'
+      .wow.animated.fadeIn
+        = render 'components/sign-in'
 
   = render 'components/footer'
