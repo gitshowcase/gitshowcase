@@ -79,7 +79,7 @@ class Dashboard::UsersController < DashboardController
 
   # GET /dashboard/sync_profile
   def sync_profile
-    GithubProjectService.sync_by_user(@user)
+    GithubUserService.new(@user).sync
     redirect_to dashboard_profile_url, notice: 'Profile synced :)'
   end
 
