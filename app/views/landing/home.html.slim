@@ -125,12 +125,12 @@
           i.fa.fa-twitter
           |  Share on Twitter
 
-  footer#footer
+  section#footer.wow.animated.fadeIn
     = render 'components/background',
             image: image_path('home/footer.jpg'),
             mask: 0
 
-    .container.clearfix
+    .container
       h2
         .first-line
           strong#homeProjectCountUp= @project_count

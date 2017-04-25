@@ -1,20 +1,33 @@
 @import "globals/colors";
 
-$divider-height: 111px;
+$divider-height: 8rem;
+$divider-height-small: 4rem;
 
 #home-view {
   $margin-size: 4rem;
   text-align: center;
 
+  section {
+    margin-top: $divider-height;
+
+    @media screen and (max-width: 767px) {
+      margin-top: $divider-height-small;
+    }
+  }
+
   h2 {
+    $factor: .5;
+
     color: $color-title-black;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 300;
     line-height: 1.9;
     letter-spacing: 1.6px;
+    margin: 0 auto ($divider-height * $factor);
 
     @media screen and (max-width: 767px) {
-      font-size: 32px;
+      font-size: 1.75rem;
+      margin-bottom: $divider-height-small * $factor;
     }
   }
 
@@ -28,11 +41,15 @@ $divider-height: 111px;
     margin-top: 0;
     margin-bottom: 44px;
     font-family: Montserrat;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: $color-text-black;
-    line-height: 1.17;
+    line-height: 1.65;
     letter-spacing: 1px;
+
+    @media screen and (max-width: 767px) {
+      font-size: 1.17rem;
+    }
   }
 
   p {
@@ -134,17 +151,8 @@ $divider-height: 111px;
 
   #plug-and-play {
     h2 {
-      margin: $divider-height auto 86px;
-
       @media screen and (min-width: 768px) {
         width: 40%;
-      }
-
-      @media (max-width: 768px) {
-        #home-view #plug-and-play h2 {
-          margin: 61px auto 86px;
-          font-size: 28px;
-        }
       }
     }
 
@@ -166,15 +174,16 @@ $divider-height: 111px;
   }
 
   #responsive {
-    h2 {
-      margin-top: $divider-height;
-      margin-bottom: 86px;
-    }
-
     p {
-      margin: 82px auto;
+      $factor: .5;
       width: 741px;
       max-width: 100%;
+      margin: ($divider-height * $factor) auto;
+
+      @media screen and (max-width: 767px) {
+        margin: ($divider-height-small * $factor) auto;
+        font-weight: 300;
+      }
     }
 
     @media screen and (max-width: 767px) {
@@ -183,24 +192,20 @@ $divider-height: 111px;
       }
 
       a + a {
-        margin-top: 33px;
+        margin-top: 1.75rem;
       }
     }
 
     @media screen and (min-width: 768px) {
       a + a {
-        margin-left: 33px;
+        margin-left: 1.75rem;
       }
     }
   }
 
   #domain {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     h2 {
-      margin-top: $divider-height;
-      margin-bottom: 86px;
+      padding-bottom: 1rem;
     }
 
     .domain-card {
@@ -251,23 +256,24 @@ $divider-height: 111px;
         letter-spacing: 1px;
 
         @media screen and (max-width: 767px) {
-          padding: 1.5rem 1.5rem;
+          padding: 1.5rem;
         }
       }
     }
 
     p {
       font-weight: 300;
+
+      @media screen and (max-width: 767px) {
+        b {
+          display: block;
+        }
+      }
     }
   }
 
   #open-source {
-    padding-bottom: $divider-height;
-
     h2 {
-      margin-top: $divider-height;
-      margin-bottom: 76px;
-
       img {
         margin-right: 28px;
         margin-top: -8px;
@@ -275,7 +281,13 @@ $divider-height: 111px;
     }
 
     p {
-      margin-bottom: 82px;
+      $factor: .6;
+      margin-bottom: ($divider-height * $factor);
+
+      @media screen and (max-width: 767px) {
+        margin-bottom: ($divider-height-small * $factor);
+        font-weight: 300;
+      }
     }
 
     .btn-social {
@@ -295,12 +307,9 @@ $divider-height: 111px;
 
   #footer {
     position: relative;
-    padding-bottom: 111px;
-    padding-top: 111px;
+    padding: $divider-height 0;
 
     h2 {
-      margin-top: 0;
-      margin-bottom: 52px;
       line-height: 1.68;
       font-size: 31.65px;
       color: $color-title-white;
