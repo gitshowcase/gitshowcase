@@ -4,6 +4,8 @@ class LandingController < ApplicationController
 
     inviter_id = session[:inviter_id]
     @inviter = User.find(inviter_id) rescue nil if inviter_id
+
+    @domain_user = User.order('RANDOM()').where(admin: true).first
   end
 
   def invitation

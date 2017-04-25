@@ -71,6 +71,33 @@
 
       = render 'components/sign-in'
 
+  section#domain
+    .container
+      header
+        h2
+          | Make it your own website. We provide
+          br
+          | Custom domain host for free:
+
+      a.domain-card href=@domain_user.url
+        = render 'components/avatar', user: @domain_user
+
+        .url
+          = render 'components/background',
+                  image: @domain_user.cover,
+                  mask_color: 'linear-gradient(135deg, #009bec, #91ffa3), linear-gradient(#c4c4c4, #c4c4c4)'
+
+
+          div
+            = @domain_user.url
+
+        .bio
+          = @domain_user.bio
+
+      p
+        b This could be you.
+        |  Get started today and stand out.
+
   section#open-source
     .container
       header

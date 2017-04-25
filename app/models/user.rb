@@ -30,7 +30,7 @@ class User < ApplicationRecord
   end
 
   def url
-    domain if domain && domain_allowed?
-    Rails.application.routes.url_helpers.profile_path(username: username)
+    return UrlHelper.url(domain) if domain && domain_allowed?
+    Rails.application.routes.url_helpers.profile_url(host: ENV['APP_DOMAIN'], username: username)
   end
 end
