@@ -17,6 +17,6 @@ header.header
             '  Edit
             span class="#{show_share ? 'hidden-xs-down' : ''}" my profile
         - else
-          a href=omniauth_authorize_path(User, :github)
+          a href=omniauth_authorize_url(User, :github, host: ENV['APP_DOMAIN'])
             i.fa.fa-github
             |  Create your portfolio
