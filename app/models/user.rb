@@ -47,7 +47,7 @@ class User < ApplicationRecord
         skills: skills_value,
         website: (domain.present? && domain_allowed?) || website.present?,
         socials: (socials.size - 1) * 5,
-        projects: projects.count * 3
+        projects: projects.visible.count * 3.5
     }
   end
 

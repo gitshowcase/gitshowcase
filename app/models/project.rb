@@ -4,6 +4,7 @@ class Project < ApplicationRecord
 
   # Scopes
   scope :ordered, -> { order(position: :asc) }
+  scope :visible, -> { where(hide: [false, nil]) }
   scope :invisible, -> { where(hide: true) }
 
   # Urls

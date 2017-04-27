@@ -13,6 +13,8 @@ class Admin::UsersController < AdminController
   private
 
   def set_user
-    @user = User.find(params[:id])
+    param = params[:id]
+    is_number = true if Float(param) rescue false
+    @user = is_number ? User.find(param) : User.find_by_username(param)
   end
 end
