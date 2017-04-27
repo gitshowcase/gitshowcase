@@ -1,0 +1,15 @@
+@import "globals/colors";
+
+.score {
+  &-medium {
+    color: orange;
+  }
+
+  &-strong {
+    color: green;
+  }
+
+  &-rockstar {
+    color: $color-highlight;
+  }
+}

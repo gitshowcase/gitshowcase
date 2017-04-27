@@ -1,0 +1,64 @@
+#users-show-view
+  header
+    h1
+      i.fa.fa-user
+      |  User
+
+  section
+    h2 Domain
+
+    .domain
+      b Domain:
+      '
+      = @user.domain
+
+    .invitations
+      b Invitations
+      '
+      = @user.invitations.count
+
+  section
+    h2 Basic Information
+
+    .name
+      b Name:
+      '
+      = @user.name
+
+    .role
+      b Role
+      '
+      = @user.role
+
+    .bio
+      b Bio:
+      '
+      = @user.bio
+
+    .display_email
+      b Display email:
+      '
+      = @user.display_email
+
+    .location
+      b Location:
+      '
+      = @user.location
+
+    .website
+      b Website:
+      '
+      = @user.website
+
+  section
+    h2 Company Information
+
+    .company
+      b Company:
+      '
+      = @user.company
+
+    .company_website
+      b Website:
+      '
+      = @user.company_website

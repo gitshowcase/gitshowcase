@@ -27,7 +27,7 @@ Rails.application.routes.draw do
           get '/', action: :home, as: :home
         end
 
-        resources :users, only: [:index]
+        resources :users, only: [:index, :show]
         resources :invitations, only: [:index]
         resources :plans, only: [:index, :show]
         resources :setup_covers, only: [:index, :create, :destroy]

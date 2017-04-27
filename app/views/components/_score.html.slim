@@ -1,0 +1,14 @@
+- klass = 'weak'
+- klass = 'medium' if score >= 5
+- klass = 'strong' if score >= 8
+- klass = 'rockstar' if score >= 9.5
+
+.score class="score-#{klass}"
+  i.fa.fa-star-o
+  '
+  - if score == 10
+    | Rockstar
+  - else
+    = number_with_precision(score, precision: 1)
+    small
+      |  / 10

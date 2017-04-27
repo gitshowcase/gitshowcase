@@ -126,10 +126,9 @@ group :development, :test do
   # Use dotenv to configure environment variables
   gem 'dotenv-rails'
 
+  # Use rspec for testing
   gem 'rspec-rails', '~> 3.5'
-end
 
-group :test do
   # Use simplecov for code coverage
   gem 'simplecov', require: false
 

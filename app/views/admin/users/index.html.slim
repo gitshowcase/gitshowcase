@@ -4,35 +4,26 @@
       i.fa.fa-users
       |  Users
 
-  - @users.each do |user|
-    - invisible_projects_count = user.projects.invisible.count
-    - visible_projects_count = user.projects.count - invisible_projects_count
+  .row.panel-transparent
+    - @users.each do |user|
+      - invisible_projects_count = user.projects.invisible.count
+      - visible_projects_count = user.projects.count - invisible_projects_count
 
-    a.profile-block href=profile_path(username: user.username) target='_blank'
-      .created_at= "#{time_ago_in_words user.created_at} ago"
+      .col-md-6.col-lg-4
+        .user.panel-block
+          a href=profile_path(username: user.username) target='_blank'
+            = render 'components/avatar', user: user
 
-      .username
-        i.fa.fa-user
-        = user.username
+            div
+              |  @
+              = user.username
 
-      .email
-        i.fa.fa-at
-        = user.email
+          a href=admin_user_path(user)
+            = render 'components/score', score: user.score
 
-      - if user.domain.present?
-        .domain
-          i.fa.fa-globe
-          = user.domain
-
-      .projects
-        span class='badge badge-info'
-          = visible_projects_count
-          |  visible
-
-        span class='badge badge-default'
-          = invisible_projects_count
-          |  hidden
-
+            .created_at
+              i.fa.fa-clock-o
+              = " #{time_ago_in_words user.created_at} ago"
 
   - if @users.total_pages > 1
     footer.panel-transparent

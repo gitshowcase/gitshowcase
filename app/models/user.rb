@@ -33,4 +33,32 @@ class User < ApplicationRecord
     return UrlHelper.url(domain) if domain && domain_allowed?
     Rails.application.routes.url_helpers.profile_url(host: ENV['APP_DOMAIN'], username: username)
   end
+
+  def metrics
+    skills_value = (skills || {}).size * 3
+    skills_value = 0 if (skills || {}).values.uniq == [UserSkillService::DEFAULT_SKILL_MASTERY]
+
+    {
+        name: name.present?,
+        cover: cover.present?,
+        bio: bio.present?,
+        role: role.present? && role != 'Jedi Developer',
+        location: location.present?,
+        skills: skills_value,
+        website: (domain.present? && domain_allowed?) || website.present?,
+        socials: (socials.size - 1) * 5,
+        projects: projects.count * 3
+    }
+  end
+
+  def score
+    total = 0
+
+    metrics.each do |_, value|
+      value = value ? 10 : 0 unless value.is_a? Numeric
+      total += [value, 10].min
+    end
+
+    total.to_f / metrics.size
+  end
 end

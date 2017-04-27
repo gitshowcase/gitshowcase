@@ -6,7 +6,7 @@
 
   .panel-transparent.list-group
     - @plans.each do |plan|
-      a.list-group-item href=admin_plan_path(plan) target='_blank' style='display: block'
+      a.list-group-item href=admin_plan_path(plan) style='display: block'
         i.fa.fa-leaf
         = " #{plan.name}"
         .pull-right
