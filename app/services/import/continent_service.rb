@@ -1,6 +1,4 @@
 class Import::ContinentService < ImportService
-  FILENAME = 'continents'
-
   CONTINENTS = {
       AF: 'Africa',
       AS: 'Asia',
@@ -12,8 +10,7 @@ class Import::ContinentService < ImportService
   }
 
   def import
-    records = YAML.load_file(path(FILENAME))
-    records.each do |record|
+    yaml_records.each do |record|
       Continent.find_or_create_by(abbreviation: record['abbreviation']) do |continent|
         continent.name = record['name']
       end
@@ -21,6 +18,12 @@ class Import::ContinentService < ImportService
   end
 
   def export
-    export_yaml(FILENAME, Continent.order(:name).select(:abbreviation, :name))
+    export_yaml Continent.order(:name).select(:abbreviation, :name)
+  end
+
+  protected
+
+  def self.filename
+    'continents'
   end
 end

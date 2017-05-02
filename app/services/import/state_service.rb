@@ -1,11 +1,8 @@
 class Import::StateService < ImportService
-  FILENAME = 'states'
-
   def import
     countries = Hash[Country.all.map { |country| [country.abbreviation, country.id] }]
 
-    records = YAML.load_file(path(FILENAME))
-    states = records.map do |record|
+    states = yaml_records.map do |record|
       State.new(
           abbreviation: record['abbreviation'],
           name: record['name'],
@@ -20,6 +17,12 @@ class Import::StateService < ImportService
   def export
     fields = :abbreviation, :name, 'countries.abbreviation as country'
     data = State.order(:name).joins(:country).select fields
-    export_yaml(FILENAME, data)
+    export_yaml data
+  end
+
+  protected
+
+  def self.filename
+    'states'
   end
 end

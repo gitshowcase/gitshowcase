@@ -1,17 +1,21 @@
 class GeoService < ApplicationService
-  def import
-    Import::ContinentService.new.import
-    Import::CountryService.new.import
-    Import::StateService.new.import
-    Import::TimezoneService.new.import
-    Import::CityService.new.import
+  def self.import
+    instances.map(&:import)
   end
 
-  def export
-    Import::ContinentService.new.export
-    Import::CountryService.new.export
-    Import::StateService.new.export
-    Import::TimezoneService.new.export
-    Import::CityService.new.export
+  def self.export
+    instances.map(&:export)
+  end
+
+  private
+
+  def self.instances
+    @instances ||= [
+        Import::ContinentService,
+        Import::CountryService,
+        Import::StateService,
+        Import::TimezoneService,
+        Import::CityService
+    ].map(&:new)
   end
 end

@@ -1,6 +1,4 @@
 class Import::CityService < ImportService
-  FILENAME = 'cities'
-
   def import
     countries = Hash[Country.select(:id, :abbreviation).map { |country| [country.abbreviation, country.id] }]
     timezones = Hash[Timezone.select(:id, :slug).map { |timezone| [timezone.slug, timezone.id] }]
@@ -11,8 +9,7 @@ class Import::CityService < ImportService
 
     states = Hash[states_result]
 
-    records = YAML.load_file(path(FILENAME))
-    cities = records.map do |record|
+    cities = yaml_records.map do |record|
       country = record['country']
 
       City.new(
@@ -37,6 +34,12 @@ class Import::CityService < ImportService
     fields = :name, :key, :full_name, :latitude, :longitude, :population, :capital,
         'states.abbreviation as state', 'countries.abbreviation as country', 'timezones.slug as timezone'
     data = City.order(:name).joins(:country).left_joins(:state).left_joins(:timezone).select fields
-    export_yaml(FILENAME, data)
+    export_yaml data
+  end
+
+  protected
+
+  def self.filename
+    'cities'
   end
 end

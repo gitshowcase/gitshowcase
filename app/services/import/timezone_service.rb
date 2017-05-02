@@ -1,11 +1,8 @@
 class Import::TimezoneService < ImportService
-  FILENAME = 'timezones'
-
   def import
     countries = Hash[Country.all.map { |country| [country.abbreviation, country.id] }]
 
-    records = YAML.load_file(path(FILENAME))
-    timezones = records.map do |record|
+    timezones = yaml_records.map do |record|
       Timezone.new(
           slug: record['slug'],
           name: record['name'],
@@ -22,6 +19,12 @@ class Import::TimezoneService < ImportService
   def export
     fields = :slug, :name, :offset_1, :offset_2, 'countries.abbreviation as country'
     data = Timezone.order(:slug).joins(:country).select fields
-    export_yaml(FILENAME, data)
+    export_yaml data
+  end
+
+  protected
+
+  def self.filename
+    'timezones'
   end
 end
