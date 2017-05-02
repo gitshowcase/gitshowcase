@@ -1,0 +1,8509 @@
+---
+- abbreviation: AC
+  name: AC
+  country: BR
+- abbreviation: AGS
+  name: AGS
+  country: MX
+- abbreviation: AK
+  name: AK
+  country: US
+- abbreviation: AL
+  name: AL
+  country: BR
+- abbreviation: AL
+  name: AL
+  country: US
+- abbreviation: AM
+  name: AM
+  country: BR
+- abbreviation: AP
+  name: AP
+  country: BR
+- abbreviation: AR
+  name: AR
+  country: US
+- abbreviation: AG
+  name: Aargau
+  country: CH
+- abbreviation: Abia
+  name: Abia
+  country: NG
+- abbreviation: AB
+  name: Abia State
+  country: NG
+- abbreviation: Abidjan
+  name: Abidjan
+  country: CI
+- abbreviation: Abomey
+  name: Abomey
+  country: BJ
+- abbreviation: Abruzzi
+  name: Abruzzi
+  country: IT
+- abbreviation: Absheron-Guba
+  name: Absheron-Guba
+  country: AZ
+- abbreviation: Abu Dhabi
+  name: Abu Dhabi
+  country: AE
+- abbreviation: AZ
+  name: Abu Dhabi
+  country: AE
+- abbreviation: Aceh
+  name: Aceh
+  country: ID
+- abbreviation: Ad Dakhliyah
+  name: Ad Dakhliyah
+  country: OM
+- abbreviation: Ad Damazin
+  name: Ad Damazin
+  country: SD
+- abbreviation: Ad Damer
+  name: Ad Damer
+  country: SD
+- abbreviation: Ad Dinder
+  name: Ad Dinder
+  country: SD
+- abbreviation: Ad Douiem
+  name: Ad Douiem
+  country: SD
+- abbreviation: AD
+  name: Adamaoua
+  country: CM
+- abbreviation: Adamawa
+  name: Adamawa
+  country: NG
+- abbreviation: AD
+  name: Adamawa
+  country: NG
+- abbreviation: Adami Tulu Jido Kombolcha
+  name: Adami Tulu Jido Kombolcha
+  country: ET
+- abbreviation: Adana
+  name: Adana
+  country: TR
+- abbreviation: AD
+  name: Aden
+  country: YE
+- abbreviation: Adh Dhahirah
+  name: Adh Dhahirah
+  country: OM
+- abbreviation: Adiyaman
+  name: Adiyaman
+  country: TR
+- abbreviation: Adjumani
+  name: Adjumani
+  country: UG
+- abbreviation: Adolana Wadera
+  name: Adolana Wadera
+  country: ET
+- abbreviation: Adrar
+  name: Adrar
+  country: DZ
+- abbreviation: AF
+  name: Afar Region
+  country: ET
+- abbreviation: Afghanistan
+  name: Afghanistan
+  country: AF
+- abbreviation: Afgoi
+  name: Afgoi
+  country: SO
+- abbreviation: Afyonkarahisar
+  name: Afyonkarahisar
+  country: TR
+- abbreviation: Agadez
+  name: Agadez
+  country: NE
+- abbreviation: Agri
+  name: Agri
+  country: TR
+- abbreviation: AGU
+  name: Aguascalientes
+  country: MX
+- abbreviation: Ahmadi
+  name: Ahmadi
+  country: KW
+- abbreviation: Aichi
+  name: Aichi
+  country: JP
+- abbreviation: Aisen of Gral. C. Ibáñez del Campo
+  name: Aisen of Gral. C. Ibáñez del Campo
+  country: CL
+- abbreviation: Ajloun Governorate
+  name: Ajloun Governorate
+  country: JO
+- abbreviation: Ajman
+  name: Ajman
+  country: AE
+- abbreviation: Akita
+  name: Akita
+  country: JP
+- abbreviation: Aksaray
+  name: Aksaray
+  country: TR
+- abbreviation: Akwa Ibom
+  name: Akwa Ibom
+  country: NG
+- abbreviation: AK
+  name: Akwa Ibom State
+  country: NG
+- abbreviation: Al Aqaba Governorate
+  name: Al Aqaba Governorate
+  country: JO
+- abbreviation: KU
+  name: Al Asimah
+  country: KW
+- abbreviation: AH
+  name: Al Aḩmadī
+  country: KW
+- abbreviation: Al Balqa Governorate
+  name: Al Balqa Governorate
+  country: JO
+- abbreviation: Al Basrah
+  name: Al Basrah
+  country: IQ
+- abbreviation: Al Batinah North
+  name: Al Batinah North
+  country: OM
+- abbreviation: Al Batinah South
+  name: Al Batinah South
+  country: OM
+- abbreviation: Al Bayda City
+  name: Al Bayda City
+  country: YE
+- abbreviation: Al Buraymi
+  name: Al Buraymi
+  country: OM
+- abbreviation: Al Butnan
+  name: Al Butnan
+  country: LY
+- abbreviation: Al Deain
+  name: Al Deain
+  country: SD
+- abbreviation: Al Fallujah
+  name: Al Fallujah
+  country: IQ
+- abbreviation: FA
+  name: Al Farwaniyah
+  country: KW
+- abbreviation: Al Fasher
+  name: Al Fasher
+  country: SD
+- abbreviation: Al Gadaref
+  name: Al Gadaref
+  country: SD
+- abbreviation: Al Hai
+  name: Al Hai
+  country: IQ
+- abbreviation: Al Hamdaniyah
+  name: Al Hamdaniyah
+  country: IQ
+- abbreviation: Al Hudaydah
+  name: Al Hudaydah
+  country: YE
+- abbreviation: Al Jabal Al Akhdar
+  name: Al Jabal Al Akhdar
+  country: LY
+- abbreviation: Al Jabal Al Gharbi
+  name: Al Jabal Al Gharbi
+  country: LY
+- abbreviation: Al Jabalian
+  name: Al Jabalian
+  country: SD
+- abbreviation: Al Jouf
+  name: Al Jouf
+  country: SA
+- abbreviation: Al Jufrah
+  name: Al Jufrah
+  country: LY
+- abbreviation: Al Kufrah
+  name: Al Kufrah
+  country: LY
+- abbreviation: Al Mafraq Governorate
+  name: Al Mafraq Governorate
+  country: JO
+- abbreviation: Al Mahagil
+  name: Al Mahagil
+  country: SD
+- abbreviation: Al Manama
+  name: Al Manama
+  country: BH
+- abbreviation: Al Manathera
+  name: Al Manathera
+  country: IQ
+- abbreviation: Al Marj
+  name: Al Marj
+  country: LY
+- abbreviation: Al Mukalla City
+  name: Al Mukalla City
+  country: YE
+- abbreviation: Al Muqdadiyah
+  name: Al Muqdadiyah
+  country: IQ
+- abbreviation: Al Murgub
+  name: Al Murgub
+  country: LY
+- abbreviation: Al Qaseem
+  name: Al Qaseem
+  country: SA
+- abbreviation: Al Roseires
+  name: Al Roseires
+  country: SD
+- abbreviation: Al Samawa
+  name: Al Samawa
+  country: IQ
+- abbreviation: Al Shatra
+  name: Al Shatra
+  country: IQ
+- abbreviation: Al Tafilah Governorate
+  name: Al Tafilah Governorate
+  country: JO
+- abbreviation: Al Wahat
+  name: Al Wahat
+  country: LY
+- abbreviation: WA
+  name: Al Wakrah
+  country: QA
+- abbreviation: Al Zarqa Governorate
+  name: Al Zarqa Governorate
+  country: JO
+- abbreviation: Al Zubair
+  name: Al Zubair
+  country: IQ
+- abbreviation: Al-Suwaira
+  name: Al-Suwaira
+  country: IQ
+- abbreviation: Alaba
+  name: Alaba
+  country: ET
+- abbreviation: AB
+  name: Alberta
+  country: CA
+- abbreviation: Aleppo
+  name: Aleppo
+  country: SY
+- abbreviation: HL
+  name: Aleppo Governorate
+  country: SY
+- abbreviation: ALX
+  name: Alexandria
+  country: EG
+- abbreviation: Algiers
+  name: Algiers
+  country: DZ
+- abbreviation: Ali Sabieh
+  name: Ali Sabieh
+  country: DJ
+- abbreviation: Almati oblisi
+  name: Almati oblisi
+  country: KZ
+- abbreviation: ALM
+  name: Almaty Oblysy
+  country: KZ
+- abbreviation: ALA
+  name: Almaty Qalasy
+  country: KZ
+- abbreviation: Alsace-Champagne-Ardenne-Lorraine
+  name: Alsace-Champagne-Ardenne-Lorraine
+  country: FR
+- abbreviation: Alta Verapaz
+  name: Alta Verapaz
+  country: GT
+- abbreviation: ALT
+  name: Altai Krai
+  country: RU
+- abbreviation: AL
+  name: Alytaus apskritis
+  country: LT
+- abbreviation: Am-Timan
+  name: Am-Timan
+  country: TD
+- abbreviation: Amajyaruguru
+  name: Amajyaruguru
+  country: RW
+- abbreviation: Amajyepfo
+  name: Amajyepfo
+  country: RW
+- abbreviation: Amambay
+  name: Amambay
+  country: PY
+- abbreviation: Amara
+  name: Amara
+  country: IQ
+- abbreviation: Amasya
+  name: Amasya
+  country: TR
+- abbreviation: Amazonas
+  name: Amazonas
+  country: PE
+- abbreviation: AMA
+  name: Amazonas
+  country: PE
+- abbreviation: Amazonas
+  name: Amazonas
+  country: VE
+- abbreviation: Ambalavao
+  name: Ambalavao
+  country: MG
+- abbreviation: Ambanja
+  name: Ambanja
+  country: MG
+- abbreviation: Ambatofinandrahana
+  name: Ambatofinandrahana
+  country: MG
+- abbreviation: Ambatolampy
+  name: Ambatolampy
+  country: MG
+- abbreviation: Ambatondrazaka
+  name: Ambatondrazaka
+  country: MG
+- abbreviation: Ambilobe
+  name: Ambilobe
+  country: MG
+- abbreviation: Ambo
+  name: Ambo
+  country: ET
+- abbreviation: Amboasary-Atsimo
+  name: Amboasary-Atsimo
+  country: MG
+- abbreviation: Ambositra
+  name: Ambositra
+  country: MG
+- abbreviation: Ambovombe-Androy
+  name: Ambovombe-Androy
+  country: MG
+- abbreviation: AM
+  name: Amhara
+  country: ET
+- abbreviation: AM
+  name: Amman
+  country: JO
+- abbreviation: Amman Governorate
+  name: Amman Governorate
+  country: JO
+- abbreviation: Ampanihy
+  name: Ampanihy
+  country: MG
+- abbreviation: Amparafaravola
+  name: Amparafaravola
+  country: MG
+- abbreviation: Amran
+  name: Amran
+  country: YE
+- abbreviation: AMU
+  name: Amurskaya Oblast'
+  country: RU
+- abbreviation: An Giang
+  name: An Giang
+  country: VN
+- abbreviation: NA
+  name: An Najaf
+  country: IQ
+- abbreviation: An Nuqat Al Khams
+  name: An Nuqat Al Khams
+  country: LY
+- abbreviation: Ana
+  name: Ana
+  country: IQ
+- abbreviation: Anambra
+  name: Anambra
+  country: NG
+- abbreviation: ANC
+  name: Ancash
+  country: PE
+- abbreviation: AN
+  name: Andalusia
+  country: ES
+- abbreviation: Andalusia
+  name: Andalusia
+  country: ES
+- abbreviation: AP
+  name: Andhra Pradesh
+  country: IN
+- abbreviation: Andijon
+  name: Andijon
+  country: UZ
+- abbreviation: Anhui
+  name: Anhui
+  country: CN
+- abbreviation: Ankara
+  name: Ankara
+  country: TR
+- abbreviation: Ankazoabo
+  name: Ankazoabo
+  country: MG
+- abbreviation: Annaba
+  name: Annaba
+  country: DZ
+- abbreviation: Antalaha
+  name: Antalaha
+  country: MG
+- abbreviation: Antalya
+  name: Antalya
+  country: TR
+- abbreviation: Antanifotsy
+  name: Antanifotsy
+  country: MG
+- abbreviation: ANT
+  name: Antioquia
+  country: CO
+- abbreviation: Antioquia
+  name: Antioquia
+  country: CO
+- abbreviation: AN
+  name: Antofagasta
+  country: CL
+- abbreviation: Antsirabe
+  name: Antsirabe
+  country: MG
+- abbreviation: Antsiranana
+  name: Antsiranana
+  country: MG
+- abbreviation: Anzoategui
+  name: Anzoategui
+  country: VE
+- abbreviation: Aného
+  name: Aného
+  country: TG
+- abbreviation: Aomori
+  name: Aomori
+  country: JP
+- abbreviation: AR
+  name: Appenzell Ausserrhoden
+  country: CH
+- abbreviation: Apulia
+  name: Apulia
+  country: IT
+- abbreviation: Apure
+  name: Apure
+  country: VE
+- abbreviation: APU
+  name: Apurimac
+  country: PE
+- abbreviation: AKM
+  name: Aqmola Oblysy
+  country: KZ
+- abbreviation: Aqmola oblisi
+  name: Aqmola oblisi
+  country: KZ
+- abbreviation: Aqtöbe oblisi
+  name: Aqtöbe oblisi
+  country: KZ
+- abbreviation: Aquitaine-Limousin-Poitou-Charentes
+  name: Aquitaine-Limousin-Poitou-Charentes
+  country: FR
+- abbreviation: Ar Ramadi
+  name: Ar Ramadi
+  country: IQ
+- abbreviation: Ar Raqqah
+  name: Ar Raqqah
+  country: SY
+- abbreviation: AR
+  name: Arad
+  country: RO
+- abbreviation: AG
+  name: Aragatsotni Marz
+  country: AM
+- abbreviation: AR
+  name: Aragon
+  country: ES
+- abbreviation: Aragon
+  name: Aragon
+  country: ES
+- abbreviation: Aragua
+  name: Aragua
+  country: VE
+- abbreviation: Aran
+  name: Aran
+  country: AZ
+- abbreviation: Ararat
+  name: Ararat
+  country: AM
+- abbreviation: Arauca
+  name: Arauca
+  country: CO
+- abbreviation: Arba Minch Zuria
+  name: Arba Minch Zuria
+  country: ET
+- abbreviation: ARE
+  name: Arequipa
+  country: PE
+- abbreviation: Arequipa
+  name: Arequipa
+  country: PE
+- abbreviation: Arges
+  name: Arges
+  country: RO
+- abbreviation: AZ
+  name: Arizona
+  country: US
+- abbreviation: ARK
+  name: Arkhangelskaya
+  country: RU
+- abbreviation: Armavir
+  name: Armavir
+  country: AM
+- abbreviation: Artemisa
+  name: Artemisa
+  country: CU
+- abbreviation: Arua
+  name: Arua
+  country: UG
+- abbreviation: Aruba
+  name: Aruba
+  country: AW
+- abbreviation: AR
+  name: Arunachal Pradesh
+  country: IN
+- abbreviation: As Sulaymaniyah
+  name: As Sulaymaniyah
+  country: IQ
+- abbreviation: As Suwayda
+  name: As Suwayda
+  country: SY
+- abbreviation: SUZ
+  name: As Suways
+  country: EG
+- abbreviation: Aseer
+  name: Aseer
+  country: SA
+- abbreviation: Ash Sharqiyah North
+  name: Ash Sharqiyah North
+  country: OM
+- abbreviation: Ash Sharqiyah South
+  name: Ash Sharqiyah South
+  country: OM
+- abbreviation: Ashanti
+  name: Ashanti
+  country: GH
+- abbreviation: AH
+  name: Ashanti Region
+  country: GH
+- abbreviation: AS
+  name: Assam
+  country: IN
+- abbreviation: AST
+  name: Astrakhanskaya Oblast'
+  country: RU
+- abbreviation: Aswan
+  name: Aswan
+  country: EG
+- abbreviation: Asyout
+  name: Asyout
+  country: EG
+- abbreviation: AT
+  name: Atacama
+  country: CL
+- abbreviation: Atacama
+  name: Atacama
+  country: CL
+- abbreviation: Atakpamé
+  name: Atakpamé
+  country: TG
+- abbreviation: Ataq
+  name: Ataq
+  country: YE
+- abbreviation: Atbara
+  name: Atbara
+  country: SD
+- abbreviation: Atirau oblisi
+  name: Atirau oblisi
+  country: KZ
+- abbreviation: Atlantico
+  name: Atlantico
+  country: CO
+- abbreviation: AQ
+  name: Atlantique Department
+  country: BJ
+- abbreviation: ATL
+  name: Atlántico
+  country: CO
+- abbreviation: Atlántida
+  name: Atlántida
+  country: HN
+- abbreviation: Attiki
+  name: Attiki
+  country: GR
+- abbreviation: ATY
+  name: Atyrau Oblysy
+  country: KZ
+- abbreviation: AUK
+  name: Auckland
+  country: NZ
+- abbreviation: Auckland
+  name: Auckland
+  country: NZ
+- abbreviation: Autonoma of Balearic Islands
+  name: Autonoma of Balearic Islands
+  country: ES
+- abbreviation: VO
+  name: Autonomna Pokrajina Vojvodina
+  country: RS
+- abbreviation: Autonomous Reg. in Muslim Mindanao
+  name: Autonomous Reg. in Muslim Mindanao
+  country: PH
+- abbreviation: Autonomía de La Rioja
+  name: Autonomía de La Rioja
+  country: ES
+- abbreviation: Auvergne-Rhone-Alpes
+  name: Auvergne-Rhone-Alpes
+  country: FR
+- abbreviation: Awasa
+  name: Awasa
+  country: ET
+- abbreviation: AYA
+  name: Ayacucho
+  country: PE
+- abbreviation: Aydin
+  name: Aydin
+  country: TR
+- abbreviation: AI
+  name: Aysen
+  country: CL
+- abbreviation: Az Zawiyah
+  name: Az Zawiyah
+  country: LY
+- abbreviation: JK
+  name: Azad Kashmir
+  country: PK
+- abbreviation: Azua
+  name: Azua
+  country: DO
+- abbreviation: Aïn Defla
+  name: Aïn Defla
+  country: DZ
+- abbreviation: Aïn Témouchent
+  name: Aïn Témouchent
+  country: DZ
+- abbreviation: BC
+  name: BC
+  country: MX
+- abbreviation: BR
+  name: BR
+  country: IN
+- abbreviation: BUSAN
+  name: BUSAN
+  country: KR
+- abbreviation: Ba Ria-Vung Tau
+  name: Ba Ria-Vung Tau
+  country: VN
+- abbreviation: Ba'Quba
+  name: Ba'Quba
+  country: IQ
+- abbreviation: Baar-Dheere
+  name: Baar-Dheere
+  country: SO
+- abbreviation: Bac Lieu
+  name: Bac Lieu
+  country: VN
+- abbreviation: Bac Ninh
+  name: Bac Ninh
+  country: VN
+- abbreviation: Bacau
+  name: Bacau
+  country: RO
+- abbreviation: Baden-Württemberg
+  name: Baden-Württemberg
+  country: DE
+- abbreviation: BW
+  name: Baden-Württemberg Region
+  country: DE
+- abbreviation: Bafoulabé
+  name: Bafoulabé
+  country: ML
+- abbreviation: Bagmati
+  name: Bagmati
+  country: NP
+- abbreviation: BA
+  name: Bahia
+  country: BR
+- abbreviation: Baiji
+  name: Baiji
+  country: IQ
+- abbreviation: BCS
+  name: Baja California Sur
+  country: MX
+- abbreviation: Baja Verapaz
+  name: Baja Verapaz
+  country: GT
+- abbreviation: Bajil
+  name: Bajil
+  country: YE
+- abbreviation: Baku
+  name: Baku
+  country: AZ
+- abbreviation: Balad
+  name: Balad
+  country: IQ
+- abbreviation: RA
+  name: Baladiyat ar Rayyan
+  country: QA
+- abbreviation: Baladrooz
+  name: Baladrooz
+  country: IQ
+- abbreviation: IB
+  name: Balearic Islands
+  country: ES
+- abbreviation: BA
+  name: Bali
+  country: ID
+- abbreviation: Bali
+  name: Bali
+  country: ID
+- abbreviation: Balikesir
+  name: Balikesir
+  country: TR
+- abbreviation: BA
+  name: Balochistan
+  country: PK
+- abbreviation: Balti
+  name: Balti
+  country: MD
+- abbreviation: Bambari
+  name: Bambari
+  country: CF
+- abbreviation: Bamboutos
+  name: Bamboutos
+  country: CM
+- abbreviation: Banamba
+  name: Banamba
+  country: ML
+- abbreviation: Bandundu
+  name: Bandundu
+  country: CD
+- abbreviation: Banfora
+  name: Banfora
+  country: BF
+- abbreviation: BB
+  name: Bangka–Belitung Islands
+  country: ID
+- abbreviation: Bani Sueif
+  name: Bani Sueif
+  country: EG
+- abbreviation: BC
+  name: Banskobystricky kraj
+  country: SK
+- abbreviation: Banskobystrický kraj
+  name: Banskobystrický kraj
+  country: SK
+- abbreviation: Banteay Meanchey
+  name: Banteay Meanchey
+  country: KH
+- abbreviation: Banten
+  name: Banten
+  country: ID
+- abbreviation: BT
+  name: Banten
+  country: ID
+- abbreviation: Bara
+  name: Bara
+  country: SD
+- abbreviation: BA
+  name: Baranya
+  country: HU
+- abbreviation: Baranya
+  name: Baranya
+  country: HU
+- abbreviation: Barinas
+  name: Barinas
+  country: VE
+- abbreviation: Barisal
+  name: Barisal
+  country: BD
+- abbreviation: Bas-Congo
+  name: Bas-Congo
+  country: CD
+- abbreviation: Bas-Sassandra
+  name: Bas-Sassandra
+  country: CI
+- abbreviation: BS
+  name: Basel-City
+  country: CH
+- abbreviation: BL
+  name: Basel-Landschaft
+  country: CH
+- abbreviation: BA
+  name: Bashkortostan
+  country: RU
+- abbreviation: PV
+  name: Basque Country
+  country: ES
+- abbreviation: Basque Country
+  name: Basque Country
+  country: ES
+- abbreviation: Bassar
+  name: Bassar
+  country: TG
+- abbreviation: Bata
+  name: Bata
+  country: GQ
+- abbreviation: Batis Qazaqstan oblisi
+  name: Batis Qazaqstan oblisi
+  country: KZ
+- abbreviation: Batman
+  name: Batman
+  country: TR
+- abbreviation: Batna
+  name: Batna
+  country: DZ
+- abbreviation: Battambang
+  name: Battambang
+  country: KH
+- abbreviation: Batumi
+  name: Batumi
+  country: GE
+- abbreviation: ZAP
+  name: Batys Qazaqstan Oblysy
+  country: KZ
+- abbreviation: Bauchi
+  name: Bauchi
+  country: NG
+- abbreviation: Bavaria
+  name: Bavaria
+  country: DE
+- abbreviation: BY
+  name: Bavaria
+  country: DE
+- abbreviation: BOP
+  name: Bay of Plenty
+  country: NZ
+- abbreviation: Bayan-Olgii
+  name: Bayan-Olgii
+  country: MN
+- abbreviation: Baydhabo
+  name: Baydhabo
+  country: SO
+- abbreviation: BAY
+  name: Bayqongyr Qalasy
+  country: KZ
+- abbreviation: Bayt Al Faqih
+  name: Bayt Al Faqih
+  country: YE
+- abbreviation: Beheira
+  name: Beheira
+  country: EG
+- abbreviation: Beijing
+  name: Beijing
+  country: CN
+- abbreviation: Beirut
+  name: Beirut
+  country: LB
+- abbreviation: BE
+  name: Bekes
+  country: HU
+- abbreviation: BE
+  name: Belait District
+  country: BN
+- abbreviation: Beled Weyn
+  name: Beled Weyn
+  country: SO
+- abbreviation: BEL
+  name: Belgorodskaya Oblast'
+  country: RU
+- abbreviation: BZ
+  name: Belize District
+  country: BZ
+- abbreviation: Ben Arous
+  name: Ben Arous
+  country: TN
+- abbreviation: Ben Tre
+  name: Ben Tre
+  country: VN
+- abbreviation: Bena
+  name: Bena
+  country: ET
+- abbreviation: Bender
+  name: Bender
+  country: MD
+- abbreviation: Benghazi
+  name: Benghazi
+  country: LY
+- abbreviation: Bengkulu
+  name: Bengkulu
+  country: ID
+- abbreviation: Bengo
+  name: Bengo
+  country: AO
+- abbreviation: BGU
+  name: Benguela
+  country: AO
+- abbreviation: Benue
+  name: Benue
+  country: NG
+- abbreviation: BE
+  name: Benue State
+  country: NG
+- abbreviation: Beqaa
+  name: Beqaa
+  country: LB
+- abbreviation: Berat
+  name: Berat
+  country: AL
+- abbreviation: Berbera
+  name: Berbera
+  country: SO
+- abbreviation: Berbérati
+  name: Berbérati
+  country: CF
+- abbreviation: Berlin
+  name: Berlin
+  country: DE
+- abbreviation: BE
+  name: Bern
+  country: CH
+- abbreviation: Betafo
+  name: Betafo
+  country: MG
+- abbreviation: Betioky Atsimo
+  name: Betioky Atsimo
+  country: MG
+- abbreviation: Bheri
+  name: Bheri
+  country: NP
+- abbreviation: Bicol Region
+  name: Bicol Region
+  country: PH
+- abbreviation: BH
+  name: Bihor
+  country: RO
+- abbreviation: Bimbo
+  name: Bimbo
+  country: CF
+- abbreviation: Binh Thuan
+  name: Binh Thuan
+  country: VN
+- abbreviation: Biobio
+  name: Biobio
+  country: CL
+- abbreviation: Biskra
+  name: Biskra
+  country: DZ
+- abbreviation: Bistrita-Nasaud
+  name: Bistrita-Nasaud
+  country: RO
+- abbreviation: Bitlis
+  name: Bitlis
+  country: TR
+- abbreviation: Bizerte
+  name: Bizerte
+  country: TN
+- abbreviation: Bié
+  name: Bié
+  country: AO
+- abbreviation: Blida
+  name: Blida
+  country: DZ
+- abbreviation: Bo
+  name: Bo
+  country: SL
+- abbreviation: Boaco
+  name: Boaco
+  country: NI
+- abbreviation: Bohicon
+  name: Bohicon
+  country: BJ
+- abbreviation: Boké
+  name: Boké
+  country: GN
+- abbreviation: Bolivar
+  name: Bolivar
+  country: VE
+- abbreviation: Bolivar
+  name: Bolivar
+  country: CO
+- abbreviation: Boloso Sore
+  name: Boloso Sore
+  country: ET
+- abbreviation: Bolu
+  name: Bolu
+  country: TR
+- abbreviation: Bombali
+  name: Bombali
+  country: SL
+- abbreviation: BO
+  name: Bonaire
+  country: BQ
+- abbreviation: Bongor
+  name: Bongor
+  country: TD
+- abbreviation: Bordj Bou Arréridj
+  name: Bordj Bou Arréridj
+  country: DZ
+- abbreviation: Borno
+  name: Borno
+  country: NG
+- abbreviation: ARI
+  name: Borough of Arima
+  country: TT
+- abbreviation: BZ
+  name: Borsod-Abaúj-Zemplén
+  country: HU
+- abbreviation: Bosaaso
+  name: Bosaaso
+  country: SO
+- abbreviation: Bossangoa
+  name: Bossangoa
+  country: CF
+- abbreviation: Botosani
+  name: Botosani
+  country: RO
+- abbreviation: Bouar
+  name: Bouar
+  country: CF
+- abbreviation: NSA
+  name: Bougainville
+  country: PG
+- abbreviation: Bougouni
+  name: Bougouni
+  country: ML
+- abbreviation: Bouira
+  name: Bouira
+  country: DZ
+- abbreviation: Boumerdès
+  name: Boumerdès
+  country: DZ
+- abbreviation: Boyaca
+  name: Boyaca
+  country: CO
+- abbreviation: Boyo
+  name: Boyo
+  country: CM
+- abbreviation: Bozoum
+  name: Bozoum
+  country: CF
+- abbreviation: Braila
+  name: Braila
+  country: RO
+- abbreviation: Brandenburg
+  name: Brandenburg
+  country: DE
+- abbreviation: BB
+  name: Brandenburg
+  country: DE
+- abbreviation: Brasov
+  name: Brasov
+  country: RO
+- abbreviation: BL
+  name: Bratislavsky kraj
+  country: SK
+- abbreviation: HB
+  name: Bremen
+  country: DE
+- abbreviation: BR
+  name: Brest
+  country: BY
+- abbreviation: Brestskaya voblasts'
+  name: Brestskaya voblasts'
+  country: BY
+- abbreviation: Bria
+  name: Bria
+  country: CF
+- abbreviation: BC
+  name: British Columbia
+  country: CA
+- abbreviation: Brittany
+  name: Brittany
+  country: FR
+- abbreviation: Brong Ahafo
+  name: Brong Ahafo
+  country: GH
+- abbreviation: BA
+  name: Brong-Ahafo
+  country: GH
+- abbreviation: BRY
+  name: Bryanskaya Oblast'
+  country: RU
+- abbreviation: BRC
+  name: Brčko
+  country: BA
+- abbreviation: Buchanan
+  name: Buchanan
+  country: LR
+- abbreviation: Bucharest
+  name: Bucharest
+  country: RO
+- abbreviation: Budapest
+  name: Budapest
+  country: HU
+- abbreviation: Buenos Aires
+  name: Buenos Aires
+  country: AR
+- abbreviation: Buenos Aires Autonomous City
+  name: Buenos Aires Autonomous City
+  country: AR
+- abbreviation: Bui
+  name: Bui
+  country: CM
+- abbreviation: Buikwe
+  name: Buikwe
+  country: UG
+- abbreviation: BU
+  name: Bulawayo
+  country: ZW
+- abbreviation: Bungoma
+  name: Bungoma
+  country: KE
+- abbreviation: Bur Hacaba
+  name: Bur Hacaba
+  country: SO
+- abbreviation: Burao
+  name: Burao
+  country: SO
+- abbreviation: Burgundy-Franche-Comte
+  name: Burgundy-Franche-Comte
+  country: FR
+- abbreviation: Bursa
+  name: Bursa
+  country: TR
+- abbreviation: Busia
+  name: Busia
+  country: UG
+- abbreviation: Busia
+  name: Busia
+  country: KE
+- abbreviation: Buxoro
+  name: Buxoro
+  country: UZ
+- abbreviation: Buzau
+  name: Buzau
+  country: RO
+- abbreviation: Bács-Kiskun
+  name: Bács-Kiskun
+  country: HU
+- abbreviation: BK
+  name: Bács-Kiskun
+  country: HU
+- abbreviation: Béchar
+  name: Béchar
+  country: DZ
+- abbreviation: Béjaïa
+  name: Béjaïa
+  country: DZ
+- abbreviation: Békés
+  name: Békés
+  country: HU
+- abbreviation: Béni Mellal - Khénifra
+  name: Béni Mellal - Khénifra
+  country: MA
+- abbreviation: Bénoué
+  name: Bénoué
+  country: CM
+- abbreviation: BE
+  name: Bīnshangul Gumuz
+  country: ET
+- abbreviation: CAMP
+  name: CAMP
+  country: MX
+- abbreviation: CHIH
+  name: CHIH
+  country: MX
+- abbreviation: CHIS
+  name: CHIS
+  country: MX
+- abbreviation: CHUNGCHEONGBUKDO
+  name: CHUNGCHEONGBUKDO
+  country: KR
+- abbreviation: CHUNGCHEONGNAMDO
+  name: CHUNGCHEONGNAMDO
+  country: KR
+- abbreviation: CO
+  name: CO
+  country: US
+- abbreviation: COAH
+  name: COAH
+  country: MX
+- abbreviation: CT
+  name: CT
+  country: IN
+- abbreviation: CT
+  name: CT
+  country: US
+- abbreviation: Ca Mau
+  name: Ca Mau
+  country: VN
+- abbreviation: Caaguazú
+  name: Caaguazú
+  country: PY
+- abbreviation: CAB
+  name: Cabinda
+  country: AO
+- abbreviation: Cabo Delgado
+  name: Cabo Delgado
+  country: MZ
+- abbreviation: Cagayan Valley
+  name: Cagayan Valley
+  country: PH
+- abbreviation: CA
+  name: Cahul
+  country: MD
+- abbreviation: Cairo
+  name: Cairo
+  country: EG
+- abbreviation: CAJ
+  name: Cajamarca
+  country: PE
+- abbreviation: Calabarzon
+  name: Calabarzon
+  country: PH
+- abbreviation: Calabria
+  name: Calabria
+  country: IT
+- abbreviation: Caldas
+  name: Caldas
+  country: CO
+- abbreviation: CA
+  name: California
+  country: US
+- abbreviation: CAL
+  name: Callao
+  country: PE
+- abbreviation: Camagüey
+  name: Camagüey
+  country: CU
+- abbreviation: Campania
+  name: Campania
+  country: IT
+- abbreviation: CAM
+  name: Campeche
+  country: MX
+- abbreviation: Canakkale
+  name: Canakkale
+  country: TR
+- abbreviation: CN
+  name: Canary Islands
+  country: ES
+- abbreviation: Canary Islands
+  name: Canary Islands
+  country: ES
+- abbreviation: CA
+  name: Canelones
+  country: UY
+- abbreviation: Cankiri
+  name: Cankiri
+  country: TR
+- abbreviation: Cantabria
+  name: Cantabria
+  country: ES
+- abbreviation: CB
+  name: Cantabria
+  country: ES
+- abbreviation: Canterbury
+  name: Canterbury
+  country: NZ
+- abbreviation: CAN
+  name: Canterbury
+  country: NZ
+- abbreviation: Cao Bang
+  name: Cao Bang
+  country: VN
+- abbreviation: Capital
+  name: Capital
+  country: DK
+- abbreviation: Carabobo
+  name: Carabobo
+  country: VE
+- abbreviation: Caraga
+  name: Caraga
+  country: PH
+- abbreviation: Caras-Severin
+  name: Caras-Severin
+  country: RO
+- abbreviation: Carazo
+  name: Carazo
+  country: NI
+- abbreviation: Carchi
+  name: Carchi
+  country: EC
+- abbreviation: Carinthia
+  name: Carinthia
+  country: AT
+- abbreviation: Carnot
+  name: Carnot
+  country: CF
+- abbreviation: Casablanca - Settat
+  name: Casablanca - Settat
+  country: MA
+- abbreviation: Castilla and Leon
+  name: Castilla and Leon
+  country: ES
+- abbreviation: CL
+  name: Castille and León
+  country: ES
+- abbreviation: CM
+  name: Castille-La Mancha
+  country: ES
+- abbreviation: CT
+  name: Catalonia
+  country: ES
+- abbreviation: Catalonia
+  name: Catalonia
+  country: ES
+- abbreviation: Cauca
+  name: Cauca
+  country: CO
+- abbreviation: CY
+  name: Cayo District
+  country: BZ
+- abbreviation: Cañar
+  name: Cañar
+  country: EC
+- abbreviation: CE
+  name: Ceara
+  country: BR
+- abbreviation: Celje
+  name: Celje
+  country: SI
+- abbreviation: Central
+  name: Central
+  country: GH
+- abbreviation: Central
+  name: Central
+  country: LK
+- abbreviation: Central
+  name: Central
+  country: ZM
+- abbreviation: Central
+  name: Central
+  country: PY
+- abbreviation: ST
+  name: Central Bohemia
+  country: CZ
+- abbreviation: Central Denmark Region
+  name: Central Denmark Region
+  country: DK
+- abbreviation: CE
+  name: Central District
+  country: BW
+- abbreviation: Central Equatoria
+  name: Central Equatoria
+  country: SS
+- abbreviation: Central Federal District
+  name: Central Federal District
+  country: RU
+- abbreviation: JT
+  name: Central Java
+  country: ID
+- abbreviation: KT
+  name: Central Kalimantan
+  country: ID
+- abbreviation: Central Luzon
+  name: Central Luzon
+  country: PH
+- abbreviation: Central Region
+  name: Central Region
+  country: MW
+- abbreviation: CP
+  name: Central Region
+  country: GH
+- abbreviation: ST
+  name: Central Sulawesi
+  country: ID
+- abbreviation: Central Visayas
+  name: Central Visayas
+  country: PH
+- abbreviation: Centralna Srbija
+  name: Centralna Srbija
+  country: RS
+- abbreviation: CE
+  name: Centre
+  country: CM
+- abbreviation: Centre-Val de Loire
+  name: Centre-Val de Loire
+  country: FR
+- abbreviation: Cesar
+  name: Cesar
+  country: CO
+- abbreviation: CE
+  name: Ceuta
+  country: ES
+- abbreviation: Chachoengsao
+  name: Chachoengsao
+  country: TH
+- abbreviation: Chaco
+  name: Chaco
+  country: AR
+- abbreviation: CHA
+  name: Chaguanas
+  country: TT
+- abbreviation: Chaiyaphum
+  name: Chaiyaphum
+  country: TH
+- abbreviation: Chamchamal
+  name: Chamchamal
+  country: IQ
+- abbreviation: CH
+  name: Chandigarh
+  country: IN
+- abbreviation: CE
+  name: Chechnya
+  country: RU
+- abbreviation: CHE
+  name: Chelyabinsk
+  country: RU
+- abbreviation: Chernihivska Oblast
+  name: Chernihivska Oblast
+  country: UA
+- abbreviation: Chiang Mai
+  name: Chiang Mai
+  country: TH
+- abbreviation: Chiang Rai
+  name: Chiang Rai
+  country: TH
+- abbreviation: CHP
+  name: Chiapas
+  country: MX
+- abbreviation: Chiba
+  name: Chiba
+  country: JP
+- abbreviation: CHH
+  name: Chihuahua
+  country: MX
+- abbreviation: Chinandega
+  name: Chinandega
+  country: NI
+- abbreviation: Chiro
+  name: Chiro
+  country: ET
+- abbreviation: Chittagong
+  name: Chittagong
+  country: BD
+- abbreviation: Chlef
+  name: Chlef
+  country: DZ
+- abbreviation: Choco
+  name: Choco
+  country: CO
+- abbreviation: Choluteca
+  name: Choluteca
+  country: HN
+- abbreviation: Chon Buri
+  name: Chon Buri
+  country: TH
+- abbreviation: Chongqing
+  name: Chongqing
+  country: CN
+- abbreviation: Chontales
+  name: Chontales
+  country: NI
+- abbreviation: Chubut
+  name: Chubut
+  country: AR
+- abbreviation: CU
+  name: Chuvashia
+  country: RU
+- abbreviation: Chuy
+  name: Chuy
+  country: KG
+- abbreviation: Ciego de Ávila
+  name: Ciego de Ávila
+  country: CU
+- abbreviation: Cienfuegos
+  name: Cienfuegos
+  country: CU
+- abbreviation: FP
+  name: City of Freeport District
+  country: BS
+- abbreviation: SFO
+  name: City of San Fernando
+  country: TT
+- abbreviation: COA
+  name: Coahuila
+  country: MX
+- abbreviation: Cochabamba
+  name: Cochabamba
+  country: BO
+- abbreviation: Coimbra
+  name: Coimbra
+  country: PT
+- abbreviation: Cojedes
+  name: Cojedes
+  country: VE
+- abbreviation: COL
+  name: Colima
+  country: MX
+- abbreviation: CO
+  name: Colonia
+  country: UY
+- abbreviation: Colón
+  name: Colón
+  country: PA
+- abbreviation: Colón
+  name: Colón
+  country: HN
+- abbreviation: Comayagua
+  name: Comayagua
+  country: HN
+- abbreviation: Community of Madrid
+  name: Community of Madrid
+  country: ES
+- abbreviation: Comoé
+  name: Comoé
+  country: CI
+- abbreviation: Comè
+  name: Comè
+  country: BJ
+- abbreviation: Conakry
+  name: Conakry
+  country: GN
+- abbreviation: Concepción
+  name: Concepción
+  country: PY
+- abbreviation: CT
+  name: Constanta
+  country: RO
+- abbreviation: Constanta
+  name: Constanta
+  country: RO
+- abbreviation: Constantine
+  name: Constantine
+  country: DZ
+- abbreviation: Copperbelt
+  name: Copperbelt
+  country: ZM
+- abbreviation: Copán
+  name: Copán
+  country: HN
+- abbreviation: CO
+  name: Coquimbo
+  country: CL
+- abbreviation: Cordillera Administrative Region
+  name: Cordillera Administrative Region
+  country: PH
+- abbreviation: Cordoba
+  name: Cordoba
+  country: AR
+- abbreviation: Cordoba
+  name: Cordoba
+  country: CO
+- abbreviation: Corrientes
+  name: Corrientes
+  country: AR
+- abbreviation: Cortés
+  name: Cortés
+  country: HN
+- abbreviation: Corum
+  name: Corum
+  country: TR
+- abbreviation: County Dublin
+  name: County Dublin
+  country: IE
+- abbreviation: County Galway
+  name: County Galway
+  country: IE
+- abbreviation: County Limerick
+  name: County Limerick
+  country: IE
+- abbreviation: CV
+  name: Covasna
+  country: RO
+- abbreviation: Covè
+  name: Covè
+  country: BJ
+- abbreviation: Crete
+  name: Crete
+  country: GR
+- abbreviation: Crimea
+  name: Crimea
+  country: UA
+- abbreviation: Cross River
+  name: Cross River
+  country: NG
+- abbreviation: CR
+  name: Cross River State
+  country: NG
+- abbreviation: Crozierville
+  name: Crozierville
+  country: LR
+- abbreviation: CS
+  name: Csongrad megye
+  country: HU
+- abbreviation: Cuanza Norte
+  name: Cuanza Norte
+  country: AO
+- abbreviation: Cuanza Sul
+  name: Cuanza Sul
+  country: AO
+- abbreviation: CUN
+  name: Cundinamarca
+  country: CO
+- abbreviation: Cundinamarca
+  name: Cundinamarca
+  country: CO
+- abbreviation: Cuscatlan
+  name: Cuscatlan
+  country: SV
+- abbreviation: Cusco
+  name: Cusco
+  country: PE
+- abbreviation: CUS
+  name: Cusco
+  country: PE
+- abbreviation: DAEGU
+  name: DAEGU
+  country: KR
+- abbreviation: DC
+  name: DC
+  country: US
+- abbreviation: DE
+  name: DE
+  country: US
+- abbreviation: DF
+  name: DF
+  country: BR
+- abbreviation: DF
+  name: DF
+  country: MX
+- abbreviation: DGO
+  name: DGO
+  country: MX
+- abbreviation: DL
+  name: DL
+  country: IN
+- abbreviation: Dadjo-I
+  name: Dadjo-I
+  country: TD
+- abbreviation: DN
+  name: Dadra and Nagar Haveli
+  country: IN
+- abbreviation: Daerah Istimewa Yogyakarta
+  name: Daerah Istimewa Yogyakarta
+  country: ID
+- abbreviation: YO
+  name: Daerah Istimewa Yogyakarta
+  country: ID
+- abbreviation: DA
+  name: Dagestan
+  country: RU
+- abbreviation: Dakar
+  name: Dakar
+  country: SN
+- abbreviation: Dalarna County
+  name: Dalarna County
+  country: SE
+- abbreviation: Dale
+  name: Dale
+  country: ET
+- abbreviation: DD
+  name: Daman and Diu
+  country: IN
+- abbreviation: Damot Gale
+  name: Damot Gale
+  country: ET
+- abbreviation: Daqahlia
+  name: Daqahlia
+  country: EG
+- abbreviation: Dara
+  name: Dara
+  country: SY
+- abbreviation: Darnah
+  name: Darnah
+  country: LY
+- abbreviation: Davao Region
+  name: Davao Region
+  country: PH
+- abbreviation: Dayr Az Zawr
+  name: Dayr Az Zawr
+  country: SY
+- abbreviation: Debre Berhan
+  name: Debre Berhan
+  country: ET
+- abbreviation: Debre Markos
+  name: Debre Markos
+  country: ET
+- abbreviation: Debre Tabor
+  name: Debre Tabor
+  country: ET
+- abbreviation: Dededo
+  name: Dededo
+  country: GU
+- abbreviation: Dehloran
+  name: Dehloran
+  country: IQ
+- abbreviation: DE
+  name: Delta
+  country: NG
+- abbreviation: Delta
+  name: Delta
+  country: NG
+- abbreviation: Denguélé
+  name: Denguélé
+  country: CI
+- abbreviation: Denizli
+  name: Denizli
+  country: TR
+- abbreviation: AH
+  name: Departamento de Ahuachapan
+  country: SV
+- abbreviation: AV
+  name: Departamento de Alta Verapaz
+  country: GT
+- abbreviation: ARA
+  name: Departamento de Arauca
+  country: CO
+- abbreviation: AT
+  name: Departamento de Atlantida
+  country: HN
+- abbreviation: BOL
+  name: Departamento de Bolivar
+  country: CO
+- abbreviation: BOY
+  name: Departamento de Boyaca
+  country: CO
+- abbreviation: CAL
+  name: Departamento de Caldas
+  country: CO
+- abbreviation: CAS
+  name: Departamento de Casanare
+  country: CO
+- abbreviation: CM
+  name: Departamento de Chimaltenango
+  country: GT
+- abbreviation: CI
+  name: Departamento de Chinandega
+  country: NI
+- abbreviation: CQ
+  name: Departamento de Chiquimula
+  country: GT
+- abbreviation: CM
+  name: Departamento de Comayagua
+  country: HN
+- abbreviation: COR
+  name: Departamento de Cordoba
+  country: CO
+- abbreviation: CR
+  name: Departamento de Cortes
+  country: HN
+- abbreviation: DU
+  name: Departamento de Durazno
+  country: UY
+- abbreviation: EP
+  name: Departamento de El Paraiso
+  country: HN
+- abbreviation: ES
+  name: Departamento de Escuintla
+  country: GT
+- abbreviation: ES
+  name: Departamento de Esteli
+  country: NI
+- abbreviation: GR
+  name: Departamento de Granada
+  country: NI
+- abbreviation: GU
+  name: Departamento de Guatemala
+  country: GT
+- abbreviation: HU
+  name: Departamento de Huehuetenango
+  country: GT
+- abbreviation: IZ
+  name: Departamento de Izabal
+  country: GT
+- abbreviation: JI
+  name: Departamento de Jinotega
+  country: NI
+- abbreviation: LAG
+  name: Departamento de La Guajira
+  country: CO
+- abbreviation: LI
+  name: Departamento de La Libertad
+  country: SV
+- abbreviation: MS
+  name: Departamento de Masaya
+  country: NI
+- abbreviation: MT
+  name: Departamento de Matagalpa
+  country: NI
+- abbreviation: MOQ
+  name: Departamento de Moquegua
+  country: PE
+- abbreviation: NAR
+  name: Departamento de Narino
+  country: CO
+- abbreviation: NSA
+  name: Departamento de Norte de Santander
+  country: CO
+- abbreviation: NS
+  name: Departamento de Nueva Segovia
+  country: NI
+- abbreviation: QZ
+  name: Departamento de Quetzaltenango
+  country: GT
+- abbreviation: RE
+  name: Departamento de Retalhuleu
+  country: GT
+- abbreviation: RIS
+  name: Departamento de Risaralda
+  country: CO
+- abbreviation: RI
+  name: Departamento de Rivas
+  country: NI
+- abbreviation: SA
+  name: Departamento de Sacatepequez
+  country: GT
+- abbreviation: SA
+  name: Departamento de Salto
+  country: UY
+- abbreviation: SM
+  name: Departamento de San Marcos
+  country: GT
+- abbreviation: SM
+  name: Departamento de San Miguel
+  country: SV
+- abbreviation: SS
+  name: Departamento de San Salvador
+  country: SV
+- abbreviation: SA
+  name: Departamento de Santa Ana
+  country: SV
+- abbreviation: SB
+  name: Departamento de Santa Barbara
+  country: HN
+- abbreviation: SAN
+  name: Departamento de Santander
+  country: CO
+- abbreviation: SO
+  name: Departamento de Solola
+  country: GT
+- abbreviation: SO
+  name: Departamento de Sonsonate
+  country: SV
+- abbreviation: SUC
+  name: Departamento de Sucre
+  country: CO
+- abbreviation: TOL
+  name: Departamento de Tolima
+  country: CO
+- abbreviation: US
+  name: Departamento de Usulutan
+  country: SV
+- abbreviation: YO
+  name: Departamento de Yoro
+  country: HN
+- abbreviation: ZA
+  name: Departamento de Zacapa
+  country: GT
+- abbreviation: AMA
+  name: Departamento del Amazonas
+  country: CO
+- abbreviation: CAQ
+  name: Departamento del Caqueta
+  country: CO
+- abbreviation: CAU
+  name: Departamento del Cauca
+  country: CO
+- abbreviation: CES
+  name: Departamento del Cesar
+  country: CO
+- abbreviation: HUI
+  name: Departamento del Huila
+  country: CO
+- abbreviation: MAG
+  name: Departamento del Magdalena
+  country: CO
+- abbreviation: MET
+  name: Departamento del Meta
+  country: CO
+- abbreviation: PE
+  name: Departamento del Peten
+  country: GT
+- abbreviation: VAC
+  name: Departamento del Valle del Cauca
+  country: CO
+- abbreviation: OU
+  name: Departement de l'Ouest
+  country: HT
+- abbreviation: Dessie
+  name: Dessie
+  country: ET
+- abbreviation: Dhaka
+  name: Dhaka
+  country: BD
+- abbreviation: Dhamar City
+  name: Dhamar City
+  country: YE
+- abbreviation: Dhi As Sufal
+  name: Dhi As Sufal
+  country: YE
+- abbreviation: Diapaga
+  name: Diapaga
+  country: BF
+- abbreviation: Diffa
+  name: Diffa
+  country: NE
+- abbreviation: Dilling
+  name: Dilling
+  country: SD
+- abbreviation: Diourbel
+  name: Diourbel
+  country: SN
+- abbreviation: DD
+  name: Dire Dawa
+  country: ET
+- abbreviation: Distrito Nacional
+  name: Distrito Nacional
+  country: DO
+- abbreviation: Diwaniya
+  name: Diwaniya
+  country: IQ
+- abbreviation: Diyarbakir
+  name: Diyarbakir
+  country: TR
+- abbreviation: Dja-et-Lobo
+  name: Dja-et-Lobo
+  country: CM
+- abbreviation: Djelfa
+  name: Djelfa
+  country: DZ
+- abbreviation: Djougou
+  name: Djougou
+  country: BJ
+- abbreviation: Dnipropetrovska Oblast
+  name: Dnipropetrovska Oblast
+  country: UA
+- abbreviation: Dogbo
+  name: Dogbo
+  country: BJ
+- abbreviation: DJ
+  name: Dolj
+  country: RO
+- abbreviation: Donetsk
+  name: Donetsk
+  country: UA
+- abbreviation: Dong Thap
+  name: Dong Thap
+  country: VN
+- abbreviation: Dori
+  name: Dori
+  country: BF
+- abbreviation: Dosso
+  name: Dosso
+  country: NE
+- abbreviation: DR
+  name: Drochia
+  country: MD
+- abbreviation: Drâa - Tafilalet
+  name: Drâa - Tafilalet
+  country: MA
+- abbreviation: Duarte
+  name: Duarte
+  country: DO
+- abbreviation: Dubai
+  name: Dubai
+  country: AE
+- abbreviation: Dumiat
+  name: Dumiat
+  country: EG
+- abbreviation: DUR
+  name: Durango
+  country: MX
+- abbreviation: Durres
+  name: Durres
+  country: AL
+- abbreviation: Duzce
+  name: Duzce
+  country: TR
+- abbreviation: Dytiki Ellada
+  name: Dytiki Ellada
+  country: GR
+- abbreviation: Dâmbovita
+  name: Dâmbovita
+  country: RO
+- abbreviation: Dédougou
+  name: Dédougou
+  country: BF
+- abbreviation: EDOMEX
+  name: EDOMEX
+  country: MX
+- abbreviation: EB
+  name: East Berbice-Corentyne Region
+  country: GY
+- abbreviation: East Equatoria
+  name: East Equatoria
+  country: SS
+- abbreviation: JI
+  name: East Java
+  country: ID
+- abbreviation: KI
+  name: East Kalimantan
+  country: ID
+- abbreviation: VOS
+  name: East Kazakhstan
+  country: KZ
+- abbreviation: EBR
+  name: East New Britain Province
+  country: PG
+- abbreviation: NT
+  name: East Nusa Tenggara
+  country: ID
+- abbreviation: ESW
+  name: East Sepik Province
+  country: PG
+- abbreviation: Eastern
+  name: Eastern
+  country: GH
+- abbreviation: Eastern
+  name: Eastern
+  country: ZM
+- abbreviation: Eastern
+  name: Eastern
+  country: BW
+- abbreviation: Eastern
+  name: Eastern
+  country: LK
+- abbreviation: Eastern Cape
+  name: Eastern Cape
+  country: ZA
+- abbreviation: EC
+  name: Eastern Cape
+  country: ZA
+- abbreviation: EHG
+  name: Eastern Highlands Province
+  country: PG
+- abbreviation: SHR
+  name: Eastern Province
+  country: EG
+- abbreviation: Eastern Province
+  name: Eastern Province
+  country: SA
+- abbreviation: EP
+  name: Eastern Region
+  country: GH
+- abbreviation: Eastern Visayas
+  name: Eastern Visayas
+  country: PH
+- abbreviation: Ebonyi
+  name: Ebonyi
+  country: NG
+- abbreviation: EB
+  name: Ebonyi State
+  country: NG
+- abbreviation: Edirne
+  name: Edirne
+  country: TR
+- abbreviation: Edo
+  name: Edo
+  country: NG
+- abbreviation: ED
+  name: Edo
+  country: NG
+- abbreviation: Ehime
+  name: Ehime
+  country: JP
+- abbreviation: Ekiti
+  name: Ekiti
+  country: NG
+- abbreviation: EK
+  name: Ekiti State
+  country: NG
+- abbreviation: El Bahr El Ahmar
+  name: El Bahr El Ahmar
+  country: EG
+- abbreviation: El Bayadh
+  name: El Bayadh
+  country: DZ
+- abbreviation: El Dere
+  name: El Dere
+  country: SO
+- abbreviation: El Fayoum
+  name: El Fayoum
+  country: EG
+- abbreviation: El Geneina
+  name: El Geneina
+  country: SD
+- abbreviation: El Ismailia
+  name: El Ismailia
+  country: EG
+- abbreviation: El Kef
+  name: El Kef
+  country: TN
+- abbreviation: El Menia
+  name: El Menia
+  country: EG
+- abbreviation: El Oro
+  name: El Oro
+  country: EC
+- abbreviation: El Oued
+  name: El Oued
+  country: DZ
+- abbreviation: El Paraíso
+  name: El Paraíso
+  country: HN
+- abbreviation: El Suez
+  name: El Suez
+  country: EG
+- abbreviation: El Tarf
+  name: El Tarf
+  country: DZ
+- abbreviation: El Wadi El Gedeed
+  name: El Wadi El Gedeed
+  country: EG
+- abbreviation: Elazığ
+  name: Elazığ
+  country: TR
+- abbreviation: Elbasan
+  name: Elbasan
+  country: AL
+- abbreviation: Embu
+  name: Embu
+  country: KE
+- abbreviation: Emilia-Romagna
+  name: Emilia-Romagna
+  country: IT
+- abbreviation: En Nuhud
+  name: En Nuhud
+  country: SD
+- abbreviation: Endamehoni
+  name: Endamehoni
+  country: ET
+- abbreviation: ENG
+  name: England
+  country: GB
+- abbreviation: England
+  name: England
+  country: GB
+- abbreviation: Entre Rios
+  name: Entre Rios
+  country: AR
+- abbreviation: Enugu
+  name: Enugu
+  country: NG
+- abbreviation: EN
+  name: Enugu State
+  country: NG
+- abbreviation: Equateur
+  name: Equateur
+  country: CD
+- abbreviation: Erde-Pala
+  name: Erde-Pala
+  country: TD
+- abbreviation: Erigavo
+  name: Erigavo
+  country: SO
+- abbreviation: ER
+  name: Erongo
+  country: NA
+- abbreviation: Erzincan
+  name: Erzincan
+  country: TR
+- abbreviation: Erzurum
+  name: Erzurum
+  country: TR
+- abbreviation: Esmeraldas
+  name: Esmeraldas
+  country: EC
+- abbreviation: ES
+  name: Espirito Santo
+  country: BR
+- abbreviation: BCN
+  name: Estado de Baja California
+  country: MX
+- abbreviation: MEX
+  name: Estado de Mexico
+  country: MX
+- abbreviation: Estremadura
+  name: Estremadura
+  country: ES
+- abbreviation: EX
+  name: Extremadura
+  country: ES
+- abbreviation: FL
+  name: FL
+  country: US
+- abbreviation: Fada Ngourma
+  name: Fada Ngourma
+  country: BF
+- abbreviation: Fako
+  name: Fako
+  country: CM
+- abbreviation: Falcon
+  name: Falcon
+  country: VE
+- abbreviation: Fandriana
+  name: Fandriana
+  country: MG
+- abbreviation: Fao
+  name: Fao
+  country: IQ
+- abbreviation: Far Eastern Federal District
+  name: Far Eastern Federal District
+  country: RU
+- abbreviation: Faranah
+  name: Faranah
+  country: GN
+- abbreviation: Faratsiho
+  name: Faratsiho
+  country: MG
+- abbreviation: Farg'ona
+  name: Farg'ona
+  country: UZ
+- abbreviation: Farwaniyah
+  name: Farwaniyah
+  country: KW
+- abbreviation: Federacija Bosne i Hercegovine
+  name: Federacija Bosne i Hercegovine
+  country: BA
+- abbreviation: Federal Capital Territory
+  name: Federal Capital Territory
+  country: NG
+- abbreviation: BIH
+  name: Federation of Bosnia and Herzegovina
+  country: BA
+- abbreviation: Fejér
+  name: Fejér
+  country: HU
+- abbreviation: Fianarantsoa
+  name: Fianarantsoa
+  country: MG
+- abbreviation: Fier
+  name: Fier
+  country: AL
+- abbreviation: VLG
+  name: Flanders
+  country: BE
+- abbreviation: Flanders
+  name: Flanders
+  country: BE
+- abbreviation: Flevoland
+  name: Flevoland
+  country: NL
+- abbreviation: FD
+  name: Florida
+  country: UY
+- abbreviation: Fogera
+  name: Fogera
+  country: ET
+- abbreviation: Free State
+  name: Free State
+  country: ZA
+- abbreviation: FR
+  name: Fribourg
+  country: CH
+- abbreviation: FR
+  name: Friesland
+  country: NL
+- abbreviation: Fujairah
+  name: Fujairah
+  country: AE
+- abbreviation: Fujian
+  name: Fujian
+  country: CN
+- abbreviation: Fukui
+  name: Fukui
+  country: JP
+- abbreviation: Fukuoka
+  name: Fukuoka
+  country: JP
+- abbreviation: Fukushima
+  name: Fukushima
+  country: JP
+- abbreviation: Fès - Meknès
+  name: Fès - Meknès
+  country: MA
+- abbreviation: GA
+  name: GA
+  country: US
+- abbreviation: GA
+  name: GA
+  country: IN
+- abbreviation: GANGWONDO
+  name: GANGWONDO
+  country: KR
+- abbreviation: GJ
+  name: GJ
+  country: IN
+- abbreviation: GO
+  name: GO
+  country: BR
+- abbreviation: GTO
+  name: GTO
+  country: MX
+- abbreviation: GWANGJU
+  name: GWANGJU
+  country: KR
+- abbreviation: GYEONGGIDO
+  name: GYEONGGIDO
+  country: KR
+- abbreviation: GYEONGSANGBUKDO
+  name: GYEONGSANGBUKDO
+  country: KR
+- abbreviation: GYEONGSANGNAMDO
+  name: GYEONGSANGNAMDO
+  country: KR
+- abbreviation: Gaalkacyo
+  name: Gaalkacyo
+  country: SO
+- abbreviation: Gabes
+  name: Gabes
+  country: TN
+- abbreviation: Gafsa
+  name: Gafsa
+  country: TN
+- abbreviation: GA
+  name: Gagauzia
+  country: MD
+- abbreviation: Galati
+  name: Galati
+  country: RO
+- abbreviation: Galicia
+  name: Galicia
+  country: ES
+- abbreviation: GA
+  name: Galicia
+  country: ES
+- abbreviation: GA
+  name: Gambela
+  country: ET
+- abbreviation: Gandaki
+  name: Gandaki
+  country: NP
+- abbreviation: Ganja
+  name: Ganja
+  country: AZ
+- abbreviation: Gansu
+  name: Gansu
+  country: CN
+- abbreviation: Gao
+  name: Gao
+  country: ML
+- abbreviation: Gaoua
+  name: Gaoua
+  country: BF
+- abbreviation: Garabagh
+  name: Garabagh
+  country: AZ
+- abbreviation: Garango
+  name: Garango
+  country: BF
+- abbreviation: Garissa
+  name: Garissa
+  country: KE
+- abbreviation: Garoowe
+  name: Garoowe
+  country: SO
+- abbreviation: Gauteng
+  name: Gauteng
+  country: ZA
+- abbreviation: GP
+  name: Gauteng
+  country: ZA
+- abbreviation: Gavleborg County
+  name: Gavleborg County
+  country: SE
+- abbreviation: Gaza
+  name: Gaza
+  country: MZ
+- abbreviation: Gaza Strip
+  name: Gaza Strip
+  country: PS
+- abbreviation: Gazakh-Goranboy
+  name: Gazakh-Goranboy
+  country: AZ
+- abbreviation: Gbrbo/Niabo
+  name: Gbrbo/Niabo
+  country: LR
+- abbreviation: Geita
+  name: Geita
+  country: TZ
+- abbreviation: GE
+  name: Geneva
+  country: CH
+- abbreviation: Gerar Jarso
+  name: Gerar Jarso
+  country: ET
+- abbreviation: Gharbia
+  name: Gharbia
+  country: EG
+- abbreviation: Ghardaïa
+  name: Ghardaïa
+  country: DZ
+- abbreviation: Gifu
+  name: Gifu
+  country: JP
+- abbreviation: Gimbi
+  name: Gimbi
+  country: ET
+- abbreviation: Giresun
+  name: Giresun
+  country: TR
+- abbreviation: GIS
+  name: Gisborne
+  country: NZ
+- abbreviation: GR
+  name: Giurgiu
+  country: RO
+- abbreviation: Giza
+  name: Giza
+  country: EG
+- abbreviation: Goba
+  name: Goba
+  country: ET
+- abbreviation: Gofa Zuria
+  name: Gofa Zuria
+  country: ET
+- abbreviation: Goma
+  name: Goma
+  country: ET
+- abbreviation: Gombe
+  name: Gombe
+  country: NG
+- abbreviation: HO
+  name: Gomel
+  country: BY
+- abbreviation: Gori
+  name: Gori
+  country: GE
+- abbreviation: GJ
+  name: Gorj
+  country: RO
+- abbreviation: Gorj
+  name: Gorj
+  country: RO
+- abbreviation: GB
+  name: Gorno-Badakhshan
+  country: TJ
+- abbreviation: Grad Zagreb
+  name: Grad Zagreb
+  country: HR
+- abbreviation: Grand Bahama
+  name: Grand Bahama
+  country: BS
+- abbreviation: Granma
+  name: Granma
+  country: CU
+- abbreviation: Greater Accra
+  name: Greater Accra
+  country: GH
+- abbreviation: AA
+  name: Greater Accra Region
+  country: GH
+- abbreviation: WP
+  name: Greater Poland Voivodeship
+  country: PL
+- abbreviation: GR
+  name: Grisons
+  country: CH
+- abbreviation: HR
+  name: Grodnenskaya
+  country: BY
+- abbreviation: GR
+  name: Groningen
+  country: NL
+- abbreviation: Guadeloupe
+  name: Guadeloupe
+  country: GP
+- abbreviation: GUA
+  name: Guanajuato
+  country: MX
+- abbreviation: Guangdong
+  name: Guangdong
+  country: CN
+- abbreviation: Guangxi Zhuang
+  name: Guangxi Zhuang
+  country: CN
+- abbreviation: Guantánamo
+  name: Guantánamo
+  country: CU
+- abbreviation: Guarda
+  name: Guarda
+  country: PT
+- abbreviation: Guarico
+  name: Guarico
+  country: VE
+- abbreviation: Guatemala
+  name: Guatemala
+  country: GT
+- abbreviation: Guayas
+  name: Guayas
+  country: EC
+- abbreviation: Gudauta
+  name: Gudauta
+  country: GE
+- abbreviation: Guelma
+  name: Guelma
+  country: DZ
+- abbreviation: Guelmim - Oued Noun
+  name: Guelmim - Oued Noun
+  country: MA
+- abbreviation: GRO
+  name: Guerrero
+  country: MX
+- abbreviation: Guizhou
+  name: Guizhou
+  country: CN
+- abbreviation: Gulu
+  name: Gulu
+  country: UG
+- abbreviation: Gumushane
+  name: Gumushane
+  country: TR
+- abbreviation: Gunma
+  name: Gunma
+  country: JP
+- abbreviation: Guyane
+  name: Guyane
+  country: GF
+- abbreviation: Győr-Moson-Sopron
+  name: Győr-Moson-Sopron
+  country: HU
+- abbreviation: GS
+  name: Győr-Moson-Sopron
+  country: HU
+- abbreviation: Gôh-Djiboua
+  name: Gôh-Djiboua
+  country: CI
+- abbreviation: HGO
+  name: HGO
+  country: MX
+- abbreviation: HP
+  name: HP
+  country: IN
+- abbreviation: Ha Giang
+  name: Ha Giang
+  country: VN
+- abbreviation: Ha Nam
+  name: Ha Nam
+  country: VN
+- abbreviation: Ha Noi
+  name: Ha Noi
+  country: VN
+- abbreviation: Haditha
+  name: Haditha
+  country: IQ
+- abbreviation: HL
+  name: Hadjer-Lamis
+  country: TD
+- abbreviation: Hai Phong
+  name: Hai Phong
+  country: VN
+- abbreviation: Haifa
+  name: Haifa
+  country: IL
+- abbreviation: HA
+  name: Haifa
+  country: IL
+- abbreviation: Hail
+  name: Hail
+  country: SA
+- abbreviation: Hainan
+  name: Hainan
+  country: CN
+- abbreviation: Haiti
+  name: Haiti
+  country: HT
+- abbreviation: HB
+  name: Hajdú-Bihar
+  country: HU
+- abbreviation: Hajjah City
+  name: Hajjah City
+  country: YE
+- abbreviation: Hakkari
+  name: Hakkari
+  country: TR
+- abbreviation: Halabja
+  name: Halabja
+  country: IQ
+- abbreviation: Hamah
+  name: Hamah
+  country: SY
+- abbreviation: HH
+  name: Hamburg
+  country: DE
+- abbreviation: Hamburg
+  name: Hamburg
+  country: DE
+- abbreviation: Hamza
+  name: Hamza
+  country: IQ
+- abbreviation: Harare
+  name: Harare
+  country: ZW
+- abbreviation: HA
+  name: Harari Region
+  country: ET
+- abbreviation: HR
+  name: Harghita
+  country: RO
+- abbreviation: HR
+  name: Haryana
+  country: IN
+- abbreviation: Hasaka
+  name: Hasaka
+  country: SY
+- abbreviation: Hashimiya
+  name: Hashimiya
+  country: IQ
+- abbreviation: Hatay
+  name: Hatay
+  country: TR
+- abbreviation: Haut-Nkam
+  name: Haut-Nkam
+  country: CM
+- abbreviation: Haute-Sanaga
+  name: Haute-Sanaga
+  country: CM
+- abbreviation: Havana
+  name: Havana
+  country: CU
+- abbreviation: HI
+  name: Hawaii
+  country: US
+- abbreviation: Hawally
+  name: Hawally
+  country: KW
+- abbreviation: Hawke's Bay
+  name: Hawke's Bay
+  country: NZ
+- abbreviation: HKB
+  name: Hawke's Bay
+  country: NZ
+- abbreviation: Hebei
+  name: Hebei
+  country: CN
+- abbreviation: Heet
+  name: Heet
+  country: IQ
+- abbreviation: Heilongjiang
+  name: Heilongjiang
+  country: CN
+- abbreviation: Henan
+  name: Henan
+  country: CN
+- abbreviation: Heredia
+  name: Heredia
+  country: CR
+- abbreviation: Hermanas Mirabal
+  name: Hermanas Mirabal
+  country: DO
+- abbreviation: Herrera
+  name: Herrera
+  country: PA
+- abbreviation: Hesse
+  name: Hesse
+  country: DE
+- abbreviation: HE
+  name: Hesse
+  country: DE
+- abbreviation: Heves
+  name: Heves
+  country: HU
+- abbreviation: HE
+  name: Heves megye
+  country: HU
+- abbreviation: HH
+  name: Hhohho District
+  country: SZ
+- abbreviation: HID
+  name: Hidalgo
+  country: MX
+- abbreviation: Hiroshima
+  name: Hiroshima
+  country: JP
+- abbreviation: Hoima
+  name: Hoima
+  country: UG
+- abbreviation: Hokkaido
+  name: Hokkaido
+  country: JP
+- abbreviation: Holguín
+  name: Holguín
+  country: CU
+- abbreviation: Homa Bay
+  name: Homa Bay
+  country: KE
+- abbreviation: Homs
+  name: Homs
+  country: SY
+- abbreviation: Homyel'skaya voblasts'
+  name: Homyel'skaya voblasts'
+  country: BY
+- abbreviation: Hong Kong
+  name: Hong Kong
+  country: HK
+- abbreviation: Houndé
+  name: Houndé
+  country: BF
+- abbreviation: Hrodzyenskaya voblasts'
+  name: Hrodzyenskaya voblasts'
+  country: BY
+- abbreviation: Hsinchu City
+  name: Hsinchu City
+  country: TW
+- abbreviation: Hualien County
+  name: Hualien County
+  country: TW
+- abbreviation: HUA
+  name: Huambo
+  country: AO
+- abbreviation: HUV
+  name: Huancavelica
+  country: PE
+- abbreviation: Huanuco
+  name: Huanuco
+  country: PE
+- abbreviation: Hubei
+  name: Hubei
+  country: CN
+- abbreviation: Huehuetenango
+  name: Huehuetenango
+  country: GT
+- abbreviation: Huila
+  name: Huila
+  country: CO
+- abbreviation: HUI
+  name: Huila Province
+  country: AO
+- abbreviation: Hunan
+  name: Hunan
+  country: CN
+- abbreviation: Hunedoara
+  name: Hunedoara
+  country: RO
+- abbreviation: HD
+  name: Hunedoara
+  country: RO
+- abbreviation: Huíla
+  name: Huíla
+  country: AO
+- abbreviation: Hyogo
+  name: Hyogo
+  country: JP
+- abbreviation: Höfuðborgarsvæðið
+  name: Höfuðborgarsvæðið
+  country: IS
+- abbreviation: IA
+  name: IA
+  country: US
+- abbreviation: IN
+  name: IN
+  country: US
+- abbreviation: INCHEON
+  name: INCHEON
+  country: KR
+- abbreviation: Iasi
+  name: Iasi
+  country: RO
+- abbreviation: Ibanda
+  name: Ibanda
+  country: UG
+- abbreviation: Ibaraki
+  name: Ibaraki
+  country: JP
+- abbreviation: Ibb
+  name: Ibb
+  country: YE
+- abbreviation: Iburasirazuba
+  name: Iburasirazuba
+  country: RW
+- abbreviation: Iburengerazuba
+  name: Iburengerazuba
+  country: RW
+- abbreviation: ICA
+  name: Ica
+  country: PE
+- abbreviation: Ica
+  name: Ica
+  country: PE
+- abbreviation: Ida-Viru Maakond
+  name: Ida-Viru Maakond
+  country: EE
+- abbreviation: ID
+  name: Idaho
+  country: US
+- abbreviation: Idlib
+  name: Idlib
+  country: SY
+- abbreviation: Iganga
+  name: Iganga
+  country: UG
+- abbreviation: Igdir
+  name: Igdir
+  country: TR
+- abbreviation: Ikongo
+  name: Ikongo
+  country: MG
+- abbreviation: Ile-de-France
+  name: Ile-de-France
+  country: FR
+- abbreviation: IF
+  name: Ilfov
+  country: RO
+- abbreviation: IL
+  name: Illinois
+  country: US
+- abbreviation: Ilocos Region
+  name: Ilocos Region
+  country: PH
+- abbreviation: IM
+  name: Imereti
+  country: GE
+- abbreviation: Imo
+  name: Imo
+  country: NG
+- abbreviation: IM
+  name: Imo State
+  country: NG
+- abbreviation: Inhambane
+  name: Inhambane
+  country: MZ
+- abbreviation: Inner Mongolia
+  name: Inner Mongolia
+  country: CN
+- abbreviation: Iran
+  name: Iran
+  country: IR
+- abbreviation: IR
+  name: Irbid
+  country: JO
+- abbreviation: Iringa
+  name: Iringa
+  country: TZ
+- abbreviation: IRK
+  name: Irkutskaya Oblast'
+  country: RU
+- abbreviation: Ishikawa
+  name: Ishikawa
+  country: JP
+- abbreviation: Isiolo
+  name: Isiolo
+  country: KE
+- abbreviation: IS
+  name: Ismailia Governorate
+  country: EG
+- abbreviation: Isparta
+  name: Isparta
+  country: TR
+- abbreviation: Issyk Kul
+  name: Issyk Kul
+  country: KG
+- abbreviation: Istanbul
+  name: Istanbul
+  country: TR
+- abbreviation: Istochen
+  name: Istochen
+  country: MK
+- abbreviation: Itapúa
+  name: Itapúa
+  country: PY
+- abbreviation: Ivano-Frankivska Oblast
+  name: Ivano-Frankivska Oblast
+  country: UA
+- abbreviation: IVA
+  name: Ivanovskaya Oblast'
+  country: RU
+- abbreviation: Iwate
+  name: Iwate
+  country: JP
+- abbreviation: Izmir
+  name: Izmir
+  country: TR
+- abbreviation: JEJUDO
+  name: JEJUDO
+  country: KR
+- abbreviation: JEOLLABUKDO
+  name: JEOLLABUKDO
+  country: KR
+- abbreviation: JEOLLANAMDO
+  name: JEOLLANAMDO
+  country: KR
+- abbreviation: JH
+  name: JH
+  country: IN
+- abbreviation: Jalal-Abad
+  name: Jalal-Abad
+  country: KG
+- abbreviation: Jalapa
+  name: Jalapa
+  country: GT
+- abbreviation: JAL
+  name: Jalisco
+  country: MX
+- abbreviation: Jamaame
+  name: Jamaame
+  country: SO
+- abbreviation: Jambi
+  name: Jambi
+  country: ID
+- abbreviation: Jamtland County
+  name: Jamtland County
+  country: SE
+- abbreviation: Janakpur
+  name: Janakpur
+  country: NP
+- abbreviation: Jawa Barat
+  name: Jawa Barat
+  country: ID
+- abbreviation: Jawa Tengah
+  name: Jawa Tengah
+  country: ID
+- abbreviation: Jawa Timur
+  name: Jawa Timur
+  country: ID
+- abbreviation: Jawhar
+  name: Jawhar
+  country: SO
+- abbreviation: Jazan
+  name: Jazan
+  country: SA
+- abbreviation: Jekabpils
+  name: Jekabpils
+  country: LV
+- abbreviation: JEL
+  name: Jelgava
+  country: LV
+- abbreviation: Jendouba
+  name: Jendouba
+  country: TN
+- abbreviation: Jerash Governorate
+  name: Jerash Governorate
+  country: JO
+- abbreviation: Jerusalem
+  name: Jerusalem
+  country: IL
+- abbreviation: JM
+  name: Jerusalem
+  country: IL
+- abbreviation: YEV
+  name: Jewish Autonomous Oblast
+  country: RU
+- abbreviation: Jiangsu
+  name: Jiangsu
+  country: CN
+- abbreviation: Jiangxi
+  name: Jiangxi
+  country: CN
+- abbreviation: Jigawa
+  name: Jigawa
+  country: NG
+- abbreviation: JC
+  name: Jihocesky kraj
+  country: CZ
+- abbreviation: Jihomoravský kraj
+  name: Jihomoravský kraj
+  country: CZ
+- abbreviation: Jihočeský kraj
+  name: Jihočeský kraj
+  country: CZ
+- abbreviation: Jilib
+  name: Jilib
+  country: SO
+- abbreviation: Jilin
+  name: Jilin
+  country: CN
+- abbreviation: Jinja
+  name: Jinja
+  country: UG
+- abbreviation: Jizzax
+  name: Jizzax
+  country: UZ
+- abbreviation: Johore
+  name: Johore
+  country: MY
+- abbreviation: Jonkoping County
+  name: Jonkoping County
+  country: SE
+- abbreviation: Jorquelleh
+  name: Jorquelleh
+  country: LR
+- abbreviation: AB
+  name: Judetul Alba
+  country: RO
+- abbreviation: AG
+  name: Judetul Arges
+  country: RO
+- abbreviation: BC
+  name: Judetul Bacau
+  country: RO
+- abbreviation: BT
+  name: Judetul Botosani
+  country: RO
+- abbreviation: BV
+  name: Judetul Brasov
+  country: RO
+- abbreviation: BZ
+  name: Judetul Buzau
+  country: RO
+- abbreviation: CL
+  name: Judetul Calarasi
+  country: RO
+- abbreviation: CS
+  name: Judetul Caras-Severin
+  country: RO
+- abbreviation: CJ
+  name: Judetul Cluj
+  country: RO
+- abbreviation: DB
+  name: Judetul Dambovita
+  country: RO
+- abbreviation: GL
+  name: Judetul Galati
+  country: RO
+- abbreviation: IL
+  name: Judetul Ialomita
+  country: RO
+- abbreviation: IS
+  name: Judetul Iasi
+  country: RO
+- abbreviation: MS
+  name: Judetul Mures
+  country: RO
+- abbreviation: NT
+  name: Judetul Neamt
+  country: RO
+- abbreviation: SB
+  name: Judetul Sibiu
+  country: RO
+- abbreviation: TM
+  name: Judetul Timis
+  country: RO
+- abbreviation: Jugozapaden
+  name: Jugozapaden
+  country: MK
+- abbreviation: Jujuy
+  name: Jujuy
+  country: AR
+- abbreviation: Junin
+  name: Junin
+  country: PE
+- abbreviation: JUN
+  name: Junin
+  country: PE
+- abbreviation: Junqali
+  name: Junqali
+  country: SS
+- abbreviation: Jurmala
+  name: Jurmala
+  country: LV
+- abbreviation: Jutiapa
+  name: Jutiapa
+  country: GT
+- abbreviation: JN
+  name: Jász-Nagykun-Szolnok
+  country: HU
+- abbreviation: KA
+  name: KA
+  country: IN
+- abbreviation: KL
+  name: KL
+  country: IN
+- abbreviation: Kabale
+  name: Kabale
+  country: UG
+- abbreviation: KB
+  name: Kabardino-Balkarskaya Respublika
+  country: RU
+- abbreviation: Kabarole
+  name: Kabarole
+  country: UG
+- abbreviation: Kachimel-Abéché
+  name: Kachimel-Abéché
+  country: TD
+- abbreviation: Kadey
+  name: Kadey
+  country: CM
+- abbreviation: Kadugli
+  name: Kadugli
+  country: SD
+- abbreviation: Kaduna
+  name: Kaduna
+  country: NG
+- abbreviation: KD
+  name: Kaduna State
+  country: NG
+- abbreviation: Kaffrine
+  name: Kaffrine
+  country: SN
+- abbreviation: Kafr El Sheikh
+  name: Kafr El Sheikh
+  country: EG
+- abbreviation: Kaga-Bandoro
+  name: Kaga-Bandoro
+  country: CF
+- abbreviation: Kagawa
+  name: Kagawa
+  country: JP
+- abbreviation: Kagera
+  name: Kagera
+  country: TZ
+- abbreviation: Kagoshima
+  name: Kagoshima
+  country: JP
+- abbreviation: Kahramanmaras
+  name: Kahramanmaras
+  country: TR
+- abbreviation: Kairouan
+  name: Kairouan
+  country: TN
+- abbreviation: Kakamega
+  name: Kakamega
+  country: KE
+- abbreviation: Kalimantan Barat
+  name: Kalimantan Barat
+  country: ID
+- abbreviation: Kalimantan Selatan
+  name: Kalimantan Selatan
+  country: ID
+- abbreviation: Kalimantan Tengah
+  name: Kalimantan Tengah
+  country: ID
+- abbreviation: Kalimantan Timur
+  name: Kalimantan Timur
+  country: ID
+- abbreviation: KGD
+  name: Kaliningradskaya Oblast'
+  country: RU
+- abbreviation: KL
+  name: Kalmykiya
+  country: RU
+- abbreviation: Kalu
+  name: Kalu
+  country: ET
+- abbreviation: KLU
+  name: Kaluzhskaya Oblast'
+  country: RU
+- abbreviation: Kampong Cham
+  name: Kampong Cham
+  country: KH
+- abbreviation: Kampong Chhnang
+  name: Kampong Chhnang
+  country: KH
+- abbreviation: Kampong Speu
+  name: Kampong Speu
+  country: KH
+- abbreviation: KAM
+  name: Kamtchatski Kray
+  country: RU
+- abbreviation: Kanchanaburi
+  name: Kanchanaburi
+  country: TH
+- abbreviation: Kandal
+  name: Kandal
+  country: KH
+- abbreviation: Kandi
+  name: Kandi
+  country: BJ
+- abbreviation: Kankan
+  name: Kankan
+  country: GN
+- abbreviation: KN
+  name: Kano State
+  country: NG
+- abbreviation: KS
+  name: Kansas
+  country: US
+- abbreviation: Kaohsiung City
+  name: Kaohsiung City
+  country: TW
+- abbreviation: KL
+  name: Kaolack
+  country: SN
+- abbreviation: Kara
+  name: Kara
+  country: TG
+- abbreviation: KC
+  name: Karachayevo-Cherkesiya
+  country: RU
+- abbreviation: KA
+  name: Karas
+  country: NA
+- abbreviation: Karbala
+  name: Karbala
+  country: IQ
+- abbreviation: KA
+  name: Karlovarsky kraj
+  country: CZ
+- abbreviation: Kars
+  name: Kars
+  country: TR
+- abbreviation: Kasai-Occidental
+  name: Kasai-Occidental
+  country: CD
+- abbreviation: Kasai-Oriental
+  name: Kasai-Oriental
+  country: CD
+- abbreviation: Kasese
+  name: Kasese
+  country: UG
+- abbreviation: JK
+  name: Kashmir
+  country: IN
+- abbreviation: Kaskazini Pemba
+  name: Kaskazini Pemba
+  country: TZ
+- abbreviation: KA
+  name: Kassala
+  country: SD
+- abbreviation: Kasserine
+  name: Kasserine
+  country: TN
+- abbreviation: Katanga
+  name: Katanga
+  country: CD
+- abbreviation: KA
+  name: Katanga Province
+  country: CD
+- abbreviation: Katavi
+  name: Katavi
+  country: TZ
+- abbreviation: Kati
+  name: Kati
+  country: ML
+- abbreviation: Katsina
+  name: Katsina
+  country: NG
+- abbreviation: KT
+  name: Katsina State
+  country: NG
+- abbreviation: Kauno Apskritis
+  name: Kauno Apskritis
+  country: LT
+- abbreviation: KU
+  name: Kauno apskritis
+  country: LT
+- abbreviation: Kavango
+  name: Kavango
+  country: NA
+- abbreviation: Kaya
+  name: Kaya
+  country: BF
+- abbreviation: Kayes
+  name: Kayes
+  country: ML
+- abbreviation: Kayseri
+  name: Kayseri
+  country: TR
+- abbreviation: Kaédi
+  name: Kaédi
+  country: MR
+- abbreviation: Kebbi
+  name: Kebbi
+  country: NG
+- abbreviation: KE
+  name: Kebbi State
+  country: NG
+- abbreviation: Kedah
+  name: Kedah
+  country: MY
+- abbreviation: Keelung City
+  name: Keelung City
+  country: TW
+- abbreviation: Kelantan
+  name: Kelantan
+  country: MY
+- abbreviation: KEM
+  name: Kemerovskaya Oblast'
+  country: RU
+- abbreviation: Kenema
+  name: Kenema
+  country: SL
+- abbreviation: Kentriki Makedonia
+  name: Kentriki Makedonia
+  country: GR
+- abbreviation: KY
+  name: Kentucky
+  country: US
+- abbreviation: Kepulauan Bangka Belitung
+  name: Kepulauan Bangka Belitung
+  country: ID
+- abbreviation: Keren
+  name: Keren
+  country: ER
+- abbreviation: Kericho
+  name: Kericho
+  country: KE
+- abbreviation: Kersa
+  name: Kersa
+  country: ET
+- abbreviation: KHA
+  name: Khabarovsk Krai
+  country: RU
+- abbreviation: Khanh Hoa
+  name: Khanh Hoa
+  country: VN
+- abbreviation: KHM
+  name: Khanty-Mansiyskiy Avtonomnyy Okrug-Yugra
+  country: RU
+- abbreviation: Kharkiv
+  name: Kharkiv
+  country: UA
+- abbreviation: Khashuri
+  name: Khashuri
+  country: GE
+- abbreviation: Khenchela
+  name: Khenchela
+  country: DZ
+- abbreviation: Kherson
+  name: Kherson
+  country: UA
+- abbreviation: Khmelnytskyi
+  name: Khmelnytskyi
+  country: UA
+- abbreviation: Khon Kaen
+  name: Khon Kaen
+  country: TH
+- abbreviation: Khovsgol
+  name: Khovsgol
+  country: MN
+- abbreviation: Khulna
+  name: Khulna
+  country: BD
+- abbreviation: NW
+  name: Khyber Pakhtunkhwa
+  country: PK
+- abbreviation: Kien Giang
+  name: Kien Giang
+  country: VN
+- abbreviation: Kiffa
+  name: Kiffa
+  country: MR
+- abbreviation: Kifri
+  name: Kifri
+  country: IQ
+- abbreviation: Kigoma
+  name: Kigoma
+  country: TZ
+- abbreviation: Kilifi
+  name: Kilifi
+  country: KE
+- abbreviation: Kilimanjaro
+  name: Kilimanjaro
+  country: TZ
+- abbreviation: Kindia
+  name: Kindia
+  country: GN
+- abbreviation: Kinmen County
+  name: Kinmen County
+  country: TW
+- abbreviation: Kinshasa
+  name: Kinshasa
+  country: CD
+- abbreviation: Kirikkale
+  name: Kirikkale
+  country: TR
+- abbreviation: Kirovohrad
+  name: Kirovohrad
+  country: UA
+- abbreviation: KIR
+  name: Kirovskaya Oblast'
+  country: RU
+- abbreviation: Kirsehir
+  name: Kirsehir
+  country: TR
+- abbreviation: Kisii
+  name: Kisii
+  country: KE
+- abbreviation: Kismaayo
+  name: Kismaayo
+  country: SO
+- abbreviation: Kisumu
+  name: Kisumu
+  country: KE
+- abbreviation: Kitgum
+  name: Kitgum
+  country: UG
+- abbreviation: KL
+  name: Klaipedos apskritis
+  country: LT
+- abbreviation: Klaipėdos Apskritis
+  name: Klaipėdos Apskritis
+  country: LT
+- abbreviation: Kocaeli
+  name: Kocaeli
+  country: TR
+- abbreviation: Kochi
+  name: Kochi
+  country: JP
+- abbreviation: Kogi
+  name: Kogi
+  country: NG
+- abbreviation: KO
+  name: Kogi State
+  country: NG
+- abbreviation: Koh Kong
+  name: Koh Kong
+  country: KH
+- abbreviation: Koisnjaq
+  name: Koisnjaq
+  country: IQ
+- abbreviation: Kokologho
+  name: Kokologho
+  country: BF
+- abbreviation: Kolda
+  name: Kolda
+  country: SN
+- abbreviation: Kolokani
+  name: Kolokani
+  country: ML
+- abbreviation: Kombissiri
+  name: Kombissiri
+  country: BF
+- abbreviation: Kombo Central
+  name: Kombo Central
+  country: GM
+- abbreviation: KO
+  name: Komi Republic
+  country: RU
+- abbreviation: Komuna e Ferizajit
+  name: Komuna e Ferizajit
+  country: XK
+- abbreviation: Komuna e Gjakovës
+  name: Komuna e Gjakovës
+  country: XK
+- abbreviation: Komuna e Gjilanit
+  name: Komuna e Gjilanit
+  country: XK
+- abbreviation: Komuna e Mitrovicës
+  name: Komuna e Mitrovicës
+  country: XK
+- abbreviation: Komuna e Pejës
+  name: Komuna e Pejës
+  country: XK
+- abbreviation: Komuna e Prishtinës
+  name: Komuna e Prishtinës
+  country: XK
+- abbreviation: Komuna e Prizrenit
+  name: Komuna e Prizrenit
+  country: XK
+- abbreviation: KE
+  name: Komárom-Esztergom
+  country: HU
+- abbreviation: Komárom-Esztergom
+  name: Komárom-Esztergom
+  country: HU
+- abbreviation: Kongoussi
+  name: Kongoussi
+  country: BF
+- abbreviation: Kono
+  name: Kono
+  country: SL
+- abbreviation: Konya
+  name: Konya
+  country: TR
+- abbreviation: Korce
+  name: Korce
+  country: AL
+- abbreviation: Koshi
+  name: Koshi
+  country: NP
+- abbreviation: KI
+  name: Kosicky kraj
+  country: SK
+- abbreviation: Kosti
+  name: Kosti
+  country: SD
+- abbreviation: KOS
+  name: Kostromskaya Oblast'
+  country: RU
+- abbreviation: Kotayq
+  name: Kotayq
+  country: AM
+- abbreviation: Koudougou
+  name: Koudougou
+  country: BF
+- abbreviation: Koumra
+  name: Koumra
+  country: TD
+- abbreviation: Koupéla
+  name: Koupéla
+  country: BF
+- abbreviation: Koutiala
+  name: Koutiala
+  country: ML
+- abbreviation: KKC
+  name: Kowloon City
+  country: HK
+- abbreviation: Košický kraj
+  name: Košický kraj
+  country: SK
+- abbreviation: Kpalimé
+  name: Kpalimé
+  country: TG
+- abbreviation: VY
+  name: Kraj Vysocina
+  country: CZ
+- abbreviation: KR
+  name: Kralovehradecky kraj
+  country: CZ
+- abbreviation: KDA
+  name: Krasnodarskiy Kray
+  country: RU
+- abbreviation: KYA
+  name: Krasnoyarskiy Kray
+  country: RU
+- abbreviation: Kronoberg County
+  name: Kronoberg County
+  country: SE
+- abbreviation: Královéhradecký kraj
+  name: Královéhradecký kraj
+  country: CZ
+- abbreviation: CCU
+  name: Kuando Kubango
+  country: AO
+- abbreviation: Kufa
+  name: Kufa
+  country: IQ
+- abbreviation: KP
+  name: Kujawsko-Pomorskie
+  country: PL
+- abbreviation: Kumamoto
+  name: Kumamoto
+  country: JP
+- abbreviation: KGN
+  name: Kurganskaya Oblast'
+  country: RU
+- abbreviation: KRS
+  name: Kurskaya Oblast'
+  country: RU
+- abbreviation: Kusini Unguja
+  name: Kusini Unguja
+  country: TZ
+- abbreviation: Kutahya
+  name: Kutahya
+  country: TR
+- abbreviation: ZN
+  name: KwaZulu-Natal
+  country: ZA
+- abbreviation: Kwara
+  name: Kwara
+  country: NG
+- abbreviation: KW
+  name: Kwara State
+  country: NG
+- abbreviation: Kwazulu Natal
+  name: Kwazulu Natal
+  country: ZA
+- abbreviation: Kyivska Oblast
+  name: Kyivska Oblast
+  country: UA
+- abbreviation: Kyoto
+  name: Kyoto
+  country: JP
+- abbreviation: Kébili
+  name: Kébili
+  country: TN
+- abbreviation: Kélo
+  name: Kélo
+  country: TD
+- abbreviation: Kırklareli
+  name: Kırklareli
+  country: TR
+- abbreviation: L'Oriental
+  name: L'Oriental
+  country: MA
+- abbreviation: LA
+  name: LA
+  country: US
+- abbreviation: LU
+  name: LU
+  country: CH
+- abbreviation: La Altagracia
+  name: La Altagracia
+  country: DO
+- abbreviation: La Guajira
+  name: La Guajira
+  country: CO
+- abbreviation: La Libertad
+  name: La Libertad
+  country: PE
+- abbreviation: La Libertad
+  name: La Libertad
+  country: SV
+- abbreviation: LAL
+  name: La Libertad
+  country: PE
+- abbreviation: La Paz
+  name: La Paz
+  country: SV
+- abbreviation: RI
+  name: La Rioja
+  country: ES
+- abbreviation: La Union
+  name: La Union
+  country: SV
+- abbreviation: La Vega
+  name: La Vega
+  country: DO
+- abbreviation: Labé
+  name: Labé
+  country: GN
+- abbreviation: Lacs
+  name: Lacs
+  country: CI
+- abbreviation: Laghouat
+  name: Laghouat
+  country: DZ
+- abbreviation: LA
+  name: Lagos
+  country: NG
+- abbreviation: Lagos
+  name: Lagos
+  country: NG
+- abbreviation: Lagunes
+  name: Lagunes
+  country: CI
+- abbreviation: Laikipia
+  name: Laikipia
+  country: KE
+- abbreviation: Lakes
+  name: Lakes
+  country: SS
+- abbreviation: Lam Dong
+  name: Lam Dong
+  country: VN
+- abbreviation: Lambayeque
+  name: Lambayeque
+  country: PE
+- abbreviation: LAM
+  name: Lambayeque
+  country: PE
+- abbreviation: Lampung
+  name: Lampung
+  country: ID
+- abbreviation: BE
+  name: Land Berlin
+  country: DE
+- abbreviation: Lang Son
+  name: Lang Son
+  country: VN
+- abbreviation: Languedoc-Roussillon-Mid-Pyrenees
+  name: Languedoc-Roussillon-Mid-Pyrenees
+  country: FR
+- abbreviation: Lao Cai
+  name: Lao Cai
+  country: VN
+- abbreviation: Laos
+  name: Laos
+  country: LA
+- abbreviation: Lara
+  name: Lara
+  country: VE
+- abbreviation: Las Anod
+  name: Las Anod
+  country: SO
+- abbreviation: Las Tunas
+  name: Las Tunas
+  country: CU
+- abbreviation: LA
+  name: Latakia Governorate
+  country: SY
+- abbreviation: Latakkia
+  name: Latakkia
+  country: SY
+- abbreviation: Latium
+  name: Latium
+  country: IT
+- abbreviation: Lebialem
+  name: Lebialem
+  country: CM
+- abbreviation: Lekié
+  name: Lekié
+  country: CM
+- abbreviation: LEN
+  name: Leningrad
+  country: RU
+- abbreviation: Leribe
+  name: Leribe
+  country: LS
+- abbreviation: MA
+  name: Lesser Poland Voivodeship
+  country: PL
+- abbreviation: León
+  name: León
+  country: NI
+- abbreviation: Liaoning
+  name: Liaoning
+  country: CN
+- abbreviation: LI
+  name: Liberecky kraj
+  country: CZ
+- abbreviation: Liberecký kraj
+  name: Liberecký kraj
+  country: CZ
+- abbreviation: Libertador Gral Bernardo O'Higgins
+  name: Libertador Gral Bernardo O'Higgins
+  country: CL
+- abbreviation: Liepaja
+  name: Liepaja
+  country: LV
+- abbreviation: Liguria
+  name: Liguria
+  country: IT
+- abbreviation: Lima
+  name: Lima
+  country: PE
+- abbreviation: LIM
+  name: Lima
+  country: PE
+- abbreviation: LI
+  name: Limburg
+  country: NL
+- abbreviation: Limon
+  name: Limon
+  country: CR
+- abbreviation: Limpopo
+  name: Limpopo
+  country: ZA
+- abbreviation: LP
+  name: Limpopo
+  country: ZA
+- abbreviation: Lindi
+  name: Lindi
+  country: TZ
+- abbreviation: LIP
+  name: Lipetskaya Oblast'
+  country: RU
+- abbreviation: Lira
+  name: Lira
+  country: UG
+- abbreviation: LT
+  name: Littoral
+  country: CM
+- abbreviation: LI
+  name: Littoral
+  country: BJ
+- abbreviation: LO
+  name: Logone Occidental Region
+  country: TD
+- abbreviation: Logone-et-Chari
+  name: Logone-et-Chari
+  country: CM
+- abbreviation: Loire Region
+  name: Loire Region
+  country: FR
+- abbreviation: Lokossa
+  name: Lokossa
+  country: BJ
+- abbreviation: Lom-et-Djérem
+  name: Lom-et-Djérem
+  country: CM
+- abbreviation: Lombardy
+  name: Lombardy
+  country: IT
+- abbreviation: Lome
+  name: Lome
+  country: ET
+- abbreviation: Long An
+  name: Long An
+  country: VN
+- abbreviation: Lop Buri
+  name: Lop Buri
+  country: TH
+- abbreviation: Loreto
+  name: Loreto
+  country: PE
+- abbreviation: LOR
+  name: Loreto
+  country: PE
+- abbreviation: Lori
+  name: Lori
+  country: AM
+- abbreviation: LL
+  name: Los Lagos
+  country: CL
+- abbreviation: Los Lagos
+  name: Los Lagos
+  country: CL
+- abbreviation: Los Rios
+  name: Los Rios
+  country: CL
+- abbreviation: Los Ríos
+  name: Los Ríos
+  country: EC
+- abbreviation: Louga
+  name: Louga
+  country: SN
+- abbreviation: LG
+  name: Louga
+  country: SN
+- abbreviation: Louvakou
+  name: Louvakou
+  country: CG
+- abbreviation: Lower Austria
+  name: Lower Austria
+  country: AT
+- abbreviation: NI
+  name: Lower Saxony
+  country: DE
+- abbreviation: Lower Saxony
+  name: Lower Saxony
+  country: DE
+- abbreviation: DS
+  name: Lower Silesian Voivodeship
+  country: PL
+- abbreviation: LU
+  name: Lublin Voivodeship
+  country: PL
+- abbreviation: LB
+  name: Lubusz
+  country: PL
+- abbreviation: Luhansk
+  name: Luhansk
+  country: UA
+- abbreviation: Lumbini
+  name: Lumbini
+  country: NP
+- abbreviation: LNO
+  name: Lunda Norte Province
+  country: AO
+- abbreviation: Lunda Sul
+  name: Lunda Sul
+  country: AO
+- abbreviation: Lusaka
+  name: Lusaka
+  country: ZM
+- abbreviation: Luuk
+  name: Luuk
+  country: SO
+- abbreviation: Luwero
+  name: Luwero
+  country: UG
+- abbreviation: LX
+  name: Luxor
+  country: EG
+- abbreviation: Lviv
+  name: Lviv
+  country: UA
+- abbreviation: Léo
+  name: Léo
+  country: BF
+- abbreviation: M'Baïki
+  name: M'Baïki
+  country: CF
+- abbreviation: M'Sila
+  name: M'Sila
+  country: DZ
+- abbreviation: ME
+  name: ME
+  country: US
+- abbreviation: MICH
+  name: MICH
+  country: MX
+- abbreviation: MN
+  name: MN
+  country: IN
+- abbreviation: MN
+  name: MN
+  country: US
+- abbreviation: MT
+  name: MT
+  country: BR
+- abbreviation: MT
+  name: MT
+  country: US
+- abbreviation: MZ
+  name: MZ
+  country: IN
+- abbreviation: Maan Governorate
+  name: Maan Governorate
+  country: JO
+- abbreviation: Macau
+  name: Macau
+  country: MO
+- abbreviation: Machakos
+  name: Machakos
+  country: KE
+- abbreviation: Macuata
+  name: Macuata
+  country: FJ
+- abbreviation: Madaba Governorate
+  name: Madaba Governorate
+  country: JO
+- abbreviation: MPM
+  name: Madang Province
+  country: PG
+- abbreviation: MP
+  name: Madhya Pradesh
+  country: IN
+- abbreviation: Madinah
+  name: Madinah
+  country: SA
+- abbreviation: Madre de Dios
+  name: Madre de Dios
+  country: PE
+- abbreviation: MDD
+  name: Madre de Dios
+  country: PE
+- abbreviation: MD
+  name: Madrid
+  country: ES
+- abbreviation: Mafeteng
+  name: Mafeteng
+  country: LS
+- abbreviation: MAG
+  name: Magadanskaya Oblast'
+  country: RU
+- abbreviation: Magdalena
+  name: Magdalena
+  country: CO
+- abbreviation: Mahajanga I
+  name: Mahajanga I
+  country: MG
+- abbreviation: Mahakali
+  name: Mahakali
+  country: NP
+- abbreviation: Mahanoro
+  name: Mahanoro
+  country: MG
+- abbreviation: MH
+  name: Maharashtra
+  country: IN
+- abbreviation: Mahdia
+  name: Mahdia
+  country: TN
+- abbreviation: Mahilyowskaya voblasts'
+  name: Mahilyowskaya voblasts'
+  country: BY
+- abbreviation: Makkah
+  name: Makkah
+  country: SA
+- abbreviation: Malacca
+  name: Malacca
+  country: MY
+- abbreviation: Malange
+  name: Malange
+  country: AO
+- abbreviation: Malanville
+  name: Malanville
+  country: BJ
+- abbreviation: MA
+  name: Maldonado
+  country: UY
+- abbreviation: Maluku
+  name: Maluku
+  country: ID
+- abbreviation: Maluku Utara
+  name: Maluku Utara
+  country: ID
+- abbreviation: Mana Sibu
+  name: Mana Sibu
+  country: ET
+- abbreviation: Manabí
+  name: Manabí
+  country: EC
+- abbreviation: Managua
+  name: Managua
+  country: NI
+- abbreviation: Manakara Atsimo
+  name: Manakara Atsimo
+  country: MG
+- abbreviation: Mananara Avaratra
+  name: Mananara Avaratra
+  country: MG
+- abbreviation: Mananjary
+  name: Mananjary
+  country: MG
+- abbreviation: MWT
+  name: Manawatu-Wanganui
+  country: NZ
+- abbreviation: Mandera
+  name: Mandera
+  country: KE
+- abbreviation: Manica
+  name: Manica
+  country: MZ
+- abbreviation: Manicaland
+  name: Manicaland
+  country: ZW
+- abbreviation: MA
+  name: Manicaland
+  country: ZW
+- abbreviation: Maniema
+  name: Maniema
+  country: CD
+- abbreviation: Manisa
+  name: Manisa
+  country: TR
+- abbreviation: MB
+  name: Manitoba
+  country: CA
+- abbreviation: Manjakandriana
+  name: Manjakandriana
+  country: MG
+- abbreviation: Manouba
+  name: Manouba
+  country: TN
+- abbreviation: Manyara
+  name: Manyara
+  country: TZ
+- abbreviation: MA
+  name: Manzini District
+  country: SZ
+- abbreviation: Maputo
+  name: Maputo
+  country: MZ
+- abbreviation: Mara
+  name: Mara
+  country: TZ
+- abbreviation: Maradi
+  name: Maradi
+  country: NE
+- abbreviation: Maramures
+  name: Maramures
+  country: RO
+- abbreviation: MM
+  name: Maramureş
+  country: RO
+- abbreviation: MA
+  name: Maranhao
+  country: BR
+- abbreviation: Marches
+  name: Marches
+  country: IT
+- abbreviation: Mardin
+  name: Mardin
+  country: TR
+- abbreviation: Marijampolės Apskritis
+  name: Marijampolės Apskritis
+  country: LT
+- abbreviation: Marka
+  name: Marka
+  country: SO
+- abbreviation: Marlborough
+  name: Marlborough
+  country: NZ
+- abbreviation: Marolambo
+  name: Marolambo
+  country: MG
+- abbreviation: Maroua
+  name: Maroua
+  country: CM
+- abbreviation: Marovoay
+  name: Marovoay
+  country: MG
+- abbreviation: Marrakech - Safi
+  name: Marrakech - Safi
+  country: MA
+- abbreviation: Marsabit
+  name: Marsabit
+  country: KE
+- abbreviation: Martinique
+  name: Martinique
+  country: MQ
+- abbreviation: MD
+  name: Maryland
+  country: US
+- abbreviation: María Trinidad Sánchez
+  name: María Trinidad Sánchez
+  country: DO
+- abbreviation: Masaka
+  name: Masaka
+  country: UG
+- abbreviation: Mascara
+  name: Mascara
+  country: DZ
+- abbreviation: Mashonaland Central
+  name: Mashonaland Central
+  country: ZW
+- abbreviation: Mashonaland East
+  name: Mashonaland East
+  country: ZW
+- abbreviation: Mashonaland West
+  name: Mashonaland West
+  country: ZW
+- abbreviation: MW
+  name: Mashonaland West
+  country: ZW
+- abbreviation: Masindi
+  name: Masindi
+  country: UG
+- abbreviation: MZ
+  name: Masovian Voivodeship
+  country: PL
+- abbreviation: MA
+  name: Massachusetts
+  country: US
+- abbreviation: Masvingo
+  name: Masvingo
+  country: ZW
+- abbreviation: MN
+  name: Matabeleland North
+  country: ZW
+- abbreviation: Matabeleland North
+  name: Matabeleland North
+  country: ZW
+- abbreviation: Matabeleland South
+  name: Matabeleland South
+  country: ZW
+- abbreviation: Matanzas
+  name: Matanzas
+  country: CU
+- abbreviation: MS
+  name: Mato Grosso do Sul
+  country: BR
+- abbreviation: Matrouh
+  name: Matrouh
+  country: EG
+- abbreviation: ML
+  name: Maule
+  country: CL
+- abbreviation: Maule
+  name: Maule
+  country: CL
+- abbreviation: Mayabeque
+  name: Mayabeque
+  country: CU
+- abbreviation: RCM
+  name: Mayaro
+  country: TT
+- abbreviation: Mayo-Banyo
+  name: Mayo-Banyo
+  country: CM
+- abbreviation: Mayo-Danay
+  name: Mayo-Danay
+  country: CM
+- abbreviation: Mayo-Kani
+  name: Mayo-Kani
+  country: CM
+- abbreviation: Mayo-Louti
+  name: Mayo-Louti
+  country: CM
+- abbreviation: Mayo-Sava
+  name: Mayo-Sava
+  country: CM
+- abbreviation: Mayo-Tsanaga
+  name: Mayo-Tsanaga
+  country: CM
+- abbreviation: Mañgistau oblisi
+  name: Mañgistau oblisi
+  country: KZ
+- abbreviation: Mbale
+  name: Mbale
+  country: UG
+- abbreviation: Mbarara
+  name: Mbarara
+  country: UG
+- abbreviation: Mbeya
+  name: Mbeya
+  country: TZ
+- abbreviation: Mbéré
+  name: Mbéré
+  country: CM
+- abbreviation: MV
+  name: Mecklenburg-Vorpommern
+  country: DE
+- abbreviation: Medenine
+  name: Medenine
+  country: TN
+- abbreviation: ML
+  name: Meghalaya
+  country: IN
+- abbreviation: Mehedinti
+  name: Mehedinti
+  country: RO
+- abbreviation: Mekele
+  name: Mekele
+  country: ET
+- abbreviation: ML
+  name: Melilla
+  country: ES
+- abbreviation: Menchum
+  name: Menchum
+  country: CM
+- abbreviation: Menofia
+  name: Menofia
+  country: EG
+- abbreviation: Menoua
+  name: Menoua
+  country: CM
+- abbreviation: Merida
+  name: Merida
+  country: VE
+- abbreviation: Merkaz
+  name: Merkaz
+  country: IL
+- abbreviation: Mersin
+  name: Mersin
+  country: TR
+- abbreviation: Meru
+  name: Meru
+  country: KE
+- abbreviation: Meskana
+  name: Meskana
+  country: ET
+- abbreviation: Meta
+  name: Meta
+  country: CO
+- abbreviation: Metu
+  name: Metu
+  country: ET
+- abbreviation: DIF
+  name: Mexico City
+  country: MX
+- abbreviation: Mezam
+  name: Mezam
+  country: CM
+- abbreviation: MI
+  name: Michigan
+  country: US
+- abbreviation: MIC
+  name: Michoacán
+  country: MX
+- abbreviation: Midlands
+  name: Midlands
+  country: ZW
+- abbreviation: MI
+  name: Midlands Province
+  country: ZW
+- abbreviation: Mie
+  name: Mie
+  country: JP
+- abbreviation: Migori
+  name: Migori
+  country: KE
+- abbreviation: Mila
+  name: Mila
+  country: DZ
+- abbreviation: Mimaropa
+  name: Mimaropa
+  country: PH
+- abbreviation: MG
+  name: Minas Gerais
+  country: BR
+- abbreviation: Minsk
+  name: Minsk
+  country: BY
+- abbreviation: MI
+  name: Minsk
+  country: BY
+- abbreviation: Minskaya voblasts'
+  name: Minskaya voblasts'
+  country: BY
+- abbreviation: Miranda
+  name: Miranda
+  country: VE
+- abbreviation: Misiones
+  name: Misiones
+  country: AR
+- abbreviation: Misratah
+  name: Misratah
+  country: LY
+- abbreviation: MS
+  name: Mississippi
+  country: US
+- abbreviation: MO
+  name: Missouri
+  country: US
+- abbreviation: Mityana
+  name: Mityana
+  country: UG
+- abbreviation: Miyagi
+  name: Miyagi
+  country: JP
+- abbreviation: Miyazaki
+  name: Miyazaki
+  country: JP
+- abbreviation: MA
+  name: Mogilev
+  country: BY
+- abbreviation: BH
+  name: Mohafazat Baalbek-Hermel
+  country: LB
+- abbreviation: AS
+  name: Mohafazat Liban-Nord
+  country: LB
+- abbreviation: JA
+  name: Mohafazat Liban-Sud
+  country: LB
+- abbreviation: Mohale's Hoek
+  name: Mohale's Hoek
+  country: LS
+- abbreviation: Mombasa
+  name: Mombasa
+  country: KE
+- abbreviation: Monagas
+  name: Monagas
+  country: VE
+- abbreviation: Monastir
+  name: Monastir
+  country: TN
+- abbreviation: Monseñor Nouel
+  name: Monseñor Nouel
+  country: DO
+- abbreviation: Montagne
+  name: Montagne
+  country: CI
+- abbreviation: Mopti
+  name: Mopti
+  country: ML
+- abbreviation: Moramanga
+  name: Moramanga
+  country: MG
+- abbreviation: MO
+  name: Moravskoslezsky kraj
+  country: CZ
+- abbreviation: Moravskoslezský kraj
+  name: Moravskoslezský kraj
+  country: CZ
+- abbreviation: More and Romsdal
+  name: More and Romsdal
+  country: 'NO'
+- abbreviation: MOR
+  name: Morelos
+  country: MX
+- abbreviation: MPL
+  name: Morobe Province
+  country: PG
+- abbreviation: Morogoro
+  name: Morogoro
+  country: TZ
+- abbreviation: Morondava
+  name: Morondava
+  country: MG
+- abbreviation: MOW
+  name: Moscow
+  country: RU
+- abbreviation: MOS
+  name: Moskovskaya
+  country: RU
+- abbreviation: Mostaganem
+  name: Mostaganem
+  country: DZ
+- abbreviation: Mosul
+  name: Mosul
+  country: IQ
+- abbreviation: Moungo
+  name: Moungo
+  country: CM
+- abbreviation: Mount Lebanon
+  name: Mount Lebanon
+  country: LB
+- abbreviation: Mpassa
+  name: Mpassa
+  country: GA
+- abbreviation: MP
+  name: Mpumalanga
+  country: ZA
+- abbreviation: Mpumalanga
+  name: Mpumalanga
+  country: ZA
+- abbreviation: Mtwara
+  name: Mtwara
+  country: TZ
+- abbreviation: Mubarak Al Kabeer
+  name: Mubarak Al Kabeer
+  country: KW
+- abbreviation: Mughan
+  name: Mughan
+  country: AZ
+- abbreviation: AR
+  name: Muhafazat Arbil
+  country: IQ
+- abbreviation: BB
+  name: Muhafazat Babil
+  country: IQ
+- abbreviation: BNS
+  name: Muhafazat Bani Suwayf
+  country: EG
+- abbreviation: PTS
+  name: Muhafazat Bur Sa`id
+  country: EG
+- abbreviation: DT
+  name: Muhafazat Dumyat
+  country: EG
+- abbreviation: HA
+  name: Muhafazat Hawalli
+  country: KW
+- abbreviation: TS
+  name: Muhafazat Kirkuk
+  country: IQ
+- abbreviation: NI
+  name: Muhafazat Ninawa
+  country: IQ
+- abbreviation: SD
+  name: Muhafazat Salah ad Din
+  country: IQ
+- abbreviation: SHG
+  name: Muhafazat Suhaj
+  country: EG
+- abbreviation: ZU
+  name: Muhafazat Zufar
+  country: OM
+- abbreviation: DA
+  name: Muhafazat ad Dakhiliyah
+  country: OM
+- abbreviation: DK
+  name: Muhafazat ad Daqahliyah
+  country: EG
+- abbreviation: GH
+  name: Muhafazat al Gharbiyah
+  country: EG
+- abbreviation: GZ
+  name: Muhafazat al Jizah
+  country: EG
+- abbreviation: KB
+  name: Muhafazat al Qalyubiyah
+  country: EG
+- abbreviation: Mukono
+  name: Mukono
+  country: UG
+- abbreviation: MC
+  name: Murcia
+  country: ES
+- abbreviation: Mures
+  name: Mures
+  country: RO
+- abbreviation: MUR
+  name: Murmansk
+  country: RU
+- abbreviation: Murzuq
+  name: Murzuq
+  country: LY
+- abbreviation: Mus
+  name: Mus
+  country: TR
+- abbreviation: Muscat
+  name: Muscat
+  country: OM
+- abbreviation: Muyinga
+  name: Muyinga
+  country: BI
+- abbreviation: Mvila
+  name: Mvila
+  country: CM
+- abbreviation: Mwanza
+  name: Mwanza
+  country: TZ
+- abbreviation: Myanmar
+  name: Myanmar
+  country: MM
+- abbreviation: Mykolaiv
+  name: Mykolaiv
+  country: UA
+- abbreviation: Médéa
+  name: Médéa
+  country: DZ
+- abbreviation: N. Ireland
+  name: N. Ireland
+  country: GB
+- abbreviation: NE
+  name: NE
+  country: US
+- abbreviation: NH
+  name: NH
+  country: US
+- abbreviation: NL
+  name: NL
+  country: IN
+- abbreviation: NL
+  name: NL
+  country: MX
+- abbreviation: NV
+  name: NV
+  country: US
+- abbreviation: Naama
+  name: Naama
+  country: DZ
+- abbreviation: Nabatieh
+  name: Nabatieh
+  country: LB
+- abbreviation: Nabeul
+  name: Nabeul
+  country: TN
+- abbreviation: Nagano
+  name: Nagano
+  country: JP
+- abbreviation: Nagasaki
+  name: Nagasaki
+  country: JP
+- abbreviation: Nairobi
+  name: Nairobi
+  country: KE
+- abbreviation: Najaf
+  name: Najaf
+  country: IQ
+- abbreviation: NX
+  name: Nakhichevan
+  country: AZ
+- abbreviation: Nakhon Pathom
+  name: Nakhon Pathom
+  country: TH
+- abbreviation: Nakhon Phanom
+  name: Nakhon Phanom
+  country: TH
+- abbreviation: Nakhon Ratchasima
+  name: Nakhon Ratchasima
+  country: TH
+- abbreviation: Nakhon Si Thammarat
+  name: Nakhon Si Thammarat
+  country: TH
+- abbreviation: Nakuru
+  name: Nakuru
+  country: KE
+- abbreviation: Nalut
+  name: Nalut
+  country: LY
+- abbreviation: Nam Dinh
+  name: Nam Dinh
+  country: VN
+- abbreviation: Namangan
+  name: Namangan
+  country: UZ
+- abbreviation: NAM
+  name: Namibe Province
+  country: AO
+- abbreviation: Nampula
+  name: Nampula
+  country: MZ
+- abbreviation: AC
+  name: Nanggroe Aceh Darussalam Province
+  country: ID
+- abbreviation: Nantou County
+  name: Nantou County
+  country: TW
+- abbreviation: Nara
+  name: Nara
+  country: JP
+- abbreviation: Narathiwat
+  name: Narathiwat
+  country: TH
+- abbreviation: Narayani
+  name: Narayani
+  country: NP
+- abbreviation: Narino
+  name: Narino
+  country: CO
+- abbreviation: Narok
+  name: Narok
+  country: KE
+- abbreviation: Naryn
+  name: Naryn
+  country: KG
+- abbreviation: Nassarawa
+  name: Nassarawa
+  country: NG
+- abbreviation: Nassriya
+  name: Nassriya
+  country: IQ
+- abbreviation: National Capital Region
+  name: National Capital Region
+  country: PH
+- abbreviation: Natitingou
+  name: Natitingou
+  country: BJ
+- abbreviation: NC
+  name: Navarre
+  country: ES
+- abbreviation: Navoyi
+  name: Navoyi
+  country: UZ
+- abbreviation: NAY
+  name: Nayarit
+  country: MX
+- abbreviation: Ndé
+  name: Ndé
+  country: CM
+- abbreviation: Neamt
+  name: Neamt
+  country: RO
+- abbreviation: Nebbi
+  name: Nebbi
+  country: UG
+- abbreviation: Negros Island Region
+  name: Negros Island Region
+  country: PH
+- abbreviation: NSN
+  name: Nelson
+  country: NZ
+- abbreviation: NE
+  name: Neuchâtel
+  country: CH
+- abbreviation: Neuquen
+  name: Neuquen
+  country: AR
+- abbreviation: Nevsehir
+  name: Nevsehir
+  country: TR
+- abbreviation: NB
+  name: New Brunswick
+  country: CA
+- abbreviation: NJ
+  name: New Jersey
+  country: US
+- abbreviation: NM
+  name: New Mexico
+  country: US
+- abbreviation: NSW
+  name: New South Wales
+  country: AU
+- abbreviation: New Sparta
+  name: New Sparta
+  country: VE
+- abbreviation: New Taipei City
+  name: New Taipei City
+  country: TW
+- abbreviation: NY
+  name: New York
+  country: US
+- abbreviation: NL
+  name: Newfoundland and Labrador
+  country: CA
+- abbreviation: Nghe An
+  name: Nghe An
+  country: VN
+- abbreviation: Niassa
+  name: Niassa
+  country: MZ
+- abbreviation: Nigde
+  name: Nigde
+  country: TR
+- abbreviation: Niger
+  name: Niger
+  country: NG
+- abbreviation: NI
+  name: Niger State
+  country: NG
+- abbreviation: Niigata
+  name: Niigata
+  country: JP
+- abbreviation: Nikki
+  name: Nikki
+  country: BJ
+- abbreviation: Ningxia Hui
+  name: Ningxia Hui
+  country: CN
+- abbreviation: Ninh Thuan
+  name: Ninh Thuan
+  country: VN
+- abbreviation: Nitriansky kraj
+  name: Nitriansky kraj
+  country: SK
+- abbreviation: NI
+  name: Nitriansky kraj
+  country: SK
+- abbreviation: NIZ
+  name: Nizhegorodskaya Oblast'
+  country: RU
+- abbreviation: Njombe
+  name: Njombe
+  country: TZ
+- abbreviation: Nkayi
+  name: Nkayi
+  country: CG
+- abbreviation: 'NO'
+  name: Nograd megye
+  country: HU
+- abbreviation: Nola
+  name: Nola
+  country: CF
+- abbreviation: Nong Bua Lam Phu
+  name: Nong Bua Lam Phu
+  country: TH
+- abbreviation: Nong Khai
+  name: Nong Khai
+  country: TH
+- abbreviation: Nonthaburi
+  name: Nonthaburi
+  country: TH
+- abbreviation: NK
+  name: Nord Kivu
+  country: CD
+- abbreviation: Nord-Kivu
+  name: Nord-Kivu
+  country: CD
+- abbreviation: Nord-Pas-de-Calais-Picardie
+  name: Nord-Pas-de-Calais-Picardie
+  country: FR
+- abbreviation: Nordland
+  name: Nordland
+  country: 'NO'
+- abbreviation: Normandy
+  name: Normandy
+  country: FR
+- abbreviation: BD
+  name: Norrbotten
+  country: SE
+- abbreviation: Norrbotten County
+  name: Norrbotten County
+  country: SE
+- abbreviation: Norte de Santander
+  name: Norte de Santander
+  country: CO
+- abbreviation: North Bahr al Ghazal
+  name: North Bahr al Ghazal
+  country: SS
+- abbreviation: NB
+  name: North Brabant
+  country: NL
+- abbreviation: NC
+  name: North Carolina
+  country: US
+- abbreviation: North Caucasian Federal District
+  name: North Caucasian Federal District
+  country: RU
+- abbreviation: North Central
+  name: North Central
+  country: LK
+- abbreviation: ND
+  name: North Dakota
+  country: US
+- abbreviation: NE
+  name: North East District
+  country: BW
+- abbreviation: North Holland
+  name: North Holland
+  country: NL
+- abbreviation: NH
+  name: North Holland
+  country: NL
+- abbreviation: North Korea
+  name: North Korea
+  country: KP
+- abbreviation: SE
+  name: North Ossetia
+  country: RU
+- abbreviation: North Rhine-Westphalia
+  name: North Rhine-Westphalia
+  country: DE
+- abbreviation: NW
+  name: North Rhine-Westphalia
+  country: DE
+- abbreviation: North Sinai
+  name: North Sinai
+  country: EG
+- abbreviation: SA
+  name: North Sulawesi
+  country: ID
+- abbreviation: SU
+  name: North Sumatra
+  country: ID
+- abbreviation: North West
+  name: North West
+  country: ZA
+- abbreviation: North Western
+  name: North Western
+  country: LK
+- abbreviation: North al Gazera
+  name: North al Gazera
+  country: SD
+- abbreviation: NW
+  name: North-West Region
+  country: CM
+- abbreviation: Northern
+  name: Northern
+  country: LK
+- abbreviation: Northern
+  name: Northern
+  country: GH
+- abbreviation: Northern
+  name: Northern
+  country: BW
+- abbreviation: Northern
+  name: Northern
+  country: ZM
+- abbreviation: Northern
+  name: Northern
+  country: BH
+- abbreviation: Northern Border
+  name: Northern Border
+  country: SA
+- abbreviation: NC
+  name: Northern Cape
+  country: ZA
+- abbreviation: NIR
+  name: Northern Ireland
+  country: GB
+- abbreviation: Northern Mindanao
+  name: Northern Mindanao
+  country: PH
+- abbreviation: NPP
+  name: Northern Province
+  country: PG
+- abbreviation: Northern Region
+  name: Northern Region
+  country: MW
+- abbreviation: NT
+  name: Northern Territory
+  country: AU
+- abbreviation: NTL
+  name: Northland
+  country: NZ
+- abbreviation: NT
+  name: Northwest Territories
+  country: CA
+- abbreviation: Northwestern Federal District
+  name: Northwestern Federal District
+  country: RU
+- abbreviation: Nosy-Varika
+  name: Nosy-Varika
+  country: MG
+- abbreviation: Notio Aigaio
+  name: Notio Aigaio
+  country: GR
+- abbreviation: Nouadhibou
+  name: Nouadhibou
+  country: MR
+- abbreviation: Noun
+  name: Noun
+  country: CM
+- abbreviation: Nouna
+  name: Nouna
+  country: BF
+- abbreviation: NS
+  name: Nova Scotia
+  country: CA
+- abbreviation: NGR
+  name: Novgorodskaya Oblast'
+  country: RU
+- abbreviation: NVS
+  name: Novosibirskaya Oblast'
+  country: RU
+- abbreviation: Ntungamo
+  name: Ntungamo
+  country: UG
+- abbreviation: NLE
+  name: Nuevo León
+  country: MX
+- abbreviation: Nusa Tenggara Barat
+  name: Nusa Tenggara Barat
+  country: ID
+- abbreviation: Nusa Tenggara Timur
+  name: Nusa Tenggara Timur
+  country: ID
+- abbreviation: Nyandarua
+  name: Nyandarua
+  country: KE
+- abbreviation: Nyeri
+  name: Nyeri
+  country: KE
+- abbreviation: Nyong-et-So'o
+  name: Nyong-et-So'o
+  country: CM
+- abbreviation: Nzérékoré
+  name: Nzérékoré
+  country: GN
+- abbreviation: Néma
+  name: Néma
+  country: MR
+- abbreviation: OAX
+  name: OAX
+  country: MX
+- abbreviation: OD
+  name: OD
+  country: IN
+- abbreviation: OH
+  name: OH
+  country: US
+- abbreviation: OK
+  name: OK
+  country: US
+- abbreviation: Odesa
+  name: Odesa
+  country: UA
+- abbreviation: OR
+  name: Odisha
+  country: IN
+- abbreviation: Odo Shakiso
+  name: Odo Shakiso
+  country: ET
+- abbreviation: Ofla
+  name: Ofla
+  country: ET
+- abbreviation: Ogun
+  name: Ogun
+  country: NG
+- abbreviation: OG
+  name: Ogun State
+  country: NG
+- abbreviation: Oita
+  name: Oita
+  country: JP
+- abbreviation: Okinawa
+  name: Okinawa
+  country: JP
+- abbreviation: Olancho
+  name: Olancho
+  country: HN
+- abbreviation: OL
+  name: Olomoucky kraj
+  country: CZ
+- abbreviation: Olomoucký kraj
+  name: Olomoucký kraj
+  country: CZ
+- abbreviation: OT
+  name: Olt
+  country: RO
+- abbreviation: Omdurman
+  name: Omdurman
+  country: SD
+- abbreviation: OMS
+  name: Omskaya Oblast'
+  country: RU
+- abbreviation: Ondo
+  name: Ondo
+  country: NG
+- abbreviation: 'ON'
+  name: Ondo State
+  country: NG
+- abbreviation: 'ON'
+  name: Ontario
+  country: CA
+- abbreviation: OP
+  name: Opole Voivodeship
+  country: PL
+- abbreviation: Oran
+  name: Oran
+  country: DZ
+- abbreviation: FS
+  name: Orange Free State
+  country: ZA
+- abbreviation: Ordu
+  name: Ordu
+  country: TR
+- abbreviation: Orebro County
+  name: Orebro County
+  country: SE
+- abbreviation: OR
+  name: Oregon
+  country: US
+- abbreviation: ORE
+  name: Orenburgskaya Oblast'
+  country: RU
+- abbreviation: OR
+  name: Orhei
+  country: MD
+- abbreviation: Orientale
+  name: Orientale
+  country: CD
+- abbreviation: Orkhon
+  name: Orkhon
+  country: MN
+- abbreviation: ORL
+  name: Orlovskaya Oblast'
+  country: RU
+- abbreviation: OR
+  name: Oromiya
+  country: ET
+- abbreviation: Osaka
+  name: Osaka
+  country: JP
+- abbreviation: Osh
+  name: Osh
+  country: KG
+- abbreviation: Osh
+  name: Osh
+  country: UZ
+- abbreviation: 'ON'
+  name: Oshana
+  country: NA
+- abbreviation: Ostergotland County
+  name: Ostergotland County
+  country: SE
+- abbreviation: Osun
+  name: Osun
+  country: NG
+- abbreviation: OS
+  name: Osun State
+  country: NG
+- abbreviation: OTA
+  name: Otago
+  country: NZ
+- abbreviation: OD
+  name: Otjozondjupa
+  country: NA
+- abbreviation: Ouahigouya
+  name: Ouahigouya
+  country: BF
+- abbreviation: Ouargla
+  name: Ouargla
+  country: DZ
+- abbreviation: Ouidah
+  name: Ouidah
+  country: BJ
+- abbreviation: OL
+  name: Oulu
+  country: FI
+- abbreviation: Oum El Bouaghi
+  name: Oum El Bouaghi
+  country: DZ
+- abbreviation: Overijssel
+  name: Overijssel
+  country: NL
+- abbreviation: Ovorkhangai
+  name: Ovorkhangai
+  country: MN
+- abbreviation: Oyo
+  name: Oyo
+  country: NG
+- abbreviation: OY
+  name: Oyo State
+  country: NG
+- abbreviation: Oñtüstyk Qazaqstan oblisi
+  name: Oñtüstyk Qazaqstan oblisi
+  country: KZ
+- abbreviation: PA
+  name: PA
+  country: BR
+- abbreviation: PR
+  name: PR
+  country: PR
+- abbreviation: Pahang
+  name: Pahang
+  country: MY
+- abbreviation: Pakistan
+  name: Pakistan
+  country: PK
+- abbreviation: Pallisa
+  name: Pallisa
+  country: UG
+- abbreviation: Panamá
+  name: Panamá
+  country: PA
+- abbreviation: PN
+  name: Panevėžys
+  country: LT
+- abbreviation: Papua
+  name: Papua
+  country: ID
+- abbreviation: Papua Barat
+  name: Papua Barat
+  country: ID
+- abbreviation: Papua New Guinea
+  name: Papua New Guinea
+  country: PG
+- abbreviation: PB
+  name: Paraiba
+  country: BR
+- abbreviation: Parakou
+  name: Parakou
+  country: BJ
+- abbreviation: PR
+  name: Parana
+  country: BR
+- abbreviation: PA
+  name: Pardubicky kraj
+  country: CZ
+- abbreviation: PAS
+  name: Pasco
+  country: PE
+- abbreviation: Pasco
+  name: Pasco
+  country: PE
+- abbreviation: Pathum Thani
+  name: Pathum Thani
+  country: TH
+- abbreviation: Pattani
+  name: Pattani
+  country: TH
+- abbreviation: PAV
+  name: Pavlodar Oblysy
+  country: KZ
+- abbreviation: Pavlodar oblisi
+  name: Pavlodar oblisi
+  country: KZ
+- abbreviation: Peloponnisos
+  name: Peloponnisos
+  country: GR
+- abbreviation: Penang
+  name: Penang
+  country: MY
+- abbreviation: Penghu County
+  name: Penghu County
+  country: TW
+- abbreviation: Penjwin
+  name: Penjwin
+  country: IQ
+- abbreviation: PA
+  name: Pennsylvania
+  country: US
+- abbreviation: PNZ
+  name: Penzenskaya Oblast'
+  country: RU
+- abbreviation: Peravia
+  name: Peravia
+  country: DO
+- abbreviation: PER
+  name: Perm Krai
+  country: RU
+- abbreviation: PE
+  name: Pernambuco
+  country: BR
+- abbreviation: Pest
+  name: Pest
+  country: HU
+- abbreviation: PE
+  name: Pest megye
+  country: HU
+- abbreviation: Petén
+  name: Petén
+  country: GT
+- abbreviation: Phetchabun
+  name: Phetchabun
+  country: TH
+- abbreviation: Phetchaburi
+  name: Phetchaburi
+  country: TH
+- abbreviation: Phra Nakhon Si Ayutthaya
+  name: Phra Nakhon Si Ayutthaya
+  country: TH
+- abbreviation: Phu Tho
+  name: Phu Tho
+  country: VN
+- abbreviation: Phu Yen
+  name: Phu Yen
+  country: VN
+- abbreviation: Phuket
+  name: Phuket
+  country: TH
+- abbreviation: PI
+  name: Piaui
+  country: BR
+- abbreviation: Pichincha
+  name: Pichincha
+  country: EC
+- abbreviation: Piedmont
+  name: Piedmont
+  country: IT
+- abbreviation: Pinar del Rio
+  name: Pinar del Rio
+  country: CU
+- abbreviation: Pingtung County
+  name: Pingtung County
+  country: TW
+- abbreviation: PIU
+  name: Piura
+  country: PE
+- abbreviation: Piura
+  name: Piura
+  country: PE
+- abbreviation: Plaine Wilhems
+  name: Plaine Wilhems
+  country: MU
+- abbreviation: PW
+  name: Plaines Wilhems District
+  country: MU
+- abbreviation: Plateau
+  name: Plateau
+  country: NG
+- abbreviation: PL
+  name: Plateau State
+  country: NG
+- abbreviation: PL
+  name: Plzensky kraj
+  country: CZ
+- abbreviation: Pobè
+  name: Pobè
+  country: BJ
+- abbreviation: PD
+  name: Podlasie
+  country: PL
+- abbreviation: Pointe Noire
+  name: Pointe Noire
+  country: CG
+- abbreviation: Poloshki
+  name: Poloshki
+  country: MK
+- abbreviation: Poltava
+  name: Poltava
+  country: UA
+- abbreviation: PM
+  name: Pomeranian Voivodeship
+  country: PL
+- abbreviation: Port Sudan
+  name: Port Sudan
+  country: SD
+- abbreviation: Porto
+  name: Porto
+  country: PT
+- abbreviation: Portuguesa
+  name: Portuguesa
+  country: VE
+- abbreviation: Poti
+  name: Poti
+  country: GE
+- abbreviation: Potosi
+  name: Potosi
+  country: BO
+- abbreviation: Prachuap Khiri Khan
+  name: Prachuap Khiri Khan
+  country: TH
+- abbreviation: Prague
+  name: Prague
+  country: CZ
+- abbreviation: PH
+  name: Prahova
+  country: RO
+- abbreviation: Prahova
+  name: Prahova
+  country: RO
+- abbreviation: PV
+  name: Presovsky kraj
+  country: SK
+- abbreviation: Prey Veng
+  name: Prey Veng
+  country: KH
+- abbreviation: Prešovský kraj
+  name: Prešovský kraj
+  country: SK
+- abbreviation: PRI
+  name: Primorskiy Kray
+  country: RU
+- abbreviation: Primorsko-goranska županija
+  name: Primorsko-goranska županija
+  country: HR
+- abbreviation: PE
+  name: Prince Edward Island
+  country: CA
+- abbreviation: Principality of Asturias
+  name: Principality of Asturias
+  country: ES
+- abbreviation: AS
+  name: Principality of Asturias
+  country: ES
+- abbreviation: BE
+  name: Propinsi Bengkulu
+  country: ID
+- abbreviation: Provence-Alpes-Cote D'Azur
+  name: Provence-Alpes-Cote D'Azur
+  country: FR
+- abbreviation: NW
+  name: Province of North West
+  country: ZA
+- abbreviation: WC
+  name: Province of the Western Cape
+  country: ZA
+- abbreviation: SJ
+  name: Provincia de San Jose
+  country: CR
+- abbreviation: SE
+  name: Provincia de Santa Elena
+  country: EC
+- abbreviation: SD
+  name: Provincia de Santo Domingo de los Tsachilas
+  country: EC
+- abbreviation: DR
+  name: Provincie Drenthe
+  country: NL
+- abbreviation: FL
+  name: Provincie Flevoland
+  country: NL
+- abbreviation: GE
+  name: Provincie Gelderland
+  country: NL
+- abbreviation: OV
+  name: Provincie Overijssel
+  country: NL
+- abbreviation: UT
+  name: Provincie Utrecht
+  country: NL
+- abbreviation: ZE
+  name: Provincie Zeeland
+  country: NL
+- abbreviation: GO
+  name: Provinsi Gorontalo
+  country: ID
+- abbreviation: JA
+  name: Provinsi Jambi
+  country: ID
+- abbreviation: LA
+  name: Provinsi Lampung
+  country: ID
+- abbreviation: PA
+  name: Provinsi Papua
+  country: ID
+- abbreviation: RI
+  name: Provinsi Riau
+  country: ID
+- abbreviation: PSK
+  name: Pskovskaya Oblast'
+  country: RU
+- abbreviation: PUE
+  name: Puebla
+  country: MX
+- abbreviation: PB
+  name: Punjab
+  country: PK
+- abbreviation: PUN
+  name: Puno
+  country: PE
+- abbreviation: Puno
+  name: Puno
+  country: PE
+- abbreviation: Puntarenas
+  name: Puntarenas
+  country: CR
+- abbreviation: Pursat
+  name: Pursat
+  country: KH
+- abbreviation: Putumayo
+  name: Putumayo
+  country: CO
+- abbreviation: Pwani
+  name: Pwani
+  country: TZ
+- abbreviation: Pärnu Maakond
+  name: Pärnu Maakond
+  country: EE
+- abbreviation: QC
+  name: QC
+  country: CA
+- abbreviation: QRO
+  name: QRO
+  country: MX
+- abbreviation: QROO
+  name: QROO
+  country: MX
+- abbreviation: Qacha's Nek
+  name: Qacha's Nek
+  country: LS
+- abbreviation: Qalyoubia
+  name: Qalyoubia
+  country: EG
+- abbreviation: Qaragandi oblisi
+  name: Qaragandi oblisi
+  country: KZ
+- abbreviation: KAR
+  name: Qaraghandy Oblysy
+  country: KZ
+- abbreviation: Qaraqalpaqstan
+  name: Qaraqalpaqstan
+  country: UZ
+- abbreviation: Qashqadaryo
+  name: Qashqadaryo
+  country: UZ
+- abbreviation: Qena
+  name: Qena
+  country: EG
+- abbreviation: Qizilorda oblisi
+  name: Qizilorda oblisi
+  country: KZ
+- abbreviation: Qoryooley
+  name: Qoryooley
+  country: SO
+- abbreviation: KUS
+  name: Qostanay Oblysy
+  country: KZ
+- abbreviation: Qostanay oblisi
+  name: Qostanay oblisi
+  country: KZ
+- abbreviation: Quang Binh
+  name: Quang Binh
+  country: VN
+- abbreviation: Quang Nam
+  name: Quang Nam
+  country: VN
+- abbreviation: Quang Ngai
+  name: Quang Ngai
+  country: VN
+- abbreviation: Quang Ninh
+  name: Quang Ninh
+  country: VN
+- abbreviation: QBA
+  name: Quba Rayon
+  country: AZ
+- abbreviation: QLD
+  name: Queensland
+  country: AU
+- abbreviation: QUE
+  name: Querétaro
+  country: MX
+- abbreviation: Quetzaltenango
+  name: Quetzaltenango
+  country: GT
+- abbreviation: Quiché
+  name: Quiché
+  country: GT
+- abbreviation: Quindio
+  name: Quindio
+  country: CO
+- abbreviation: QUI
+  name: Quindio Department
+  country: CO
+- abbreviation: ROO
+  name: Quintana Roo
+  country: MX
+- abbreviation: QUS
+  name: Qusar Rayon
+  country: AZ
+- abbreviation: KZY
+  name: Qyzylorda Oblysy
+  country: KZ
+- abbreviation: RI
+  name: RI
+  country: US
+- abbreviation: RO
+  name: RO
+  country: BR
+- abbreviation: RR
+  name: RR
+  country: BR
+- abbreviation: RS
+  name: RS
+  country: BR
+- abbreviation: Rabat - Salé - Kénitra
+  name: Rabat - Salé - Kénitra
+  country: MA
+- abbreviation: SO
+  name: Raionul Soroca
+  country: MD
+- abbreviation: RJ
+  name: Rajasthan
+  country: IN
+- abbreviation: Rajshahi
+  name: Rajshahi
+  country: BD
+- abbreviation: Rangpur
+  name: Rangpur
+  country: BD
+- abbreviation: Rapti
+  name: Rapti
+  country: NP
+- abbreviation: Ras Al Khaimah
+  name: Ras Al Khaimah
+  country: AE
+- abbreviation: Ratchaburi
+  name: Ratchaburi
+  country: TH
+- abbreviation: Rayong
+  name: Rayong
+  country: TH
+- abbreviation: BA
+  name: Red Sea
+  country: EG
+- abbreviation: AS
+  name: Region Autonoma Atlantico Sur
+  country: NI
+- abbreviation: Region Santiago Metropolitan
+  name: Region Santiago Metropolitan
+  country: CL
+- abbreviation: AP
+  name: Region de Arica y Parinacota
+  country: CL
+- abbreviation: HUC
+  name: Region de Huanuco
+  country: PE
+- abbreviation: KE
+  name: Region de Kedougou
+  country: SN
+- abbreviation: LR
+  name: Region de Los Rios
+  country: CL
+- abbreviation: MA
+  name: Region de Magallanes y de la Antartica Chilena
+  country: CL
+- abbreviation: SAM
+  name: Region de San Martin
+  country: PE
+- abbreviation: VS
+  name: Region de Valparaiso
+  country: CL
+- abbreviation: AR
+  name: Region de la Araucania
+  country: CL
+- abbreviation: BI
+  name: Region del Biobio
+  country: CL
+- abbreviation: LI
+  name: Region del Libertador General Bernardo O'Higgins
+  country: CL
+- abbreviation: Región Autónoma Atlántico Norte
+  name: Región Autónoma Atlántico Norte
+  country: NI
+- abbreviation: Región Autónoma Atlántico Sur
+  name: Región Autónoma Atlántico Sur
+  country: NI
+- abbreviation: Región de Murcia
+  name: Región de Murcia
+  country: ES
+- abbreviation: Relizane
+  name: Relizane
+  country: DZ
+- abbreviation: KR
+  name: Republic of Karelia
+  country: RU
+- abbreviation: Republika Srpska
+  name: Republika Srpska
+  country: BA
+- abbreviation: SRP
+  name: Republika Srpska
+  country: BA
+- abbreviation: AD
+  name: Respublika Adygeya
+  country: RU
+- abbreviation: AL
+  name: Respublika Altay
+  country: RU
+- abbreviation: BU
+  name: Respublika Buryatiya
+  country: RU
+- abbreviation: IN
+  name: Respublika Ingushetiya
+  country: RU
+- abbreviation: KK
+  name: Respublika Khakasiya
+  country: RU
+- abbreviation: ME
+  name: Respublika Mariy-El
+  country: RU
+- abbreviation: MO
+  name: Respublika Mordoviya
+  country: RU
+- abbreviation: SA
+  name: Respublika Sakha (Yakutiya)
+  country: RU
+- abbreviation: TY
+  name: Respublika Tyva
+  country: RU
+- abbreviation: Rezekne
+  name: Rezekne
+  country: LV
+- abbreviation: RP
+  name: Rheinland-Pfalz
+  country: DE
+- abbreviation: Rhineland-Palatinate
+  name: Rhineland-Palatinate
+  country: DE
+- abbreviation: Riau
+  name: Riau
+  country: ID
+- abbreviation: KR
+  name: Riau Islands
+  country: ID
+- abbreviation: Rif Dimashq
+  name: Rif Dimashq
+  country: SY
+- abbreviation: RN
+  name: Rio Grande do Norte
+  country: BR
+- abbreviation: Rio Negro
+  name: Rio Negro
+  country: AR
+- abbreviation: RJ
+  name: Rio de Janeiro
+  country: BR
+- abbreviation: Risaralda
+  name: Risaralda
+  country: CO
+- abbreviation: NR
+  name: River Nile
+  country: SD
+- abbreviation: Rivers
+  name: Rivers
+  country: NG
+- abbreviation: RI
+  name: Rivers State
+  country: NG
+- abbreviation: RR
+  name: Riviere du Rempart District
+  country: MU
+- abbreviation: Rivne
+  name: Rivne
+  country: UA
+- abbreviation: Riyadh
+  name: Riyadh
+  country: SA
+- abbreviation: Rize
+  name: Rize
+  country: TR
+- abbreviation: Rogaland
+  name: Rogaland
+  country: 'NO'
+- abbreviation: Rosso
+  name: Rosso
+  country: MR
+- abbreviation: ROS
+  name: Rostov
+  country: RU
+- abbreviation: Rukwa
+  name: Rukwa
+  country: TZ
+- abbreviation: Ruse
+  name: Ruse
+  country: BG
+- abbreviation: Rustavi
+  name: Rustavi
+  country: GE
+- abbreviation: Ruvuma
+  name: Ruvuma
+  country: TZ
+- abbreviation: Ruyigi
+  name: Ruyigi
+  country: BI
+- abbreviation: RYA
+  name: Ryazanskaya Oblast'
+  country: RU
+- abbreviation: Réo
+  name: Réo
+  country: BF
+- abbreviation: Réunion
+  name: Réunion
+  country: RE
+- abbreviation: SD
+  name: SD
+  country: US
+- abbreviation: SEJONGSI
+  name: SEJONGSI
+  country: KR
+- abbreviation: SG
+  name: SG
+  country: CH
+- abbreviation: SLP
+  name: SLP
+  country: MX
+- abbreviation: Sa'Adah
+  name: Sa'Adah
+  country: YE
+- abbreviation: SL
+  name: Saarland
+  country: DE
+- abbreviation: Saarland
+  name: Saarland
+  country: DE
+- abbreviation: Sabah
+  name: Sabah
+  country: MY
+- abbreviation: Sabaragamuwa
+  name: Sabaragamuwa
+  country: LK
+- abbreviation: Sabha
+  name: Sabha
+  country: LY
+- abbreviation: Saga
+  name: Saga
+  country: JP
+- abbreviation: Sagarmatha
+  name: Sagarmatha
+  country: NP
+- abbreviation: Saint-Louis
+  name: Saint-Louis
+  country: SN
+- abbreviation: SL
+  name: Saint-Louis
+  country: SN
+- abbreviation: Saitama
+  name: Saitama
+  country: JP
+- abbreviation: Sakarya
+  name: Sakarya
+  country: TR
+- abbreviation: SAK
+  name: Sakhalinskaya Oblast'
+  country: RU
+- abbreviation: Sakété
+  name: Sakété
+  country: BJ
+- abbreviation: Salaj
+  name: Salaj
+  country: RO
+- abbreviation: Salta
+  name: Salta
+  country: AR
+- abbreviation: Samarra
+  name: Samarra
+  country: IQ
+- abbreviation: SAM
+  name: Samarskaya Oblast'
+  country: RU
+- abbreviation: Sambava
+  name: Sambava
+  country: MG
+- abbreviation: SZ
+  name: Samegrelo and Zemo Svaneti
+  country: GE
+- abbreviation: Samsun
+  name: Samsun
+  country: TR
+- abbreviation: Samut Prakan
+  name: Samut Prakan
+  country: TH
+- abbreviation: Samut Sakhon
+  name: Samut Sakhon
+  country: TH
+- abbreviation: San Andres and Providencia
+  name: San Andres and Providencia
+  country: CO
+- abbreviation: San Cristobal
+  name: San Cristobal
+  country: DO
+- abbreviation: San Jose
+  name: San Jose
+  country: CR
+- abbreviation: San Juan
+  name: San Juan
+  country: DO
+- abbreviation: San Juan
+  name: San Juan
+  country: AR
+- abbreviation: SJL
+  name: San Juan/Laventille
+  country: TT
+- abbreviation: San Luis
+  name: San Luis
+  country: AR
+- abbreviation: San Martin
+  name: San Martin
+  country: PE
+- abbreviation: San Pedro de Macoris
+  name: San Pedro de Macoris
+  country: DO
+- abbreviation: San Vicente
+  name: San Vicente
+  country: SV
+- abbreviation: Sanaga-Maritime
+  name: Sanaga-Maritime
+  country: CM
+- abbreviation: Sancti Spiritus
+  name: Sancti Spiritus
+  country: CU
+- abbreviation: SGE
+  name: Sangre Grande
+  country: TT
+- abbreviation: Sanhan
+  name: Sanhan
+  country: YE
+- abbreviation: Sanliurfa
+  name: Sanliurfa
+  country: TR
+- abbreviation: Santa Ana
+  name: Santa Ana
+  country: SV
+- abbreviation: SC
+  name: Santa Catarina
+  country: BR
+- abbreviation: Santa Cruz
+  name: Santa Cruz
+  country: BO
+- abbreviation: Santa Cruz
+  name: Santa Cruz
+  country: AR
+- abbreviation: Santa Fe
+  name: Santa Fe
+  country: AR
+- abbreviation: Santa Rosa
+  name: Santa Rosa
+  country: GT
+- abbreviation: Santiago
+  name: Santiago
+  country: DO
+- abbreviation: RM
+  name: Santiago Metropolitan
+  country: CL
+- abbreviation: Santiago de Cuba
+  name: Santiago de Cuba
+  country: CU
+- abbreviation: Santiago del Estero
+  name: Santiago del Estero
+  country: AR
+- abbreviation: Santo Domingo
+  name: Santo Domingo
+  country: DO
+- abbreviation: SP
+  name: Sao Paulo
+  country: BR
+- abbreviation: Saraburi
+  name: Saraburi
+  country: TH
+- abbreviation: SAR
+  name: Saratovskaya Oblast'
+  country: RU
+- abbreviation: Sarawak
+  name: Sarawak
+  country: MY
+- abbreviation: Sardinia
+  name: Sardinia
+  country: IT
+- abbreviation: Sarh
+  name: Sarh
+  country: TD
+- abbreviation: SK
+  name: Saskatchewan
+  country: CA
+- abbreviation: Sassandra-Marahoué
+  name: Sassandra-Marahoué
+  country: CI
+- abbreviation: SM
+  name: Satu Mare
+  country: RO
+- abbreviation: Savalou
+  name: Savalou
+  country: BJ
+- abbreviation: Savane
+  name: Savane
+  country: CI
+- abbreviation: Savè
+  name: Savè
+  country: BJ
+- abbreviation: SN
+  name: Saxony
+  country: DE
+- abbreviation: Saxony
+  name: Saxony
+  country: DE
+- abbreviation: ST
+  name: Saxony-Anhalt
+  country: DE
+- abbreviation: Saxony-Anhalt
+  name: Saxony-Anhalt
+  country: DE
+- abbreviation: Sayo
+  name: Sayo
+  country: ET
+- abbreviation: SH
+  name: Schaffhausen
+  country: CH
+- abbreviation: Schleswig-Holstein
+  name: Schleswig-Holstein
+  country: DE
+- abbreviation: SH
+  name: Schleswig-Holstein
+  country: DE
+- abbreviation: SCT
+  name: Scotland
+  country: GB
+- abbreviation: Scotland
+  name: Scotland
+  country: GB
+- abbreviation: Selangor
+  name: Selangor
+  country: MY
+- abbreviation: Semerkant
+  name: Semerkant
+  country: UZ
+- abbreviation: Senaki
+  name: Senaki
+  country: GE
+- abbreviation: Sennar
+  name: Sennar
+  country: SD
+- abbreviation: Serekunda
+  name: Serekunda
+  country: GM
+- abbreviation: SE
+  name: Sergipe
+  country: BR
+- abbreviation: Seti
+  name: Seti
+  country: NP
+- abbreviation: Setubal
+  name: Setubal
+  country: PT
+- abbreviation: SEV
+  name: Severo-Kazakhstanskaya Oblast'
+  country: KZ
+- abbreviation: Severoistochen
+  name: Severoistochen
+  country: MK
+- abbreviation: Sfax
+  name: Sfax
+  country: TN
+- abbreviation: BA
+  name: Sha`biyat Banghazi
+  country: LY
+- abbreviation: MI
+  name: Sha`biyat Misratah
+  country: LY
+- abbreviation: SB
+  name: Sha`biyat Sabha
+  country: LY
+- abbreviation: Shaanxi
+  name: Shaanxi
+  country: CN
+- abbreviation: Shaki-Shirvan
+  name: Shaki-Shirvan
+  country: AZ
+- abbreviation: Shandong
+  name: Shandong
+  country: CN
+- abbreviation: Shanghai
+  name: Shanghai
+  country: CN
+- abbreviation: Shanxi
+  name: Shanxi
+  country: CN
+- abbreviation: Sharjah
+  name: Sharjah
+  country: AE
+- abbreviation: Sharqia
+  name: Sharqia
+  country: EG
+- abbreviation: Shashemene
+  name: Shashemene
+  country: ET
+- abbreviation: Shefa
+  name: Shefa
+  country: VU
+- abbreviation: SK
+  name: Shida Kartli
+  country: GE
+- abbreviation: Shiga
+  name: Shiga
+  country: JP
+- abbreviation: Shigis Qazaqstan oblisi
+  name: Shigis Qazaqstan oblisi
+  country: KZ
+- abbreviation: Shimane
+  name: Shimane
+  country: JP
+- abbreviation: Shinyanga
+  name: Shinyanga
+  country: TZ
+- abbreviation: Shirak
+  name: Shirak
+  country: AM
+- abbreviation: Shizuoka
+  name: Shizuoka
+  country: JP
+- abbreviation: Shkoder
+  name: Shkoder
+  country: AL
+- abbreviation: Si Sa Ket
+  name: Si Sa Ket
+  country: TH
+- abbreviation: Siberian Federal District
+  name: Siberian Federal District
+  country: RU
+- abbreviation: Sibiu
+  name: Sibiu
+  country: RO
+- abbreviation: Sibut
+  name: Sibut
+  country: CF
+- abbreviation: Sichuan
+  name: Sichuan
+  country: CN
+- abbreviation: Sicily
+  name: Sicily
+  country: IT
+- abbreviation: Sidi Bel Abbès
+  name: Sidi Bel Abbès
+  country: DZ
+- abbreviation: Siem Reap
+  name: Siem Reap
+  country: KH
+- abbreviation: Siirt
+  name: Siirt
+  country: TR
+- abbreviation: Sikasso
+  name: Sikasso
+  country: ML
+- abbreviation: SK
+  name: Sikkim
+  country: IN
+- abbreviation: SL
+  name: Silesian Voivodeship
+  country: PL
+- abbreviation: Siliana
+  name: Siliana
+  country: TN
+- abbreviation: Simiyu
+  name: Simiyu
+  country: TZ
+- abbreviation: SIN
+  name: Sinaloa
+  country: MX
+- abbreviation: SD
+  name: Sindh
+  country: PK
+- abbreviation: Singa
+  name: Singa
+  country: SD
+- abbreviation: Singida
+  name: Singida
+  country: TZ
+- abbreviation: Sinjar
+  name: Sinjar
+  country: IQ
+- abbreviation: Sinop
+  name: Sinop
+  country: TR
+- abbreviation: Sirdaryo
+  name: Sirdaryo
+  country: UZ
+- abbreviation: Sirnak
+  name: Sirnak
+  country: TR
+- abbreviation: Sivas
+  name: Sivas
+  country: TR
+- abbreviation: Skane County
+  name: Skane County
+  country: SE
+- abbreviation: Skikda
+  name: Skikda
+  country: DZ
+- abbreviation: Skopski
+  name: Skopski
+  country: MK
+- abbreviation: SMO
+  name: Smolenskaya Oblast'
+  country: RU
+- abbreviation: Soanierana Ivongo
+  name: Soanierana Ivongo
+  country: MG
+- abbreviation: Soavinandriana
+  name: Soavinandriana
+  country: MG
+- abbreviation: Soc Trang
+  name: Soc Trang
+  country: VN
+- abbreviation: Soccsksargen
+  name: Soccsksargen
+  country: PH
+- abbreviation: Sodermanland County
+  name: Sodermanland County
+  country: SE
+- abbreviation: Sofala
+  name: Sofala
+  country: MZ
+- abbreviation: Sohag
+  name: Sohag
+  country: EG
+- abbreviation: Sokodé
+  name: Sokodé
+  country: TG
+- abbreviation: Sokoto
+  name: Sokoto
+  country: NG
+- abbreviation: Sololá
+  name: Sololá
+  country: GT
+- abbreviation: SO
+  name: Solothurn
+  country: CH
+- abbreviation: SO
+  name: Somali
+  country: ET
+- abbreviation: Somogy
+  name: Somogy
+  country: HU
+- abbreviation: Songkhla
+  name: Songkhla
+  country: TH
+- abbreviation: SON
+  name: Sonora
+  country: MX
+- abbreviation: SO
+  name: Soriano
+  country: UY
+- abbreviation: Soroti
+  name: Soroti
+  country: UG
+- abbreviation: Souk Ahras
+  name: Souk Ahras
+  country: DZ
+- abbreviation: Souss - Massa
+  name: Souss - Massa
+  country: MA
+- abbreviation: Sousse
+  name: Sousse
+  country: TN
+- abbreviation: South
+  name: South
+  country: LB
+- abbreviation: SA
+  name: South Australia
+  country: AU
+- abbreviation: SC
+  name: South Carolina
+  country: US
+- abbreviation: South Eastern
+  name: South Eastern
+  country: BW
+- abbreviation: South Finland
+  name: South Finland
+  country: FI
+- abbreviation: South Holland
+  name: South Holland
+  country: NL
+- abbreviation: ZH
+  name: South Holland
+  country: NL
+- abbreviation: KS
+  name: South Kalimantan
+  country: ID
+- abbreviation: JM
+  name: South Moravian
+  country: CZ
+- abbreviation: SU
+  name: South Region
+  country: CM
+- abbreviation: SN
+  name: South Sulawesi
+  country: ID
+- abbreviation: SS
+  name: South Sumatra
+  country: ID
+- abbreviation: SW
+  name: South-West Region
+  country: CM
+- abbreviation: Southern
+  name: Southern
+  country: BH
+- abbreviation: Southern
+  name: Southern
+  country: LK
+- abbreviation: Southern
+  name: Southern
+  country: ZM
+- abbreviation: Southern Denmark Region
+  name: Southern Denmark Region
+  country: DK
+- abbreviation: Southern Federal District
+  name: Southern Federal District
+  country: RU
+- abbreviation: SHM
+  name: Southern Highlands Province
+  country: PG
+- abbreviation: Southern Region
+  name: Southern Region
+  country: MW
+- abbreviation: STL
+  name: Southland
+  country: NZ
+- abbreviation: St Andrew
+  name: St Andrew
+  country: JM
+- abbreviation: St Croix
+  name: St Croix
+  country: VI
+- abbreviation: SPE
+  name: St.-Petersburg
+  country: RU
+- abbreviation: PB
+  name: State of Punjab
+  country: IN
+- abbreviation: STA
+  name: Stavropol'skiy Kray
+  country: RU
+- abbreviation: Sterea Ellada
+  name: Sterea Ellada
+  country: GR
+- abbreviation: AB
+  name: Stockholm
+  country: SE
+- abbreviation: Stockholm County
+  name: Stockholm County
+  country: SE
+- abbreviation: ST
+  name: Strășeni
+  country: MD
+- abbreviation: Stung Treng
+  name: Stung Treng
+  country: KH
+- abbreviation: Středočeský kraj
+  name: Středočeský kraj
+  country: CZ
+- abbreviation: PK
+  name: Subcarpathian Voivodeship
+  country: PL
+- abbreviation: SV
+  name: Suceava
+  country: RO
+- abbreviation: SU
+  name: Suchitepeque
+  country: GT
+- abbreviation: Sucre
+  name: Sucre
+  country: VE
+- abbreviation: Sucre
+  name: Sucre
+  country: CO
+- abbreviation: SE
+  name: Sud-Est
+  country: HT
+- abbreviation: Sud-Kivu
+  name: Sud-Kivu
+  country: CD
+- abbreviation: Sukhothai
+  name: Sukhothai
+  country: TH
+- abbreviation: Sukhumi
+  name: Sukhumi
+  country: GE
+- abbreviation: Sulawesi Barat
+  name: Sulawesi Barat
+  country: ID
+- abbreviation: Sulawesi Selatan
+  name: Sulawesi Selatan
+  country: ID
+- abbreviation: Sulawesi Tengah
+  name: Sulawesi Tengah
+  country: ID
+- abbreviation: Sulawesi Tenggara
+  name: Sulawesi Tenggara
+  country: ID
+- abbreviation: Sumatera Barat
+  name: Sumatera Barat
+  country: ID
+- abbreviation: Sumatera Selatan
+  name: Sumatera Selatan
+  country: ID
+- abbreviation: Sumatera Utara
+  name: Sumatera Utara
+  country: ID
+- abbreviation: Sumel
+  name: Sumel
+  country: IQ
+- abbreviation: SM
+  name: Sumqayit City
+  country: AZ
+- abbreviation: Sumy
+  name: Sumy
+  country: UA
+- abbreviation: Surat Thani
+  name: Surat Thani
+  country: TH
+- abbreviation: Surt
+  name: Surt
+  country: LY
+- abbreviation: Surxondaryo
+  name: Surxondaryo
+  country: UZ
+- abbreviation: SVE
+  name: Sverdlovskaya Oblast'
+  country: RU
+- abbreviation: Sylhet
+  name: Sylhet
+  country: BD
+- abbreviation: Syuniq
+  name: Syuniq
+  country: AM
+- abbreviation: SZ
+  name: Szabolcs-Szatmár-Bereg
+  country: HU
+- abbreviation: São Vicente
+  name: São Vicente
+  country: CV
+- abbreviation: Ségou
+  name: Ségou
+  country: ML
+- abbreviation: Sétif
+  name: Sétif
+  country: DZ
+- abbreviation: TAMPS
+  name: TAMPS
+  country: MX
+- abbreviation: TLAX
+  name: TLAX
+  country: MX
+- abbreviation: TN
+  name: TN
+  country: US
+- abbreviation: TN
+  name: TN
+  country: IN
+- abbreviation: TO
+  name: TO
+  country: BR
+- abbreviation: TR
+  name: TR
+  country: IN
+- abbreviation: TS
+  name: TS
+  country: IN
+- abbreviation: TX
+  name: TX
+  country: US
+- abbreviation: Ta'Izz
+  name: Ta'Izz
+  country: YE
+- abbreviation: TAB
+  name: Tabasco
+  country: MX
+- abbreviation: Tabora
+  name: Tabora
+  country: TZ
+- abbreviation: Tabouk
+  name: Tabouk
+  country: SA
+- abbreviation: Tachira
+  name: Tachira
+  country: VE
+- abbreviation: TAC
+  name: Tacna
+  country: PE
+- abbreviation: Tahoua
+  name: Tahoua
+  country: NE
+- abbreviation: Tahtay Koraro
+  name: Tahtay Koraro
+  country: ET
+- abbreviation: Taichung City
+  name: Taichung City
+  country: TW
+- abbreviation: Tainan City
+  name: Tainan City
+  country: TW
+- abbreviation: Taita-Taveta
+  name: Taita-Taveta
+  country: KE
+- abbreviation: Taitung County
+  name: Taitung County
+  country: TW
+- abbreviation: Tajikistan
+  name: Tajikistan
+  country: TJ
+- abbreviation: Takeo
+  name: Takeo
+  country: KH
+- abbreviation: Talas
+  name: Talas
+  country: KG
+- abbreviation: Tamanrasset
+  name: Tamanrasset
+  country: DZ
+- abbreviation: TAM
+  name: Tamaulipas
+  country: MX
+- abbreviation: Tambacounda
+  name: Tambacounda
+  country: SN
+- abbreviation: TAM
+  name: Tambovskaya Oblast'
+  country: RU
+- abbreviation: Tanga
+  name: Tanga
+  country: TZ
+- abbreviation: Tanger - Tétouan - Al Hoceima
+  name: Tanger - Tétouan - Al Hoceima
+  country: MA
+- abbreviation: Taolagnaro
+  name: Taolagnaro
+  country: MG
+- abbreviation: Taoyuan City
+  name: Taoyuan City
+  country: TW
+- abbreviation: TA
+  name: Taraba State
+  country: NG
+- abbreviation: TKI
+  name: Taranaki
+  country: NZ
+- abbreviation: TA
+  name: Tarapacá
+  country: CL
+- abbreviation: Tarija
+  name: Tarija
+  country: BO
+- abbreviation: Tartus
+  name: Tartus
+  country: SY
+- abbreviation: TAS
+  name: Tasmania
+  country: AU
+- abbreviation: Tataouine
+  name: Tataouine
+  country: TN
+- abbreviation: TA
+  name: Tatarstan
+  country: RU
+- abbreviation: Tauragės Apskritis
+  name: Tauragės Apskritis
+  country: LT
+- abbreviation: Tay Ninh
+  name: Tay Ninh
+  country: VN
+- abbreviation: Taşkent
+  name: Taşkent
+  country: UZ
+- abbreviation: Tchamba
+  name: Tchamba
+  country: TG
+- abbreviation: Tekirdag
+  name: Tekirdag
+  country: TR
+- abbreviation: Tel Aviv
+  name: Tel Aviv
+  country: IL
+- abbreviation: TA
+  name: Tel Aviv
+  country: IL
+- abbreviation: TG
+  name: Telangana
+  country: IN
+- abbreviation: TR
+  name: Teleorman
+  country: RO
+- abbreviation: Teleorman
+  name: Teleorman
+  country: RO
+- abbreviation: Telšių Apskritis
+  name: Telšių Apskritis
+  country: LT
+- abbreviation: Ternopil
+  name: Ternopil
+  country: UA
+- abbreviation: Thanh Hoa
+  name: Thanh Hoa
+  country: VN
+- abbreviation: Thanh Pho Ho Chi Minh
+  name: Thanh Pho Ho Chi Minh
+  country: VN
+- abbreviation: Thiès
+  name: Thiès
+  country: SN
+- abbreviation: Thua Thien-Hue
+  name: Thua Thien-Hue
+  country: VN
+- abbreviation: TG
+  name: Thurgau
+  country: CH
+- abbreviation: Thuringia
+  name: Thuringia
+  country: DE
+- abbreviation: TH
+  name: Thuringia
+  country: DE
+- abbreviation: Tianjin
+  name: Tianjin
+  country: CN
+- abbreviation: Tiaret
+  name: Tiaret
+  country: DZ
+- abbreviation: Tibet
+  name: Tibet
+  country: CN
+- abbreviation: TI
+  name: Ticino
+  country: CH
+- abbreviation: Tien Giang
+  name: Tien Giang
+  country: VN
+- abbreviation: TI
+  name: Tigray
+  country: ET
+- abbreviation: Tillabéri
+  name: Tillabéri
+  country: NE
+- abbreviation: Timis
+  name: Timis
+  country: RO
+- abbreviation: Timor-Leste
+  name: Timor-Leste
+  country: TL
+- abbreviation: Tindouf
+  name: Tindouf
+  country: DZ
+- abbreviation: Tipaza
+  name: Tipaza
+  country: DZ
+- abbreviation: Tirana
+  name: Tirana
+  country: AL
+- abbreviation: Tissemsilt
+  name: Tissemsilt
+  country: DZ
+- abbreviation: Tizi Ouzou
+  name: Tizi Ouzou
+  country: DZ
+- abbreviation: TLA
+  name: Tlaxcala
+  country: MX
+- abbreviation: Tlemcen
+  name: Tlemcen
+  country: DZ
+- abbreviation: WTO
+  name: Tobago
+  country: TT
+- abbreviation: Tochigi
+  name: Tochigi
+  country: JP
+- abbreviation: Tokat
+  name: Tokat
+  country: TR
+- abbreviation: Tokyo
+  name: Tokyo
+  country: JP
+- abbreviation: Toliary
+  name: Toliary
+  country: MG
+- abbreviation: Tolima
+  name: Tolima
+  country: CO
+- abbreviation: Tolna
+  name: Tolna
+  country: HU
+- abbreviation: TO
+  name: Tolna megye
+  country: HU
+- abbreviation: Tomasina
+  name: Tomasina
+  country: MG
+- abbreviation: Tombouctou
+  name: Tombouctou
+  country: ML
+- abbreviation: TOM
+  name: Tomskaya Oblast'
+  country: RU
+- abbreviation: Tooz
+  name: Tooz
+  country: IQ
+- abbreviation: Tororo
+  name: Tororo
+  country: UG
+- abbreviation: Toshkent Shahri
+  name: Toshkent Shahri
+  country: UZ
+- abbreviation: Totonicapán
+  name: Totonicapán
+  country: GT
+- abbreviation: Tottori
+  name: Tottori
+  country: JP
+- abbreviation: Toyama
+  name: Toyama
+  country: JP
+- abbreviation: Tozeur
+  name: Tozeur
+  country: TN
+- abbreviation: Trabzon
+  name: Trabzon
+  country: TR
+- abbreviation: Trans Nzoia
+  name: Trans Nzoia
+  country: KE
+- abbreviation: ZAB
+  name: Transbaikal Territory
+  country: RU
+- abbreviation: Trentino-Alto Adige
+  name: Trentino-Alto Adige
+  country: IT
+- abbreviation: Trenčiansky kraj
+  name: Trenčiansky kraj
+  country: SK
+- abbreviation: Trinidad
+  name: Trinidad
+  country: TT
+- abbreviation: Tripoli
+  name: Tripoli
+  country: LY
+- abbreviation: TA
+  name: Trnavsky kraj
+  country: SK
+- abbreviation: Trnavský kraj
+  name: Trnavský kraj
+  country: SK
+- abbreviation: Troms
+  name: Troms
+  country: 'NO'
+- abbreviation: Tsafon
+  name: Tsafon
+  country: IL
+- abbreviation: Tsihombe
+  name: Tsihombe
+  country: MG
+- abbreviation: Tsiroanomandidy
+  name: Tsiroanomandidy
+  country: MG
+- abbreviation: Tsévié
+  name: Tsévié
+  country: TG
+- abbreviation: Tucuman
+  name: Tucuman
+  country: AR
+- abbreviation: TUL
+  name: Tul'skaya Oblast'
+  country: RU
+- abbreviation: TL
+  name: Tulcea
+  country: RO
+- abbreviation: TUM
+  name: Tumbes
+  country: PE
+- abbreviation: TUP
+  name: Tunapuna/Piarco
+  country: TT
+- abbreviation: Tunis
+  name: Tunis
+  country: TN
+- abbreviation: Turkmenistan
+  name: Turkmenistan
+  country: TM
+- abbreviation: Tuscany
+  name: Tuscany
+  country: IT
+- abbreviation: TU
+  name: Tutong District
+  country: BN
+- abbreviation: TVE
+  name: Tverskaya Oblast'
+  country: RU
+- abbreviation: Twansiebo
+  name: Twansiebo
+  country: LR
+- abbreviation: TYU
+  name: Tyumenskaya Oblast'
+  country: RU
+- abbreviation: Tébessa
+  name: Tébessa
+  country: DZ
+- abbreviation: Tône
+  name: Tône
+  country: TG
+- abbreviation: U.T.A. Stînga Nistrul
+  name: U.T.A. Stînga Nistrul
+  country: MD
+- abbreviation: UK
+  name: UK
+  country: IN
+- abbreviation: UP
+  name: UP
+  country: IN
+- abbreviation: Uasin Gishu
+  name: Uasin Gishu
+  country: KE
+- abbreviation: Ubon Ratchathani
+  name: Ubon Ratchathani
+  country: TH
+- abbreviation: UCA
+  name: Ucayali
+  country: PE
+- abbreviation: UD
+  name: Udmurtskaya Respublika
+  country: RU
+- abbreviation: Udon Thani
+  name: Udon Thani
+  country: TH
+- abbreviation: ULY
+  name: Ulyanovsk Oblast
+  country: RU
+- abbreviation: Um Rawaba
+  name: Um Rawaba
+  country: SD
+- abbreviation: Um al Gura
+  name: Um al Gura
+  country: SD
+- abbreviation: Umm Al Quwain
+  name: Umm Al Quwain
+  country: AE
+- abbreviation: Umm Slal
+  name: Umm Slal
+  country: QA
+- abbreviation: Ungheni
+  name: Ungheni
+  country: MD
+- abbreviation: AN
+  name: Union Territory of Andaman and Nicobar Islands
+  country: IN
+- abbreviation: PY
+  name: Union Territory of Puducherry
+  country: IN
+- abbreviation: Upper Baddibu
+  name: Upper Baddibu
+  country: GM
+- abbreviation: UD
+  name: Upper Demerara-Berbice Region
+  country: GY
+- abbreviation: UE
+  name: Upper East Region
+  country: GH
+- abbreviation: Upper Nile
+  name: Upper Nile
+  country: SS
+- abbreviation: UW
+  name: Upper West Region
+  country: GH
+- abbreviation: Upper Worker
+  name: Upper Worker
+  country: LR
+- abbreviation: Ural Federal District
+  name: Ural Federal District
+  country: RU
+- abbreviation: Usak
+  name: Usak
+  country: TR
+- abbreviation: US
+  name: Ustecky kraj
+  country: CZ
+- abbreviation: UT
+  name: Utah
+  country: US
+- abbreviation: Utenos Apskritis
+  name: Utenos Apskritis
+  country: LT
+- abbreviation: UT
+  name: Utenos apskritis
+  country: LT
+- abbreviation: UL
+  name: Uttarakhand
+  country: IN
+- abbreviation: Uvs
+  name: Uvs
+  country: MN
+- abbreviation: Uíge
+  name: Uíge
+  country: AO
+- abbreviation: VA
+  name: VA
+  country: US
+- abbreviation: VS
+  name: VS
+  country: CH
+- abbreviation: VT
+  name: VT
+  country: US
+- abbreviation: VC
+  name: Valencia
+  country: ES
+- abbreviation: Valencia
+  name: Valencia
+  country: ES
+- abbreviation: Valle del Cauca
+  name: Valle del Cauca
+  country: CO
+- abbreviation: Vallée du Bandama
+  name: Vallée du Bandama
+  country: CI
+- abbreviation: VMR
+  name: Valmiera District
+  country: LV
+- abbreviation: Valparaiso
+  name: Valparaiso
+  country: CL
+- abbreviation: Valverde
+  name: Valverde
+  country: DO
+- abbreviation: Vangaindrano
+  name: Vangaindrano
+  country: MG
+- abbreviation: Varaždinska županija
+  name: Varaždinska županija
+  country: HR
+- abbreviation: VA
+  name: Vas
+  country: HU
+- abbreviation: VS
+  name: Vaslui
+  country: RO
+- abbreviation: Vaslui
+  name: Vaslui
+  country: RO
+- abbreviation: Vasterbotten County
+  name: Vasterbotten County
+  country: SE
+- abbreviation: Vasternorrland County
+  name: Vasternorrland County
+  country: SE
+- abbreviation: Vastmanland County
+  name: Vastmanland County
+  country: SE
+- abbreviation: Vastra Gotaland County
+  name: Vastra Gotaland County
+  country: SE
+- abbreviation: VD
+  name: Vaud
+  country: CH
+- abbreviation: Vavatenina
+  name: Vavatenina
+  country: MG
+- abbreviation: Veliko Tarnovo
+  name: Veliko Tarnovo
+  country: BG
+- abbreviation: Veneto
+  name: Veneto
+  country: IT
+- abbreviation: VER
+  name: Veracruz
+  country: MX
+- abbreviation: Veraguas
+  name: Veraguas
+  country: PA
+- abbreviation: Vestfold
+  name: Vestfold
+  country: 'NO'
+- abbreviation: Veszprem
+  name: Veszprem
+  country: HU
+- abbreviation: VE
+  name: Veszprem megye
+  country: HU
+- abbreviation: VIC
+  name: Victoria
+  country: AU
+- abbreviation: Villa Clara
+  name: Villa Clara
+  country: CU
+- abbreviation: Vilniaus Apskritis
+  name: Vilniaus Apskritis
+  country: LT
+- abbreviation: VL
+  name: Vilnius County
+  country: LT
+- abbreviation: Vina
+  name: Vina
+  country: CM
+- abbreviation: Vinnytska oblast
+  name: Vinnytska oblast
+  country: UA
+- abbreviation: VI
+  name: Vitebsk
+  country: BY
+- abbreviation: VLA
+  name: Vladimirskaya Oblast'
+  country: RU
+- abbreviation: Vlora
+  name: Vlora
+  country: AL
+- abbreviation: Vojvodina
+  name: Vojvodina
+  country: RS
+- abbreviation: Volga Federal District
+  name: Volga Federal District
+  country: RU
+- abbreviation: VGG
+  name: Volgogradskaya Oblast'
+  country: RU
+- abbreviation: VLG
+  name: Vologodskaya Oblast'
+  country: RU
+- abbreviation: Volta
+  name: Volta
+  country: GH
+- abbreviation: Volynska oblast
+  name: Volynska oblast
+  country: UA
+- abbreviation: VOR
+  name: Voronezhskaya Oblast'
+  country: RU
+- abbreviation: Vrancea
+  name: Vrancea
+  country: RO
+- abbreviation: VN
+  name: Vrancea
+  country: RO
+- abbreviation: Vysočina
+  name: Vysočina
+  country: CZ
+- abbreviation: Vâlcea
+  name: Vâlcea
+  country: RO
+- abbreviation: WA
+  name: WA
+  country: US
+- abbreviation: WB
+  name: WB
+  country: IN
+- abbreviation: WI
+  name: WI
+  country: US
+- abbreviation: WV
+  name: WV
+  country: US
+- abbreviation: Wadi Al Hayaa
+  name: Wadi Al Hayaa
+  country: LY
+- abbreviation: Wadi Al Shatii
+  name: Wadi Al Shatii
+  country: LY
+- abbreviation: WKO
+  name: Waikato
+  country: NZ
+- abbreviation: Wajir
+  name: Wajir
+  country: KE
+- abbreviation: Wakayama
+  name: Wakayama
+  country: JP
+- abbreviation: Wakiso
+  name: Wakiso
+  country: UG
+- abbreviation: WLS
+  name: Wales
+  country: GB
+- abbreviation: Wales
+  name: Wales
+  country: GB
+- abbreviation: Walisona Goro
+  name: Walisona Goro
+  country: ET
+- abbreviation: Wallonia
+  name: Wallonia
+  country: BE
+- abbreviation: WAL
+  name: Wallonia
+  country: BE
+- abbreviation: Warab
+  name: Warab
+  country: SS
+- abbreviation: WN
+  name: Warmian-Masurian Voivodeship
+  country: PL
+- abbreviation: Weamaquelleh/Larkay
+  name: Weamaquelleh/Larkay
+  country: LR
+- abbreviation: WGN
+  name: Wellington
+  country: NZ
+- abbreviation: Wellington
+  name: Wellington
+  country: NZ
+- abbreviation: Wenago
+  name: Wenago
+  country: ET
+- abbreviation: OU
+  name: West
+  country: CM
+- abbreviation: West Bahr al Ghazal
+  name: West Bahr al Ghazal
+  country: SS
+- abbreviation: West Bank
+  name: West Bank
+  country: PS
+- abbreviation: West Bank
+  name: West Bank
+  country: IL
+- abbreviation: West Equatoria
+  name: West Equatoria
+  country: SS
+- abbreviation: JB
+  name: West Java
+  country: ID
+- abbreviation: KB
+  name: West Kalimantan
+  country: ID
+- abbreviation: WBK
+  name: West New Britain Province
+  country: PG
+- abbreviation: NB
+  name: West Nusa Tenggara
+  country: ID
+- abbreviation: West Pokot
+  name: West Pokot
+  country: KE
+- abbreviation: ZP
+  name: West Pomeranian Voivodeship
+  country: PL
+- abbreviation: SB
+  name: West Sumatra
+  country: ID
+- abbreviation: West and Inner Finland
+  name: West and Inner Finland
+  country: FI
+- abbreviation: Western
+  name: Western
+  country: LK
+- abbreviation: Western
+  name: Western
+  country: GH
+- abbreviation: WA
+  name: Western Australia
+  country: AU
+- abbreviation: Western Cape
+  name: Western Cape
+  country: ZA
+- abbreviation: WPD
+  name: Western Province
+  country: PG
+- abbreviation: WP
+  name: Western Region
+  country: GH
+- abbreviation: Western Visayas
+  name: Western Visayas
+  country: PH
+- abbreviation: Wilayah Persekutuan
+  name: Wilayah Persekutuan
+  country: MY
+- abbreviation: Woj. Dolnośląskie
+  name: Woj. Dolnośląskie
+  country: PL
+- abbreviation: Woj. Kujawsko-Pomorskie
+  name: Woj. Kujawsko-Pomorskie
+  country: PL
+- abbreviation: Woj. Lubelskie
+  name: Woj. Lubelskie
+  country: PL
+- abbreviation: Woj. Lubuskie
+  name: Woj. Lubuskie
+  country: PL
+- abbreviation: Woj. Mazowieckie
+  name: Woj. Mazowieckie
+  country: PL
+- abbreviation: Woj. Małopolskie
+  name: Woj. Małopolskie
+  country: PL
+- abbreviation: Woj. Podkarpackie
+  name: Woj. Podkarpackie
+  country: PL
+- abbreviation: Woj. Podlaskie
+  name: Woj. Podlaskie
+  country: PL
+- abbreviation: Woj. Pomorskie
+  name: Woj. Pomorskie
+  country: PL
+- abbreviation: Woj. Warmińsko-Mazurskie
+  name: Woj. Warmińsko-Mazurskie
+  country: PL
+- abbreviation: Woj. Wielkopolskie
+  name: Woj. Wielkopolskie
+  country: PL
+- abbreviation: Woj. Zachodniopomorskie
+  name: Woj. Zachodniopomorskie
+  country: PL
+- abbreviation: Woj. Śląskie
+  name: Woj. Śląskie
+  country: PL
+- abbreviation: Woj. Świętokrzyskie
+  name: Woj. Świętokrzyskie
+  country: PL
+- abbreviation: Woj. Łódzkie
+  name: Woj. Łódzkie
+  country: PL
+- abbreviation: Woleu
+  name: Woleu
+  country: GA
+- abbreviation: WO
+  name: Woqooyi Galbeed
+  country: SO
+- abbreviation: Woroba
+  name: Woroba
+  country: CI
+- abbreviation: WY
+  name: Wyoming
+  country: US
+- abbreviation: Xinjiang Uygur
+  name: Xinjiang Uygur
+  country: CN
+- abbreviation: Xorazm
+  name: Xorazm
+  country: UZ
+- abbreviation: Yala
+  name: Yala
+  country: TH
+- abbreviation: Yamagata
+  name: Yamagata
+  country: JP
+- abbreviation: Yamaguchi
+  name: Yamaguchi
+  country: JP
+- abbreviation: YAN
+  name: Yamalo-Nenetskiy Avtonomnyy Okrug
+  country: RU
+- abbreviation: Yamanashi
+  name: Yamanashi
+  country: JP
+- abbreviation: Yaracuy
+  name: Yaracuy
+  country: VE
+- abbreviation: Yarim
+  name: Yarim
+  country: YE
+- abbreviation: YAR
+  name: Yaroslavskaya Oblast'
+  country: RU
+- abbreviation: Yen Bai
+  name: Yen Bai
+  country: VN
+- abbreviation: Yilan County
+  name: Yilan County
+  country: TW
+- abbreviation: Yobe
+  name: Yobe
+  country: NG
+- abbreviation: YO
+  name: Yobe State
+  country: NG
+- abbreviation: Yoro
+  name: Yoro
+  country: HN
+- abbreviation: Yozgat
+  name: Yozgat
+  country: TR
+- abbreviation: YUC
+  name: Yucatán
+  country: MX
+- abbreviation: Yukhary Garabagh
+  name: Yukhary Garabagh
+  country: AZ
+- abbreviation: YT
+  name: Yukon
+  country: CA
+- abbreviation: Yunlin County
+  name: Yunlin County
+  country: TW
+- abbreviation: Yunnan
+  name: Yunnan
+  country: CN
+- abbreviation: YUZ
+  name: Yuzhno-Kazakhstanskaya Oblast'
+  country: KZ
+- abbreviation: Zabid
+  name: Zabid
+  country: YE
+- abbreviation: ZAC
+  name: Zacatecas
+  country: MX
+- abbreviation: Zaire
+  name: Zaire
+  country: AO
+- abbreviation: Zakarpatska oblast
+  name: Zakarpatska oblast
+  country: UA
+- abbreviation: Zakho
+  name: Zakho
+  country: IQ
+- abbreviation: ZA
+  name: Zala
+  country: HU
+- abbreviation: Zallingi
+  name: Zallingi
+  country: SD
+- abbreviation: CA
+  name: Zambezi Region
+  country: NA
+- abbreviation: Zamboanga Peninsula
+  name: Zamboanga Peninsula
+  country: PH
+- abbreviation: Zamfara
+  name: Zamfara
+  country: NG
+- abbreviation: Zanzan
+  name: Zanzan
+  country: CI
+- abbreviation: Zaporizka oblast
+  name: Zaporizka oblast
+  country: UA
+- abbreviation: Zealand
+  name: Zealand
+  country: DK
+- abbreviation: Zeeland
+  name: Zeeland
+  country: NL
+- abbreviation: Zestaponi
+  name: Zestaponi
+  country: GE
+- abbreviation: Zhambil oblisi
+  name: Zhambil oblisi
+  country: KZ
+- abbreviation: ZHA
+  name: Zhambyl Oblysy
+  country: KZ
+- abbreviation: Zhejiang
+  name: Zhejiang
+  country: CN
+- abbreviation: Zhytomyrska oblast
+  name: Zhytomyrska oblast
+  country: UA
+- abbreviation: Ziguinchor
+  name: Ziguinchor
+  country: SN
+- abbreviation: ZI
+  name: Zilinsky kraj
+  country: SK
+- abbreviation: Zinder
+  name: Zinder
+  country: NE
+- abbreviation: ZL
+  name: Zlín
+  country: CZ
+- abbreviation: Zlínský kraj
+  name: Zlínský kraj
+  country: CZ
+- abbreviation: Zombo
+  name: Zombo
+  country: UG
+- abbreviation: Zonguldak
+  name: Zonguldak
+  country: TR
+- abbreviation: Zouérate
+  name: Zouérate
+  country: MR
+- abbreviation: ZG
+  name: Zug
+  country: CH
+- abbreviation: Zulia
+  name: Zulia
+  country: VE
+- abbreviation: ZH
+  name: Zurich
+  country: CH
+- abbreviation: Ñeembucú
+  name: Ñeembucú
+  country: PY
+- abbreviation: Ústecký kraj
+  name: Ústecký kraj
+  country: CZ
+- abbreviation: Šiaulių Apskritis
+  name: Šiaulių Apskritis
+  country: LT
+- abbreviation: Šibensko-kninska županija
+  name: Šibensko-kninska županija
+  country: HR
+- abbreviation: Žilinský kraj
+  name: Žilinský kraj
+  country: SK
+- abbreviation: SK
+  name: Świętokrzyskie
+  country: PL
+- abbreviation: LD
+  name: Łódź Voivodeship
+  country: PL
+- abbreviation: Cordillera
+  name: 
+  country: PY
+- abbreviation: Al Khor and Al Thakhira
+  name: 
+  country: QA
+- abbreviation: Covasna
+  name: 
+  country: RO
+- abbreviation: Ialomita
+  name: 
+  country: RO
+- abbreviation: Olt
+  name: 
+  country: RO
+- abbreviation: Dolj
+  name: 
+  country: RO
+- abbreviation: Tokar
+  name: 
+  country: SD
+- abbreviation: Merawi
+  name: 
+  country: SD
+- abbreviation: Al Galabat
+  name: 
+  country: SD
+- abbreviation: Berber
+  name: 
+  country: SD
+- abbreviation: Sheikan
+  name: 
+  country: SD
+- abbreviation: Al Gutaina
+  name: 
+  country: SD
+- abbreviation: Abyei
+  name: 
+  country: SD
+- abbreviation: Sharq al Gazera
+  name: 
+  country: SD
+- abbreviation: Al Rahd
+  name: 
+  country: SD
+- abbreviation: Abu Jubaiyah
+  name: 
+  country: SD
+- abbreviation: Kalmar County
+  name: 
+  country: SE
+- abbreviation: Uppsala County
+  name: 
+  country: SE
+- abbreviation: Western Rural
+  name: 
+  country: SL
+- abbreviation: Kailahun
+  name: 
+  country: SL
+- abbreviation: Port Loko
+  name: 
+  country: SL
+- abbreviation: Koinadugu
+  name: 
+  country: SL
+- abbreviation: Sédhiou
+  name: 
+  country: SN
+- abbreviation: Fatick
+  name: 
+  country: SN
+- abbreviation: Kaolack
+  name: 
+  country: SN
+- abbreviation: Matam
+  name: 
+  country: SN
+- abbreviation: Wanla Weyn
+  name: 
+  country: SO
+- abbreviation: Qandala
+  name: 
+  country: SO
+- abbreviation: Eyl
+  name: 
+  country: SO
+- abbreviation: Bulo-Burte
+  name: 
+  country: SO
+- abbreviation: Wanica
+  name: 
+  country: SR
+- abbreviation: Sonsonate
+  name: 
+  country: SV
+- abbreviation: Cabañas
+  name: 
+  country: SV
+- abbreviation: Usulutan
+  name: 
+  country: SV
+- abbreviation: San Miguel
+  name: 
+  country: SV
+- abbreviation: Morazan
+  name: 
+  country: SV
+- abbreviation: Chalatenango
+  name: 
+  country: SV
+- abbreviation: San Salvador
+  name: 
+  country: SV
+- abbreviation: Fada
+  name: 
+  country: TD
+- abbreviation: Massalat-Oum-Hadjer
+  name: 
+  country: TD
+- abbreviation: Moussoro
+  name: 
+  country: TD
+- abbreviation: Léré-Tchad
+  name: 
+  country: TD
+- abbreviation: Massakory
+  name: 
+  country: TD
+- abbreviation: Sultanat
+  name: 
+  country: TD
+- abbreviation: Laï
+  name: 
+  country: TD
+- abbreviation: Kyabé
+  name: 
+  country: TD
+- abbreviation: Dourbali/Abouguerne
+  name: 
+  country: TD
+- abbreviation: Doba
+  name: 
+  country: TD
+- abbreviation: Bitkine
+  name: 
+  country: TD
+- abbreviation: Bénoye
+  name: 
+  country: TD
+- abbreviation: Salamat
+  name: 
+  country: TD
+- abbreviation: Vo
+  name: 
+  country: TG
+- abbreviation: Soutouboua
+  name: 
+  country: TG
+- abbreviation: Notsé
+  name: 
+  country: TG
+- abbreviation: Doufelgou
+  name: 
+  country: TG
+- abbreviation: Assoli
+  name: 
+  country: TG
+- abbreviation: Badou
+  name: 
+  country: TG
+- abbreviation: Lampang
+  name: 
+  country: TH
+- abbreviation: Uthai Thani
+  name: 
+  country: TH
+- abbreviation: Lamphun
+  name: 
+  country: TH
+- abbreviation: Tak
+  name: 
+  country: TH
+- abbreviation: Nakhon Sawan
+  name: 
+  country: TH
+- abbreviation: Chumphon
+  name: 
+  country: TH
+- abbreviation: Kamphaeng Phet
+  name: 
+  country: TH
+- abbreviation: Trang
+  name: 
+  country: TH
+- abbreviation: Phayao
+  name: 
+  country: TH
+- abbreviation: Kalasin
+  name: 
+  country: TH
+- abbreviation: Ang Thong
+  name: 
+  country: TH
+- abbreviation: Loei
+  name: 
+  country: TH
+- abbreviation: Sa Kaeo
+  name: 
+  country: TH
+- abbreviation: Phichit
+  name: 
+  country: TH
+- abbreviation: Chanthaburi
+  name: 
+  country: TH
+- abbreviation: Bueng Kan
+  name: 
+  country: TH
+- abbreviation: Sakon Nakhon
+  name: 
+  country: TH
+- abbreviation: Buri Ram
+  name: 
+  country: TH
+- abbreviation: Nakhon Nayok
+  name: 
+  country: TH
+- abbreviation: Roi Et
+  name: 
+  country: TH
+- abbreviation: Prachin Buri
+  name: 
+  country: TH
+- abbreviation: Phrae
+  name: 
+  country: TH
+- abbreviation: Chai Nat
+  name: 
+  country: TH
+- abbreviation: Phitsanulok
+  name: 
+  country: TH
+- abbreviation: Sing Buri
+  name: 
+  country: TH
+- abbreviation: Zaghouan
+  name: 
+  country: TN
+- abbreviation: Ariana
+  name: 
+  country: TN
+- abbreviation: Béja
+  name: 
+  country: TN
+- abbreviation: Mugla
+  name: 
+  country: TR
+- abbreviation: Bingol
+  name: 
+  country: TR
+- abbreviation: Karaman
+  name: 
+  country: TR
+- abbreviation: Malatya
+  name: 
+  country: TR
+- abbreviation: Osmaniye
+  name: 
+  country: TR
+- abbreviation: Kastamonu
+  name: 
+  country: TR
+- abbreviation: Artvin
+  name: 
+  country: TR
+- abbreviation: Arusha
+  name: 
+  country: TZ
+- abbreviation: Dodoma
+  name: 
+  country: TZ
+- abbreviation: Dar es Salaam
+  name: 
+  country: TZ
+- abbreviation: Kusini Pemba
+  name: 
+  country: TZ
+- abbreviation: Cherkasy
+  name: 
+  country: UA
+- abbreviation: Sevastopol
+  name: 
+  country: UA
+- abbreviation: Yumbe
+  name: 
+  country: UG
+- abbreviation: Kanungu
+  name: 
+  country: UG
+- abbreviation: Nakaseke
+  name: 
+  country: UG
+- abbreviation: Mubende
+  name: 
+  country: UG
+- abbreviation: Moyo
+  name: 
+  country: UG
+- abbreviation: Kyenjojo
+  name: 
+  country: UG
+- abbreviation: Kotido
+  name: 
+  country: UG
+- abbreviation: Kayunga
+  name: 
+  country: UG
+- abbreviation: Kamwenge
+  name: 
+  country: UG
+- abbreviation: Bundibugyo
+  name: 
+  country: UG
+- abbreviation: Bugiri
+  name: 
+  country: UG
+- abbreviation: Saint George
+  name: 
+  country: VC
+- abbreviation: Son La
+  name: 
+  country: VN
+- abbreviation: Binh Phuoc
+  name: 
+  country: VN
+- abbreviation: Quang Tri
+  name: 
+  country: VN
+- abbreviation: Bac Kan
+  name: 
+  country: VN
+- abbreviation: Zingibar
+  name: 
+  country: YE
+- abbreviation: Marib City
+  name: 
+  country: YE
+- abbreviation: Al Hawtah
+  name: 
+  country: YE
+- abbreviation: Al Hazm
+  name: 
+  country: YE
+- abbreviation: Dzaoudzi
+  name: 
+  country: YT
+- abbreviation: Koungou
+  name: 
+  country: YT
+- abbreviation: Northern Cape
+  name: 
+  country: ZA
+- abbreviation: Luapula
+  name: 
+  country: ZM
+- abbreviation: Napo
+  name: 
+  country: EC
+- abbreviation: Baki
+  name: 
+  country: SO
+- abbreviation: Hagatna
+  name: 
+  country: GU
+- abbreviation: Antigua
+  name: 
+  country: AG
+- abbreviation: Kukës
+  name: 
+  country: AL
+- abbreviation: Gjirokaster
+  name: 
+  country: AL
+- abbreviation: Dibër
+  name: 
+  country: AL
+- abbreviation: Lezhë
+  name: 
+  country: AL
+- abbreviation: Gegharquniq
+  name: 
+  country: AM
+- abbreviation: Moxico
+  name: 
+  country: AO
+- abbreviation: Huambo
+  name: 
+  country: AO
+- abbreviation: Benguela
+  name: 
+  country: AO
+- abbreviation: Formosa
+  name: 
+  country: AR
+- abbreviation: Zorgho
+  name: 
+  country: BF
+- abbreviation: Yako
+  name: 
+  country: BF
+- abbreviation: Tougan
+  name: 
+  country: BF
+- abbreviation: Titao
+  name: 
+  country: BF
+- abbreviation: Po
+  name: 
+  country: BF
+- abbreviation: Manga
+  name: 
+  country: BF
+- abbreviation: Gourcy
+  name: 
+  country: BF
+- abbreviation: Djibo
+  name: 
+  country: BF
+- abbreviation: Boussé
+  name: 
+  country: BF
+- abbreviation: Boulsa
+  name: 
+  country: BF
+- abbreviation: Orodara
+  name: 
+  country: BF
+- abbreviation: Haskovo
+  name: 
+  country: BG
+- abbreviation: Bedele
+  name: 
+  country: ET
+- abbreviation: Makamba
+  name: 
+  country: BI
+- abbreviation: Bururi
+  name: 
+  country: BI
+- abbreviation: Muramvya
+  name: 
+  country: BI
+- abbreviation: Gitega
+  name: 
+  country: BI
+- abbreviation: Ngozi
+  name: 
+  country: BI
+- abbreviation: Kayanza
+  name: 
+  country: BI
+- abbreviation: Rutana
+  name: 
+  country: BI
+- abbreviation: Tchaourou
+  name: 
+  country: BJ
+- abbreviation: Tanguiéta
+  name: 
+  country: BJ
+- abbreviation: Kétou
+  name: 
+  country: BJ
+- abbreviation: Dassa-Zoumè
+  name: 
+  country: BJ
+- abbreviation: Bembéréké
+  name: 
+  country: BJ
+- abbreviation: Bassila
+  name: 
+  country: BJ
+- abbreviation: Banikoara
+  name: 
+  country: BJ
+- abbreviation: Aplahoué
+  name: 
+  country: BJ
+- abbreviation: Allada
+  name: 
+  country: BJ
+- abbreviation: Beni
+  name: 
+  country: BO
+- abbreviation: Oruro
+  name: 
+  country: BO
+- abbreviation: Bhutan
+  name: 
+  country: BT
+- abbreviation: Vitsyebskaya voblasts'
+  name: 
+  country: BY
+- abbreviation: Orange Walk
+  name: 
+  country: BZ
+- abbreviation: Mobaye
+  name: 
+  country: CF
+- abbreviation: Ippy
+  name: 
+  country: CF
+- abbreviation: Bangassou
+  name: 
+  country: CF
+- abbreviation: Paoua
+  name: 
+  country: CF
+- abbreviation: Damara
+  name: 
+  country: CF
+- abbreviation: Boganda
+  name: 
+  country: CF
+- abbreviation: Batangafo
+  name: 
+  country: CF
+- abbreviation: Sibiti
+  name: 
+  country: CG
+- abbreviation: Owando
+  name: 
+  country: CG
+- abbreviation: Ouesso
+  name: 
+  country: CG
+- abbreviation: Mossendjo
+  name: 
+  country: CG
+- abbreviation: Madingou
+  name: 
+  country: CG
+- abbreviation: Impfondo
+  name: 
+  country: CG
+- abbreviation: Gamboma
+  name: 
+  country: CG
+- abbreviation: Araucania
+  name: 
+  country: CL
+- abbreviation: Antofagasta
+  name: 
+  country: CL
+- abbreviation: Coquimbo
+  name: 
+  country: CL
+- abbreviation: Mayo-Rey
+  name: 
+  country: CM
+- abbreviation: Manyu
+  name: 
+  country: CM
+- abbreviation: Océan
+  name: 
+  country: CM
+- abbreviation: Nyong et Kellé
+  name: 
+  country: CM
+- abbreviation: Diamaré
+  name: 
+  country: CM
+- abbreviation: Ndian
+  name: 
+  country: CM
+- abbreviation: Nyong-et-Mfoumou
+  name: 
+  country: CM
+- abbreviation: Casanare
+  name: 
+  country: CO
+- abbreviation: Santander
+  name: 
+  country: CO
+- abbreviation: Guaviare
+  name: 
+  country: CO
+- abbreviation: Alajuela
+  name: 
+  country: CR
+- abbreviation: Guanacaste
+  name: 
+  country: CR
+- abbreviation: Isla de la Juventud
+  name: 
+  country: CU
+- abbreviation: Sal
+  name: 
+  country: CV
+- abbreviation: Santa Catarina do Fogo
+  name: 
+  country: CV
+- abbreviation: Ammochostos
+  name: 
+  country: CY
+- abbreviation: Tadjourah
+  name: 
+  country: DJ
+- abbreviation: Obock
+  name: 
+  country: DJ
+- abbreviation: North Denmark Region
+  name: 
+  country: DK
+- abbreviation: El Seibo
+  name: 
+  country: DO
+- abbreviation: San José de Ocoa
+  name: 
+  country: DO
+- abbreviation: Monte Plata
+  name: 
+  country: DO
+- abbreviation: Puerto Plata
+  name: 
+  country: DO
+- abbreviation: Bahoruco
+  name: 
+  country: DO
+- abbreviation: Dajabón
+  name: 
+  country: DO
+- abbreviation: Cotopaxi
+  name: 
+  country: EC
+- abbreviation: Sucumbíos
+  name: 
+  country: EC
+- abbreviation: Bolívar
+  name: 
+  country: EC
+- abbreviation: Loja
+  name: 
+  country: EC
+- abbreviation: Massawa City
+  name: 
+  country: ER
+- abbreviation: Barentu
+  name: 
+  country: ER
+- abbreviation: Southern Dankalia
+  name: 
+  country: ER
+- abbreviation: Mendefera
+  name: 
+  country: ER
+- abbreviation: Chartered Community of Navarre
+  name: 
+  country: ES
+- abbreviation: Yabelo
+  name: 
+  country: ET
+- abbreviation: Adama
+  name: 
+  country: ET
+- abbreviation: Yeki
+  name: 
+  country: ET
+- abbreviation: Jimma Horo
+  name: 
+  country: ET
+- abbreviation: Alem Gena
+  name: 
+  country: ET
+- abbreviation: Kobo
+  name: 
+  country: ET
+- abbreviation: Nejo
+  name: 
+  country: ET
+- abbreviation: Fentale
+  name: 
+  country: ET
+- abbreviation: Dawa Chefa
+  name: 
+  country: ET
+- abbreviation: Ginir
+  name: 
+  country: ET
+- abbreviation: Walmara
+  name: 
+  country: ET
+- abbreviation: Habro
+  name: 
+  country: ET
+- abbreviation: Kuyu
+  name: 
+  country: ET
+- abbreviation: Jabi Tehnan
+  name: 
+  country: ET
+- abbreviation: Dodola
+  name: 
+  country: ET
+- abbreviation: Debark
+  name: 
+  country: ET
+- abbreviation: Bure Wemberma
+  name: 
+  country: ET
+- abbreviation: Gimbo
+  name: 
+  country: ET
+- abbreviation: Enemay
+  name: 
+  country: ET
+- abbreviation: Kuni
+  name: 
+  country: ET
+- abbreviation: Bati
+  name: 
+  country: ET
+- abbreviation: Gazer
+  name: 
+  country: ET
+- abbreviation: Aysaita
+  name: 
+  country: ET
+- abbreviation: Gedeb
+  name: 
+  country: ET
+- abbreviation: Hagere Mariam
+  name: 
+  country: ET
+- abbreviation: Kemekem
+  name: 
+  country: ET
+- abbreviation: Adet
+  name: 
+  country: ET
+- abbreviation: Kewet
+  name: 
+  country: ET
+- abbreviation: East Finland
+  name: 
+  country: FI
+- abbreviation: Southwest Finland
+  name: 
+  country: FI
+- abbreviation: Micronesia, Federated States of
+  name: 
+  country: FM
+- abbreviation: Mougoutsi
+  name: 
+  country: GA
+- abbreviation: Douya Onoye
+  name: 
+  country: GA
+- abbreviation: Ogooué et des Lacs
+  name: 
+  country: GA
+- abbreviation: Lolo Bouenguidi
+  name: 
+  country: GA
+- abbreviation: Grenada
+  name: 
+  country: GD
+- abbreviation: Ochamchire
+  name: 
+  country: GE
+- abbreviation: Telavi
+  name: 
+  country: GE
+- abbreviation: Ozurgeti
+  name: 
+  country: GE
+- abbreviation: Marneuli
+  name: 
+  country: GE
+- abbreviation: Kobuleti
+  name: 
+  country: GE
+- abbreviation: Akhaltsikhe
+  name: 
+  country: GE
+- abbreviation: Tskaltubo
+  name: 
+  country: GE
+- abbreviation: Channel Islands
+  name: 
+  country: GG
+- abbreviation: Kombo North/Saint Mary
+  name: 
+  country: GM
+- abbreviation: Upper Niumi
+  name: 
+  country: GM
+- abbreviation: Mamou
+  name: 
+  country: GN
+- abbreviation: Ebebiyin
+  name: 
+  country: GQ
+- abbreviation: Voreio Aigaio
+  name: 
+  country: GR
+- abbreviation: Anatoliki Makedonia Thraki
+  name: 
+  country: GR
+- abbreviation: Chimaltenango
+  name: 
+  country: GT
+- abbreviation: Sacatepéquez
+  name: 
+  country: GT
+- abbreviation: Suchitepéquez
+  name: 
+  country: GT
+- abbreviation: El Progreso
+  name: 
+  country: GT
+- abbreviation: Escuintla
+  name: 
+  country: GT
+- abbreviation: Retalhuleú
+  name: 
+  country: GT
+- abbreviation: Izabal
+  name: 
+  country: GT
+- abbreviation: Zacapa
+  name: 
+  country: GT
+- abbreviation: San Marcos
+  name: 
+  country: GT
+- abbreviation: Tamuning
+  name: 
+  country: GU
+- abbreviation: Yigo
+  name: 
+  country: GU
+- abbreviation: Mangilao
+  name: 
+  country: GU
+- abbreviation: Bafatá
+  name: 
+  country: GW
+- abbreviation: Valle
+  name: 
+  country: HN
+- abbreviation: La Paz
+  name: 
+  country: HN
+- abbreviation: Virovitičko-podravska županija
+  name: 
+  country: HR
+- abbreviation: Požeško-slavonska županija
+  name: 
+  country: HR
+- abbreviation: Osječko-baranjska županija
+  name: 
+  country: HR
+- abbreviation: Međimurska županija
+  name: 
+  country: HR
+- abbreviation: Borsod-Abaúj-Zemplén
+  name: 
+  country: HU
+- abbreviation: County Wexford
+  name: 
+  country: IE
+- abbreviation: County Westmeath
+  name: 
+  country: IE
+- abbreviation: County Tipperary
+  name: 
+  country: IE
+- abbreviation: Darom
+  name: 
+  country: IL
+- abbreviation: Tilkaif
+  name: 
+  country: IQ
+- abbreviation: Soran
+  name: 
+  country: IQ
+- abbreviation: Al Rutba
+  name: 
+  country: IQ
+- abbreviation: Akre
+  name: 
+  country: IQ
+- abbreviation: Ali Al Gharbi
+  name: 
+  country: IQ
+- abbreviation: Suq Al Shoyokh
+  name: 
+  country: IQ
+- abbreviation: Afaq
+  name: 
+  country: IQ
+- abbreviation: Umbria
+  name: 
+  country: IT
+- abbreviation: Westmoreland
+  name: 
+  country: JM
+- abbreviation: St Catherine
+  name: 
+  country: JM
+- abbreviation: Irbid Governorate
+  name: 
+  country: JO
+- abbreviation: Al Karak Governorate
+  name: 
+  country: JO
+- abbreviation: Tokushima
+  name: 
+  country: JP
+- abbreviation: Samburu
+  name: 
+  country: KE
+- abbreviation: Makueni
+  name: 
+  country: KE
+- abbreviation: Turkana
+  name: 
+  country: KE
+- abbreviation: Lamu
+  name: 
+  country: KE
+- abbreviation: Kitui
+  name: 
+  country: KE
+- abbreviation: Kiambu
+  name: 
+  country: KE
+- abbreviation: Kirinyaga
+  name: 
+  country: KE
+- abbreviation: Murang'a
+  name: 
+  country: KE
+- abbreviation: Baringo
+  name: 
+  country: KE
+- abbreviation: Siaya
+  name: 
+  country: KE
+- abbreviation: Batken
+  name: 
+  country: KG
+- abbreviation: Andijon
+  name: 
+  country: KG
+- abbreviation: Svay Rieng
+  name: 
+  country: KH
+- abbreviation: Otdar Mean Chey
+  name: 
+  country: KH
+- abbreviation: Preah Vihear
+  name: 
+  country: KH
+- abbreviation: Krong Pailin
+  name: 
+  country: KH
+- abbreviation: Ratanakkiri
+  name: 
+  country: KH
+- abbreviation: Kratie
+  name: 
+  country: KH
+- abbreviation: Kampot
+  name: 
+  country: KH
+- abbreviation: Kampong Thom
+  name: 
+  country: KH
+- abbreviation: Jilin
+  name: 
+  country: KP
+- abbreviation: Jahra
+  name: 
+  country: KW
+- abbreviation: North
+  name: 
+  country: LB
+- abbreviation: Yarmein
+  name: 
+  country: LR
+- abbreviation: Greenville
+  name: 
+  country: LR
+- abbreviation: Quthing
+  name: 
+  country: LS
+- abbreviation: Butha-Buthe
+  name: 
+  country: LS
+- abbreviation: Panevėžio Apskritis
+  name: 
+  country: LT
+- abbreviation: Alytaus Apskritis
+  name: 
+  country: LT
+- abbreviation: Cēsu novads
+  name: 
+  country: LV
+- abbreviation: Ghat
+  name: 
+  country: LY
+- abbreviation: Edinet
+  name: 
+  country: MD
+- abbreviation: Sîngerei
+  name: 
+  country: MD
+- abbreviation: Hîncesti
+  name: 
+  country: MD
+- abbreviation: Causeni
+  name: 
+  country: MD
+- abbreviation: Floresti
+  name: 
+  country: MD
+- abbreviation: U.T.A. Gagauzia
+  name: 
+  country: MD
+- abbreviation: Vondrozo
+  name: 
+  country: MG
+- abbreviation: Tsaratanana
+  name: 
+  country: MG
+- abbreviation: Antsirabe II
+  name: 
+  country: MG
+- abbreviation: Ambato Boeni
+  name: 
+  country: MG
+- abbreviation: Sakaraha
+  name: 
+  country: MG
+- abbreviation: Miandrivazo
+  name: 
+  country: MG
+- abbreviation: Maroantsetra
+  name: 
+  country: MG
+- abbreviation: Maintirano
+  name: 
+  country: MG
+- abbreviation: Maevatanana
+  name: 
+  country: MG
+- abbreviation: Ikalamavony
+  name: 
+  country: MG
+- abbreviation: Ihosy
+  name: 
+  country: MG
+- abbreviation: Ifanadiana
+  name: 
+  country: MG
+- abbreviation: Fenoarivobe
+  name: 
+  country: MG
+- abbreviation: Fenerive Est
+  name: 
+  country: MG
+- abbreviation: Farafangana
+  name: 
+  country: MG
+- abbreviation: Beroroha
+  name: 
+  country: MG
+- abbreviation: Belo sur Tsiribihina
+  name: 
+  country: MG
+- abbreviation: Beloha
+  name: 
+  country: MG
+- abbreviation: Bealanana
+  name: 
+  country: MG
+- abbreviation: Arivonimamo
+  name: 
+  country: MG
+- abbreviation: Antsohihy
+  name: 
+  country: MG
+- abbreviation: Ankazobe
+  name: 
+  country: MG
+- abbreviation: Anjozorobe
+  name: 
+  country: MG
+- abbreviation: Nosy-Be
+  name: 
+  country: MG
+- abbreviation: Andilamena
+  name: 
+  country: MG
+- abbreviation: Andapa
+  name: 
+  country: MG
+- abbreviation: Brickaville
+  name: 
+  country: MG
+- abbreviation: Marshall Is
+  name: 
+  country: MH
+- abbreviation: Pelagoniski
+  name: 
+  country: MK
+- abbreviation: Jugoistochen
+  name: 
+  country: MK
+- abbreviation: Yorosso
+  name: 
+  country: ML
+- abbreviation: San
+  name: 
+  country: ML
+- abbreviation: Kéniéba
+  name: 
+  country: ML
+- abbreviation: Koulikoro
+  name: 
+  country: ML
+- abbreviation: Kangaba
+  name: 
+  country: ML
+- abbreviation: Djenné
+  name: 
+  country: ML
+- abbreviation: Selenge
+  name: 
+  country: MN
+- abbreviation: Bulgan
+  name: 
+  country: MN
+- abbreviation: Tov
+  name: 
+  country: MN
+- abbreviation: Saint-Louis
+  name: 
+  country: MR
+- abbreviation: Sélibabi
+  name: 
+  country: MR
+- abbreviation: Atar
+  name: 
+  country: MR
+- abbreviation: Aleg
+  name: 
+  country: MR
+- abbreviation: Montserrat
+  name: 
+  country: MS
+- abbreviation: Pamplemousses
+  name: 
+  country: MU
+- abbreviation: Moka
+  name: 
+  country: MU
+- abbreviation: Grand Port
+  name: 
+  country: MU
+- abbreviation: Flacq
+  name: 
+  country: MU
+- abbreviation: Terengganu
+  name: 
+  country: MY
+- abbreviation: Hardap
+  name: 
+  country: NA
+- abbreviation: Otjozondjupa
+  name: 
+  country: NA
+- abbreviation: Karas
+  name: 
+  country: NA
+- abbreviation: Omaheke
+  name: 
+  country: NA
+- abbreviation: Bayelsa
+  name: 
+  country: NG
+- abbreviation: Kano
+  name: 
+  country: NG
+- abbreviation: Taraba
+  name: 
+  country: NG
+- abbreviation: Madriz
+  name: 
+  country: NI
+- abbreviation: Matagalpa
+  name: 
+  country: NI
+- abbreviation: Granada
+  name: 
+  country: NI
+- abbreviation: Masaya
+  name: 
+  country: NI
+- abbreviation: Nueva Segovia
+  name: 
+  country: NI
+- abbreviation: Gelderland
+  name: 
+  country: NL
+- abbreviation: North Brabant
+  name: 
+  country: NL
+- abbreviation: Groningen
+  name: 
+  country: NL
+- abbreviation: Utrecht
+  name: 
+  country: NL
+- abbreviation: Oppland
+  name: 
+  country: 'NO'
+- abbreviation: Hordaland
+  name: 
+  country: 'NO'
+- abbreviation: Mechi
+  name: 
+  country: NP
+- abbreviation: UK
+  name: 
+  country: NP
+- abbreviation: Dhawalagiri
+  name: 
+  country: NP
+- abbreviation: Waikato
+  name: 
+  country: NZ
+- abbreviation: Musandam
+  name: 
+  country: OM
+- abbreviation: Panamá Oeste
+  name: 
+  country: PA
+- abbreviation: Chiriquí
+  name: 
+  country: PA
+- abbreviation: Bocas del Toro
+  name: 
+  country: PA
+- abbreviation: Ancash
+  name: 
+  country: PE
+- abbreviation: Tumbes
+  name: 
+  country: PE
+- abbreviation: Ayacucho
+  name: 
+  country: PE
+- abbreviation: Apurimac
+  name: 
+  country: PE
+- abbreviation: Lisbon
+  name: 
+  country: PT
+- abbreviation: Faro
+  name: 
+  country: PT
+- abbreviation: Santarem
+  name: 
+  country: PT
+- abbreviation: Caazapá
+  name: 
+  country: PY

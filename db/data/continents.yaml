@@ -1,0 +1,15 @@
+---
+- abbreviation: AF
+  name: Africa
+- abbreviation: AN
+  name: Antarctica
+- abbreviation: AS
+  name: Asia
+- abbreviation: EU
+  name: Europe
+- abbreviation: NA
+  name: North America
+- abbreviation: OC
+  name: Oceania
+- abbreviation: SA
+  name: South America

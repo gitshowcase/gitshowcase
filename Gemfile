@@ -48,6 +48,9 @@ end
 # Use sortable to allow sorting projects and skills
 gem 'sortable-rails'
 
+# Use TypeAhead for autocompletion
+gem 'bootstrap-typeahead-rails'
+
 # Use font awesome for icons
 gem 'font-awesome-rails'
 
@@ -107,6 +110,18 @@ gem 'will_paginate-bootstrap'
 # Use HTTP to handle pontual requests
 gem 'http'
 
+# Use GeoCoder for geolocation
+gem 'geocoder'
+
+# Use EarthDistance to find nearby places
+gem 'activerecord-postgres-earthdistance'
+
+# Use PG_Search to autocomplete location
+gem 'pg_search'
+
+# User ActiveRecordImport for mass import
+gem 'activerecord-import'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -150,6 +165,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
+  # Use CityState for a list of cities/states/countries
+  gem 'city-state'
 end
 
 group :production do

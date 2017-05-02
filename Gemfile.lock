@@ -34,6 +34,12 @@ GEM
       activemodel (= 5.0.2)
       activesupport (= 5.0.2)
       arel (~> 7.0)
+    activerecord-import (0.18.1)
+      activerecord (>= 3.2)
+    activerecord-postgres-earthdistance (0.5.2)
+      activerecord (>= 3.1)
+      pg
+      rake
     activesupport (5.0.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
@@ -44,9 +50,13 @@ GEM
     arel (7.1.4)
     awesome_print (1.7.0)
     bcrypt (3.1.11)
+    bootstrap-typeahead-rails (0.10.5.1)
+      railties (>= 3.0)
     builder (3.2.3)
     byebug (9.0.6)
     callsite (0.0.11)
+    city-state (0.0.13)
+      rubyzip (~> 1.1)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -99,6 +109,7 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.3)
     gibbon (3.0.1)
       faraday (>= 0.9.1)
       multi_json (>= 1.11.0)
@@ -208,6 +219,10 @@ GEM
     orm_adapter (0.5.0)
     os (0.9.6)
     pg (0.19.0)
+    pg_search (2.0.1)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      arel (>= 6)
     platform-api (1.0.0)
       heroics (~> 0.0.20)
       moneta (~> 0.8.1)
@@ -288,6 +303,7 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rubyzip (1.2.1)
     safe_yaml (1.0.4)
     sass (3.4.23)
     sass-rails (5.0.6)
@@ -382,13 +398,18 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord-import
+  activerecord-postgres-earthdistance
   awesome_print
+  bootstrap-typeahead-rails
   byebug
+  city-state
   coffee-rails (~> 4.2)
   devise
   dotenv-rails
   factory_girl_rails
   font-awesome-rails
+  geocoder
   gibbon
   google-api-client (~> 0.10)
   http
@@ -401,6 +422,7 @@ DEPENDENCIES
   omniauth
   omniauth-github
   pg (~> 0.18)
+  pg_search
   platform-api
   pry-byebug
   puma (~> 3.0)

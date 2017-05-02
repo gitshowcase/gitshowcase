@@ -42,8 +42,8 @@ Rails.application.routes.draw do
       root to: redirect('/admin')
     end
 
-    # Dashboard
     authenticated :user do
+      # Dashboard
       namespace :dashboard do
         controller :users do
           get '/', action: :home, as: :home
@@ -105,6 +105,12 @@ Rails.application.routes.draw do
 
           get 'theme'
           match 'theme', action: :update_theme, as: :update_theme, via: [:put, :patch]
+        end
+      end
+
+      scope path: '/location', as: :location do
+        controller :location do
+          get ':query', action: :autocomplete, as: :autocomplete
         end
       end
 

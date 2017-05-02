@@ -12,6 +12,13 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:github]
 
+  # Location & Time
+  belongs_to :country, optional: true
+  belongs_to :city, optional: true
+  delegate :timezone, to: :city
+
+  acts_as_geolocated lat: 'latitude', lng: 'longitude'
+
   # Urls
   url :website
   url :company_website
@@ -40,7 +47,6 @@ class User < ApplicationRecord
 
     {
         name: name.present?,
-        cover: cover.present?,
         bio: bio.present?,
         role: role.present? && role != 'Jedi Developer',
         location: location.present?,
