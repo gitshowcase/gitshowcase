@@ -38,7 +38,7 @@ class Admin::AnalyticsController < AdminController
 
   def history(fields)
     @totals = full_snapshot.fields(fields)
-    @today = today_snapshot.fields(fields)
+    @today = today_snapshot.fields(fields, true)
     @one_day_ago, @two_days_ago = comparison(1.day, fields)
     @one_week_ago, @two_weeks_ago = comparison(1.week, fields)
     @one_month_ago, @two_months_ago = comparison(1.month, fields)
