@@ -8,6 +8,9 @@ AnalyticsOverview = {
 
   draw: ->
     AnalyticsOverview.drawGeneral()
+    AnalyticsOverview.drawUserCompleteness()
+    AnalyticsOverview.drawInvitations()
+    AnalyticsOverview.drawInvitationFunnel()
 
   drawGeneral: ->
     data = AnalyticsOverview.dataTable([
@@ -28,6 +31,37 @@ AnalyticsOverview = {
     chart = new google.visualization.LineChart($('#general-chart')[0]);
     chart.draw(data, options);
 
+  drawUserCompleteness: ->
+    data = AnalyticsOverview.dataTable([
+      {name: 'daily_avg_user_completeness', label: 'Average'},
+      {name: 'daily_count_user_weak_completeness', label: 'Weak'},
+      {name: 'daily_count_user_medium_completeness', label: 'Medium'},
+      {name: 'daily_count_user_strong_completeness', label: 'Strong'},
+      {name: 'daily_count_user_very_strong_completeness', label: 'Very Strong'}
+    ])
+    options = AnalyticsOverview.options {
+      series: {
+        0: {targetAxisIndex: 0},
+        1: {targetAxisIndex: 1}
+        2: {targetAxisIndex: 1},
+        3: {targetAxisIndex: 1},
+        4: {targetAxisIndex: 1},
+        5: {targetAxisIndex: 1}
+      },
+      vAxes: {
+        0: {title: 'Average'},
+        1: {title: 'Count'}
+      }
+    }
+
+    chart = new google.visualization.LineChart($('#user-completeness-chart')[0]);
+    chart.draw(data, options);
+
+  drawInvitations: ->
+
+  drawInvitationFunnel: ->
+
+
   options: (extra) ->
     Object.assign({
       width: '100%',
@@ -39,9 +73,13 @@ AnalyticsOverview = {
   data: ->
     return AnalyticsOverview._data if AnalyticsOverview._data
 
-    AnalyticsOverview._data = window.snapshots.map (array) ->
-      array.date = 'Date(' + array.date.split('-').join(', ') + ')'
-      array
+    AnalyticsOverview._data = window.snapshots.map (row) ->
+      date = row.date.split('-')
+      date[1] = parseInt(date[1]) - 1
+
+      row.date = 'Date(' + date.join(', ') + ')'
+      row.daily_avg_user_completeness = row.daily_total_user_completeness / (row.daily_count_users || 1)
+      row
 
   dataTable: (fields) =>
     cols = [

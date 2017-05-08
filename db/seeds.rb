@@ -18,7 +18,7 @@ users = (1..2000).map do |i|
       email: "email#{i}@example.com",
       domain: Faker::Number.between(1, 10) > 8 ? "domain#{i}.com" : nil,
       encrypted_password: 'password',
-      completeness: (rand * 10).round(1),
+      completeness: [(rand * User::CompletenessService::MAX * 1.6).round(1), User::CompletenessService::MAX].min,
       plan_id: (rand * 3).round == 3 ? invitation_reward_id : nil,
       created_at: Faker::Date.between(period, Date.today)
   }
