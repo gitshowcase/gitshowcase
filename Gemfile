@@ -101,7 +101,7 @@ gem 'platform-api'
 gem 'sidekiq'
 
 # Use GoogleAPI for analytics
-gem 'google-api-client', '~> 0.10'
+# gem 'google-api-client', '~> 0.10'
 
 # Use WillPaginate for pagination
 gem 'will_paginate'
@@ -129,17 +129,8 @@ group :development, :test do
   # Add pry-byebug to enable pry features like navigation for byebug
   gem 'pry-byebug'
 
-  # Call ap for a readable result
-  gem 'awesome_print', require: 'ap'
-
-  # Use meta request for Rails Panel
-  gem 'meta_request'
-
   # Use FactoryGirl to use factories
   gem 'factory_girl_rails'
-
-  # Use dotenv to configure environment variables
-  gem 'dotenv-rails'
 
   # Use rspec for testing
   gem 'rspec-rails', '~> 3.5'
@@ -155,9 +146,6 @@ group :development, :test do
 
   # Use WebMock as HTTP interceptor
   gem 'webmock'
-
-  # Use faker to generate seeds
-  gem 'faker'
 end
 
 group :development do
@@ -171,6 +159,18 @@ group :development do
 
   # Use CityState for a list of cities/states/countries
   gem 'city-state'
+
+  # Call ap for a readable result
+  gem 'awesome_print', require: 'ap'
+
+  # Use meta request for Rails Panel
+  gem 'meta_request'
+
+  # Use dotenv to configure environment variables
+  gem 'dotenv-rails'
+
+  # Use faker to generate seeds
+  gem 'faker'
 end
 
 group :production do

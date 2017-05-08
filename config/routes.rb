@@ -23,17 +23,21 @@ Rails.application.routes.draw do
     # Admin
     authenticated :user, lambda { |u| u.admin } do
       namespace :admin do
-        controller :analytics do
-          get '/', action: :home, as: :home
-          get '/analytics/growth', action: :growth, as: :analytics_growth
-          get '/analytics/user_completeness', action: :user_completeness, as: :analytics_user_completeness
-          get '/analytics/invitation_funnel', action: :invitation_funnel, as: :analytics_invitation_funnel
-        end
+        get '/', controller: :analytics, action: :home, as: :home
 
         resources :users, only: [:index, :show]
         resources :invitations, only: [:index]
         resources :plans, only: [:index, :show]
         resources :setup_covers, only: [:index, :create, :destroy]
+
+        resources :analytics, only: [:index] do
+          collection do
+            get 'growth'
+            get 'user_completeness'
+            get 'invitation_funnel'
+            get 'overview'
+          end
+        end
 
         namespace :monitor do
           # Sidekiq

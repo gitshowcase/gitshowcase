@@ -6,6 +6,8 @@ html
     = stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload'
 
+    script type='text/javascript' src='https://www.gstatic.com/charts/loader.js' data-turbolinks-track='reload'
+
   body
     = render 'layouts/partials/body', tag_manager: false
 
@@ -16,17 +18,21 @@ html
           |  Dashboard
 
       nav
-        a href=admin_analytics_growth_path
+        a href=growth_admin_analytics_path
           i.fa.fa-line-chart
           |  Growth
 
-        a href=admin_analytics_user_completeness_path
+        a href=user_completeness_admin_analytics_path
           i.fa.fa-pie-chart
           |  User Completeness
 
-        a href=admin_analytics_invitation_funnel_path
+        a href=invitation_funnel_admin_analytics_path
           i.fa.fa-filter
           |  Invitation Funnel
+
+        a href=overview_admin_analytics_path
+          i.fa.fa-bar-chart
+          |  Overview
 
       nav
         a href=admin_users_path

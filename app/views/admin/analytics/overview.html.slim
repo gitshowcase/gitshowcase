@@ -1,0 +1,13 @@
+#analytics-overview-view
+  header
+    h1
+      i.fa.fa-bar-chart
+      |  Overview
+
+  / Data
+  = render 'components/javascript-variable', name: 'snapshots', value: @snapshots
+
+  section
+    h2 Users/Projects
+
+    #general-chart

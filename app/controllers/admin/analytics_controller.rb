@@ -1,4 +1,9 @@
 class Admin::AnalyticsController < AdminController
+  # GET /admin/analytics
+  def index
+
+  end
+
   # GET /admin
   def home
     @totals = [full_snapshot.general, full_snapshot.invitation, full_snapshot.invitation_funnel].reduce(:merge)
@@ -32,6 +37,17 @@ class Admin::AnalyticsController < AdminController
     ]
 
     history(fields)
+  end
+
+  def overview
+    @period = params[:period] || '3-months'
+
+    date = 1.year
+    date = 3.months if @period == '3-months'
+    date = 1.month if @period == '1-month'
+    date = 2.week if @period == '1-week'
+
+    @snapshots = Snapshot.where('date > ?', Date.today - date)
   end
 
   private
