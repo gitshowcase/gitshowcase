@@ -122,7 +122,8 @@ class SnapshotService < ApplicationService
   end
 
   def count_zero_invitations(type = TYPE_TOTAL)
-    count_users - invitation_counts(type).values.sum
+    others = invitation_counts(type).map { |key, value| key > 6 ? 0 : value }.sum
+    count_domains(type) - others
   end
 
   def count_one_invitations(type = TYPE_TOTAL)
@@ -186,7 +187,7 @@ class SnapshotService < ApplicationService
   def invitation_counts(type)
     return @invitation_counts unless @invitation_counts.nil?
 
-    grouped_invitations = query(User, type).joins(:invitations).select('count(users.id) as invitees').group('users.id').all
+    grouped_invitations = query(Invitation, type).joins(:inviter).select('count(users.id) as invitees').group('users.id').all
     @invitation_counts = Hash[grouped_invitations.group_by(&:invitees).map { |invitations, rows| [invitations, rows.count] }]
     @invitation_counts[6] = @invitation_counts.map { |invitations, count| invitations >= 6 ? count : 0 }.sum
 

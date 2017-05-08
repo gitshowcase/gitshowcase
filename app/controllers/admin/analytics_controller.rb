@@ -31,17 +31,17 @@ class Admin::AnalyticsController < AdminController
         *SnapshotService::INVITATION_FUNNEL
     ]
 
-    history(fields, false)
+    history(fields)
   end
 
   private
 
-  def history(fields, daily = true)
+  def history(fields)
     @totals = full_snapshot.fields(fields)
-    @today = today_snapshot.fields(fields, SnapshotService::TYPE_DAILY)
-    @one_day_ago, @two_days_ago = comparison(1.day, fields, daily)
-    @one_week_ago, @two_weeks_ago = comparison(1.week, fields, daily)
-    @one_month_ago, @two_months_ago = comparison(1.month, fields, daily)
+    @today = today_snapshot.fields(fields)
+    @one_day_ago, @two_days_ago = comparison(1.day, fields)
+    @one_week_ago, @two_weeks_ago = comparison(1.week, fields)
+    @one_month_ago, @two_months_ago = comparison(1.month, fields)
   end
 
   def full_snapshot
@@ -52,12 +52,15 @@ class Admin::AnalyticsController < AdminController
     @snapshot ||= SnapshotService.new(Date.today)
   end
 
-  def query_fields(fields, daily)
-    fields.map { |field| "SUM(#{daily ? 'daily_' : ''}#{field}) as #{field}" }
+  def query_fields(fields)
+    fields.map do |field|
+      in_funnel = SnapshotService::INVITATION_FUNNEL.include?(field)
+      (in_funnel ? "MAX(#{field})" : "SUM(daily_#{field})") + "as #{field}"
+    end
   end
 
-  def comparison(interval, fields, daily)
-    select_fields = query_fields(fields, daily)
+  def comparison(interval, fields)
+    select_fields = query_fields(fields)
 
     end_date = Date.today - interval
     start_date = end_date - interval

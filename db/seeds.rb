@@ -38,7 +38,7 @@ end
 Project.import projects, validate: false
 
 # Invitations
-invitations = (1..500).map do |i|
+invitations = (1..100).map do |i|
   {
       inviter_id: (1999 * rand).round + 1,
       invitee: "username#{i}",
