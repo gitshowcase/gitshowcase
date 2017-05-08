@@ -1,0 +1,23 @@
+@import "globals/colors";
+
+#analytics-overview-view {
+  #filter {
+    > header {
+      margin-bottom: 1rem;
+    }
+
+    .date-shortcuts {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid $color-border;
+
+      a + a {
+        margin-left: 1rem;
+      }
+    }
+
+    .form-actions {
+      margin-top: 0;
+    }
+  }
+}

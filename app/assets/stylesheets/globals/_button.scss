@@ -2,6 +2,7 @@
 
 @mixin button-theme($color-one, $color-two) {
   .btn-primary {
+    color: white;
     background-color: $color-one;
 
     &:hover {

@@ -7,8 +7,44 @@
   / Data
   = render 'components/javascript-variable', name: 'snapshots', value: @snapshots
 
+  section#filter
+    header
+      h2
+        i.fa.fa-filter
+        |  Filter
+
+    form.form
+      .row
+        .col-lg-6
+          .form-group
+            .control-label for='filter-date' Date
+            input#filter-date.form-control name='date' value=params[:date] type='date'
+
+        .col-lg-6
+          .form-group
+            .control-label for='filter-date-end' Final Date
+            input#filter-date-end.form-control name='date_end' value=params[:date_end] type='date'
+
+      .form-actions
+        button.btn.btn-primary
+          i.fa.fa-search
+          |  Search
+
+    .date-shortcuts
+      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 1.week}"
+        | 1 Week Ago
+
+      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 2.week}"
+        | 2 Weeks Ago
+
+      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 1.month}"
+        | 1 Month Ago
+
+      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 3.months}"
+        | 3 Months Ago
+
   section
-    h2 Users,Projects over Time
+    h2 Users, Projects over Time
 
     #general-chart
 

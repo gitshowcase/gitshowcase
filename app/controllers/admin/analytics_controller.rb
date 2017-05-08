@@ -40,14 +40,11 @@ class Admin::AnalyticsController < AdminController
   end
 
   def overview
-    @period = params[:period] || '3-months'
+    query = Snapshot
+    query = query.where('date >= ?', params[:date]) if params[:date].present?
+    query = query.where('date < ?', params[:date_end]) if params[:date_end].present?
 
-    date = 1.year
-    date = 3.months if @period == '3-months'
-    date = 1.month if @period == '1-month'
-    date = 2.week if @period == '1-week'
-
-    @snapshots = Snapshot.where('date > ?', Date.today - date)
+    @snapshots = query.all
   end
 
   private
