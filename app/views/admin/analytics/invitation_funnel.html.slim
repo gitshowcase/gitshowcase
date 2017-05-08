@@ -1,0 +1,10 @@
+#analytics-invitation-funnel-view
+  header
+    h1
+      i.fa.fa-filter
+      |  Invitation Funnel
+
+  = render 'admin/analytics/components/invitation-overview', title: 'Totals', values: @totals
+  = render 'admin/analytics/components/invitation-overview', title: 'Yesterday', values: @one_day_ago, compare: @two_days_ago
+  = render 'admin/analytics/components/invitation-overview', title: 'Last Week', values: @one_week_ago, compare: @two_weeks_ago
+  = render 'admin/analytics/components/invitation-overview', title: 'Last Month', values: @one_month_ago, compare: @two_months_ago

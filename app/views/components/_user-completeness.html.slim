@@ -1,0 +1,9 @@
+.user-completeness class="user-completeness-#{User::CompletenessService.level(completeness)}"
+  i.fa.fa-star-o
+  '
+  - if completeness == 10
+    | Rockstar
+  - else
+    = number_with_precision(completeness, precision: 1)
+    small
+      |  / 10

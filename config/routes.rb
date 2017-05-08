@@ -25,6 +25,9 @@ Rails.application.routes.draw do
       namespace :admin do
         controller :analytics do
           get '/', action: :home, as: :home
+          get '/analytics/growth', action: :growth, as: :analytics_growth
+          get '/analytics/user_completeness', action: :user_completeness, as: :analytics_user_completeness
+          get '/analytics/invitation_funnel', action: :invitation_funnel, as: :analytics_invitation_funnel
         end
 
         resources :users, only: [:index, :show]

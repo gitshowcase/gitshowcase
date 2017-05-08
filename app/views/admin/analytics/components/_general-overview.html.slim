@@ -1,0 +1,25 @@
+- title ||= nil
+
+- count_users = values[:count_users]
+- count_projects = values[:count_projects]
+- projects_per_user = count_users.nil? || count_users == 0 ? 0 : (count_projects / count_users)
+
+- compare ||= {}
+- compare_count_users = compare[:count_users]
+- compare_count_projects = compare[:count_projects]
+- compare_projects_per_user = compare_count_users.nil? ? nil : (compare_count_users == 0 ? 0 : (compare_count_projects / compare_count_users))
+
+.general-overview
+  - if title
+    header
+      h2= title
+
+  .row
+    .col-lg-4
+      = render 'admin/analytics/components/data-card', title: 'Users', icon: 'users', value: count_users, compare: compare_count_users
+
+    .col-lg-4
+      = render 'admin/analytics/components/data-card', title: 'Projects', icon: 'cubes', value: count_projects, compare: compare_count_projects
+
+    .col-lg-4
+      = render 'admin/analytics/components/data-card', title: 'Projects/User', icon: 'th-large', value: projects_per_user, compare: compare_projects_per_user

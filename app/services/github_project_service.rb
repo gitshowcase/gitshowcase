@@ -43,6 +43,10 @@ class GithubProjectService < ApplicationService
     created
   end
 
+  def sync_forks_stars
+    # TODO
+  end
+
   protected
 
   def client(user = nil)

@@ -19,7 +19,7 @@
               = user.username
 
           a href=admin_user_path(user)
-            = render 'components/score', score: user.score
+            = render 'components/user-completeness', completeness: user.completeness
 
             .created_at
               i.fa.fa-clock-o

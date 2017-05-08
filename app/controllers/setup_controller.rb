@@ -9,7 +9,14 @@ class SetupController < ApplicationController
 
   # PUT/PATCH /setup
   def update_profile
-    @user.update(user_params(:name, :bio, :role, :location, :company))
+    values = user_params(:name, :bio, :role, :location, :company)
+
+    # location = LocationService.new.get(params[:location])
+    # values[:city_id] = location[:city_id]
+    # values[:country_id] = location[:country_id] if location[:country_id]
+    # values[:location] = location[:location]
+
+    service.save(values)
     redirect_to setup_cover_path
   end
 
@@ -23,7 +30,7 @@ class SetupController < ApplicationController
 
   # PUT/PATCH /setup/cover
   def update_cover
-    @user.update(cover: params[:cover])
+    service.save(cover: params[:cover])
     redirect_to setup_socials_url
   end
 
@@ -35,7 +42,7 @@ class SetupController < ApplicationController
 
   # PUT/PATCH /setup/socials
   def update_socials
-    @user.update(user_params(User::SOCIALS.keys))
+    service.save(user_params(User::SOCIALS.keys))
     redirect_to setup_skills_url
   end
 
@@ -47,15 +54,8 @@ class SetupController < ApplicationController
 
   # PUT/PATCH /setup/skills
   def update_skills
-    skills = {}
-
-    for i in 0..params[:name].size
-      name = params[:name][i]
-      mastery = params[:mastery][i]
-      skills[name] = mastery
-    end
-
-    UserSkillService.new(@user).update(skills)
+    hash = {name: params[:name], mastery: params[:mastery]}
+    service.save(skills: hash)
     redirect_to setup_projects_url
   end
 
@@ -93,5 +93,9 @@ class SetupController < ApplicationController
 
   def user_params(*fields)
     params.require(:user).permit(fields)
+  end
+
+  def service
+    @service ||= UserService.new(@user)
   end
 end

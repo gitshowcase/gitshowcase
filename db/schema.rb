@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502050506) do
+ActiveRecord::Schema.define(version: 20170502201750) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,6 +100,39 @@ ActiveRecord::Schema.define(version: 20170502050506) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "snapshots", force: :cascade do |t|
+    t.date     "date"
+    t.integer  "count_users",                               default: 0,   null: false
+    t.integer  "count_projects",                            default: 0,   null: false
+    t.integer  "count_domains",                             default: 0,   null: false
+    t.float    "total_user_completeness",                   default: 0.0, null: false
+    t.integer  "count_user_weak_completeness",              default: 0,   null: false
+    t.integer  "count_user_medium_completeness",            default: 0,   null: false
+    t.integer  "count_user_strong_completeness",            default: 0,   null: false
+    t.integer  "count_user_very_strong_completeness",       default: 0,   null: false
+    t.integer  "count_invitations",                         default: 0,   null: false
+    t.integer  "count_invitation_rewards",                  default: 0,   null: false
+    t.integer  "count_zero_invitations",                    default: 0,   null: false
+    t.integer  "count_one_invitations",                     default: 0,   null: false
+    t.integer  "count_two_invitations",                     default: 0,   null: false
+    t.integer  "count_three_invitations",                   default: 0,   null: false
+    t.integer  "count_four_invitations",                    default: 0,   null: false
+    t.integer  "count_five_invitations",                    default: 0,   null: false
+    t.integer  "count_six_more_invitations",                default: 0,   null: false
+    t.integer  "daily_count_users",                         default: 0,   null: false
+    t.integer  "daily_count_projects",                      default: 0,   null: false
+    t.integer  "daily_count_domains",                       default: 0,   null: false
+    t.float    "daily_total_user_completeness",             default: 0.0, null: false
+    t.integer  "daily_count_user_weak_completeness",        default: 0,   null: false
+    t.integer  "daily_count_user_medium_completeness",      default: 0,   null: false
+    t.integer  "daily_count_user_strong_completeness",      default: 0,   null: false
+    t.integer  "daily_count_user_very_strong_completeness", default: 0,   null: false
+    t.integer  "daily_count_invitations",                   default: 0,   null: false
+    t.datetime "created_at",                                              null: false
+    t.datetime "updated_at",                                              null: false
+    t.index ["date"], name: "index_snapshots_on_date", unique: true, using: :btree
+  end
+
   create_table "states", force: :cascade do |t|
     t.integer  "country_id",   null: false
     t.string   "abbreviation", null: false
@@ -170,6 +203,8 @@ ActiveRecord::Schema.define(version: 20170502050506) do
     t.decimal  "longitude",              precision: 10, scale: 6
     t.integer  "city_id"
     t.integer  "country_id"
+    t.float    "completeness"
+    t.json     "completeness_details"
     t.index "ll_to_earth((latitude)::double precision, (longitude)::double precision)", name: "users_earthdistance_ix", using: :gist
     t.index ["city_id"], name: "index_users_on_city_id", using: :btree
     t.index ["country_id"], name: "index_users_on_country_id", using: :btree

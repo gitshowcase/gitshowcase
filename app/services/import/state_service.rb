@@ -3,15 +3,15 @@ class Import::StateService < ImportService
     countries = Hash[Country.all.map { |country| [country.abbreviation, country.id] }]
 
     states = yaml_records.map do |record|
-      State.new(
+      {
           abbreviation: record['abbreviation'],
           name: record['name'],
           country_id: countries[record['country']]
-      )
+      }
     end
 
     # Mass import
-    State.import states, on_duplicate_key_update: {conflict_target: [:abbreviation, :country_id], columns: [:name]}
+    State.import states, on_duplicate_key_update: {conflict_target: [:abbreviation, :country_id], columns: [:name]}, validate: false
   end
 
   def export

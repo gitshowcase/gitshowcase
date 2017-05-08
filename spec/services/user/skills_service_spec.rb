@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe ProjectInspectorService, type: :service do
+RSpec.describe User::SkillsService, type: :service do
   let(:user) { FactoryGirl.create(:user, skills: {'rails': 5}) }
-  let(:service) { UserSkillService.new(user) }
+  let(:service) { User::SkillsService.new(user) }
 
   describe '#import' do
     context 'without projects' do
@@ -25,14 +25,14 @@ RSpec.describe ProjectInspectorService, type: :service do
 
       it 'updates projects' do
         service.import(projects)
-        expect(user.skills).to eq('ruby' => UserSkillService::DEFAULT_SKILL_MASTERY, 'rails' => 5)
+        expect(user.skills).to eq('ruby' => User::SkillsService::DEFAULT_SKILL_MASTERY, 'rails' => 5)
       end
     end
   end
 
   describe '#update' do
     let(:skills) { {ruby: -1, rails: 4, javascript: 6} }
-    before { service.update(skills) }
+    before { service.set(skills) }
 
     it 'sets minimum mastery' do
       expect(user.skills['ruby']).to eq(0)

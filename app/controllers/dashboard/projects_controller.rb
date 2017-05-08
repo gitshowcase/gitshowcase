@@ -28,6 +28,7 @@ class Dashboard::ProjectsController < DashboardController
         ProjectInspectorService.new(@project).sync if @project.homepage.present?
       end
 
+      User::CompletenessService.new(@project.user).reset_projects
       redirect_to edit_dashboard_project_url(@project), notice: 'Project created :)'
     rescue
       redirect_back fallback_location: new_dashboard_project_path, alert: 'Failed to created project :('
@@ -74,6 +75,7 @@ class Dashboard::ProjectsController < DashboardController
   # DELETE /projects/1
   def destroy
     @project.destroy
+    User::CompletenessService.new(@project.user).reset_projects
     redirect_to dashboard_projects_url, notice: "Project \"#{@project.display_title}\" deleted"
   end
 

@@ -1,0 +1,68 @@
+@import "globals/colors";
+@import "globals/mixins";
+
+.data-card-container {
+  margin-bottom: -1rem;
+
+  .data-card {
+    margin-top: 1rem;
+    border: none;
+    padding: 0;
+    height: 5rem;
+
+    .comparison {
+      padding-bottom: 1rem;
+
+      .values {
+        left: 0;
+      }
+
+      .percentage {
+        font-size: 1.45rem;
+      }
+    }
+  }
+}
+
+.data-card {
+  padding: 1rem;
+  border-radius: .1rem;
+  margin-bottom: 1rem;
+  height: 6.6rem;
+  @include cardify();
+
+  .title {
+    margin-bottom: .5rem;
+  }
+
+  > .value, .percentage {
+    font-size: 2rem;
+  }
+
+  .comparison {
+    position: relative;
+
+    &.direction-up {
+      color: green;
+    }
+
+    &.direction-down {
+      color: red;
+    }
+
+    .values {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+
+    .value {
+      font-size :.9rem;
+    }
+
+    .compare-value {
+      color: #999;
+      font-size: .75rem;
+    }
+  }
+}

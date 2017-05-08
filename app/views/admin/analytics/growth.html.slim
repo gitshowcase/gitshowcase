@@ -1,0 +1,25 @@
+#analytics-growth-view
+  header
+    h1
+      i.fa.fa-line-chart
+      |  Growth
+
+  section
+    .data-card-container
+      = render 'admin/analytics/components/general-overview', title: 'Totals', values: @totals
+
+  section
+    .data-card-container
+      = render 'admin/analytics/components/general-overview', title: 'Today', values: @today, compare: @one_day_ago
+
+  section
+    .data-card-container
+      = render 'admin/analytics/components/general-overview', title: 'Yesterday', values: @one_day_ago, compare: @two_days_ago
+
+  section
+    .data-card-container
+      = render 'admin/analytics/components/general-overview', title: 'Last week', values: @one_week_ago, compare: @two_weeks_ago
+
+  section
+    .data-card-container
+      = render 'admin/analytics/components/general-overview', title: 'Last Month', values: @one_month_ago, compare: @two_months_ago

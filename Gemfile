@@ -155,6 +155,9 @@ group :development, :test do
 
   # Use WebMock as HTTP interceptor
   gem 'webmock'
+
+  # Use faker to generate seeds
+  gem 'faker'
 end
 
 group :development do

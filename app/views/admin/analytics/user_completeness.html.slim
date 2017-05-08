@@ -1,0 +1,11 @@
+#analytics-user-completeness-view
+  header
+    h1
+      i.fa.fa-pie-chart
+      |  User Completeness
+
+  = render 'admin/analytics/components/completeness-overview', title: 'Totals', values: @totals
+  = render 'admin/analytics/components/completeness-overview', title: 'Today', values: @today, compare: @one_day_ago
+  = render 'admin/analytics/components/completeness-overview', title: 'Yesterday', values: @one_day_ago, compare: @two_days_ago
+  = render 'admin/analytics/components/completeness-overview', title: 'Last Week', values: @one_week_ago, compare: @two_weeks_ago
+  = render 'admin/analytics/components/completeness-overview', title: 'Last Month', values: @one_month_ago, compare: @two_months_ago

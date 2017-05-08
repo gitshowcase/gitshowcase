@@ -1,0 +1,2 @@
+class Snapshot < ApplicationRecord
+end

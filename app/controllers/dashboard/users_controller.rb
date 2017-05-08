@@ -16,7 +16,6 @@ class Dashboard::UsersController < DashboardController
     old_domain = @user.domain
     new_domain = user_params(:domain)[:domain]
 
-    @user.update(domain: new_domain)
     if old_domain != new_domain
       begin
         DomainService.new(new_domain).add if new_domain.present?
@@ -25,7 +24,7 @@ class Dashboard::UsersController < DashboardController
       end
 
       RemoveDomainJob.perform_later(old_domain) if old_domain.present?
-      @user.update(domain: new_domain)
+      service.save(domain: new_domain)
     end
 
     redirect_to dashboard_domain_path, notice: 'Domain saved :)'
@@ -37,7 +36,7 @@ class Dashboard::UsersController < DashboardController
 
   # PUT /dashboard/profile
   def update_profile
-    @user.update(user_params(:name, :avatar, :cover, :bio, :role, :location, :display_email, :company, :company_website, :website, :hireable))
+    service.save(user_params(:name, :avatar, :cover, :bio, :role, :location, :display_email, :company, :company_website, :website, :hireable))
     redirect_to dashboard_home_url, notice: 'Profile saved :)'
   end
 
@@ -47,7 +46,7 @@ class Dashboard::UsersController < DashboardController
 
   # PUT /dashboard/socials
   def update_socials
-    @user.update(user_params(User::SOCIALS.keys))
+    service.save(user_params(User::SOCIALS.keys))
     redirect_to dashboard_home_url, notice: 'Socials saved :)'
   end
 
@@ -57,15 +56,8 @@ class Dashboard::UsersController < DashboardController
 
   # PUT /dashboard/skills
   def update_skills
-    skills = {}
-
-    for i in 0..params[:name].size
-      name = params[:name][i]
-      mastery = params[:mastery][i]
-      skills[name] = mastery
-    end
-
-    UserSkillService.new(@user).update(skills)
+    hash = {name: params[:name], mastery: params[:mastery]}
+    service.save(skills: hash)
     redirect_to dashboard_home_url, notice: 'Skills saved :)'
   end
 
@@ -102,6 +94,10 @@ class Dashboard::UsersController < DashboardController
   end
 
   private
+
+  def service
+    @service ||= UserService.new(@user)
+  end
 
   def set_user
     # @type [User]

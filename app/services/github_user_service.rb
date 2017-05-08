@@ -43,11 +43,11 @@ class GithubUserService < ApplicationService
   end
 
   def sync_name
-    @user.name = client_user.name
+    user_service.set(name: client_user.name)
   end
 
   def sync_username
-    @user.username = client_user.login.downcase
+    user_service.set(username: client_user.login.downcase)
   end
 
   def sync_avatar
@@ -58,37 +58,43 @@ class GithubUserService < ApplicationService
       avatar << (avatar.include?('?') ? '&' : '?') + 's=400'
     end
 
-    @user.avatar = avatar
+    user_service.set(avatar: avatar)
   end
 
   def sync_hireable
-    @user.hireable = client_user.hireable
+    user_service.set(hireable: client_user.hireable)
   end
 
   def sync_company
-    @user.company = client_user.company
+    user_service.set(company: client_user.company)
   end
 
   def sync_company_website
     company = client_user.company
     if company.present?
-      @user.company_website = company.start_with?('@') ? ('https://github.com/' + company[1..-1]) : company
+      user_service.set(company_website: company.start_with?('@') ? ('https://github.com/' + company[1..-1]) : company)
     end
   end
 
   def sync_website
-    @user.website = client_user.blog if client_user.blog.present?
+    user_service.set(website: client_user.blog) if client_user.blog.present?
   end
 
   def sync_location
-    @user.location = client_user.location if client_user.location.present?
+    user_service.set(location: client_user.location) if client_user.location.present?
   end
 
   def sync_display_email
-    @user.display_email = client_user.email if client_user.email.present?
+    user_service.set(display_email: client_user.email) if client_user.email.present?
   end
 
   def sync_bio
-    @user.bio = client_user.bio if client_user.bio.present?
+    user_service.set(bio: client_user.bio) if client_user.bio.present?
+  end
+
+  private
+
+  def user_service
+    @user_service ||= UserService.new(@user)
   end
 end

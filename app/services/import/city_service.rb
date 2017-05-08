@@ -12,7 +12,7 @@ class Import::CityService < ImportService
     cities = yaml_records.map do |record|
       country = record['country']
 
-      City.new(
+      {
           key: record['key'],
           name: record['name'],
           full_name: record['full_name'],
@@ -23,11 +23,11 @@ class Import::CityService < ImportService
           country_id: countries[country],
           timezone_id: timezones[record['timezone']],
           state_id: record['state'].present? ? states["#{country}:#{record['state']}"] : nil
-      )
+      }
     end
 
     columns = [:name, :full_name, :latitude, :longitude, :population, :capital, :country_id, :timezone_id, :state_id]
-    City.import cities, on_duplicate_key_update: {conflict_target: [:key], columns: columns}
+    City.import cities, on_duplicate_key_update: {conflict_target: [:key], columns: columns}, validate: false
   end
 
   def export

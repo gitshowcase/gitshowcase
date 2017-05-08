@@ -5,10 +5,10 @@
       |  Covers
 
   .panel-transparent
-    .setup-covers.row
+    .row
       - @setup_covers.each do |cover|
         .col-md-6.col-lg-4.my-auto
-          = render 'admin/components/setup-cover', cover: cover
+          = render 'admin/setup_covers/components/cover', cover: cover
 
     = link_to admin_setup_covers_path, method: :post, class: 'btn btn-primary' do
       i.fa.fa-plus

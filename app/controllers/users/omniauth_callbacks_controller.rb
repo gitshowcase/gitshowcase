@@ -20,8 +20,10 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       end
 
       GithubProjectService.sync_by_user(@user)
-      UserSkillService.new(@user).import
+      User::SkillsService.new(@user).import
+
       @user.projects.create(homepage: @user.website) if @user.website.present?
+      User::CompletenessService.new(@user).reset_projects
 
       SyncUserProjectWebsitesJob.perform_later(@user)
       CreateEmailSubscriptionJob.perform_later(@user)

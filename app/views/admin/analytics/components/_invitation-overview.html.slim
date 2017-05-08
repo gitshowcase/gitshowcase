@@ -1,0 +1,32 @@
+- title ||= nil
+
+- domains = values[:count_domains]
+- invitations = values[:count_invitations]
+- rewards = values[:count_invitation_rewards]
+
+- compare ||= {}
+- compare_domains = compare[:count_domains]
+- compare_invitations = compare[:count_invitations]
+- compare_rewards = compare[:count_invitation_rewards]
+
+.invitation-overview
+  header
+    h2
+      = title
+
+  .data-card-container
+    .row
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Domains', icon: 'globe', value: domains, compare: compare_domains
+
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Invitations', icon: 'pagelines', value: invitations, compare: compare_invitations
+
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Rewards', icon: 'gift', value: rewards, compare: compare_rewards
+
+    .row
+      - SnapshotService::INVITATION_FUNNEL.each_with_index do |step, i|
+        - next if step == :count_invitation_rewards
+        .col-lg-3
+          = render 'admin/analytics/components/data-card', title: "#{i} Invitations", value: values[step], compare: compare[step]

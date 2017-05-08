@@ -1,0 +1,32 @@
+- icon ||= nil
+
+- value ||= 0
+
+- compare ||= nil
+- percentage = '-'
+- percentage = value.to_f * 100 / compare - 100 unless compare.nil? || compare == 0
+- direction = percentage > 0 ? 'up' : percentage < 0 ? 'down' : 'none' unless compare.nil? || compare == 0
+
+.data-card
+  .title
+    - if icon
+      i.fa class="fa-#{icon}"
+      '
+    = title
+
+  - if compare.nil?
+    .value.color-two= value
+  - else
+    .comparison class="direction-#{direction}"
+      .percentage
+        - if percentage != 0 && percentage != '-'
+          i.fa class="fa-long-arrow-#{direction}"
+
+        - if percentage == '-'
+          | -
+        - else
+          = " #{number_with_precision(percentage.abs, precision: 1)}%"
+      .values.color-two
+        span.value= value
+        | /
+        span.compare-value= compare

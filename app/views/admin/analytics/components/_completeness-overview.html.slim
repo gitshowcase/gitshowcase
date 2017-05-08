@@ -1,0 +1,35 @@
+- title ||= nil
+
+- average = values[:count_users].nil? || values[:count_users] == 0 ? 0 :(values[:total_user_completeness] / values[:count_users]).round(1)
+- weak = values[:count_user_weak_completeness]
+- medium = values[:count_user_medium_completeness]
+- strong = values[:count_user_strong_completeness]
+- very_strong = values[:count_user_very_strong_completeness]
+
+- compare ||= {}
+- compare_average = compare[:count_users].nil? ? nil : (compare[:count_users] == 0 ? 0 : (compare[:total_user_completeness] / compare[:count_users]).round(1))
+- compare_weak = compare[:count_user_weak_completeness]
+- compare_medium = compare[:count_user_medium_completeness]
+- compare_strong = compare[:count_user_strong_completeness]
+- compare_very_strong = compare[:count_user_very_strong_completeness]
+
+.completeness-overview
+  header
+    h2
+      = title
+
+  .data-card-container
+    = render 'admin/analytics/components/data-card', title: 'Average', value: average, compare: compare_average
+
+    .row
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Weak', icon: 'star-o', value: weak, compare: compare_weak
+
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Medium', icon: 'star-half', value: medium, compare: compare_medium
+
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Strong', icon: 'star-half-o', value: strong, compare: compare_strong
+
+      .col-lg-3
+        = render 'admin/analytics/components/data-card', title: 'Very Strong', icon: 'star', value: very_strong, compare: compare_very_strong
