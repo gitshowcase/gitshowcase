@@ -31,17 +31,10 @@
           |  Search
 
     .date-shortcuts
-      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 1.week}"
-        | 1 Week Ago
-
-      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 2.week}"
-        | 2 Weeks Ago
-
-      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 1.month}"
-        | 1 Month Ago
-
-      a.btn.btn-primary.btn-sm href="?date=#{Date.today - 3.months}"
-        | 3 Months Ago
+      = date_ago_link('1 Week Ago', 1.week)
+      = date_ago_link('2 Weeks Ago', 2.weeks)
+      = date_ago_link('1 Month Ago', 1.month)
+      = date_ago_link('3 Months Ago', 3.months)
 
   section
     h2 Users, Projects over Time
