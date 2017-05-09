@@ -1,7 +1,7 @@
 class CreateSnapshots < ActiveRecord::Migration[5.0]
   def change
     create_table :snapshots do |t|
-      t.date :date
+      t.date :date, null: false
 
       # Total values
       t.integer :count_users, null: false, default: 0

@@ -1,4 +1,4 @@
-class CreatePastSnapshotsJob < ApplicationJob
+class CreateMissingSnapshotsJob < ApplicationJob
   queue_as :default
 
   def perform

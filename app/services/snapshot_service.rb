@@ -27,11 +27,12 @@ class SnapshotService < ApplicationService
     @date = date
   end
 
-  def create
-    raise 'Snapshots can only be saved after the day is over' if @date >= Date.today
-    return false if Snapshot.exists?(date: @date)
+  def snapshot
+    Snapshot.new({date: @date}.merge(all))
+  end
 
-    Snapshot.create({date: @date}.merge(all))
+  def create
+    snapshot.save
   end
 
   def fields(fields, type = nil)

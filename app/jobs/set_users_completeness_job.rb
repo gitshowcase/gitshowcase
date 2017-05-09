@@ -3,7 +3,7 @@ class SetUsersCompletenessJob < ApplicationJob
 
   def perform
     User.transaction do
-      User.where('completeness is null').each do |user|
+      User.each do |user|
         User::CompletenessService.new(user).reset
       end
     end
