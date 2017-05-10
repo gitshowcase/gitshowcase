@@ -7,6 +7,16 @@
 
     = render 'admin/analytics/components/general-overview', values: @totals
 
+    .row
+      .col-lg-4
+        = render 'admin/analytics/components/data-card', title: 'New Users Today', icon: 'user', value: @totals[:daily_count_users]
+
+      .col-lg-4
+        = render 'admin/analytics/components/data-card', title: 'New Projects Today', icon: 'cube', value: @totals[:daily_count_projects]
+
+      .col-lg-4
+        = render 'admin/analytics/components/data-card', title: 'New Invitations Today', icon: 'envelope', value: @totals[:daily_count_invitations]
+
   section
     header
       h2

@@ -158,7 +158,7 @@ class SnapshotService < ApplicationService
   end
 
   def daily(hash)
-    Hash[hash.map { |key, value| ["daily_#{key}", value] }]
+    Hash[hash.map { |key, value| ["daily_#{key}".to_sym, value] }]
   end
 
   def execute(type, fields)

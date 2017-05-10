@@ -6,8 +6,8 @@ class Admin::AnalyticsController < AdminController
 
   # GET /admin
   def home
-    @totals = [snapshot.general, snapshot.invitation, snapshot.invitation_funnel].reduce(:merge)
-    @users = User.order('id DESC').limit(6)
+    @totals = [snapshot.general, snapshot.general(:daily), snapshot.invitation(:daily)].reduce(:merge)
+    @users = User.order('id DESC').limit(3)
     @invitations = Invitation.order('id DESC').limit(3)
   end
 
