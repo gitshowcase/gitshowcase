@@ -1,0 +1,4 @@
+.row.users
+  - users.each do |user|
+    .col-md-6.col-lg-4
+      = render 'admin/components/user', user: user

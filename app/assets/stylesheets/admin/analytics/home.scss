@@ -1,0 +1,11 @@
+#analytics-home-view {
+  > section + section {
+    margin-top: 1rem;
+  }
+
+  > section {
+    header {
+      margin-bottom: 1rem;
+    }
+  }
+}

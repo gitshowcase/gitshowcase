@@ -1,0 +1,38 @@
+- invisible_projects_count = user.projects.invisible.count
+- visible_projects_count = user.projects.count - invisible_projects_count
+
+.user
+  a href=profile_path(username: user.username) target='_blank'
+    = render 'components/avatar', user: user
+
+    .username
+      = "@#{user.username}"
+
+    .location
+      i.fa.fa-map-marker
+      - if user.location.present?
+        = " #{user.location}"
+      - else
+        span.text-muted  Unkown
+
+    - if user.invited?
+      span.invited class='badge text-success'
+        i.fa.fa-envelope
+        |  Invited
+
+    .projects
+      span.projects-visible
+        i.fa.fa-cubes
+        = visible_projects_count
+
+      span.projects-invisible
+        i.fa.fa-eye-slash
+        = invisible_projects_count
+
+    .clearfix
+
+    = render 'components/user-completeness', completeness: user.completeness
+
+    .created_at
+      i.fa.fa-clock-o
+      = " #{time_ago_in_words user.created_at}"

@@ -3,7 +3,7 @@ class Admin::UsersController < AdminController
 
   # GET /admin/users
   def index
-    @users = User.order('id DESC').paginate(page: params[:page], per_page: 12)
+    @users = User.order('id DESC').paginate(page: params[:page], per_page: 15)
   end
 
   # GET /admin/users/:id

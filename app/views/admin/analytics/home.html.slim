@@ -1,2 +1,16 @@
 #analytics-home-view.transparent
-  = render 'admin/analytics/components/general-overview', values: @totals
+  section
+    header
+      h2
+        i.fa.fa-info
+        |  Overview
+
+    = render 'admin/analytics/components/general-overview', values: @totals
+
+  section
+    header
+      h2
+        i.fa.fa-users
+        |  Latest Users
+
+    = render 'admin/components/users', users: @users

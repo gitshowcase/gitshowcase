@@ -4,26 +4,8 @@
       i.fa.fa-users
       |  Users
 
-  .row.panel-transparent
-    - @users.each do |user|
-      - invisible_projects_count = user.projects.invisible.count
-      - visible_projects_count = user.projects.count - invisible_projects_count
-
-      .col-md-6.col-lg-4
-        .user.panel-block
-          a href=profile_path(username: user.username) target='_blank'
-            = render 'components/avatar', user: user
-
-            div
-              |  @
-              = user.username
-
-          a href=admin_user_path(user)
-            = render 'components/user-completeness', completeness: user.completeness
-
-            .created_at
-              i.fa.fa-clock-o
-              = " #{time_ago_in_words user.created_at} ago"
+  .panel-transparent
+    = render 'admin/components/users', users: @users
 
   - if @users.total_pages > 1
     footer.panel-transparent

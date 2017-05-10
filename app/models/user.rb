@@ -36,6 +36,10 @@ class User < ApplicationRecord
     admin.present? || plan&.domain
   end
 
+  def invited?
+    Invitation.find_by_invitee(username) != nil
+  end
+
   def url
     return UrlHelper.url(domain) if domain && domain_allowed?
     Rails.application.routes.url_helpers.profile_url(host: ENV['APP_DOMAIN'], username: username)

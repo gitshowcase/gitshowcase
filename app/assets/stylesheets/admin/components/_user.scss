@@ -1,0 +1,63 @@
+@import "globals/mixins";
+
+.user {
+  @include cardify();
+  display: block;
+  padding: .5rem 1rem;
+
+  .username {
+    margin-bottom: .1rem;
+  }
+
+  .invited {
+    float: right;
+    margin-top: .325rem;
+  }
+
+  .avatar {
+    margin-top: .5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    float: left;
+    margin-right: 1rem;
+    max-width: 100%;
+    border-radius: 100%;
+    margin-bottom: .5rem;
+  }
+
+  .location {
+    font-size: .85rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .projects {
+    font-size: .95rem;
+    margin-top: .15rem;
+    margin-bottom: .35rem;
+
+    span + span {
+      margin-left: .75rem;
+    }
+
+    i {
+      margin-right: .1rem;
+    }
+
+    .projects-invisible {
+      opacity: .5;
+    }
+  }
+
+  .user-completeness {
+    float: left;
+    margin-top: -.175rem;
+  }
+
+  .created_at {
+    color: #666;
+    font-size: .85rem;
+    text-align: right;
+  }
+}
