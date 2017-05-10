@@ -34,7 +34,8 @@ AnalyticsOverview = {
 
   drawUserCompleteness: ->
     data = AnalyticsOverview.dataTable([
-      {name: 'daily_avg_user_completeness', label: 'Average'}
+      {name: 'avg_user_completeness', label: 'Average'}
+      {name: 'daily_avg_user_completeness', label: 'Daily Average'}
       {name: 'daily_count_user_weak_completeness', label: 'Weak'}
       {name: 'daily_count_user_medium_completeness', label: 'Medium'}
       {name: 'daily_count_user_strong_completeness', label: 'Strong'}
@@ -44,11 +45,12 @@ AnalyticsOverview = {
     options = AnalyticsOverview.options {
       series: {
         0: {targetAxisIndex: 0}
-        1: {targetAxisIndex: 1}
+        1: {targetAxisIndex: 0}
         2: {targetAxisIndex: 1}
         3: {targetAxisIndex: 1}
         4: {targetAxisIndex: 1}
         5: {targetAxisIndex: 1}
+        6: {targetAxisIndex: 1}
       }
       vAxes: {
         0: {title: 'Average'}
@@ -111,6 +113,7 @@ AnalyticsOverview = {
       date[1] = parseInt(date[1]) - 1
 
       row.date = 'Date(' + date.join(', ') + ')'
+      row.avg_user_completeness = row.total_user_completeness / (row.count_users || 1)
       row.daily_avg_user_completeness = row.daily_total_user_completeness / (row.daily_count_users || 1)
       row
 
