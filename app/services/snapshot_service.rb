@@ -172,7 +172,7 @@ class SnapshotService < ApplicationService
 
   def query(model, type)
     @queries ||= {}
-    @queries["#{model.name}-#{type}"] ||= model.where("DATE(#{model.table_name}.created_at) #{type == TYPE_TOTAL ? '<' : '='} ?", @date)
+    @queries["#{model.name}-#{type}"] ||= model.where("DATE(#{model.table_name}.created_at) #{type == TYPE_TOTAL ? '<=' : '='} ?", @date)
   end
 
   def user_completeness_count(level, type)
@@ -181,7 +181,7 @@ class SnapshotService < ApplicationService
     next_level = level_values.at(level_values.find_index(target) + 1)
 
     user_query = query(User, type).where('completeness >= ?', target)
-    user_query = user_query.where('completeness <= ?', next_level) unless next_level.nil?
+    user_query = user_query.where('completeness < ?', next_level) unless next_level.nil?
     user_query.count
   end
 
