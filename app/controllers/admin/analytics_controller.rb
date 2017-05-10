@@ -6,7 +6,7 @@ class Admin::AnalyticsController < AdminController
 
   # GET /admin
   def home
-    @totals = [full_snapshot.general, full_snapshot.invitation, full_snapshot.invitation_funnel].reduce(:merge)
+    @totals = [snapshot.general, snapshot.invitation, snapshot.invitation_funnel].reduce(:merge)
     @users = User.order('id DESC').limit(6)
     @invitations = Invitation.order('id DESC').limit(4)
   end
@@ -52,19 +52,15 @@ class Admin::AnalyticsController < AdminController
   private
 
   def history(fields)
-    @totals = full_snapshot.fields(fields)
-    @today = today_snapshot.fields(fields, true)
+    @totals = snapshot.fields(fields)
+    @today = snapshot.fields(fields, true)
     @one_day_ago, @two_days_ago = comparison(1.day, fields)
     @one_week_ago, @two_weeks_ago = comparison(1.week, fields)
     @one_month_ago, @two_months_ago = comparison(1.month, fields)
   end
 
-  def full_snapshot
-    @full_snapshot ||= SnapshotService.new
-  end
-
-  def today_snapshot
-    @snapshot ||= SnapshotService.new(Date.today)
+  def snapshot
+    @snapshot ||= SnapshotService.new
   end
 
   def query_fields(fields)

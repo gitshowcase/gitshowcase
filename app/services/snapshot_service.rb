@@ -23,7 +23,7 @@ class SnapshotService < ApplicationService
                        :count_invitation_rewards]
 
   def initialize(date = nil)
-    date ||= Date.today + 1.day
+    date ||= Date.today
     @date = date
   end
 
@@ -181,7 +181,7 @@ class SnapshotService < ApplicationService
     next_level = level_values.at(level_values.find_index(target) + 1)
 
     user_query = query(User, type).where('completeness >= ?', target)
-    user_query = user_query.where('completeness < ?', next_level) unless next_level.nil?
+    user_query = user_query.where('completeness <= ?', next_level) unless next_level.nil?
     user_query.count
   end
 
