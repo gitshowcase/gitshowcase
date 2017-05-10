@@ -13,6 +13,6 @@
   .details
     .created_at= "#{time_ago_in_words invitation.created_at} ago"
 
-    a href=profile_path(username: username) target='_blank' title='Invitee'
+    a href=profile_path(username: invitation.invitee) target='_blank' title='Invitee'
       = "@#{invitation.invitee}"
 
