@@ -1,0 +1,36 @@
+@import "globals/colors";
+@import "globals/mixins";
+
+.invitation {
+  @include cardify();
+  padding: .5rem 1rem;
+
+  a {
+    display: block;
+  }
+
+  .avatar {
+    margin-top: .25rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    float: left;
+    margin-right: .5rem;
+    max-width: 100%;
+    border-radius: 100%;
+  }
+
+  .number {
+  }
+
+  .details {
+    font-size: .8rem;
+    color: #666;
+    border-top: 1px solid $color-border;
+    padding-top: .25rem;
+    margin-top: .25rem;
+
+    .created_at {
+      float: right;
+    }
+  }
+}

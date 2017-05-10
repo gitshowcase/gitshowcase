@@ -8,7 +8,7 @@ class Admin::AnalyticsController < AdminController
   def home
     @totals = [snapshot.general, snapshot.invitation, snapshot.invitation_funnel].reduce(:merge)
     @users = User.order('id DESC').limit(6)
-    @invitations = Invitation.order('id DESC').limit(4)
+    @invitations = Invitation.order('id DESC').limit(3)
   end
 
   # GET /admin/analytics/growth

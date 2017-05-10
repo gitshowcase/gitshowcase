@@ -1,0 +1,4 @@
+.row.invitations
+  - invitations.each do |invitation|
+    .col-md-6.col-lg-4
+      = render 'admin/components/invitation', invitation: invitation

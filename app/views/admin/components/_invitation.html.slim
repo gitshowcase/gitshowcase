@@ -1,0 +1,18 @@
+- inviter = invitation.inviter
+- username = inviter.username
+- invitations = invitation.inviter.invitations.count
+
+.invitation
+  a href=profile_path(username: username) target='_blank' title='Inviter'
+    = render 'components/avatar', user: inviter
+    = "@#{username}"
+
+  .number
+    = "#{invitations.ordinalize} invitation"
+
+  .details
+    .created_at= "#{time_ago_in_words invitation.created_at} ago"
+
+    a href=profile_path(username: username) target='_blank' title='Invitee'
+      = "@#{invitation.invitee}"
+

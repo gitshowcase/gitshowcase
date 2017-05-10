@@ -2,7 +2,6 @@
 
 .user {
   @include cardify();
-  display: block;
   padding: .5rem 1rem;
 
   .username, .location {
