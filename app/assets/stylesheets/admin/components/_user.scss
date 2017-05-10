@@ -5,6 +5,12 @@
   display: block;
   padding: .5rem 1rem;
 
+  .username, .location {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   .username {
     margin-bottom: .1rem;
   }
@@ -27,9 +33,6 @@
 
   .location {
     font-size: .85rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   .projects {
