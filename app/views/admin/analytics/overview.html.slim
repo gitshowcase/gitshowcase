@@ -4,37 +4,29 @@
       i.fa.fa-bar-chart
       |  Overview
 
-  / Data
-  = render 'components/javascript-variable', name: 'snapshots', value: @snapshots
+    section.filter
+      form.form
+        .row
+          .col-lg-6
+            .form-group
+              .control-label for='filter-date' Date
+              input#filter-date.form-control name='date' value=params[:date] type='date'
 
-  section#filter
-    header
-      h2
-        i.fa.fa-filter
-        |  Filter
+          .col-lg-6
+            .form-group
+              .control-label for='filter-date-end' Final Date
+              input#filter-date-end.form-control name='date_end' value=params[:date_end] type='date'
 
-    form.form
-      .row
-        .col-lg-6
-          .form-group
-            .control-label for='filter-date' Date
-            input#filter-date.form-control name='date' value=params[:date] type='date'
+        .form-actions
+          button.btn.btn-primary.pull-left
+            i.fa.fa-search
+            |  Search
 
-        .col-lg-6
-          .form-group
-            .control-label for='filter-date-end' Final Date
-            input#filter-date-end.form-control name='date_end' value=params[:date_end] type='date'
-
-      .form-actions
-        button.btn.btn-primary
-          i.fa.fa-search
-          |  Search
-
-    .date-shortcuts
-      = date_ago_link('1 Week Ago', 1.week)
-      = date_ago_link('2 Weeks Ago', 2.weeks)
-      = date_ago_link('1 Month Ago', 1.month)
-      = date_ago_link('3 Months Ago', 3.months)
+      .date-shortcuts
+        = date_ago_link('1 Week', 1.week)
+        = date_ago_link('2 Weeks', 2.weeks)
+        = date_ago_link('1 Month', 1.month)
+        = date_ago_link('3 Months', 3.months)
 
   section
     h2 Users, Projects over Time
@@ -55,3 +47,6 @@
     h2 Invitation Funnel over Time
 
     #invitation-funnel-chart
+
+/ Data
+= render 'components/javascript-variable', name: 'snapshots', value: @snapshots

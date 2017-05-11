@@ -4,6 +4,35 @@
       i.fa.fa-users
       |  Users
 
+    section.filter
+      form.form
+        .form-group
+          .control-label for='filter-search' Search
+          input#filter-name.form-control name='search' value=@filters[:search] type='text' placeholder="I'm looking for..." autofocus=true
+
+        .control-label Search For
+        - @search_fields.each do |field|
+          label.checkbox-inline
+            = check_box_tag "field[#{field}]", true, @filters[:field][field]
+            = " #{field.titleize}"
+
+        .control-label Completeness
+        - @levels.each do |level|
+          label.checkbox-inline
+            = check_box_tag "completeness[#{level}]", true, @filters[:completeness][level.to_s]
+            = " #{level.to_s.titleize}"
+
+        .control-label Funnel
+        - %w[no_domain 0 1 2 3 4 5 6+].each do |item|
+          label.checkbox-inline
+            = check_box_tag "funnel[#{item}]", true, @filters[:funnel][item], disabled: true
+            = " #{item.titleize}"
+
+        .form-actions
+          button.btn.btn-primary
+            i.fa.fa-search
+            |  Search
+
   .panel-transparent
     = render 'admin/components/users', users: @users
 

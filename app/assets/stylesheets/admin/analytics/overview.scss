@@ -1,23 +1,18 @@
 @import "globals/colors";
 
 #analytics-overview-view {
-  #filter {
-    > header {
-      margin-bottom: 1rem;
-    }
-
+  .filter {
     .date-shortcuts {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid $color-border;
+      margin-top: .1rem;
+      text-align: right;
+
+      a {
+        text-decoration: none;
+      }
 
       a + a {
-        margin-left: 1rem;
+        margin-left: .5rem;
       }
-    }
-
-    .form-actions {
-      margin-top: 0;
     }
   }
 }

@@ -151,6 +151,22 @@ class SnapshotService < ApplicationService
     invitation_counts(type)[6] || 0
   end
 
+  def self.completeness_query(level)
+    target = User::CompletenessService::LEVELS[level]
+    level_values = User::CompletenessService::LEVELS.values
+    next_level = level_values.at(level_values.find_index(target) + 1)
+
+    where = 'completeness >= ?'
+    values = [target]
+
+    unless next_level.nil?
+      where << ' AND completeness < ?'
+      values << next_level
+    end
+
+    {where: where, values: values}
+  end
+
   protected
 
   def prefix(type, hash)
@@ -176,13 +192,8 @@ class SnapshotService < ApplicationService
   end
 
   def user_completeness_count(level, type)
-    target = User::CompletenessService::LEVELS[level]
-    level_values = User::CompletenessService::LEVELS.values
-    next_level = level_values.at(level_values.find_index(target) + 1)
-
-    user_query = query(User, type).where('completeness >= ?', target)
-    user_query = user_query.where('completeness < ?', next_level) unless next_level.nil?
-    user_query.count
+    query = self.class.completeness_query(level)
+    query(User, type).where(query[:where], *query[:values]).count
   end
 
   def invitation_counts(type)

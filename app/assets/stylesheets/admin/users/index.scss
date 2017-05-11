@@ -1,0 +1,11 @@
+#users-index-view {
+  .filter {
+    .checkbox-inline {
+      font-size: .8rem;
+    }
+
+    .checkbox-inline + .checkbox-inline {
+      margin-left: 1rem;
+    }
+  }
+}

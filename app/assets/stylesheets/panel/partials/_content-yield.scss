@@ -5,6 +5,14 @@
   > *:not(.transparent) {
     > header {
       border: 1px solid $color-border;
+
+      .filter {
+        margin-top: 1.5rem;
+      }
+
+      .form-actions {
+        margin-top: .5rem;
+      }
     }
 
     > *:not(.panel-transparent), .panel-block {
