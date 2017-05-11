@@ -1,7 +1,7 @@
 class Admin::UsersController < AdminController
   before_action :set_user, only: [:show]
 
-  SEARCH_FIELDS = %w[name username email location role domain]
+  SEARCH_FIELDS = %w[name username email location role website domain company company_website]
 
   # GET /admin/users
   def index
