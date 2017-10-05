@@ -1,5 +1,5 @@
 class Dashboard::ProjectsController < DashboardController
-  before_action :set_project, only: [:show, :edit, :update, :show, :hide, :sync, :destroy]
+  before_action :set_project, only: [:show, :edit, :update, :hide, :sync, :destroy]
 
   # GET /projects
   def index
